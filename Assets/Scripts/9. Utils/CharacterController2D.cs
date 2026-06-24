@@ -30,23 +30,34 @@ namespace Study.Utilities
         private Collider2D  col;
 
         // 내부 상태 변수들
-        private int     jumpCount        = 0;
-        private bool    attackRequested  = false;
-        private bool    jumpRequested    = false;
-        public bool    crouchRequested  = false;
-        public bool    rollRequested    = false;
-        public bool    stickWall        = false;
+        private int    jumpCount        = 0;
+        public bool    jumpRequested = false;
 
-        private Vector2 pendingDashDirection; //마우스방향좌표
+        public bool    attackRequested = false;
+
+        public bool    crouchRequested = false;
+        public float fastFallSpeed = 1.0f; //빠른 하강 속도
+
+        public bool    rollRequested = false;
+
+        public bool    stickWall = false;
+
+        public bool useGravity = true;
+
+        private Vector2 pendingDashDirection; //마우스 방향 좌표
         private float   pendingRollForward; // 구르기 방향값 -1/+1:좌/우
         private Vector2 boostVelocity    = Vector2.zero; //이동 메서드에 의한 이동값
         private Vector3 externalDelta    = Vector3.zero; //외부 플랫폼에 의한 이동값
-        private float   moveInput        = 0.0f;
 
-        // 아래의 두개는 외부에서 조회가 가능해야 합니다.
+        private float   moveInput        = 0.0f; //기본 이동x값
+        private float   baseVerticalVelocity = 0.0f; //기본 점프 + 중력값
+
         // 읽기 전용으로 바꿔줍니다
-        public float VerticalVelocity { get; private set; } = 0.0f;
+        public float HorizontalVelocity { get; private set; } = 0.0f; // 최종 x값
+        public float VerticalVelocity { get; private set; } = 0.0f; // 최종 y값
         public bool IsGrounded { get; private set; } = false;
+        public bool IsCrouching { get; private set; } = false;
+        public bool IsRolling = false;
 
         #region Unity Methods
         private void Awake()
@@ -61,19 +72,20 @@ namespace Study.Utilities
         {
             IsGrounded = CheckGrounded();
             
-            ApplyGravaity();
+            
             ApplyJump();
             ApplyAttack();
             ApplyCrouch();
-            //ApplyRoll();
+            ApplyRoll();
             //StickWall();
+            ApplyGravaity();
             DecayBoostVelocity();  // ← 매 프레임 감쇠
 
-            float horizontalVelocity = moveInput * speed + boostVelocity.x;
-            float verticalVelocity   = VerticalVelocity + boostVelocity.y;
+            HorizontalVelocity = moveInput * speed + boostVelocity.x;
+            VerticalVelocity = baseVerticalVelocity + boostVelocity.y;
 
             Vector3 desireMove =
-                new Vector3(horizontalVelocity, verticalVelocity) * Time.fixedDeltaTime
+                new Vector3(HorizontalVelocity, VerticalVelocity) * Time.fixedDeltaTime
                 + externalDelta;
 
             externalDelta = Vector3.zero;
@@ -86,8 +98,9 @@ namespace Study.Utilities
             if (moveVector.x != desireMove.x) boostVelocity.x = 0f;
             if (moveVector.y != desireMove.y)
             {
-                VerticalVelocity = 0.0f;
+                baseVerticalVelocity = 0.0f;
                 boostVelocity.y = 0f;
+                VerticalVelocity = 0.0f;
             } 
 
             rBody.MovePosition(transform.position + moveVector);
@@ -126,6 +139,12 @@ namespace Study.Utilities
             crouchRequested = true;
         }
 
+        public void RequestRoll(float forward)
+        {
+            pendingRollForward = forward;
+            rollRequested = true;
+        }
+
         public void ExitCrouch()
         {
             crouchRequested = false;
@@ -137,15 +156,34 @@ namespace Study.Utilities
 
         private void ApplyGravaity()
         {
-            if (IsGrounded && VerticalVelocity <= 0)
+            // 여기 공격중 중력끄는 코드 필요
+            if (useGravity == false) return;
+
+            if (IsGrounded && baseVerticalVelocity <= 0)
             {
-                VerticalVelocity += GROUND_STICK_SPEED;
+                baseVerticalVelocity += GROUND_STICK_SPEED;
                 jumpCount = 0;
             }
             else // 공중에 있는 상태
             {
-                VerticalVelocity += gravity * Time.fixedDeltaTime;
+                baseVerticalVelocity += gravity * Time.fixedDeltaTime;
             }
+        }
+
+        private void DecayBoostVelocity()
+        {
+            if (boostVelocity.sqrMagnitude < 0.05f)
+            {
+                boostVelocity = Vector2.zero;
+                return;
+            }
+            // 현재 활성 boost 종류에 따라 drag 선택 (둘 다 같으면 하나만 써도 됨)
+            float drag = boostVelocity.y != 0f ? dashDrag : rollDrag;
+            boostVelocity = Vector2.MoveTowards(
+            boostVelocity,
+            Vector2.zero,
+            drag * (Time.fixedDeltaTime * 2)
+            );
         }
 
         private float ResolveAxisMovement(float move, Vector3 axis)
@@ -185,7 +223,7 @@ namespace Study.Utilities
 
             if (jumpCount >= maxJumpCount) return;
 
-            VerticalVelocity = jumpPower;
+            baseVerticalVelocity = jumpPower;
             jumpCount++;
             IsGrounded = false; // 바닥에서 떨어졌음을 설정합니다.
         }
@@ -195,42 +233,61 @@ namespace Study.Utilities
             if (attackRequested == false) return;
             attackRequested = false;
             Vector2 dir = pendingDashDirection;
+
             boostVelocity = dir * dashPower;
 
             // 돌진 중 점프 Y 속도는 유지하고 싶으면 boostVelocity.y만 덮어쓰기
-            boostVelocity.x = dir.x * dashPower;
-            boostVelocity.y = dir.y * dashPower;
+            //boostVelocity.x = dir.x * dashPower;
+            //boostVelocity.y = dir.y * dashPower;
         }
 
         public void ApplyCrouch()
         {
-            if (crouchRequested == false) return;
+            if (IsRolling)
+                return;
 
-            // 1. 점프중인지 아닌지 판정
-            if (IsGrounded == false)
+            if (crouchRequested)
             {
-                //여기 땅으로 빠르게 떨어지는 코드 필요
-                //if(IsGrounded)
-            }
-            else if (IsGrounded)
-            {
-                // 2. 아래로 내려갈 수 있는지 판정
+                // 1. 공중이면 빠른 하강
+                if (!IsGrounded)
+                {
+                    // 순간이동이 아니라 하강 속도를 강하게 주는 방식으로 처리합니다.
+                    baseVerticalVelocity += -fastFallSpeed;
+                }
+
+                // 2. 아래로 내려갈 수 있는 지면이면 관통 하강
                 Bounds box = GetCastBox();
-                //여기 아래땅으로 떨어지는 코드 필요
                 RaycastHit2D hit = Physics2D.BoxCast(
-                    box.center, box.size, 0.0f, Vector2.down, groundCheckDistance, collisionLayer);
-                if (hit.collider.gameObject.layer == 6 && moveInput == 0)
+                    box.center,
+                    box.size,
+                    0.0f,
+                    Vector2.down,
+                    groundCheckDistance + 0.05f,
+                    collisionLayer);
+
+                if (hit.collider == null) return;
+                bool canDropDown = hit.collider.gameObject.GetComponent<PlatformEffector2D>();
+
+                if (canDropDown)
                 {
-                    Debug.Log("내려갈 수 없음");
+                    //여기 아래로 내려가는 코드 써야함
+                    Debug.Log("아래로 내려가야함");
+                    //StartDropDown();
+                    return;
                 }
-                // 3. 이동입력이 있는지 판정
-                if (moveInput != 0)
-                {
-                    ApplyRoll();
-                    crouchRequested = false;
-                }
+                else Debug.Log("내려갈 수 없는 지형입니다.");
+
+                // 3. 아니면 crouch loop 진입
+                IsCrouching = true;
+                return;
             }
 
+            if (IsCrouching && moveInput != 0)
+            {
+                RequestRoll(moveInput);
+                return;
+            }
+            //else IsCrouching = false;
         }
 
         public void ApplyRoll() // 바라보는 방향으로 돌진
@@ -239,6 +296,10 @@ namespace Study.Utilities
             rollRequested = false;
             // 구르기는 보통 지상 X만
             if (IsGrounded == false) return; // 공중 구르기 허용 시 이 줄 제거
+
+            IsCrouching = false;
+            IsRolling = true;
+
             boostVelocity.x = pendingRollForward * rollPower;
             boostVelocity.y = 0f;
         }   
@@ -264,22 +325,6 @@ namespace Study.Utilities
             { 
                 stickWall = false;
             }
-        }
-
-        private void DecayBoostVelocity()
-        {
-            if (boostVelocity.sqrMagnitude < 0.05f)
-            {
-                boostVelocity = Vector2.zero;
-                return;
-            }
-            // 현재 활성 boost 종류에 따라 drag 선택 (둘 다 같으면 하나만 써도 됨)
-            float drag = boostVelocity.y != 0f ? dashDrag : rollDrag;
-            boostVelocity = Vector2.MoveTowards(
-            boostVelocity,
-            Vector2.zero,
-            drag * Time.fixedDeltaTime
-            );
         }
 
         private bool CheckGrounded()

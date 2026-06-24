@@ -10,7 +10,7 @@ namespace Study_ActionPlatformer
     public abstract class PlayerAnimStateBase
     {
         public const float INPUT_RESET_TIME = 0.3f;
-        public const float COMBO_INPUT_END_TIME = 0.9f;
+        public const float COMBO_INPUT_END_TIME = 0.6f;
 
         protected PlayerController Owner { get; }
         protected Animator Animator => Owner.Animator;

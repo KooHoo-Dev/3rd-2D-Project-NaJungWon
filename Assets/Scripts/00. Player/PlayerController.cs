@@ -15,12 +15,14 @@ namespace Study_ActionPlatformer
         // 애니메이터 상태 Tag
 
         private const string ANIM_TAG_ATTACK = "Attack";
+        private const string ANIM_TAG_ROLL = "Roll";
         private const string ANIM_TAG_MOVEMENT = "Movement";
         private const string ANIM_TAG_JUMP = "Jump";
 
         public static readonly int MOVEMENT    = Animator.StringToHash("Movement");
         public static readonly int IS_ATTACK   = Animator.StringToHash("IsAttack");
         public static readonly int IS_Crouch   = Animator.StringToHash("IsCrouch");
+        public static readonly int IS_ROLL     = Animator.StringToHash("IsRoll");
         public static readonly int IS_GROUNDED = Animator.StringToHash("IsGrounded");
         public static readonly int JUMP        = Animator.StringToHash("IsJump");
         public static readonly int DESCENDING = Animator.StringToHash("Descending");
@@ -55,12 +57,14 @@ namespace Study_ActionPlatformer
 
             StateDic.Add(Animator.StringToHash(ANIM_TAG_MOVEMENT), defaultState);
             StateDic.Add(Animator.StringToHash(ANIM_TAG_ATTACK), new AttackState(this));
-
+            StateDic.Add(Animator.StringToHash(ANIM_TAG_ROLL), new RollState(this));
         }
+
         private void Update()
         {
             UpdateAnimState();
             UpdateJumpInput();
+            UpdateDownInput();
             UpdateGroundedAnimation();
         }
 
@@ -107,16 +111,7 @@ namespace Study_ActionPlatformer
 
             Controller2D.SetMoveInput(inputVector.x);
 
-            if(SimpleInput.GetKeyDown(Key.S))
-            {
-                Animator.SetBool(IS_Crouch, true);
-                Controller2D.RequestCrouch();
-            }
-            if(SimpleInput.GetKeyUp(Key.S))
-            {
-                Animator.SetBool(IS_Crouch, false);
-                Controller2D.ExitCrouch();
-            }
+            
             if(SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Left))
             {
                 //바라보게할 위치
@@ -134,6 +129,7 @@ namespace Study_ActionPlatformer
                 // (히트박스를 뒤집기 위해서 스케일 반전을 사용)
                 Animator.transform.localScale = new Vector3(FacingDirection, 1, 1);
 
+                StopGravity();
                 Controller2D.RequestAttack(dir);
                 Animator.SetBool(IS_ATTACK, true);
             }
@@ -143,9 +139,40 @@ namespace Study_ActionPlatformer
             }
         }
 
+        public void StopGravity()
+        {
+            Controller2D.useGravity = false;
+        }
+
+        public void StopRoll()
+        {
+            Controller2D.IsRolling = false;
+        }
+
+        public void ApplyGravity()
+        {
+            Controller2D.useGravity = true;
+        }
+
         public void StopMovement()
         {
             Controller2D.SetMoveInput(0.0f);
+        }
+
+        private void UpdateDownInput()
+        {
+            if (SimpleInput.GetKeyDown(Key.S))
+            {
+                Animator.SetBool(IS_Crouch, true);
+                Controller2D.RequestCrouch();
+            }
+            Animator.SetBool(IS_ROLL, Controller2D.IsRolling);
+            if (SimpleInput.GetKeyUp(Key.S))
+            {
+                Animator.SetBool(IS_Crouch, false);
+                Controller2D.ExitCrouch();
+            }
+            
         }
 
         private void UpdateJumpInput()

@@ -13,6 +13,7 @@ namespace Study_ActionPlatformer
         {
             // 공격중엔 이동 금지
             Owner.StopMovement();
+            
         }
 
         public override void UpdateState(AnimatorStateInfo stateInfo)
@@ -21,6 +22,11 @@ namespace Study_ActionPlatformer
             if(stateInfo.normalizedTime < INPUT_RESET_TIME)
             {
                 Animator.SetBool(PlayerController.IS_ATTACK, false);
+            }
+
+            if (stateInfo.normalizedTime > COMBO_INPUT_END_TIME)
+            {
+                Owner.ApplyGravity();
             }
             /*
             // 콤보 입력구간 (30% ~ 90%)
