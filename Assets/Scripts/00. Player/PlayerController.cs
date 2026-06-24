@@ -28,7 +28,7 @@ namespace Study_ActionPlatformer
 
 
         public Animator Animator { get; private set; }
-        public Animator slashAnim;
+        public Animator[] effectAnim; //캐릭터 연출 애니메이터
 
         private SpriteRenderer SpriteRenderer { get; set; }
         private CharacterController2D Controller2D { get; set; }
@@ -110,14 +110,12 @@ namespace Study_ActionPlatformer
             if(SimpleInput.GetKeyDown(Key.S))
             {
                 Animator.SetBool(IS_Crouch, true);
-            }
-            if(SimpleInput.GetKeyDown(Key.S) && absMovement != 0)
-            {
-                Controller2D.RequestRoll(FacingDirection);
+                Controller2D.RequestCrouch();
             }
             if(SimpleInput.GetKeyUp(Key.S))
             {
                 Animator.SetBool(IS_Crouch, false);
+                Controller2D.ExitCrouch();
             }
             if(SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Left))
             {
@@ -152,16 +150,11 @@ namespace Study_ActionPlatformer
 
         private void UpdateJumpInput()
         {
-            if (SimpleInput.GetKeyDown(Key.Space))
+            if (SimpleInput.GetKeyDown(Key.W))
             {
                 // 점프가 가능한 상태인지는 CharacterController가 판단함.
                 Controller2D.RequestJump();
             }
-        }
-
-        private void UpdateSKeyInput()
-        {
-
         }
 
         private void UpdateGroundedAnimation()

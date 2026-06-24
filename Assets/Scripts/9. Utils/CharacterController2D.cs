@@ -33,7 +33,9 @@ namespace Study.Utilities
         private int     jumpCount        = 0;
         private bool    attackRequested  = false;
         private bool    jumpRequested    = false;
-        private bool    CrouchRequested  = false;
+        public bool    crouchRequested  = false;
+        public bool    rollRequested    = false;
+        public bool    stickWall        = false;
 
         private Vector2 pendingDashDirection; //마우스방향좌표
         private float   pendingRollForward; // 구르기 방향값 -1/+1:좌/우
@@ -62,7 +64,9 @@ namespace Study.Utilities
             ApplyGravaity();
             ApplyJump();
             ApplyAttack();
-            ApplyRoll();
+            ApplyCrouch();
+            //ApplyRoll();
+            //StickWall();
             DecayBoostVelocity();  // ← 매 프레임 감쇠
 
             float horizontalVelocity = moveInput * speed + boostVelocity.x;
@@ -119,7 +123,12 @@ namespace Study.Utilities
 
         public void RequestCrouch()
         {
-            CrouchRequested = true;
+            crouchRequested = true;
+        }
+
+        public void ExitCrouch()
+        {
+            crouchRequested = false;
         }
 
         #endregion
@@ -195,12 +204,33 @@ namespace Study.Utilities
 
         public void ApplyCrouch()
         {
-            if (CrouchRequested == false) return;
+            if (crouchRequested == false) return;
 
-            while(true)
+            // 1. 점프중인지 아닌지 판정
+            if (IsGrounded == false)
             {
-
+                //여기 땅으로 빠르게 떨어지는 코드 필요
+                //if(IsGrounded)
             }
+            else if (IsGrounded)
+            {
+                // 2. 아래로 내려갈 수 있는지 판정
+                Bounds box = GetCastBox();
+                //여기 아래땅으로 떨어지는 코드 필요
+                RaycastHit2D hit = Physics2D.BoxCast(
+                    box.center, box.size, 0.0f, Vector2.down, groundCheckDistance, collisionLayer);
+                if (hit.collider.gameObject.layer == 6 && moveInput == 0)
+                {
+                    Debug.Log("내려갈 수 없음");
+                }
+                // 3. 이동입력이 있는지 판정
+                if (moveInput != 0)
+                {
+                    ApplyRoll();
+                    crouchRequested = false;
+                }
+            }
+
         }
 
         public void ApplyRoll() // 바라보는 방향으로 돌진
@@ -215,7 +245,25 @@ namespace Study.Utilities
 
         private void StickWall()
         {
+            //공중에 뜬상태고 이동중 벽에 닿았을때
+            if (IsGrounded == false && moveInput != 0)
+            {
+                Bounds box = GetCastBox();
+                if (moveInput == 1.0f)
+                {
+                    RaycastHit2D hit = Physics2D.BoxCast(
+                    box.center, box.size, 0.0f, Vector2.right, groundCheckDistance, collisionLayer);
+                    stickWall = true;
+                }
+                else if(moveInput == -1.0f)
+                {
 
+                }
+            }
+            else if (IsGrounded || boostVelocity.x != 0f)
+            { 
+                stickWall = false;
+            }
         }
 
         private void DecayBoostVelocity()
