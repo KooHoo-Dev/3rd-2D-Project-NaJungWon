@@ -720,7 +720,7 @@ Transform:
   m_GameObject: {fileID: 782025976}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.2, y: 1.64, z: 0}
+  m_LocalPosition: {x: -4.49, y: -2.51, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -757,26 +757,27 @@ MonoBehaviour:
   speed: 2
   gravity: -9.81
   jumpPower: 6
-  rollPower: 20
-  dashPower: 15
-  rollDrag: 25
-  dashDrag: 20
+  dashPower: 2
+  dashDuration: 0.12
+  rollPower: 4
+  rollDuration: 0.1
   maxJumpCount: 1
   groundCheckDistance: 0.5
   skinWidth: 0.02
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 192
-  layerA:
-    serializedVersion: 2
-    m_Bits: 64
-  layerB:
+    m_Bits: 448
+  originLayer:
     serializedVersion: 2
     m_Bits: 0
+  layerA:
+    serializedVersion: 2
+    m_Bits: 320
   jumpRequested: 0
   attackRequested: 0
   crouchRequested: 0
-  fastFallSpeed: 1
+  fastFallSpeed: 0.7
+  isDropping: 0
   rollRequested: 0
   stickWall: 0
   useGravity: 1
@@ -1538,7 +1539,7 @@ GameObject:
   - component: {fileID: 1858113380}
   - component: {fileID: 1858113379}
   - component: {fileID: 1858113381}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}

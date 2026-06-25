@@ -129,7 +129,6 @@ namespace Study_ActionPlatformer
                 // (히트박스를 뒤집기 위해서 스케일 반전을 사용)
                 Animator.transform.localScale = new Vector3(FacingDirection, 1, 1);
 
-                StopGravity();
                 Controller2D.RequestAttack(dir);
                 Animator.SetBool(IS_ATTACK, true);
             }
@@ -153,9 +152,9 @@ namespace Study_ActionPlatformer
             Controller2D.SetMoveInput(0.0f);
         }
 
-        public void StopRoll()
+        public void ApplyRoll(bool apply)
         {
-            Controller2D.IsRolling = false;
+            Controller2D.IsRolling = apply;
         }
 
         
@@ -166,12 +165,12 @@ namespace Study_ActionPlatformer
             if (SimpleInput.GetKeyDown(Key.S))
             {
                 Animator.SetBool(IS_Crouch, true);
-                Controller2D.RequestCrouch();
+                Controller2D.ApplyCrouch(true);
             }
             if (SimpleInput.GetKeyUp(Key.S))
             {
                 Animator.SetBool(IS_Crouch, false);
-                Controller2D.ExitCrouch();
+                Controller2D.ApplyCrouch(false);
             }
             Animator.SetBool(IS_ROLL, Controller2D.IsRolling);
 

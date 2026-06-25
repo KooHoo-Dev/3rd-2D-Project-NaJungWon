@@ -20,10 +20,10 @@ namespace Study.Utilities
         public float     speed               = 2.0f;
         public float     gravity             = -9.81f;
         public float     jumpPower           = 8.0f;
-        public float     rollPower           = 10.0f;
-        public float     dashPower           = 6.0f;
-        public float     rollDrag            = 25.0f;   // 구르기 감쇠 (클수록 빨리 멈춤)
-        public float     dashDrag            = 20.0f;   // 돌진 감쇠
+        public float     dashPower           = 6.0f; // 공격 대쉬 거리
+        public float dashDuration = 0.12f;  // 공격 대쉬 시간(초)
+        public float     rollPower           = 10.0f; // 구르기 거리
+        public float rollDuration = 0.10f;  // 구르기 시간(초)        public float     dashDrag            = 20.0f;   // 돌진 감쇠
         public int       maxJumpCount        = 1;
         public float     groundCheckDistance = 0.5f;
         public float     skinWidth           = 0.02f;
@@ -44,14 +44,13 @@ namespace Study.Utilities
         public float fastFallSpeed = 1.0f; //빠른 하강 속도
         public bool isDropping = false;
         public bool    rollRequested = false;
-
         public bool    stickWall = false;
-
-        public bool useGravity = true;
+        public bool useGravity = true; //중력 적용
 
         private Vector2 pendingDashDirection; //마우스 방향 좌표
         private float   pendingRollForward; // 구르기 방향값 -1/+1:좌/우
         private Vector2 boostVelocity    = Vector2.zero; //이동 메서드에 의한 이동값
+        private float boostTimer = 0.0f; //대쉬/구르기 이동 시간
         private Vector3 externalDelta    = Vector3.zero; //외부 플랫폼에 의한 이동값
 
         private float   moveInput        = 0.0f; //기본 이동x값
@@ -86,15 +85,13 @@ namespace Study.Utilities
             ApplyRoll();
             //StickWall();
             ApplyGravaity();
-            DecayBoostVelocity();  // ← 매 프레임 감쇠
+            UpdateBoostMovement();  // ← 매 프레임 감쇠
             
 
             HorizontalVelocity = moveInput * speed + boostVelocity.x;
             VerticalVelocity = baseVerticalVelocity + boostVelocity.y;
 
             MoveUpPlatform();
-            
-
 
             Vector3 desireMove =
                 new Vector3(HorizontalVelocity, VerticalVelocity) * Time.fixedDeltaTime
@@ -102,9 +99,15 @@ namespace Study.Utilities
 
             externalDelta = Vector3.zero;
 
+            Bounds box = GetCastBox();
+
             Vector3 moveVector = Vector3.zero;
-            moveVector.x = ResolveAxisMovement(desireMove.x, Vector3.right);
-            moveVector.y = ResolveAxisMovement(desireMove.y, Vector3.up);
+
+            float boxX = ResolveAxisMovement(box, desireMove.x, Vector3.right);
+            box.center += new Vector3(boxX, 0, 0);
+            float boxY = ResolveAxisMovement(box, desireMove.y, Vector3.up);
+
+            moveVector = new Vector3 (boxX, boxY, 0);
 
             MoveVectorX = (Mathf.Abs(moveVector.x) > 0) ? 1 : 0;
 
@@ -148,20 +151,15 @@ namespace Study.Utilities
             return true;
         }
 
-        public void RequestCrouch()
+        public void ApplyCrouch(bool apply)
         {
-            crouchRequested = true;
+            crouchRequested = apply;
         }
 
         public void RequestRoll(float forward)
         {
             pendingRollForward = forward;
             rollRequested = true;
-        }
-
-        public void ExitCrouch()
-        {
-            crouchRequested = false;
         }
 
         #endregion
@@ -184,30 +182,31 @@ namespace Study.Utilities
             }
         }
 
-        private void DecayBoostVelocity()
+        private void UpdateBoostMovement()
         {
-            if (boostVelocity.sqrMagnitude < 0.05f)
+            if (boostTimer <= 0.0f)
             {
+                boostTimer = 0.0f;
                 boostVelocity = Vector2.zero;
                 return;
             }
-            // 현재 활성 boost 종류에 따라 drag 선택 (둘 다 같으면 하나만 써도 됨)
-            float drag = boostVelocity.y != 0f ? dashDrag : rollDrag;
-            boostVelocity = Vector2.MoveTowards(
-            boostVelocity,
-            Vector2.zero,
-            drag * (Time.fixedDeltaTime * 2)
-            );
+
+            boostTimer -= Time.fixedDeltaTime;
+
+            if (boostTimer <= 0.0f)
+            {
+                boostTimer = 0.0f;
+                boostVelocity = Vector2.zero;
+            }
         }
 
-        private float ResolveAxisMovement(float move, Vector3 axis)
+        private float ResolveAxisMovement(Bounds box, float move, Vector3 axis) //이동값 보정
         {
             if (move == 0.0f) return 0.0f;
 
             Vector3 dir = move > 0.0f ? axis : -axis;
             float distance = Mathf.Abs(move);
 
-            Bounds box = GetCastBox();
             RaycastHit2D hit = Physics2D.BoxCast(
                 box.center, box.size, 0.0f, dir, distance, collisionLayer);
 
@@ -232,7 +231,6 @@ namespace Study.Utilities
 
         private void ApplyJump()
         {
-            if (IsGrounded == false) return; //땅이 아니라면 점프불가
             if (jumpRequested == false) return;
             jumpRequested = false; //우편함을 비웁니다.
 
@@ -247,13 +245,14 @@ namespace Study.Utilities
         {
             if (attackRequested == false) return;
             attackRequested = false;
-            Vector2 dir = pendingDashDirection;
 
-            boostVelocity = dir * dashPower;
+            if (dashDuration <= 0.0f) return;
 
-            // 돌진 중 점프 Y 속도는 유지하고 싶으면 boostVelocity.y만 덮어쓰기
-            //boostVelocity.x = dir.x * dashPower;
-            //boostVelocity.y = dir.y * dashPower;
+            Vector2 dir = pendingDashDirection.normalized;
+
+            float dashSpeed = dashPower / dashDuration;   // 거리 / 시간 = 속도
+            boostVelocity = dir * dashSpeed;
+            boostTimer = dashDuration;
         }
 
         public void ApplyCrouch()
@@ -307,34 +306,31 @@ namespace Study.Utilities
         #region 플랫폼 이동 코루틴
         public void MoveUpPlatform()
         {
-            if (isDropping == false && IsGrounded == false)
+            if (isDropping == true || VerticalVelocity > 0)
             {
-                if(VerticalVelocity > 0)
-                {
-                    collisionLayer = layerA;
-                }
-                else if(VerticalVelocity <= 0)
-                {
-                    Bounds box = GetCastBox();
-                    RaycastHit2D hit = Physics2D.BoxCast(
-                        box.center,
-                        box.size,
-                        0.0f,
-                        Vector2.down,
-                        groundCheckDistance + 0.05f,
-                        collisionLayer);
-                    if (hit.collider == null) collisionLayer = originLayer;
-                    else if (VerticalVelocity <= 0 && GetCastBox().min.y + skinWidth < hit.collider.bounds.max.y)  //여기에 하강중 끼는거 보강 코드 넣어야함
-                    {
-                        collisionLayer = layerA;
-                    }
-                    else if(VerticalVelocity <=0 && GetCastBox().max.y + skinWidth < hit.collider.bounds.min.y)
-                    {
-                        collisionLayer = originLayer;
-                    }
-                }
+                collisionLayer = layerA;
+                return;
+            }
+            Bounds box = GetCastBox();
+            RaycastHit2D hit = Physics2D.BoxCast(
+                box.center,
+                box.size,
+                0.0f,
+                Vector2.down,
+                groundCheckDistance + 0.05f,
+                collisionLayer);
+            if (hit.collider == null) collisionLayer = originLayer;
+            else if (GetCastBox().min.y < hit.collider.bounds.max.y + skinWidth)  //여기에 하강중 끼는거 보강 코드 넣어야함
+            {
+                collisionLayer = layerA;
+            }
+
+            else if (GetCastBox().max.y < hit.collider.bounds.min.y + skinWidth)
+            {
+                collisionLayer = originLayer;
             }
         }
+
         public IEnumerator DropDownPlatform(Collider2D collider)
         {
             // 플레이어가 플랫폼 위 또는 겹쳐져있다면 플레이어의 CollisionLayer에서 해당 레이어 끄기
@@ -345,7 +341,8 @@ namespace Study.Utilities
             isDropping = true;
 
             // 플레이어가 플랫폼 위에서 벗어나거나 아래로 완전히 내려가면 해당 레이어 키기
-            yield return new WaitUntil(() => GetCastBox().max.y + skinWidth < platformBottom); //완전히 내려갈 때까지 기다리기
+            yield return new WaitUntil(() => GetCastBox().max.y + skinWidth < platformBottom || //완전히 내려갈 때까지 기다리기
+            GetCastBox().min.y + skinWidth > platformTop);//또는 아예 다시 올라가버리기 
 
             isDropping = false;
             collisionLayer = originLayer;
@@ -357,15 +354,16 @@ namespace Study.Utilities
         {
             if (rollRequested == false) return;
             rollRequested = false;
-            // 구르기는 보통 지상 X만
-            if (IsGrounded == false) return; // 공중 구르기 허용 시 이 줄 제거
+
+            if (IsGrounded == false) return;
+            if (rollDuration <= 0.0f) return;
 
             IsCrouching = false;
             IsRolling = true;
-            //MoveVectorX = 0;
 
-            boostVelocity.x = pendingRollForward * rollPower;
-            //boostVelocity.y = 0f;
+            float rollSpeed = rollPower / rollDuration;   // 거리 / 시간 = 속도
+            boostVelocity = new Vector2(pendingRollForward * rollSpeed, 0.0f);
+            boostTimer = rollDuration;
         }   
 
         private void StickWall()

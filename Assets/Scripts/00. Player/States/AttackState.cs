@@ -13,7 +13,7 @@ namespace Study_ActionPlatformer
         {
             // 공격중엔 이동 금지
             Owner.StopMovement();
-            
+            Owner.StopGravity();
         }
 
         public override void UpdateState(AnimatorStateInfo stateInfo)
@@ -23,24 +23,11 @@ namespace Study_ActionPlatformer
             {
                 Animator.SetBool(PlayerController.IS_ATTACK, false);
             }
+        }
 
-            if (stateInfo.normalizedTime > COMBO_INPUT_END_TIME)
-            {
-                Owner.ApplyGravity();
-            }
-            /*
-            // 콤보 입력구간 (30% ~ 90%)
-            else if(INPUT_RESET_TIME < stateInfo.normalizedTime && 
-                stateInfo.normalizedTime < COMBO_INPUT_END_TIME)
-            {
-                // 다음 콤보 입력이 없다면 입력을 받아준다
-                if(Animator.GetBool(PlayerController.IS_ATTACK) == false)
-                {
-                    Animator.SetBool(PlayerController.IS_ATTACK,
-                        SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Left));
-                }
-            }
-            */
+        public override void Exit()
+        {
+            Owner.ApplyGravity();
         }
     }
 }
