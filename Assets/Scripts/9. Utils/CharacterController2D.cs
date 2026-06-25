@@ -1,3 +1,6 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,6 +28,10 @@ namespace Study.Utilities
         public float     groundCheckDistance = 0.5f;
         public float     skinWidth           = 0.02f;
         public LayerMask collisionLayer;
+        public LayerMask originLayer;
+        public LayerMask layerA;
+        //public LayerMask layerB;
+
 
         private Rigidbody2D rBody;
         private Collider2D  col;
@@ -32,12 +39,10 @@ namespace Study.Utilities
         // 내부 상태 변수들
         private int    jumpCount        = 0;
         public bool    jumpRequested = false;
-
         public bool    attackRequested = false;
-
         public bool    crouchRequested = false;
         public float fastFallSpeed = 1.0f; //빠른 하강 속도
-
+        public bool isDropping = false;
         public bool    rollRequested = false;
 
         public bool    stickWall = false;
@@ -55,6 +60,8 @@ namespace Study.Utilities
         // 읽기 전용으로 바꿔줍니다
         public float HorizontalVelocity { get; private set; } = 0.0f; // 최종 x값
         public float VerticalVelocity { get; private set; } = 0.0f; // 최종 y값
+
+        public float MoveVectorX { get; private set; } = 0.0f; 
         public bool IsGrounded { get; private set; } = false;
         public bool IsCrouching { get; private set; } = false;
         public bool IsRolling = false;
@@ -64,7 +71,7 @@ namespace Study.Utilities
         {
             rBody = GetComponent<Rigidbody2D>();
             col = GetComponent<Collider2D>();
-
+            originLayer = collisionLayer;
             rBody.bodyType = RigidbodyType2D.Kinematic;
         }
 
@@ -80,9 +87,14 @@ namespace Study.Utilities
             //StickWall();
             ApplyGravaity();
             DecayBoostVelocity();  // ← 매 프레임 감쇠
+            
 
             HorizontalVelocity = moveInput * speed + boostVelocity.x;
             VerticalVelocity = baseVerticalVelocity + boostVelocity.y;
+
+            MoveUpPlatform();
+            
+
 
             Vector3 desireMove =
                 new Vector3(HorizontalVelocity, VerticalVelocity) * Time.fixedDeltaTime
@@ -93,6 +105,8 @@ namespace Study.Utilities
             Vector3 moveVector = Vector3.zero;
             moveVector.x = ResolveAxisMovement(desireMove.x, Vector3.right);
             moveVector.y = ResolveAxisMovement(desireMove.y, Vector3.up);
+
+            MoveVectorX = (Mathf.Abs(moveVector.x) > 0) ? 1 : 0;
 
             // 벽/바닥 충돌 시 해당 축 속도 제거 (점프와 동일 패턴)
             if (moveVector.x != desireMove.x) boostVelocity.x = 0f;
@@ -197,7 +211,7 @@ namespace Study.Utilities
             RaycastHit2D hit = Physics2D.BoxCast(
                 box.center, box.size, 0.0f, dir, distance, collisionLayer);
 
-            if (hit.collider == null) return move;
+            if (hit.collider == null) return move; 
 
             float allowed = Mathf.Max(0, hit.distance - skinWidth);
 
@@ -218,6 +232,7 @@ namespace Study.Utilities
 
         private void ApplyJump()
         {
+            if (IsGrounded == false) return; //땅이 아니라면 점프불가
             if (jumpRequested == false) return;
             jumpRequested = false; //우편함을 비웁니다.
 
@@ -271,24 +286,72 @@ namespace Study.Utilities
                 if (canDropDown)
                 {
                     //여기 아래로 내려가는 코드 써야함
-                    Debug.Log("아래로 내려가야함");
-                    //StartDropDown();
+                    //Debug.Log("아래로 내려가야함");
+                    StartCoroutine(DropDownPlatform(hit.collider));
                     return;
                 }
-                else Debug.Log("내려갈 수 없는 지형입니다.");
+                //else Debug.Log("내려갈 수 없는 지형입니다.");
 
                 // 3. 아니면 crouch loop 진입
                 IsCrouching = true;
-                return;
-            }
 
-            if (IsCrouching && moveInput != 0)
-            {
-                RequestRoll(moveInput);
-                return;
+                if (IsCrouching && MoveVectorX != 0)
+                {
+                    RequestRoll(moveInput);
+                    return;
+                }
+                //else IsCrouching = false;
             }
-            //else IsCrouching = false;
         }
+
+        #region 플랫폼 이동 코루틴
+        public void MoveUpPlatform()
+        {
+            if (isDropping == false && IsGrounded == false)
+            {
+                if(VerticalVelocity > 0)
+                {
+                    collisionLayer = layerA;
+                }
+                else if(VerticalVelocity <= 0)
+                {
+                    Bounds box = GetCastBox();
+                    RaycastHit2D hit = Physics2D.BoxCast(
+                        box.center,
+                        box.size,
+                        0.0f,
+                        Vector2.down,
+                        groundCheckDistance + 0.05f,
+                        collisionLayer);
+                    if (hit.collider == null) collisionLayer = originLayer;
+                    else if (VerticalVelocity <= 0 && GetCastBox().min.y + skinWidth < hit.collider.bounds.max.y)  //여기에 하강중 끼는거 보강 코드 넣어야함
+                    {
+                        collisionLayer = layerA;
+                    }
+                    else if(VerticalVelocity <=0 && GetCastBox().max.y + skinWidth < hit.collider.bounds.min.y)
+                    {
+                        collisionLayer = originLayer;
+                    }
+                }
+            }
+        }
+        public IEnumerator DropDownPlatform(Collider2D collider)
+        {
+            // 플레이어가 플랫폼 위 또는 겹쳐져있다면 플레이어의 CollisionLayer에서 해당 레이어 끄기
+            float platformTop = collider.bounds.max.y;
+            float platformBottom = collider.bounds.min.y;
+
+            collisionLayer = layerA;
+            isDropping = true;
+
+            // 플레이어가 플랫폼 위에서 벗어나거나 아래로 완전히 내려가면 해당 레이어 키기
+            yield return new WaitUntil(() => GetCastBox().max.y + skinWidth < platformBottom); //완전히 내려갈 때까지 기다리기
+
+            isDropping = false;
+            collisionLayer = originLayer;
+        }
+
+        #endregion
 
         public void ApplyRoll() // 바라보는 방향으로 돌진
         {
@@ -299,9 +362,10 @@ namespace Study.Utilities
 
             IsCrouching = false;
             IsRolling = true;
+            //MoveVectorX = 0;
 
             boostVelocity.x = pendingRollForward * rollPower;
-            boostVelocity.y = 0f;
+            //boostVelocity.y = 0f;
         }   
 
         private void StickWall()

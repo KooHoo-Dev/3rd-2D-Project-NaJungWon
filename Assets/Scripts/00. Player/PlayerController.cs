@@ -97,7 +97,6 @@ namespace Study_ActionPlatformer
         {
             Vector2 inputVector = SimpleInput.GetMoveAxisRaw();
             float absMovement = Mathf.Abs(inputVector.x);
-            Animator.SetFloat(MOVEMENT, absMovement);
 
             if (absMovement > 0) // 이동량이 있을때
             {
@@ -110,9 +109,10 @@ namespace Study_ActionPlatformer
             }
 
             Controller2D.SetMoveInput(inputVector.x);
+            Animator.SetFloat(MOVEMENT, Controller2D.MoveVectorX);
 
-            
-            if(SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Left))
+
+            if (SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Left))
             {
                 //바라보게할 위치
                 Vector3 goalPosition = Cursor.position;
@@ -138,10 +138,19 @@ namespace Study_ActionPlatformer
                 Animator.SetBool(IS_ATTACK, true);
             }
         }
+        #region 입력 보내기
+        public void ApplyGravity()
+        {
+            Controller2D.useGravity = true;
+        }
 
         public void StopGravity()
         {
             Controller2D.useGravity = false;
+        }
+        public void StopMovement()
+        {
+            Controller2D.SetMoveInput(0.0f);
         }
 
         public void StopRoll()
@@ -149,15 +158,8 @@ namespace Study_ActionPlatformer
             Controller2D.IsRolling = false;
         }
 
-        public void ApplyGravity()
-        {
-            Controller2D.useGravity = true;
-        }
-
-        public void StopMovement()
-        {
-            Controller2D.SetMoveInput(0.0f);
-        }
+        
+        #endregion
 
         private void UpdateDownInput()
         {
@@ -166,13 +168,13 @@ namespace Study_ActionPlatformer
                 Animator.SetBool(IS_Crouch, true);
                 Controller2D.RequestCrouch();
             }
-            Animator.SetBool(IS_ROLL, Controller2D.IsRolling);
             if (SimpleInput.GetKeyUp(Key.S))
             {
                 Animator.SetBool(IS_Crouch, false);
                 Controller2D.ExitCrouch();
             }
-            
+            Animator.SetBool(IS_ROLL, Controller2D.IsRolling);
+
         }
 
         private void UpdateJumpInput()

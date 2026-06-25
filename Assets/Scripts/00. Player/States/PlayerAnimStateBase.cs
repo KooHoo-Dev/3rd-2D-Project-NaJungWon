@@ -9,7 +9,8 @@ namespace Study_ActionPlatformer
     // - 보스 상태패턴과는 다르게 순수 C# 클래스로 작성되어있습니다.
     public abstract class PlayerAnimStateBase
     {
-        public const float INPUT_RESET_TIME = 0.3f;
+        public const float INPUT_ATTACK_TIME = 0.3f;
+        public const float INPUT_ROLL_TIME = 0.5f;
         public const float COMBO_INPUT_END_TIME = 0.6f;
 
         protected PlayerController Owner { get; }

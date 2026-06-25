@@ -720,7 +720,7 @@ Transform:
   m_GameObject: {fileID: 782025976}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.5, y: -3.4, z: 0}
+  m_LocalPosition: {x: 3.2, y: 1.64, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -740,7 +740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec1c7a4b66ce0d468832b233775fc0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Study_ActionPlatformer.PlayerController
-  slashAnim: {fileID: 675922101621483938}
+  effectAnim: []
   <Cursor>k__BackingField: {fileID: 1437768488}
 --- !u!114 &782025980
 MonoBehaviour:
@@ -757,7 +757,7 @@ MonoBehaviour:
   speed: 2
   gravity: -9.81
   jumpPower: 6
-  rollPower: 10
+  rollPower: 20
   dashPower: 15
   rollDrag: 25
   dashDrag: 20
@@ -766,8 +766,21 @@ MonoBehaviour:
   skinWidth: 0.02
   collisionLayer:
     serializedVersion: 2
+    m_Bits: 192
+  layerA:
+    serializedVersion: 2
     m_Bits: 64
+  layerB:
+    serializedVersion: 2
+    m_Bits: 0
+  jumpRequested: 0
+  attackRequested: 0
+  crouchRequested: 0
+  fastFallSpeed: 1
+  rollRequested: 0
   stickWall: 0
+  useGravity: 1
+  IsRolling: 0
   showCastGizmos: 1
   castPreviewDistance: 0.5
 --- !u!50 &782025981
@@ -1368,7 +1381,7 @@ GameObject:
   - component: {fileID: 1810983025}
   - component: {fileID: 1810983027}
   - component: {fileID: 1810983028}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Ground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1792,6 +1805,12 @@ MonoBehaviour:
   needRecordObject: []
   disableWhilePlayback: []
   maxRecordedTicks: 15000
+  playbackTicksPerSecond: 50
+  replaySpeed: 1
+  rewindPlaybackTicksPerSecond: 150
+  rewindSpeed: 3
+  interpolateLoopAnimation: 1
+  interpolatePosition: 1
   frames: []
 --- !u!114 &2079670937
 MonoBehaviour:
@@ -1946,11 +1965,6 @@ Transform:
 --- !u!4 &675922101621483937 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1508242270148755794, guid: 7430e69a7aef8244c8041897095d152c, type: 3}
-  m_PrefabInstance: {fileID: 7908837241903985247}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &675922101621483938 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 434239483520601356, guid: 7430e69a7aef8244c8041897095d152c, type: 3}
   m_PrefabInstance: {fileID: 7908837241903985247}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1153386799525346437
