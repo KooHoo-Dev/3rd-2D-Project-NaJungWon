@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Net;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 namespace Study.Utilities
 {
@@ -29,7 +29,7 @@ namespace Study.Utilities
         public float     skinWidth           = 0.02f;
         public LayerMask collisionLayer;
         public LayerMask originLayer;
-        public LayerMask layerA;
+        public LayerMask droppingLayer;
         //public LayerMask layerB;
 
 
@@ -46,6 +46,11 @@ namespace Study.Utilities
         public bool    rollRequested = false;
         public bool    stickWall = false;
         public bool useGravity = true; //중력 적용
+
+        // 계단 오르기 변수
+        public LayerMask stairLayer;         // 계단 레이어
+        public float maxStepHeight = 0.3f;   // 한 번에 올라갈 수 있는 최대 계단 높이
+        public int stepCheckCount = 4;       // 위로 몇 번 나눠서 검사할지
 
         private Vector2 pendingDashDirection; //마우스 방향 좌표
         private float   pendingRollForward; // 구르기 방향값 -1/+1:좌/우
@@ -83,7 +88,6 @@ namespace Study.Utilities
             ApplyAttack();
             ApplyCrouch();
             ApplyRoll();
-            //StickWall();
             ApplyGravaity();
             UpdateBoostMovement();  // ← 매 프레임 감쇠
             
@@ -91,7 +95,7 @@ namespace Study.Utilities
             HorizontalVelocity = moveInput * speed + boostVelocity.x;
             VerticalVelocity = baseVerticalVelocity + boostVelocity.y;
 
-            MoveUpPlatform();
+            MoveToPlatform();
 
             Vector3 desireMove =
                 new Vector3(HorizontalVelocity, VerticalVelocity) * Time.fixedDeltaTime
@@ -103,22 +107,40 @@ namespace Study.Utilities
 
             Vector3 moveVector = Vector3.zero;
 
-            float boxX = ResolveAxisMovement(box, desireMove.x, Vector3.right);
-            box.center += new Vector3(boxX, 0, 0);
-            float boxY = ResolveAxisMovement(box, desireMove.y, Vector3.up);
+            //StickWall(box, desireMove.x, Vector3.right);
 
-            moveVector = new Vector3 (boxX, boxY, 0);
+            if (TryResolveStairMovement(box, desireMove.x, Vector3.right, out Vector2 stepMove))
+            {
+                moveVector.x = stepMove.x;
+                moveVector.y = stepMove.y;
+
+                
+                // 계단을 올라가는 중에는 아래로 눌리는 속도를 제거합니다.
+                if (stepMove.y > 0.0f && baseVerticalVelocity < 0.0f)
+                {
+                    baseVerticalVelocity = 0.0f;
+                    //VerticalVelocity = 0.0f;
+                }
+            }
+            else
+            {
+                float boxX = ResolveAxisMovement(box, desireMove.x, Vector3.right);
+                box.center += new Vector3(boxX, 0, 0);
+                float boxY = ResolveAxisMovement(box, desireMove.y, Vector3.up);
+
+                moveVector = new Vector3(boxX, boxY, 0);
+
+                // 벽/바닥 충돌 시 해당 축 속도 제거 (점프와 동일 패턴)
+                if (moveVector.x != desireMove.x) boostVelocity.x = 0f;
+                if (moveVector.y != desireMove.y)
+                {
+                    baseVerticalVelocity = 0.0f;
+                    boostVelocity.y = 0f;
+                    VerticalVelocity = 0.0f;
+                }
+            }
 
             MoveVectorX = (Mathf.Abs(moveVector.x) > 0) ? 1 : 0;
-
-            // 벽/바닥 충돌 시 해당 축 속도 제거 (점프와 동일 패턴)
-            if (moveVector.x != desireMove.x) boostVelocity.x = 0f;
-            if (moveVector.y != desireMove.y)
-            {
-                baseVerticalVelocity = 0.0f;
-                boostVelocity.y = 0f;
-                VerticalVelocity = 0.0f;
-            } 
 
             rBody.MovePosition(transform.position + moveVector);
         }
@@ -164,6 +186,62 @@ namespace Study.Utilities
 
         #endregion
 
+        #region 플랫폼 이동 (isStuck으로 내려갈때 버벅임 해결할 것)
+        public void MoveToPlatform() //기본 플랫폼 이동 
+        {
+            if (isDropping == true || VerticalVelocity > 0)
+            {
+                collisionLayer = droppingLayer;
+                return;
+            }
+
+            Bounds box = GetCastBox();
+            RaycastHit2D hit = Physics2D.BoxCast(
+                box.center,
+                box.size,
+                0.0f,
+                Vector2.down,
+                groundCheckDistance,
+                collisionLayer);
+
+            if (hit.collider == null)
+            {
+                collisionLayer = originLayer;
+                return;
+            }
+
+            //하강중 벽에 낌처리
+            bool isStuck =
+                VerticalVelocity <= 0 &&
+                hit.collider.gameObject.GetComponent<PlatformEffector2D>() &&
+                (box.min.y + skinWidth) < hit.collider.bounds.max.y;
+
+            if (isStuck)
+            {
+                StartCoroutine(DropDownPlatform(hit.collider));
+            }
+        }
+
+        public IEnumerator DropDownPlatform(Collider2D collider)
+        {
+            // 플레이어가 플랫폼 위 또는 겹쳐져있다면 플레이어의 CollisionLayer에서 해당 레이어 끄기
+            float platformTop = collider.bounds.max.y;
+            float platformBottom = collider.bounds.min.y;
+
+            collisionLayer = droppingLayer;
+            isDropping = true;
+
+            // 플레이어가 플랫폼 위에서 벗어나거나 아래로 완전히 내려가면 해당 레이어 키기
+            yield return new WaitUntil(() =>
+            GetCastBox().max.y + skinWidth < platformBottom || //완전히 내려갈 때까지 기다리기
+            GetCastBox().min.y + skinWidth > platformTop);//또는 아예 다시 올라가버리기 
+
+            isDropping = false;
+            collisionLayer = originLayer;
+        }
+
+        #endregion
+
         #region Private Methods (운동 파이프라인)
 
         private void ApplyGravaity()
@@ -200,7 +278,7 @@ namespace Study.Utilities
             }
         }
 
-        private float ResolveAxisMovement(Bounds box, float move, Vector3 axis) //이동값 보정
+        private float ResolveAxisMovement(Bounds box, float move, Vector3 axis) //기본 이동값 보정
         {
             if (move == 0.0f) return 0.0f;
 
@@ -217,6 +295,87 @@ namespace Study.Utilities
             return Mathf.Sign(move) * allowed;
         }
 
+        private bool TryResolveStairMovement(Bounds box, float moveX, Vector3 axis, out Vector2 stairMove) //계단 이동값 보정
+        {
+            stairMove = Vector2.zero;
+
+            if (moveX == 0.0f) return false;
+            if (IsGrounded == false || baseVerticalVelocity > 0.0f) return false;
+
+            Vector3 dir = moveX > 0.0f ? axis : -axis;
+            float distance = Mathf.Abs(moveX);
+
+            RaycastHit2D hit = Physics2D.BoxCast(
+                box.center,
+                box.size,
+                0.0f,
+                dir,
+                distance,
+                collisionLayer);
+
+            if (hit.collider == null)
+                return false;
+
+            // 레이어가 계단이 아니면 false
+            if (hit.collider.gameObject.layer != 8)
+            {
+                //Debug.Log("계단 레이어 아님");
+                return false;
+            }
+
+            int count = 0; // 무한반복 해제용 안전장치
+
+            while(true) //위로 조금씩 올려서 다시 이동시키기
+            {
+                if (count > 5)
+                {
+                    //Debug.Log("횟수 초과");
+                    break;
+                }
+
+                float stepY = maxStepHeight;
+
+                RaycastHit2D upHit = Physics2D.BoxCast(
+                    box.center,
+                    box.size,
+                    0.0f,
+                    Vector2.up,
+                    stepY,
+                    collisionLayer);
+
+                if (upHit.collider != null)
+                {
+                    count++;
+                    stepY += maxStepHeight;
+                    
+                    //Debug.Log("카운트 증가");
+                    continue;
+                }
+
+                box.center += new Vector3(0, stepY, 0);
+
+                RaycastHit2D moveHit = Physics2D.BoxCast(
+                    box.center,
+                    box.size,
+                    0.0f,
+                    dir,
+                    distance,
+                    collisionLayer);
+
+                if (moveHit.collider == null)
+                {
+                    stairMove = new Vector2(moveX, stepY);
+                    return true;
+                }
+                else
+                {
+                    Debug.LogError("이동 불가");
+                    break;
+                }
+            }
+            return false;
+        }
+
         private Bounds GetCastBox()
         {
             Bounds box = col.bounds; 
@@ -231,10 +390,19 @@ namespace Study.Utilities
 
         private void ApplyJump()
         {
+            if(IsGrounded == false)
+            {
+                jumpRequested = false;
+                return;
+            }
             if (jumpRequested == false) return;
             jumpRequested = false; //우편함을 비웁니다.
 
             if (jumpCount >= maxJumpCount) return;
+
+            if (useGravity == false) useGravity = true; //중력값 미적용 상태라면 키기
+            boostVelocity = Vector2.zero; // 점프시 남은 공격값 삭제
+            boostTimer = 0f;
 
             baseVerticalVelocity = jumpPower;
             jumpCount++;
@@ -247,6 +415,8 @@ namespace Study.Utilities
             attackRequested = false;
 
             if (dashDuration <= 0.0f) return;
+
+            baseVerticalVelocity = 0; // 공격시 남은 점프값 삭제
 
             Vector2 dir = pendingDashDirection.normalized;
 
@@ -265,7 +435,7 @@ namespace Study.Utilities
                 // 1. 공중이면 빠른 하강
                 if (!IsGrounded)
                 {
-                    // 순간이동이 아니라 하강 속도를 강하게 주는 방식으로 처리합니다.
+                    //하강 속도를 강하게 주는 방식으로 처리.
                     baseVerticalVelocity += -fastFallSpeed;
                 }
 
@@ -276,7 +446,7 @@ namespace Study.Utilities
                     box.size,
                     0.0f,
                     Vector2.down,
-                    groundCheckDistance + 0.05f,
+                    groundCheckDistance,
                     collisionLayer);
 
                 if (hit.collider == null) return;
@@ -303,54 +473,7 @@ namespace Study.Utilities
             }
         }
 
-        #region 플랫폼 이동 코루틴
-        public void MoveUpPlatform()
-        {
-            if (isDropping == true || VerticalVelocity > 0)
-            {
-                collisionLayer = layerA;
-                return;
-            }
-            Bounds box = GetCastBox();
-            RaycastHit2D hit = Physics2D.BoxCast(
-                box.center,
-                box.size,
-                0.0f,
-                Vector2.down,
-                groundCheckDistance + 0.05f,
-                collisionLayer);
-            if (hit.collider == null) collisionLayer = originLayer;
-            else if (GetCastBox().min.y < hit.collider.bounds.max.y + skinWidth)  //여기에 하강중 끼는거 보강 코드 넣어야함
-            {
-                collisionLayer = layerA;
-            }
-
-            else if (GetCastBox().max.y < hit.collider.bounds.min.y + skinWidth)
-            {
-                collisionLayer = originLayer;
-            }
-        }
-
-        public IEnumerator DropDownPlatform(Collider2D collider)
-        {
-            // 플레이어가 플랫폼 위 또는 겹쳐져있다면 플레이어의 CollisionLayer에서 해당 레이어 끄기
-            float platformTop = collider.bounds.max.y;
-            float platformBottom = collider.bounds.min.y;
-
-            collisionLayer = layerA;
-            isDropping = true;
-
-            // 플레이어가 플랫폼 위에서 벗어나거나 아래로 완전히 내려가면 해당 레이어 키기
-            yield return new WaitUntil(() => GetCastBox().max.y + skinWidth < platformBottom || //완전히 내려갈 때까지 기다리기
-            GetCastBox().min.y + skinWidth > platformTop);//또는 아예 다시 올라가버리기 
-
-            isDropping = false;
-            collisionLayer = originLayer;
-        }
-
-        #endregion
-
-        public void ApplyRoll() // 바라보는 방향으로 돌진
+        public void ApplyRoll() // 바라보는 방향으로 돌진 (경사 따라가게 수정할것)
         {
             if (rollRequested == false) return;
             rollRequested = false;
@@ -366,26 +489,36 @@ namespace Study.Utilities
             boostTimer = rollDuration;
         }   
 
-        private void StickWall()
+        private void StickWall(Bounds box, float move, Vector3 axis) // 만들어야함
         {
-            //공중에 뜬상태고 이동중 벽에 닿았을때
-            if (IsGrounded == false && moveInput != 0)
+            //1. 공중아니면 안됌
+            if (IsGrounded == false)
             {
-                Bounds box = GetCastBox();
-                if (moveInput == 1.0f)
-                {
-                    RaycastHit2D hit = Physics2D.BoxCast(
-                    box.center, box.size, 0.0f, Vector2.right, groundCheckDistance, collisionLayer);
-                    stickWall = true;
-                }
-                else if(moveInput == -1.0f)
-                {
-
-                }
+                if (stickWall) stickWall = false;
+                return;
             }
-            else if (IsGrounded || boostVelocity.x != 0f)
-            { 
-                stickWall = false;
+
+            if (move == 0.0f) return;
+
+            Vector3 dir = move > 0.0f ? axis : -axis;
+            float distance = Mathf.Abs(move);
+
+            RaycastHit2D hit = Physics2D.BoxCast(
+                box.center, box.size, 0.0f, dir, distance, collisionLayer);
+
+            //2. 입력 방향에 붙을수 있는 벽이 없으면 리턴 (레이어 설정 Wall등으로 다르게처리해야할듯)
+            if (hit.collider == null) return;
+
+            if(moveInput != 0)
+            {
+                stickWall = true;
+                //3.벽에 붙은상태로 벽방향이 아닌 뚫린 방향 으로 입력값이 존재하면 벽붙기 상태가 해제됌
+
+            }
+            // w(점프)입력시 붙은 위치에서 대각선방향으로 공중제비를 시전. 
+            if (stickWall && jumpRequested)
+            {
+
             }
         }
 
@@ -396,6 +529,14 @@ namespace Study.Utilities
                 box.center, box.size, 0.0f, Vector2.down, groundCheckDistance, collisionLayer);
             bool result = (hit.collider != null);
 
+            // 현재 바닥이 땅인지 계단인지 체크
+            if (result)
+            {
+                bool Stair = (hit.collider.gameObject.layer == 8);
+                collisionLayer = Stair ? droppingLayer : originLayer;
+            }
+            
+            
             return result;
         }
 

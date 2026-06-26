@@ -770,7 +770,7 @@ MonoBehaviour:
   originLayer:
     serializedVersion: 2
     m_Bits: 0
-  layerA:
+  droppingLayer:
     serializedVersion: 2
     m_Bits: 320
   jumpRequested: 0
@@ -781,6 +781,11 @@ MonoBehaviour:
   rollRequested: 0
   stickWall: 0
   useGravity: 1
+  stairLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  maxStepHeight: 0.05
+  stepCheckCount: 4
   IsRolling: 0
   showCastGizmos: 1
   castPreviewDistance: 0.5
@@ -1614,14 +1619,14 @@ Transform:
   m_GameObject: {fileID: 1858113378}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 2.1566, y: -1.9634, z: 0}
-  m_LocalScale: {x: 7.379825, y: 1, z: 1}
+  m_LocalPosition: {x: 2.1441, y: -1.9571, z: 0}
+  m_LocalScale: {x: 7.3709464, y: 1.0263424, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
---- !u!61 &1858113381
-BoxCollider2D:
+--- !u!60 &1858113381
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1664,8 +1669,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: 0.5}
+      - {x: -0.0012384157, y: -3.193922}
+      - {x: 0.4290055, y: -0.026034236}
+      - {x: 0.5, y: 0.5}
+  m_UseDelaunayMesh: 1
 --- !u!1 &1903682063
 GameObject:
   m_ObjectHideFlags: 0
