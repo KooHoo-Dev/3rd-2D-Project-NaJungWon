@@ -25,7 +25,9 @@ namespace Study_ActionPlatformer
         public static readonly int IS_ROLL     = Animator.StringToHash("IsRoll");
         public static readonly int IS_GROUNDED = Animator.StringToHash("IsGrounded");
         public static readonly int JUMP        = Animator.StringToHash("IsJump");
-        public static readonly int DESCENDING = Animator.StringToHash("Descending");
+        public static readonly int IS_FLIP     = Animator.StringToHash("IsFlip");
+        public static readonly int DESCENDING  = Animator.StringToHash("Descending");
+        public static readonly int STICK_WALL = Animator.StringToHash("StickWall");
 
 
 
@@ -43,6 +45,10 @@ namespace Study_ActionPlatformer
         private PlayerAnimStateBase currentState; // 상태객체를 담아서 제어하기 위한 빈 객체 변수
         
         private bool prevIsGrounded = false;
+
+        private bool prevCrouchHeld = false;
+        private bool prevMoveHeld = false;
+        private float prevHorizontalRaw = 0.0f;
 
         [field: SerializeField] private Transform Cursor { get; set; }
 
@@ -65,7 +71,9 @@ namespace Study_ActionPlatformer
             UpdateAnimState();
             UpdateJumpInput();
             UpdateDownInput();
+            UpdateRollInput();
             UpdateGroundedAnimation();
+            SyncFacingVisual();
         }
 
         private void UpdateAnimState()
@@ -92,96 +100,107 @@ namespace Study_ActionPlatformer
             currentState.UpdateState(stateInfo);
         }
 
+        private void SyncFacingVisual()
+        {
+            FacingDirection = Controller2D.FacingDirection;
+            Animator.transform.localScale = new Vector3(FacingDirection, 1, 1);
+        }
+
         // 아래부터는 상태 클래스들이 사용하는 공용함수들입니다
         public void HandleMovement()
         {
             Vector2 inputVector = SimpleInput.GetMoveAxisRaw();
             float absMovement = Mathf.Abs(inputVector.x);
 
-            if (absMovement > 0) // 이동량이 있을때
+            if (absMovement > 0.0f)
             {
-                // 삼항 연산자로 정면을 설정해준다
-                FacingDirection = (inputVector.x < 0) ? -1 : 1;
-
-                // x 스케일을 반전해서 좌우를 뒤집는다.
-                // (히트박스를 뒤집기 위해서 스케일 반전을 사용)
-                Animator.transform.localScale = new Vector3(FacingDirection, 1, 1);
+                int inputFacing = (inputVector.x < 0.0f) ? -1 : 1;
+                Controller2D.SetFacingDirection(inputFacing);
             }
 
             Controller2D.SetMoveInput(inputVector.x);
-            Animator.SetFloat(MOVEMENT, Controller2D.MoveVectorX);
 
+            Animator.SetFloat(MOVEMENT, Controller2D.MoveVectorX);
+            Animator.SetBool(STICK_WALL, Controller2D.stickWall);
 
             if (SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Left))
             {
-                //바라보게할 위치
                 Vector3 goalPosition = Cursor.position;
-                //내위치
                 Vector3 myPosition = transform.position;
-
-                // 방향 벡터 구하기(목표 위치 - 내 위치)
                 Vector3 dir = (goalPosition - myPosition);
 
-                // 삼항 연산자로 정면을 설정해준다
-                FacingDirection = (dir.x < 0) ? -1 : 1;
-
-                // x 스케일을 반전해서 좌우를 뒤집는다.
-                // (히트박스를 뒤집기 위해서 스케일 반전을 사용)
-                Animator.transform.localScale = new Vector3(FacingDirection, 1, 1);
+                if (Mathf.Abs(dir.x) > 0.001f)
+                {
+                    int attackFacing = (dir.x < 0.0f) ? -1 : 1;
+                    Controller2D.SetFacingDirection(attackFacing);
+                }
 
                 Controller2D.RequestAttack(dir);
                 Animator.SetBool(IS_ATTACK, true);
             }
+
             if (SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Right))
             {
                 Animator.SetBool(IS_ATTACK, true);
             }
         }
-        #region 입력 보내기
-        public void ApplyGravity()
-        {
-            Controller2D.useGravity = true;
-        }
-
-        public void StopGravity()
-        {
-            Controller2D.useGravity = false;
-        }
-        public void StopMovement()
-        {
-            Controller2D.SetMoveInput(0.0f);
-        }
-
-        public void ApplyRoll(bool apply)
-        {
-            Controller2D.IsRolling = apply;
-        }
-
-        
-        #endregion
 
         private void UpdateDownInput()
         {
-            if (SimpleInput.GetKeyDown(Key.S))
-            {
-                Animator.SetBool(IS_Crouch, true);
-                Controller2D.ApplyCrouch(true);
-            }
-            if (SimpleInput.GetKeyUp(Key.S))
-            {
-                Animator.SetBool(IS_Crouch, false);
-                Controller2D.ApplyCrouch(false);
-            }
-            Animator.SetBool(IS_ROLL, Controller2D.IsRolling);
+            bool crouchHeld = SimpleInput.GetKey(Key.S);
+            float horizontalRaw = SimpleInput.GetAxisHorizontalRaw();
 
+            bool moveHeld = !Mathf.Approximately(horizontalRaw, 0.0f);
+
+            Controller2D.RequestCrouch(crouchHeld);
+
+            // 이동 중이면 crouch 애니메이션은 무시
+            Animator.SetBool(IS_Crouch, crouchHeld && !moveHeld && !Controller2D.IsRolling);
+            Animator.SetBool(IS_ROLL, Controller2D.IsRolling);
+        }
+
+        private void UpdateRollInput()
+        {
+            bool crouchHeld = SimpleInput.GetKey(Key.S);
+            float horizontalRaw = SimpleInput.GetAxisHorizontalRaw();
+
+            bool moveHeld = !Mathf.Approximately(horizontalRaw, 0.0f);
+
+            // S 재입력
+            bool crouchDown = crouchHeld && !prevCrouchHeld;
+            // 이동 재입력
+            bool moveReInput = false;
+
+            // 0 -> 좌/우 입력 시작
+            if (!prevMoveHeld && moveHeld)
+            {
+                moveReInput = true;
+            }
+
+            // 카타나 제로식 구르기 판정
+            if (crouchHeld && moveHeld && (crouchDown || moveReInput) && Controller2D.CanStartRoll)
+            {
+                Controller2D.RequestRoll(Mathf.Sign(horizontalRaw));
+            }
+
+            prevCrouchHeld = crouchHeld;
+            prevMoveHeld = moveHeld;
+            prevHorizontalRaw = horizontalRaw;
         }
 
         private void UpdateJumpInput()
         {
             if (SimpleInput.GetKeyDown(Key.W))
             {
-                // 점프가 가능한 상태인지는 CharacterController가 판단함.
-                Controller2D.RequestJump();
+                if (Controller2D.stickWall)
+                {
+                    Controller2D.RequestFlip();
+                    Animator.SetTrigger(IS_FLIP);
+                }
+                else
+                {
+                    Controller2D.RequestJump();
+                }
             }
         }
 
@@ -205,5 +224,23 @@ namespace Study_ActionPlatformer
 
             prevIsGrounded = isGrounded;
         }
+
+        #region 입력 보내기
+        public void ApplyGravity(bool apply)
+        {
+            Controller2D.useGravity = apply;
+        }
+
+        public void StopMovement()
+        {
+            Controller2D.SetMoveInput(0.0f);
+        }
+
+        public void ApplyRoll(bool apply)
+        {
+            Controller2D.IsRolling = apply;
+        }
+
+        #endregion
     }
 }

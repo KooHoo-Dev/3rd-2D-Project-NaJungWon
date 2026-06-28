@@ -13,7 +13,7 @@ namespace Study_ActionPlatformer
         {
             // 공격중엔 이동 금지
             Owner.StopMovement();
-            Owner.StopGravity();
+            Owner.ApplyGravity(false);
         }
 
         public override void UpdateState(AnimatorStateInfo stateInfo)
@@ -27,7 +27,7 @@ namespace Study_ActionPlatformer
 
         public override void Exit()
         {
-            Owner.ApplyGravity();
+            Owner.ApplyGravity(true);
         }
     }
 }
