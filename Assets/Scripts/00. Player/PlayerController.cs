@@ -125,18 +125,22 @@ namespace Study_ActionPlatformer
 
             if (SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Left))
             {
-                Vector3 goalPosition = Cursor.position;
-                Vector3 myPosition = transform.position;
-                Vector3 dir = (goalPosition - myPosition);
+                //주의사항: Vector3로 받은 경우 Vector2로 자동변환이 가능하기 때문에 벡터값을 통일하거나 바꾸기전 z값을 0으로 변경할 것
+                Vector2 goalPosition = Cursor.position;
+                Vector2 myPosition = transform.position;
+                Vector2 dir = (goalPosition - myPosition);
 
                 if (Mathf.Abs(dir.x) > 0.001f)
                 {
                     int attackFacing = (dir.x < 0.0f) ? -1 : 1;
-                    Controller2D.SetFacingDirection(attackFacing);
+                    Controller2D.SetFacingDirection(attackFacing); //정면 방향 전환
                 }
 
-                Controller2D.RequestAttack(dir);
+                Controller2D.RequestAttack(dir); // 컨트롤러 2D로 마우스 방향 벡터 전달
                 Animator.SetBool(IS_ATTACK, true);
+
+                effectAnim[0].gameObject.transform.right = dir.normalized;
+                effectAnim[0].transform.localScale = new Vector3(1, FacingDirection, 1);
             }
 
             if (SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Right))
@@ -216,7 +220,9 @@ namespace Study_ActionPlatformer
             {
                 // VerticalVelocity가 0보다 크면 => 상승
                 if (Controller2D.VerticalVelocity > 0.0f)
+                {
                     Animator.SetTrigger(JUMP);
+                }
                 // 아니면 하강
                 else
                     Animator.SetTrigger(DESCENDING);

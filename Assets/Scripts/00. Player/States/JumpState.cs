@@ -1,16 +1,24 @@
 using UnityEngine;
 
-public class JumpState : MonoBehaviour
+namespace Study_ActionPlatformer
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class JumpState : PlayerAnimStateBase
     {
-        
-    }
+        public JumpState(PlayerController owner) : base(owner) { }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override void Enter()
+        {
+
+        }
+
+        public override void UpdateState(AnimatorStateInfo stateInfo)
+        {
+
+        }
+
+        public override void Exit()
+        {
+
+        }
     }
 }

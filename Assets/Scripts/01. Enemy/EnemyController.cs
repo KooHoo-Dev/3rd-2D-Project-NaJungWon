@@ -15,13 +15,19 @@ namespace Study_ActionPlatformer
         
         // : Simple FSM 이라고 부름(나만)
 
-        private static readonly int IS_MOVE = Animator.StringToHash("IsMove");
+        private static readonly int IS_WALK = Animator.StringToHash("IsWalk");
+        private static readonly int IS_RUN = Animator.StringToHash("IsRun");
         private static readonly int ATTACK = Animator.StringToHash("Attack");
+        private static readonly int IS_DEAD = Animator.StringToHash("IsDead");
+
+        private const float IDLE_WAIT_TIME = 3.0f;
 
         private const float ATTACK_HIT_DELAY = 0.5f;
         private const float ATTACK_COOLDOWN = 2.0f;
 
-        [SerializeField] private float moveSpeed = 1f;
+
+        [SerializeField] private float walkSpeed = 1f;
+        [SerializeField] private float runSpeed = 3f;
         [SerializeField] private float traceRange = 10.0f;
         [SerializeField] private float attackRange = 3f;
         [SerializeField] private float baseUpdateTerm = 0.1f;
@@ -86,7 +92,6 @@ namespace Study_ActionPlatformer
         private IEnumerator IdleStateCoroutine()
         {
             float waitTime = 0.0f;
-            const float IDLE_WAIT_TIME = 3.0f; // 개발하실때 이런 변수는 밖으로 빼시는걸 추천
 
             WaitForSeconds term = new WaitForSeconds(baseUpdateTerm);
 
@@ -154,7 +159,7 @@ namespace Study_ActionPlatformer
                     // 내가 가까운 목표 지점에 따라서 해당 목표지점의 반대 지점으로 바꿔주기
                     goalPoint = transform.IsSamePosition(pointB, STOPPING_DISTANCE) ? pointA : pointB;
                     nextStateCoroutine = IdleStateCoroutine();
-                    Animator.SetBool(IS_MOVE, false);
+                    Animator.SetBool(IS_WALK, false);
                     yield break;
                 }
 
@@ -171,7 +176,7 @@ namespace Study_ActionPlatformer
                 if(Target == null)
                 {
                     nextStateCoroutine = IdleStateCoroutine();
-                    Animator.SetBool(IS_MOVE, false);
+                    Animator.SetBool(IS_RUN, false);
                     yield break;
                 }
                 
@@ -180,7 +185,7 @@ namespace Study_ActionPlatformer
                 if(Target.IsInRange(transform.position, traceRange) == false)
                 {
                     nextStateCoroutine = IdleStateCoroutine();
-                    Animator.SetBool(IS_MOVE, false);
+                    Animator.SetBool(IS_RUN, false);
                     yield break;
                 }
 
@@ -191,7 +196,7 @@ namespace Study_ActionPlatformer
 
                 if(transform.IsInRange(adjustTargetPosition, attackRange))
                 {
-                    Animator.SetBool(IS_MOVE, false);
+                    Animator.SetBool(IS_RUN, false);
                     Animator.SetTrigger(ATTACK);
 
                     // 공격 모션이 타격 프레임에 도달 할 때까지 대기한다
@@ -215,10 +220,10 @@ namespace Study_ActionPlatformer
 
         protected void Move(Vector3 goalPosition)
         {
-            Animator.SetBool(IS_MOVE, true);
+            Animator.SetBool(IS_RUN, true);
             // 1차원 방향(사이드뷰, 플랫포머 이니까)
             float moveDirection = UpdateDirection(goalPosition);
-            transform.Translate(new Vector3(moveDirection, 0, 0) * (moveSpeed * Time.deltaTime));
+            transform.Translate(new Vector3(moveDirection, 0, 0) * (runSpeed * Time.deltaTime));
         }
 
         /// <summary>
@@ -269,6 +274,7 @@ namespace Study_ActionPlatformer
 
         public void Dead()
         {
+            Animator.SetBool(IS_DEAD, true);
             // Enemy가 죽게 되면 죽음 이펙트를 생성하고, 스스로를 삭제합니다.
             GameObject effect = Instantiate(deadEffect, 
                 transform.position + deadEffectOffset, Quaternion.identity);
@@ -277,7 +283,7 @@ namespace Study_ActionPlatformer
             // 여기서는 Destroy(삭제할 대상, 지연시간); 함수를 사용합니다.
             Destroy(effect, deadEffectLifeTime); // effect를 deadEffectLifeTime시간 이후에 삭제한다.
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 

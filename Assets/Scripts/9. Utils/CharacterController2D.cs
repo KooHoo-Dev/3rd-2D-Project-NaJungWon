@@ -36,6 +36,7 @@ namespace Study.Utilities
 
         private Rigidbody2D rBody;
         private Collider2D  col;
+        public Animator attackAnim;
 
         // 내부 상태 변수들
         private int    jumpCount        = 0;
@@ -64,11 +65,11 @@ namespace Study.Utilities
             rollCooldownTimer <= 0.0f;
 
         [Header("Wall Flip Settings")]
-        public float wallFlipHorizontalPower = 6.0f;
-        public float wallFlipVerticalPower = 8.0f;
-        public float wallFlipHorizontalDuration = 0.18f;
-        public float wallStickProbeDistance = 0.08f;
-        public float wallReattachLockTime = 0.08f;
+        public float wallFlipHorizontalPower = 6.0f; // 공중제비 좌우힘
+        public float wallFlipVerticalPower = 8.0f; // 공중제비 위쪽힘
+        public float wallFlipHorizontalDuration = 0.18f; //공중제비 지속시간
+        public float wallStickProbeDistance = 0.08f; // 벽감지 거리
+        public float wallReattachLockTime = 0.08f; //벽감지 쿨타임
 
         private bool isWallFlipping = false;
         private float wallReattachLockTimer = 0.0f;
@@ -208,8 +209,7 @@ namespace Study.Utilities
 
         public void RequestAttack(Vector2 mouseVec)
         {
-            if (mouseVec.sqrMagnitude < 0.0001f) return;
-            pendingDashDirection = mouseVec.normalized;
+            pendingDashDirection = mouseVec;
             attackRequested = true;
         }
 
@@ -613,7 +613,6 @@ namespace Study.Utilities
 
                 if (canDropDown)
                 {
-                    //여기 아래로 내려가는 코드 써야함
                     //Debug.Log("아래로 내려가야함");
                     StartCoroutine(DropDownPlatform(hit.collider));
                     return;
@@ -716,7 +715,6 @@ namespace Study.Utilities
             }
         }
 
-
         public void ApplyFlip()
         {
             if (flipRequested == false) return;
@@ -778,7 +776,6 @@ namespace Study.Utilities
             return Mathf.Sign(wallSide) == Mathf.Sign(stickWallDirection);
         }
 
-
         private bool TryAttachWall(Bounds box, Vector3 dir, float distance)
         {
             RaycastHit2D hit = Physics2D.BoxCast(
@@ -808,7 +805,6 @@ namespace Study.Utilities
 
             return true;
         }
-
 
         private bool CheckGrounded()
         {

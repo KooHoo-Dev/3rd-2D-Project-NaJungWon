@@ -63,7 +63,7 @@ namespace Study_ActionPlatformer
             // 미리 준비해놓고
             CombatEntity sender = Owner;
             CombatEntity receiver = hurtBox.Owner;
-            int damage = AttackInfo.RollDamage();
+            int damage = AttackInfo.Damage;
 
             // 담아주고
             CombatEvent @event;

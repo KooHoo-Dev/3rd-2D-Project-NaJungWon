@@ -14,6 +14,7 @@ namespace Study_ActionPlatformer
             // 공격중엔 이동 금지
             Owner.StopMovement();
             Owner.ApplyGravity(false);
+            Owner.effectAnim[0].Play("Zero_Slash");
         }
 
         public override void UpdateState(AnimatorStateInfo stateInfo)
