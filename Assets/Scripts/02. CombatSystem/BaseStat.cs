@@ -33,6 +33,11 @@ namespace Study_ActionPlatformer
             Hp = Mathf.Clamp(Hp + heal, 0, MaxHp);
         }
 
+        public void ApplyDead()
+        {
+
+        }
+
         /// <summary>
         /// 체력을 최대치로 되돌린다.
         /// </summary>

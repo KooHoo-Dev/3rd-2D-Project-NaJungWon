@@ -65,11 +65,15 @@ namespace Study_ActionPlatformer
             CombatEntity receiver = hurtBox.Owner;
             int damage = AttackInfo.Damage;
 
+            Vector2 hitDir = (receiver.transform.position - sender.transform.position).normalized;
+
             // 담아주고
             CombatEvent @event;
             @event.EventType = CombatEventType.DamageEvent;
             @event.Amount = damage;
             @event.Position = collision.ClosestPoint(sender.transform.position);
+            @event.HitDirection = hitDir;
+            @event.KnockbackPower = AttackInfo.KnockbackPower;
 
             // 보낸다
             CombatSystem.Instance.To(sender, receiver, @event);

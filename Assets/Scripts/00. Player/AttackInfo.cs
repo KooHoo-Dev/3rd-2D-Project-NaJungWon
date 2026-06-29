@@ -13,5 +13,6 @@ namespace Study_ActionPlatformer
     {
         public AttackKey Key;
         public int Damage;
+        public int KnockbackPower;
     }
 }

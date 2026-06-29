@@ -15,6 +15,8 @@ public class DebugFloatingText : MonoBehaviour
             @event.EventType = CombatEventType.HealEvent;
             @event.Amount = 10;
             @event.Position = entity.transform.position;
+            @event.HitDirection = Vector2.zero;
+            @event.KnockbackPower = 0.0f;
 
             CombatSystem.Instance.To(entity, entity, @event);
         }

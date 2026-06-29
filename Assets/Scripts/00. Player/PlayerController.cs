@@ -29,10 +29,15 @@ namespace Study_ActionPlatformer
         public static readonly int DESCENDING  = Animator.StringToHash("Descending");
         public static readonly int STICK_WALL = Animator.StringToHash("StickWall");
 
-
+        public static readonly int EFFECT_ATTACK = 0;
+        public static readonly int EFFECT_JUMP = 1;
+        public static readonly int EFFECT_LAND = 2;
 
         public Animator Animator { get; private set; }
         public Animator[] effectAnim; //캐릭터 연출 애니메이터
+        public Vector3 LandCloudOffset;
+        public Vector3 JumpCloudOffset;
+        public Vector3 FlipCloudOffset;
 
         private SpriteRenderer SpriteRenderer { get; set; }
         private CharacterController2D Controller2D { get; set; }
@@ -43,8 +48,10 @@ namespace Study_ActionPlatformer
         private Dictionary<int, PlayerAnimStateBase> StateDic { get; set; } = new();
         private PlayerAnimStateBase defaultState; // 예외처리를 위한 기본 상태
         private PlayerAnimStateBase currentState; // 상태객체를 담아서 제어하기 위한 빈 객체 변수
-        
+
         private bool prevIsGrounded = false;
+        private bool prevIsJumping = false;
+        private bool prevIsWallFlipping = false;
 
         private bool prevCrouchHeld = false;
         private bool prevMoveHeld = false;
@@ -73,6 +80,7 @@ namespace Study_ActionPlatformer
             UpdateDownInput();
             UpdateRollInput();
             UpdateGroundedAnimation();
+            UpdateEffectAnimation();
             SyncFacingVisual();
         }
 
@@ -211,24 +219,61 @@ namespace Study_ActionPlatformer
         private void UpdateGroundedAnimation()
         {
             bool isGrounded = Controller2D.IsGrounded;
+
             Animator.SetBool(IS_GROUNDED, isGrounded);
 
-            // 이전 프레임에서는 접지(바닥에 닿아있는) 상태였다가
-            // 현재 프레임에서는 접지 하지 않는 상태가 되었을 때
-
-            if (prevIsGrounded && isGrounded == false)
+            if (prevIsGrounded && !isGrounded)
             {
-                // VerticalVelocity가 0보다 크면 => 상승
                 if (Controller2D.VerticalVelocity > 0.0f)
                 {
                     Animator.SetTrigger(JUMP);
                 }
-                // 아니면 하강
                 else
+                {
                     Animator.SetTrigger(DESCENDING);
+                }
+            }
+            // 이전 프레임 상태 저장
+            prevIsGrounded = isGrounded;
+
+        }
+
+        private void UpdateEffectAnimation()
+        {
+            bool isJumping = Controller2D.isJumping;
+            bool isWallFlipping = Controller2D.isWallFlipping;
+
+            // 1. 기본 점프 이펙트 (점프 시작 순간)
+            bool justStartedJump = isJumping && !prevIsJumping;
+            if (justStartedJump)
+            {
+                effectAnim[EFFECT_JUMP].transform.position = transform.position + JumpCloudOffset;
+                effectAnim[EFFECT_JUMP].transform.up = Vector3.up;
+                effectAnim[EFFECT_JUMP].Play("JumpCloud", 0, 0.0f);
             }
 
-            prevIsGrounded = isGrounded;
+            // 2. 벽 공중제비(Flip) 이펙트
+            bool justStartedWallFlip = isWallFlipping && !prevIsWallFlipping;
+            if (justStartedWallFlip)
+            {
+                effectAnim[EFFECT_JUMP].transform.position = transform.position;
+
+                // ApplyFlip()에서 FacingDirection이 이미 벽 반대 방향으로 설정됨
+                // Y값은 고려하지 않고 수평 방향만 사용
+                Vector3 flipDirection = (Controller2D.FacingDirection > 0) ? Vector3.right : Vector3.left;
+                effectAnim[EFFECT_JUMP].transform.up = flipDirection;
+                effectAnim[EFFECT_JUMP].Play("JumpCloud", 0, 0.0f);
+            }
+
+            // 3. 착지 이펙트 (공중 → 지면 전환 순간)
+            if (Controller2D.isLanding)
+            {
+                effectAnim[EFFECT_LAND].transform.position = transform.position + LandCloudOffset;
+                effectAnim[EFFECT_LAND].Play("LandCloud", 0, 0.0f);
+            }
+
+            prevIsJumping = isJumping;
+            prevIsWallFlipping = isWallFlipping;
         }
 
         #region 입력 보내기

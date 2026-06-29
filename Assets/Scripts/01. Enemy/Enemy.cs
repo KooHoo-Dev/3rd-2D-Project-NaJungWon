@@ -23,7 +23,7 @@ namespace Study_ActionPlatformer
         protected virtual void Awake()
         {
             SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
-            instanceMaterial = SpriteRenderer.material;
+            //instanceMaterial = SpriteRenderer.material;
             // !주의
             // : renderer.material에 접근하는 순간 머티리얼 "복사본"이 생성됩니다.
             //  덕분에 개체마다 따로 피격효과를 줄 수 있지만, 이 복사본은 엔진이
@@ -54,7 +54,7 @@ namespace Study_ActionPlatformer
                 return;
             }
 
-            StartCoroutine(HitEffectCoroutine());
+            //StartCoroutine(HitEffectCoroutine());
         }
 
         protected IEnumerator HitEffectCoroutine()

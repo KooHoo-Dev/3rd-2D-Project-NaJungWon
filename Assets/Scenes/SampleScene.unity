@@ -423,7 +423,7 @@ Transform:
   m_GameObject: {fileID: 507492447}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.634199, y: 0.5067, z: 0}
+  m_LocalPosition: {x: 6.634199, y: 0.5, z: 0}
   m_LocalScale: {x: 4.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -766,6 +766,7 @@ GameObject:
   - component: {fileID: 584725483}
   - component: {fileID: 584725485}
   - component: {fileID: 584725484}
+  - component: {fileID: 584725486}
   m_Layer: 0
   m_Name: Grunt_Slash
   m_TagString: Untagged
@@ -869,6 +870,42 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!58 &584725486
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584725482}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.32
 --- !u!1 &601839538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,6 +1190,9 @@ MonoBehaviour:
   - {fileID: 675922101621483938}
   - {fileID: 32414407}
   - {fileID: 1848249419}
+  LandCloudOffset: {x: 0, y: 0.03, z: 0}
+  JumpCloudOffset: {x: 0, y: -0.03, z: 0}
+  FlipCloudOffset: {x: 0.03, y: 0, z: 0}
   <Cursor>k__BackingField: {fileID: 1437768488}
 --- !u!114 &782025980
 MonoBehaviour:
@@ -1186,14 +1226,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 320
   attackAnim: {fileID: 0}
+  isJumping: 0
+  isLanding: 0
   jumpRequested: 0
   attackRequested: 0
   crouchRequested: 0
+  flipRequested: 0
+  rollRequested: 0
   fastFallSpeed: 0.7
   isDropping: 0
-  rollRequested: 0
   stickWall: 0
-  flipRequested: 0
+  stickWallDirection: 0
   useGravity: 1
   rollCooldown: 0.18
   wallFlipHorizontalPower: 6
@@ -1201,9 +1244,7 @@ MonoBehaviour:
   wallFlipHorizontalDuration: 0.18
   wallStickProbeDistance: 0.08
   wallReattachLockTime: 0.08
-  stairLayer:
-    serializedVersion: 2
-    m_Bits: 256
+  isWallFlipping: 0
   maxStepHeight: 0.05
   stepCheckCount: 4
   IsDashing: 0
@@ -1290,6 +1331,7 @@ MonoBehaviour:
   attackInfo:
     Key: 0
     Damage: 0
+    KnockbackPower: 0
 --- !u!1 &806950930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,6 +1499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 903230669}
+  - component: {fileID: 903230670}
   - component: {fileID: 903230667}
   - component: {fileID: 903230666}
   m_Layer: 0
@@ -1499,6 +1542,24 @@ MonoBehaviour:
   traceRange: 5
   attackRange: 1
   baseUpdateTerm: 0.1
+  gravity: -9.81
+  skinWidth: 0.02
+  groundCheckDistance: 0.5
+  maxStepHeight: 0.3
+  stepCheckCount: 4
+  externalDrag: 12
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 448
+  originLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  droppingLayer:
+    serializedVersion: 2
+    m_Bits: 320
+  rb: {fileID: 0}
+  col: {fileID: 0}
+  desiredMoveX: 0
   Target: {fileID: 782025978}
   patrolPoint: {fileID: 2140600380}
   deadEffect: {fileID: 0}
@@ -1523,6 +1584,33 @@ Transform:
   - {fileID: 584725483}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &903230670
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903230665}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &911166843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,6 +1892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1105833041}
+  - component: {fileID: 1105833043}
   - component: {fileID: 1105833042}
   - component: {fileID: 1105833039}
   m_Layer: 0
@@ -1865,6 +1954,24 @@ MonoBehaviour:
   traceRange: 5
   attackRange: 5
   baseUpdateTerm: 0.1
+  gravity: -9.81
+  skinWidth: 0.02
+  groundCheckDistance: 0.5
+  maxStepHeight: 0.3
+  stepCheckCount: 4
+  externalDrag: 12
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 448
+  originLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  droppingLayer:
+    serializedVersion: 2
+    m_Bits: 320
+  rb: {fileID: 0}
+  col: {fileID: 0}
+  desiredMoveX: 0
   Target: {fileID: 782025978}
   patrolPoint: {fileID: 2143758548}
   deadEffect: {fileID: 0}
@@ -1872,6 +1979,33 @@ MonoBehaviour:
   deadEffectLifeTime: 0.5
   <BulletPrefab>k__BackingField: {fileID: 7636532405980243344, guid: ec2ff17bf4ac1984290bc2c75e0459b1, type: 3}
   <FirePoint>k__BackingField: {fileID: 1771740761}
+--- !u!50 &1105833043
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105833038}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1197792466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,7 +2438,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.5, y: 0.5, z: 0}
-  m_LocalScale: {x: 4.29, y: 1, z: 1}
+  m_LocalScale: {x: 4.29, y: 1.0061, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2409,12 +2543,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850194299}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2079670935}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1850194301
 MonoBehaviour:
@@ -2514,8 +2648,8 @@ Transform:
   m_GameObject: {fileID: 1858113378}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 2.1441, y: -1.9571, z: 0}
-  m_LocalScale: {x: 7.3709464, y: 1.0263424, z: 1}
+  m_LocalPosition: {x: 2.142, y: -1.9673, z: 0}
+  m_LocalScale: {x: 7.353984, y: 1.0150402, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2596,12 +2730,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858602402}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2079670935}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1858602404
 MonoBehaviour:
@@ -2797,7 +2931,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -2914,9 +3048,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1858602403}
-  - {fileID: 1850194300}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2079670937
@@ -3215,7 +3347,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -3260,7 +3392,7 @@ Transform:
   m_GameObject: {fileID: 2140600379}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.698, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3368,6 +3500,7 @@ MonoBehaviour:
   <AttackInfo>k__BackingField:
     Key: 1
     Damage: 1
+    KnockbackPower: 0
 --- !u!1001 &1153386799525346437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3442,7 +3575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9077716384637009114, guid: 622917fbbc4a36b4a94caf611d3391f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9077716384637009114, guid: 622917fbbc4a36b4a94caf611d3391f8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3639,15 +3772,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1124375975551558095, guid: 5bb5470fdbef2cb45881ba8ff27c7978, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1124375975551558095, guid: 5bb5470fdbef2cb45881ba8ff27c7978, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1124375975551558095, guid: 5bb5470fdbef2cb45881ba8ff27c7978, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1124375975551558095, guid: 5bb5470fdbef2cb45881ba8ff27c7978, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3694,6 +3827,8 @@ SceneRoots:
   - {fileID: 3265387866241908151}
   - {fileID: 1903682065}
   - {fileID: 2079670935}
+  - {fileID: 1858602403}
+  - {fileID: 1850194300}
   - {fileID: 1105833041}
   - {fileID: 903230669}
   - {fileID: 806950931}

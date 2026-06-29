@@ -24,7 +24,7 @@ namespace Study.Utilities
         public float     dashPower           = 6.0f; // 공격 대쉬 거리
         public float dashDuration = 0.12f;  // 공격 대쉬 시간(초)
         public float     rollPower           = 10.0f; // 구르기 거리
-        public float rollDuration = 0.10f;  // 구르기 시간(초)        public float     dashDrag            = 20.0f;   // 돌진 감쇠
+        public float rollDuration = 0.10f;  // 구르기 시간(초)
         public int       maxJumpCount        = 1;
         public float     groundCheckDistance = 0.5f;
         public float     skinWidth           = 0.02f;
@@ -38,22 +38,28 @@ namespace Study.Utilities
         private Collider2D  col;
         public Animator attackAnim;
 
-        // 내부 상태 변수들
+        [Header("Jump Settings")]
         private int    jumpCount        = 0;
-        public bool    jumpRequested = false;
+        // 애니메이션 용 변수
+        public bool isJumping = false;
+        public bool isLanding = false;
 
-        public bool    attackRequested = false;
-
-        public bool    crouchRequested = false;
-        public float fastFallSpeed = 1.0f; //빠른 하강 속도
-        public bool isDropping = false;
-
-        public bool    rollRequested = false;
-
-        public bool    stickWall = false;
+        [Header("Request Settings")]
+        public bool jumpRequested = false;
+        public bool attackRequested = false;
+        public bool crouchRequested = false;
         public bool flipRequested = false;
+        public bool rollRequested = false;
+
+        [Header("Crouch Settings")]
+        public float fastFallSpeed = 1.0f; //빠른 하강 속도
+        public bool isDropping = false; // 플랫폼에서 떨어짐 변수
+
+
+        [Header("stick Settings")]
+        public bool    stickWall = false;
         // [문제 3 해결] 벽 타기 방향 기억 및 상태 유지
-        private float stickWallDirection = 0.0f;
+        public float stickWallDirection = 0.0f;
         public bool useGravity = true; //중력 적용
 
         [Header("Roll Settings")]
@@ -71,11 +77,10 @@ namespace Study.Utilities
         public float wallStickProbeDistance = 0.08f; // 벽감지 거리
         public float wallReattachLockTime = 0.08f; //벽감지 쿨타임
 
-        private bool isWallFlipping = false;
+        public bool isWallFlipping = false;
         private float wallReattachLockTimer = 0.0f;
 
-        // 계단 오르기 변수
-        public LayerMask stairLayer;         // 계단 레이어
+        [Header("Step Settings")]
         public float maxStepHeight = 0.3f;   // 한 번에 올라갈 수 있는 최대 계단 높이
         public int stepCheckCount = 4;       // 위로 몇 번 나눠서 검사할지
 
@@ -95,6 +100,8 @@ namespace Study.Utilities
         public float MoveVectorX { get; private set; } = 0.0f;
         public int FacingDirection { get; private set; } = 1;
         public bool IsGrounded { get; private set; } = false;
+        public bool prevGroundedInternal { get; private set; } = false;
+
         public bool IsCrouching { get; private set; } = false;
 
         public bool IsDashing = false;
@@ -112,6 +119,9 @@ namespace Study.Utilities
         private void FixedUpdate()
         {
             IsGrounded = CheckGrounded();
+            // 착지 감지: 이전 프레임 공중 → 현재 프레임 접지
+            isLanding = !prevGroundedInternal && IsGrounded;
+            prevGroundedInternal = IsGrounded;
 
             if (wallReattachLockTimer > 0.0f)
                 wallReattachLockTimer -= Time.fixedDeltaTime;
@@ -565,6 +575,7 @@ namespace Study.Utilities
             baseVerticalVelocity = jumpPower;
             jumpCount++;
             IsGrounded = false; // 바닥에서 떨어졌음을 설정합니다.
+            isJumping = true;
         }
 
         public void ApplyAttack() // 마우스 방향으로 돌진
@@ -823,6 +834,7 @@ namespace Study.Utilities
             bool Stair = (hit.collider.gameObject.layer == 8);
             collisionLayer = Stair ? droppingLayer : originLayer;
 
+            isJumping = false;
             return true;
         }
 

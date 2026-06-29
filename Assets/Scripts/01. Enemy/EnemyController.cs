@@ -21,9 +21,10 @@ namespace Study_ActionPlatformer
         private static readonly int IS_DEAD = Animator.StringToHash("IsDead");
 
         private const float IDLE_WAIT_TIME = 3.0f;
-
         private const float ATTACK_HIT_DELAY = 0.5f;
         private const float ATTACK_COOLDOWN = 2.0f;
+
+        private const float GROUND_STICK_SPEED = -2.0f;
 
 
         [SerializeField] private float walkSpeed = 1f;
@@ -32,8 +33,35 @@ namespace Study_ActionPlatformer
         [SerializeField] private float attackRange = 3f;
         [SerializeField] private float baseUpdateTerm = 0.1f;
 
-        
+        [Header("Physics Settings")]
+        public float gravity = -9.81f;
+        public float skinWidth = 0.02f;
+        public float groundCheckDistance = 0.5f;
 
+        [Header("Step Settings")]
+        public float maxStepHeight = 0.3f;   // 한 번에 올라갈 수 있는 최대 계단 높이
+        public int stepCheckCount = 4;       // 위로 몇 번 나눠서 검사할지
+
+        [Header("Knockback Settings")]
+        [SerializeField] private float externalDrag = 12.0f;
+
+        public LayerMask collisionLayer;
+        public LayerMask originLayer;
+        public LayerMask droppingLayer;
+
+        public bool IsGrounded { get; private set; } = false;
+        public bool IsDead { get; private set; } = false;
+
+        //private Coroutine fsmRoutine;
+        public Rigidbody2D rb;
+        public Collider2D col;
+
+        private bool useGravity = true;
+        private bool isDropping = false;
+
+        public float desiredMoveX = 0.0f;
+        private float baseVerticalVelocity = 0.0f; //기본 점프 + 중력값
+        private Vector2 externalVelocity = Vector2.zero;
 
 
         [field: SerializeField] public Transform Target;
@@ -51,7 +79,14 @@ namespace Study_ActionPlatformer
         {
             Animator = GetComponentInChildren<Animator>();
             Enemy = GetComponentInChildren<Enemy>();
+
+            rb = GetComponent<Rigidbody2D>();
+            col = GetComponentInChildren<Collider2D>();
+
+            rb.bodyType = RigidbodyType2D.Kinematic;
+
             originalScale = transform.localScale;
+            originLayer = collisionLayer;
 
             // y값 보정이 필요합니다.
             pointA = transform.position;
@@ -61,6 +96,224 @@ namespace Study_ActionPlatformer
             pointB.y = transform.position.y;
 
             goalPoint = pointB;
+        }
+
+        private void FixedUpdate()
+        {
+            IsGrounded = CheckGrounded();
+
+            ApplyGravaity();
+
+            // 죽으면 AI 이동은 막고, 넉백/중력만 남길지 선택 가능
+            float horizontalVelocity = IsDead ? 0.0f : desiredMoveX + externalVelocity.x;
+            float verticalVelocity = baseVerticalVelocity + externalVelocity.y;
+
+            Vector3 desireMove =
+                new Vector3(horizontalVelocity, verticalVelocity, 0.0f) * Time.fixedDeltaTime;
+
+            Bounds box = GetCastBox();
+            Vector3 moveVector = Vector3.zero;
+
+            if(TryResolveStairMovement(box, desireMove.x, Vector3.right, out Vector2 stepMove))
+            {
+                moveVector.x = stepMove.x;
+                moveVector.y = stepMove.y;
+
+                if (stepMove.y > 0.0f && baseVerticalVelocity < 0.0f)
+                {
+                    baseVerticalVelocity = 0.0f;
+                }
+            }
+            else
+            {
+                float boxX = ResolveAxisMovement(box, desireMove.x, Vector3.right);
+                box.center += new Vector3(boxX, 0, 0);
+                float boxY = ResolveAxisMovement(box, desireMove.y, Vector3.up);
+
+                moveVector = new Vector3(boxX, boxY, 0);
+
+                if (moveVector.y != desireMove.y)
+                {
+                    baseVerticalVelocity = 0.0f;
+                    externalVelocity.y = 0.0f;
+                }
+
+                if (moveVector.x != desireMove.x)
+                {
+                    externalVelocity.x = 0.0f;
+                }
+            }
+
+            // 죽은 뒤에도 넉백은 잠깐 남게 두고 감쇠
+            externalVelocity = Vector2.Lerp(
+                externalVelocity,
+                Vector2.zero,
+                externalDrag * Time.fixedDeltaTime);
+
+            if (IsGrounded && externalVelocity.y < 0.0f)
+                externalVelocity.y = 0.0f;
+
+            rb.MovePosition(rb.position + (Vector2)moveVector);
+        }
+        public void AddExternalForce(Vector2 force)
+        {
+            externalVelocity += force;
+        }
+
+        private void ApplyGravaity()
+        {
+            // 여기 공격중 중력끄는 코드 필요
+            if (useGravity == false) return;
+
+            if (IsGrounded && baseVerticalVelocity <= 0)
+            {
+                baseVerticalVelocity += GROUND_STICK_SPEED;
+            }
+            else // 공중에 있는 상태
+            {
+                baseVerticalVelocity += gravity * Time.fixedDeltaTime;
+            }
+        }
+
+        #region 이동값 보정
+
+        private float ResolveAxisMovement(Bounds box, float move, Vector3 axis) //기본 이동값 보정
+        {
+            if (move == 0.0f) return 0.0f;
+
+            Vector3 dir = move > 0.0f ? axis : -axis;
+            float distance = Mathf.Abs(move);
+
+            RaycastHit2D hit = Physics2D.BoxCast(
+                box.center, box.size, 0.0f, dir, distance, collisionLayer);
+
+            if (hit.collider == null) return move;
+
+            float allowed = Mathf.Max(0, hit.distance - skinWidth);
+
+            return Mathf.Sign(move) * allowed;
+        }
+
+        private bool TryResolveStairMovement(Bounds box, float moveX, Vector3 axis, out Vector2 stairMove) //기본 계단 이동값 보정
+        {
+            stairMove = Vector2.zero;
+
+            if (Mathf.Approximately(moveX, 0.0f))
+                return false;
+
+            if (IsGrounded == false || baseVerticalVelocity > 0.0f)
+                return false;
+
+            Vector3 dir = moveX > 0.0f ? axis : -axis;
+            float distance = Mathf.Abs(moveX);
+
+            RaycastHit2D frontHit = Physics2D.BoxCast(
+                box.center,
+                box.size,
+                0.0f,
+                dir,
+                distance,
+                collisionLayer);
+
+            if (frontHit.collider == null)
+                return false;
+
+            // 정면에 계단있는지 확인
+            bool isStair = frontHit.collider.gameObject.layer == 8;
+            if (isStair == false) return false;
+
+
+            // maxStepHeight 안에서 stepCheckCount번 나눠서 위로 올려가며 시도
+            int checks = Mathf.Max(1, stepCheckCount);
+            float stepUnit = maxStepHeight / checks;
+
+            for (int i = 1; i <= checks; i++)
+            {
+                float stepY = stepUnit * i;
+
+                // 위로 stepY 만큼 올릴 공간이 있는지 확인
+                RaycastHit2D upHit = Physics2D.BoxCast(
+                    box.center,
+                    box.size,
+                    0.0f,
+                    Vector2.up,
+                    stepY,
+                    collisionLayer);
+
+                if (upHit.collider != null)
+                    continue;
+
+                // 올린 위치에서 다시 앞으로 갈 수 있는지 확인
+                Bounds raisedBox = box;
+                raisedBox.center += new Vector3(0.0f, stepY, 0.0f);
+
+                RaycastHit2D moveHit = Physics2D.BoxCast(
+                    raisedBox.center,
+                    raisedBox.size,
+                    0.0f,
+                    dir,
+                    distance,
+                    collisionLayer);
+
+                if (moveHit.collider == null)
+                {
+                    stairMove = new Vector2(moveX, stepY);
+                    return true;
+                }
+
+                // 여기서 바로 포기하지 않고 다음 높이를 계속 시도
+            }
+
+            // Debug.Log("계단 이동 실패");
+
+            return false;
+        }
+
+        #endregion
+
+        public IEnumerator DropDownPlatform(Collider2D collider)
+        {
+            // 플레이어가 플랫폼 위 또는 겹쳐져있다면 플레이어의 CollisionLayer에서 해당 레이어 끄기
+            float platformTop = collider.bounds.max.y;
+            float platformBottom = collider.bounds.min.y;
+
+            collisionLayer = droppingLayer;
+            isDropping = true;
+
+            // 플레이어가 플랫폼 위에서 벗어나거나 아래로 완전히 내려가면 해당 레이어 키기
+            yield return new WaitUntil(() =>
+            GetCastBox().max.y + skinWidth < platformBottom || //완전히 내려갈 때까지 기다리기
+            GetCastBox().min.y + skinWidth > platformTop);//또는 아예 다시 올라가버리기 
+
+            isDropping = false;
+            collisionLayer = originLayer;
+        }
+
+        private Bounds GetCastBox()
+        {
+            Bounds box = col.bounds;
+
+            Vector3 size = box.size;
+            size.x -= skinWidth * 2;
+            size.y -= skinWidth * 2;
+            box.size = size;
+
+            return box;
+        }
+
+        private bool CheckGrounded()
+        {
+            Bounds box = GetCastBox();
+            RaycastHit2D hit = Physics2D.BoxCast(
+                box.center, box.size, 0.0f, Vector2.down, groundCheckDistance, collisionLayer);
+            //bool result = (hit.collider != null);
+            if (hit.collider == null) return false;
+            // 현재 바닥이 땅인지 계단인지 체크
+
+            bool Stair = (hit.collider.gameObject.layer == 8);
+            collisionLayer = Stair ? droppingLayer : originLayer;
+
+            return true;
         }
 
         private void OnEnable()
@@ -159,11 +412,13 @@ namespace Study_ActionPlatformer
                     // 내가 가까운 목표 지점에 따라서 해당 목표지점의 반대 지점으로 바꿔주기
                     goalPoint = transform.IsSamePosition(pointB, STOPPING_DISTANCE) ? pointA : pointB;
                     nextStateCoroutine = IdleStateCoroutine();
+                    desiredMoveX = 0.0f;
                     Animator.SetBool(IS_WALK, false);
+
                     yield break;
                 }
 
-                Move(adjustGoalPoint);
+                Move(adjustGoalPoint, walkSpeed, false);
                 yield return null;
             }
         }
@@ -185,6 +440,7 @@ namespace Study_ActionPlatformer
                 if(Target.IsInRange(transform.position, traceRange) == false)
                 {
                     nextStateCoroutine = IdleStateCoroutine();
+                    desiredMoveX = 0.0f;
                     Animator.SetBool(IS_RUN, false);
                     yield break;
                 }
@@ -197,6 +453,7 @@ namespace Study_ActionPlatformer
                 if(transform.IsInRange(adjustTargetPosition, attackRange))
                 {
                     Animator.SetBool(IS_RUN, false);
+                    desiredMoveX = 0.0f;
                     Animator.SetTrigger(ATTACK);
 
                     // 공격 모션이 타격 프레임에 도달 할 때까지 대기한다
@@ -212,18 +469,21 @@ namespace Study_ActionPlatformer
                     // 공격 전체 쿨다운 대기
                     yield return new WaitForSeconds(ATTACK_COOLDOWN - ATTACK_HIT_DELAY);
                 }
-                else Move(Target.position); // 이동 한다(타겟이 사거리 안에 들어올때까지)
+                else Move(Target.position, runSpeed, true); // 이동 한다(타겟이 사거리 안에 들어올때까지)
 
                 yield return null;
             }
         }
 
-        protected void Move(Vector3 goalPosition)
+        protected void Move(Vector3 goalPosition, float speed, bool istracking)
         {
-            Animator.SetBool(IS_RUN, true);
             // 1차원 방향(사이드뷰, 플랫포머 이니까)
             float moveDirection = UpdateDirection(goalPosition);
-            transform.Translate(new Vector3(moveDirection, 0, 0) * (runSpeed * Time.deltaTime));
+
+            desiredMoveX = moveDirection * speed;
+
+            Animator.SetBool(IS_RUN, istracking);
+            Animator.SetBool(IS_WALK, !istracking);
         }
 
         /// <summary>
@@ -274,15 +534,27 @@ namespace Study_ActionPlatformer
 
         public void Dead()
         {
+            if (IsDead) return;
+            IsDead = true;
+
+            Animator.SetBool(IS_RUN, false);
+            Animator.SetBool(IS_WALK, false);
             Animator.SetBool(IS_DEAD, true);
+
+            desiredMoveX = 0.0f;
+            nextStateCoroutine = null;
+
+            StopAllCoroutines();
+
             // Enemy가 죽게 되면 죽음 이펙트를 생성하고, 스스로를 삭제합니다.
+            /*
             GameObject effect = Instantiate(deadEffect, 
                 transform.position + deadEffectOffset, Quaternion.identity);
 
             // 이펙트는 일정시간이 지난뒤에 자동으로 삭제 됩니다.
             // 여기서는 Destroy(삭제할 대상, 지연시간); 함수를 사용합니다.
             Destroy(effect, deadEffectLifeTime); // effect를 deadEffectLifeTime시간 이후에 삭제한다.
-
+            */
             //Destroy(gameObject);
         }
     }

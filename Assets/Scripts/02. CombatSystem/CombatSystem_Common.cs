@@ -20,6 +20,9 @@ namespace Study_ActionPlatformer
         public CombatEventType EventType;
         public int Amount;
         public Vector3 Position;
+
+        public Vector2 HitDirection;
+        public float KnockbackPower;
     }
 
     // # interface?
