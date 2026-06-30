@@ -45,12 +45,13 @@ namespace Study_ActionPlatformer
             if (instanceMaterial != null) Destroy(instanceMaterial);
         }
 
-        public override void TakeDamage(int damage)
+        public override void TakeDamage(int damage, Vector2 Hitdirection, float power)
         {
             if(Stat.ApplyDamage(damage))
             {
                 // 죽었다면
                 EnemyController.Dead();
+                EnemyController.AddExternalForce(Hitdirection);
                 return;
             }
 

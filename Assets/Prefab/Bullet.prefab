@@ -151,4 +151,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b87d31388c87d447a19b2f4821d8c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Study_ActionPlatformer.Bullet
-  <Speed>k__BackingField: 5
+  <Speed>k__BackingField: 10

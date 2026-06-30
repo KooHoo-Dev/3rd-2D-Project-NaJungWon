@@ -14,7 +14,7 @@ namespace Study_ActionPlatformer
     public class BaseStat
     {
         [field: SerializeField] public int MaxHp { get; private set; }
-        public int Hp { get; private set; }
+        [field: SerializeField] public int Hp { get; private set; }
         public bool isDead => (Hp <= 0);
 
         /// <summary>

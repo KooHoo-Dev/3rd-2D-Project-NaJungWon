@@ -20,16 +20,19 @@ namespace Study_ActionPlatformer
 
         public override BaseStat BaseStat => Stat;
         
-        private PlayerStat Stat { get; set; }
+        //private PlayerStat Stat { get; set; }
+        [field: SerializeField] public BaseStat Stat { get; private set; }
 
-        public AttackInfo attackInfo;
+
+        //public AttackInfo attackInfo;
 
         private void Awake()
         {
             LocalPlayer = this;
+            Stat.ResetToFull();
         }
 
-        public override void TakeDamage(int damage)
+        public override void TakeDamage(int damage, Vector2 hitDirection, float power)
         {
             
         }

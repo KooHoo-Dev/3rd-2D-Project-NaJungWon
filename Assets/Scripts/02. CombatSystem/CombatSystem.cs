@@ -62,7 +62,7 @@ namespace Study_ActionPlatformer
 
         private void HandleDamageEvent(CombatEntity sender, CombatEntity receiver, CombatEvent @event)
         {
-            receiver.TakeDamage(@event.Amount);
+            receiver.TakeDamage(@event.Amount, @event.HitDirection, @event.KnockbackPower);
 
             for (int i = 0; i < observerList.Count; ++i)
                 observerList[i].OnDamageTaken(sender, receiver, @event);

@@ -38,7 +38,7 @@ namespace Study_ActionPlatformer
             ApplyDamage(damage);
         }
 
-        public override void TakeDamage(int damage)
+        public override void TakeDamage(int damage, Vector2 Hitdirection, float power)
         {
             ApplyDamage(damage);
             StartCoroutine(HitEffectCoroutine());

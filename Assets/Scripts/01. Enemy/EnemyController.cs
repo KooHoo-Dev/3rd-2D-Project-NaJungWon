@@ -56,8 +56,8 @@ namespace Study_ActionPlatformer
         public Rigidbody2D rb;
         public Collider2D col;
 
-        private bool useGravity = true;
-        private bool isDropping = false;
+        public bool useGravity = true;
+        public bool isDropping = false;
 
         public float desiredMoveX = 0.0f;
         private float baseVerticalVelocity = 0.0f; //기본 점프 + 중력값
@@ -162,9 +162,6 @@ namespace Study_ActionPlatformer
 
         private void ApplyGravaity()
         {
-            // 여기 공격중 중력끄는 코드 필요
-            if (useGravity == false) return;
-
             if (IsGrounded && baseVerticalVelocity <= 0)
             {
                 baseVerticalVelocity += GROUND_STICK_SPEED;
@@ -273,14 +270,14 @@ namespace Study_ActionPlatformer
 
         public IEnumerator DropDownPlatform(Collider2D collider)
         {
-            // 플레이어가 플랫폼 위 또는 겹쳐져있다면 플레이어의 CollisionLayer에서 해당 레이어 끄기
+            //플랫폼 위 또는 겹쳐져있다면 CollisionLayer에서 해당 레이어 끄기
             float platformTop = collider.bounds.max.y;
             float platformBottom = collider.bounds.min.y;
 
             collisionLayer = droppingLayer;
             isDropping = true;
 
-            // 플레이어가 플랫폼 위에서 벗어나거나 아래로 완전히 내려가면 해당 레이어 키기
+            //플랫폼 위에서 벗어나거나 아래로 완전히 내려가면 해당 레이어 키기
             yield return new WaitUntil(() =>
             GetCastBox().max.y + skinWidth < platformBottom || //완전히 내려갈 때까지 기다리기
             GetCastBox().min.y + skinWidth > platformTop);//또는 아예 다시 올라가버리기 
@@ -324,20 +321,11 @@ namespace Study_ActionPlatformer
         // 메인 코루틴 루프
         private IEnumerator FiniteStateMachineCoroutine()
         {
-            // 기본상태를 넣어주고 루프를 시작한다.
-            // IEnumerator
-            // : 유니티의 코루틴 한정으로, 특정 코루틴의 진행상태를
-            //  저장하는 변수라고 생각해주세요
-            
+            // 기본상태를 넣어주고 루프를 시작한다.            
             nextStateCoroutine = IdleStateCoroutine();
 
-            // 게임 오브젝트가 켜져있다면 반복하는
-            // 루프를 구성합니다
-            while(gameObject.activeInHierarchy)
+            while (gameObject.activeInHierarchy)
             {
-                // yield return StartCoroutine(코루틴);
-                // : 매개변수로 주어진 코루틴이 종료될때까지
-                //  처리를 양보합니다. => 대기한다
                 yield return StartCoroutine(nextStateCoroutine);
             }
         }
@@ -380,11 +368,6 @@ namespace Study_ActionPlatformer
 
         private IEnumerator PatrolStateCoroutine()
         {
-            // Patrol은 목표지점(goalPoint)을 향해 움직입니다
-            // 목표지점에 도달하면
-            // 내 다음목적지 포인트를 갱신하고
-            // Idle 상태로 전환 됩니다
-
             const float STOPPING_DISTANCE = 0.1f;
 
             while (true)
@@ -402,7 +385,6 @@ namespace Study_ActionPlatformer
                     }
                 }
 
-                // 내가 현재 목표지점에 가까운지?
                 // - 목표지점이 B인지 ?  A지점으로 갱신 : B지점으로 갱신
 
                 // 목적지에 가까워졌으면
@@ -448,18 +430,39 @@ namespace Study_ActionPlatformer
                 //======== 반복문 탈출 검사가 끝나면 =======
                 // 공격하거나 (타겟이 사거리 안에 있으면)
                 Vector3 adjustTargetPosition = Target.position;
+                
                 adjustTargetPosition.y = transform.position.y;
+
+                
+                //if(adjustTargetPosition.y >= transform.position.y) adjustTargetPosition.y = transform.position.y;
+                /*
+                if (adjustTargetPosition.y < transform.position.y)
+                {
+                    // 2. 아래로 내려갈 수 있는 지면이면 관통 하강
+                    Bounds box = GetCastBox();
+                    RaycastHit2D hit = Physics2D.BoxCast(
+                        box.center,
+                        box.size,
+                        0.0f,
+                        Vector2.down,
+                        groundCheckDistance,
+                        collisionLayer);
+
+                    if (hit.collider != null)
+                    {
+                        bool canDropDown = hit.collider.gameObject.GetComponent<PlatformEffector2D>();
+                        if (canDropDown) StartCoroutine(DropDownPlatform(hit.collider));
+                        //else adjustTargetPosition.y = transform.position.y;
+                    }
+                }
+                */
+                
 
                 if(transform.IsInRange(adjustTargetPosition, attackRange))
                 {
                     Animator.SetBool(IS_RUN, false);
                     desiredMoveX = 0.0f;
                     Animator.SetTrigger(ATTACK);
-
-                    // 공격 모션이 타격 프레임에 도달 할 때까지 대기한다
-                    // - 정석은 애니메이션 이벤트 데이터등을 넣어서
-                    // 다격 프레임을 정확하게 알아내는게 맞습니다.
-                    // - 여기서는 간단하게 시간으로 처리합니다.
 
                     // 공격 판정을 위한 대기
                     yield return new WaitForSeconds(ATTACK_HIT_DELAY);

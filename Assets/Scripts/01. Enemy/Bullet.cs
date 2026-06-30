@@ -5,12 +5,12 @@ namespace Study_ActionPlatformer
     public class Bullet : MonoBehaviour
     {
         [field: SerializeField] public float Speed { get; private set; }
-        private Vector3 foward = Vector3.right;
+        private Vector2 fireDirection = Vector2.zero;
 
         // Update is called once per frame
         private void Update()
         {
-            transform.Translate(foward * Speed * Time.deltaTime);
+            transform.Translate(fireDirection * Speed * Time.deltaTime, Space.World);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -21,9 +21,10 @@ namespace Study_ActionPlatformer
             }
         }
 
-        public void Set(Vector3 direction)
+        public void Set(Vector2 direction)
         {
-            foward = direction;
+            transform.right = direction;
+            fireDirection = direction;
         }
     }
 

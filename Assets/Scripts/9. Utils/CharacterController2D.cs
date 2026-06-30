@@ -120,7 +120,7 @@ namespace Study.Utilities
         {
             IsGrounded = CheckGrounded();
             // 착지 감지: 이전 프레임 공중 → 현재 프레임 접지
-            isLanding = !prevGroundedInternal && IsGrounded;
+            isLanding = (prevGroundedInternal == false && IsGrounded);
             prevGroundedInternal = IsGrounded;
 
             if (wallReattachLockTimer > 0.0f)

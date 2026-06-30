@@ -14,7 +14,7 @@ namespace Study_ActionPlatformer
         [field: SerializeField] public Transform HeadUpPivot { get; private set; }
         [field: SerializeField] public virtual BaseStat BaseStat { get; }
 
-        public abstract void TakeDamage(int damage);
+        public abstract void TakeDamage(int damage, Vector2 direction, float power);
 
         public abstract void TakeHeal(int heal);
 

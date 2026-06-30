@@ -12,7 +12,7 @@ namespace Study_ActionPlatformer
             return Owner.CalculateFinalDamage(damage);
         }
 
-        public override void TakeDamage(int damage)
+        public override void TakeDamage(int damage, Vector2 Hitdirection, float power)
         {
             Owner.TakeDamage(this, damage);
             StartCoroutine(HitEffectCoroutine());
