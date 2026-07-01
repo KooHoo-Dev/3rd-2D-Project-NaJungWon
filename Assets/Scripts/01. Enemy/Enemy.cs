@@ -58,6 +58,12 @@ namespace Study_ActionPlatformer
             //StartCoroutine(HitEffectCoroutine());
         }
 
+        public void ResetState()
+        {
+            Stat.ResetToFull();
+            EnemyController.Reset();
+        }
+
         protected IEnumerator HitEffectCoroutine()
         {
             float waitTime = 0.0f;

@@ -42,6 +42,7 @@ namespace Study_ActionPlatformer
         {
             // 히트박스가 다시 켜질때 (재사용 될때 checkList를 비워준다)
             checkList.Clear();
+            
         }
 
         private void OnTriggerEnter2D(Collider2D collision)

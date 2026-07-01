@@ -39,6 +39,7 @@ namespace Study_ActionPlatformer
         public Vector3 JumpCloudOffset;
         public Vector3 FlipCloudOffset;
 
+        private Player player;
         private SpriteRenderer SpriteRenderer { get; set; }
         private CharacterController2D Controller2D { get; set; }
 

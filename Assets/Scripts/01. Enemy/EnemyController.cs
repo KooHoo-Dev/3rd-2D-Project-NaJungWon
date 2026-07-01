@@ -557,6 +557,7 @@ namespace Study_ActionPlatformer
 
             StopAllCoroutines();
 
+            UnitManagement.Instance.ReportEnemyDeath();
             // Enemy가 죽게 되면 죽음 이펙트를 생성하고, 스스로를 삭제합니다.
             /*
             GameObject effect = Instantiate(deadEffect, 
@@ -568,11 +569,11 @@ namespace Study_ActionPlatformer
             */
             //Destroy(gameObject);
         }
+
+        public void Reset()
+        {
+            if (IsDead) IsDead = false;
+        }
     }
-
-
-
-
-
 }
 

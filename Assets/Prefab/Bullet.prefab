@@ -152,7 +152,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b87d31388c87d447a19b2f4821d8c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Study_ActionPlatformer.Bullet
-  <Speed>k__BackingField: 10
+  <Owner>k__BackingField: {fileID: 0}
+  <AttackInfo>k__BackingField:
+    Key: 1
+    Damage: 1
+    KnockbackPower: 40
+  <Speed>k__BackingField: 20
 --- !u!114 &2803025670858006303
 MonoBehaviour:
   m_ObjectHideFlags: 0

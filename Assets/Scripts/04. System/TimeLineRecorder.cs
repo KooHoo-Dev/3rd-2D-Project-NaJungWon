@@ -133,7 +133,7 @@ namespace Study_System
         }
 
         // 싱글톤처럼 하나만 존재하도록 하기 위한 static 참조
-        private static TimeLineRecorder recorder;
+        public static TimeLineRecorder recorder;
         public static RecordMode recordMode;
 
         [Header("기본 대상")]
@@ -249,8 +249,7 @@ namespace Study_System
             // ESC : 기록 일시정지/재개
             if (SimpleInput.GetKeyDown(Key.Escape))
             {
-                if (recordMode == RecordMode.Recording) recordMode = RecordMode.Pause;
-                else if (recordMode == RecordMode.Pause) recordMode = RecordMode.Recording;
+                PauseRecording();
             }
             // T : 정방향 재생
             if (SimpleInput.GetKeyDown(Key.T))
@@ -401,7 +400,7 @@ namespace Study_System
         // ------------------------------------------------------------
         // [기록 시작]
         // ------------------------------------------------------------
-        private void BeginRecording()
+        public void BeginRecording()
         {
             frames.Clear();
             currentTick = 0;
@@ -419,9 +418,18 @@ namespace Study_System
         }
 
         // ------------------------------------------------------------
+        // [기록 일시정지/재시작]
+        // ------------------------------------------------------------
+        public void PauseRecording()
+        {
+            if (recordMode == RecordMode.Recording) recordMode = RecordMode.Pause;
+            else if (recordMode == RecordMode.Pause) recordMode = RecordMode.Recording;
+        }
+
+        // ------------------------------------------------------------
         // [정방향 재생 시작]
         // ------------------------------------------------------------
-        private void BeginReplay()
+        public void BeginReplay()
         {
             if (frames.Count == 0) return;
 
@@ -441,7 +449,7 @@ namespace Study_System
         // ------------------------------------------------------------
         // [역재생 시작]
         // ------------------------------------------------------------
-        private void BeginRewind()
+        public void BeginRewind()
         {
             if (frames.Count == 0) return;
 

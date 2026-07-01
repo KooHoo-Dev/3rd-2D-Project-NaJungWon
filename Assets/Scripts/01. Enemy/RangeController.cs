@@ -22,7 +22,7 @@ namespace Study_ActionPlatformer
             if (fireAnim != null) fireAnim.Play("Eenemy_Fire_Effect");
 
             Vector2 dir = (Target.position - transform.position).normalized;
-            bullet.Set(dir);
+            bullet.Set(dir, transform.GetComponent<Enemy>());
         }
     }
 }
