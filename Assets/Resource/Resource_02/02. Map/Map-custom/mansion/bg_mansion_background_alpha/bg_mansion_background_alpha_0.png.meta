@@ -1,0 +1,1014 @@
+fileFormatVersion: 2
+guid: d5c6ce765b305fc48af782de60318cde
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8883998745342517162
+    second: bg_mansion_background_alpha_0_0
+  - first:
+      213: 5477185250161271399
+    second: bg_mansion_background_alpha_0_1
+  - first:
+      213: 7532468480868793248
+    second: bg_mansion_background_alpha_0_2
+  - first:
+      213: 6144567564151649538
+    second: bg_mansion_background_alpha_0_3
+  - first:
+      213: 3824605365562295149
+    second: bg_mansion_background_alpha_0_4
+  - first:
+      213: 423113371746567335
+    second: bg_mansion_background_alpha_0_5
+  - first:
+      213: -2238502698280251720
+    second: bg_mansion_background_alpha_0_6
+  - first:
+      213: -1771576018756894133
+    second: bg_mansion_background_alpha_0_7
+  - first:
+      213: 6198146576535163632
+    second: bg_mansion_background_alpha_0_8
+  - first:
+      213: 977310015735433333
+    second: bg_mansion_background_alpha_0_9
+  - first:
+      213: 1316383217067399736
+    second: bg_mansion_background_alpha_0_10
+  - first:
+      213: -6414817083768519418
+    second: bg_mansion_background_alpha_0_11
+  - first:
+      213: 2167588482726468668
+    second: bg_mansion_background_alpha_0_12
+  - first:
+      213: -5476099694945848520
+    second: bg_mansion_background_alpha_0_13
+  - first:
+      213: -2145312120936826061
+    second: bg_mansion_background_alpha_0_14
+  - first:
+      213: -4958074524229862042
+    second: bg_mansion_background_alpha_0_15
+  - first:
+      213: -5660039472137720280
+    second: bg_mansion_background_alpha_0_16
+  - first:
+      213: -9131417885173934561
+    second: bg_mansion_background_alpha_0_17
+  - first:
+      213: 23534817971910822
+    second: bg_mansion_background_alpha_0_18
+  - first:
+      213: 8499424075126304648
+    second: bg_mansion_background_alpha_0_19
+  - first:
+      213: -2917086603317844798
+    second: bg_mansion_background_alpha_0_20
+  - first:
+      213: 3190295240729079147
+    second: bg_mansion_background_alpha_0_21
+  - first:
+      213: 988751060647701930
+    second: bg_mansion_background_alpha_0_22
+  - first:
+      213: 8093246170529188566
+    second: bg_mansion_background_alpha_0_23
+  - first:
+      213: -8599869272517181563
+    second: bg_mansion_background_alpha_0_24
+  - first:
+      213: 1310567116151009349
+    second: bg_mansion_background_alpha_0_25
+  - first:
+      213: 5508527209319620249
+    second: bg_mansion_background_alpha_0_26
+  - first:
+      213: -3007390845372058914
+    second: bg_mansion_background_alpha_0_27
+  - first:
+      213: 6711394709488754821
+    second: bg_mansion_background_alpha_0_28
+  - first:
+      213: -5630903619753859300
+    second: bg_mansion_background_alpha_0_29
+  - first:
+      213: 7767646429959529816
+    second: bg_mansion_background_alpha_0_30
+  - first:
+      213: -3307858082593872097
+    second: bg_mansion_background_alpha_0_31
+  - first:
+      213: 9200749227440245487
+    second: bg_mansion_background_alpha_0_32
+  - first:
+      213: 4784539158517959741
+    second: bg_mansion_background_alpha_0_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 287
+        width: 580
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf18291acd4a4b70800000000000000
+      internalID: 8883998745342517162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 267
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7622fd437fed20c40800000000000000
+      internalID: 5477185250161271399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 171
+        width: 186
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0abb204bc24b88860800000000000000
+      internalID: 7532468480868793248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_3
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 171
+        width: 90
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20575afe4a3e54550800000000000000
+      internalID: 6144567564151649538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_4
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 285
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d63c46cf05ab31530800000000000000
+      internalID: 3824605365562295149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_5
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 285
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a40caeae533fd500800000000000000
+      internalID: 423113371746567335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_6
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 261
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8be8040f7ad3fe0e0800000000000000
+      internalID: -2238502698280251720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_7
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 267
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4205654ff81a67e0800000000000000
+      internalID: -1771576018756894133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_8
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 171
+        width: 54
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f29e20e87d340650800000000000000
+      internalID: 6198146576535163632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_9
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 267
+        width: 289
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5788753084a109d00800000000000000
+      internalID: 977310015735433333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_10
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 219
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a9699bf8bb44210800000000000000
+      internalID: 1316383217067399736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_11
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 219
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 605ced679ddf9f6a0800000000000000
+      internalID: -6414817083768519418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_12
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 171
+        width: 84
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3c932c9d32d41e10800000000000000
+      internalID: 2167588482726468668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_13
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 171
+        width: 84
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833b020575cf004b0800000000000000
+      internalID: -5476099694945848520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_14
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 187
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b783b0ef15a32e0800000000000000
+      internalID: -2145312120936826061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_15
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 187
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66d7d5d3d71613bb0800000000000000
+      internalID: -4958074524229862042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_16
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 163
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82eaa8896108371b0800000000000000
+      internalID: -5660039472137720280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_17
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 163
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f161f8250dfa64180800000000000000
+      internalID: -9131417885173934561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_18
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 165
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a8b111dacc935000800000000000000
+      internalID: 23534817971910822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_19
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 139
+        width: 78
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f6e491a2504f570800000000000000
+      internalID: 8499424075126304648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_20
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 139
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c4603e803d6487d0800000000000000
+      internalID: -2917086603317844798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_21
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 139
+        width: 78
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6da6485e94364c20800000000000000
+      internalID: 3190295240729079147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_22
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 139
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aad623dd9dfb8bd00800000000000000
+      internalID: 988751060647701930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_23
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 133
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dace22238cf05070800000000000000
+      internalID: 8093246170529188566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_24
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 133
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58ff0d0f57027a880800000000000000
+      internalID: -8599869272517181563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_25
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 139
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5403d7439d1103210800000000000000
+      internalID: 1310567116151009349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_26
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 123
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ed11bbf48327c40800000000000000
+      internalID: 5508527209319620249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_27
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 123
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed236d0c5f99346d0800000000000000
+      internalID: -3007390845372058914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_28
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 101
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58063860ee9a32d50800000000000000
+      internalID: 6711394709488754821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_29
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 101
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c172c1cddf20bd1b0800000000000000
+      internalID: -5630903619753859300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_30
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 91
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 855a196f5493ccb60800000000000000
+      internalID: 7767646429959529816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_31
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 91
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f17669389902812d0800000000000000
+      internalID: -3307858082593872097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_32
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 59
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fea8609bca0afaf70800000000000000
+      internalID: 9200749227440245487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_mansion_background_alpha_0_33
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 59
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3cc86dd309166240800000000000000
+      internalID: 4784539158517959741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bg_mansion_background_alpha_0_0: 8883998745342517162
+      bg_mansion_background_alpha_0_1: 5477185250161271399
+      bg_mansion_background_alpha_0_10: 1316383217067399736
+      bg_mansion_background_alpha_0_11: -6414817083768519418
+      bg_mansion_background_alpha_0_12: 2167588482726468668
+      bg_mansion_background_alpha_0_13: -5476099694945848520
+      bg_mansion_background_alpha_0_14: -2145312120936826061
+      bg_mansion_background_alpha_0_15: -4958074524229862042
+      bg_mansion_background_alpha_0_16: -5660039472137720280
+      bg_mansion_background_alpha_0_17: -9131417885173934561
+      bg_mansion_background_alpha_0_18: 23534817971910822
+      bg_mansion_background_alpha_0_19: 8499424075126304648
+      bg_mansion_background_alpha_0_2: 7532468480868793248
+      bg_mansion_background_alpha_0_20: -2917086603317844798
+      bg_mansion_background_alpha_0_21: 3190295240729079147
+      bg_mansion_background_alpha_0_22: 988751060647701930
+      bg_mansion_background_alpha_0_23: 8093246170529188566
+      bg_mansion_background_alpha_0_24: -8599869272517181563
+      bg_mansion_background_alpha_0_25: 1310567116151009349
+      bg_mansion_background_alpha_0_26: 5508527209319620249
+      bg_mansion_background_alpha_0_27: -3007390845372058914
+      bg_mansion_background_alpha_0_28: 6711394709488754821
+      bg_mansion_background_alpha_0_29: -5630903619753859300
+      bg_mansion_background_alpha_0_3: 6144567564151649538
+      bg_mansion_background_alpha_0_30: 7767646429959529816
+      bg_mansion_background_alpha_0_31: -3307858082593872097
+      bg_mansion_background_alpha_0_32: 9200749227440245487
+      bg_mansion_background_alpha_0_33: 4784539158517959741
+      bg_mansion_background_alpha_0_4: 3824605365562295149
+      bg_mansion_background_alpha_0_5: 423113371746567335
+      bg_mansion_background_alpha_0_6: -2238502698280251720
+      bg_mansion_background_alpha_0_7: -1771576018756894133
+      bg_mansion_background_alpha_0_8: 6198146576535163632
+      bg_mansion_background_alpha_0_9: 977310015735433333
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

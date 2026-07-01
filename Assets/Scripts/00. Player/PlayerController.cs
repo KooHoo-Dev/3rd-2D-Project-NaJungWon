@@ -81,6 +81,7 @@ namespace Study_ActionPlatformer
             UpdateRollInput();
             UpdateGroundedAnimation();
             UpdateEffectAnimation();
+            UpdateAttackInput();
             SyncFacingVisual();
         }
 
@@ -130,10 +131,12 @@ namespace Study_ActionPlatformer
 
             Animator.SetFloat(MOVEMENT, Controller2D.MoveVectorX);
             Animator.SetBool(STICK_WALL, Controller2D.stickWall);
+        }
 
+        private void UpdateAttackInput()
+        {
             if (SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Left))
             {
-                //주의사항: Vector3로 받은 경우 Vector2로 자동변환이 가능하기 때문에 벡터값을 통일하거나 바꾸기전 z값을 0으로 변경할 것
                 Vector2 goalPosition = Cursor.position;
                 Vector2 myPosition = transform.position;
                 Vector2 dir = (goalPosition - myPosition);
@@ -141,10 +144,11 @@ namespace Study_ActionPlatformer
                 if (Mathf.Abs(dir.x) > 0.001f)
                 {
                     int attackFacing = (dir.x < 0.0f) ? -1 : 1;
-                    Controller2D.SetFacingDirection(attackFacing); //정면 방향 전환
+                    Controller2D.SetFacingDirection(attackFacing);
                 }
 
-                Controller2D.RequestAttack(dir); // 컨트롤러 2D로 마우스 방향 벡터 전달
+                // 구르기 중이라도 공격 요청 전달
+                Controller2D.RequestAttack(dir);
                 Animator.SetBool(IS_ATTACK, true);
 
                 effectAnim[0].gameObject.transform.right = dir.normalized;

@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: 61f513afaff8bd84fbb0f04e8e065e52
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4836068802078716376
+    second: bg_prison_foreground_alpha_0_0
+  - first:
+      213: 7715978402546049366
+    second: bg_prison_foreground_alpha_0_1
+  - first:
+      213: 3462984138305854274
+    second: bg_prison_foreground_alpha_0_2
+  - first:
+      213: 8775057534128349110
+    second: bg_prison_foreground_alpha_0_3
+  - first:
+      213: -8006086965086971294
+    second: bg_prison_foreground_alpha_0_4
+  - first:
+      213: -2562848496820849825
+    second: bg_prison_foreground_alpha_0_5
+  - first:
+      213: -1460434834391827694
+    second: bg_prison_foreground_alpha_0_6
+  - first:
+      213: -3793853411381889236
+    second: bg_prison_foreground_alpha_0_7
+  - first:
+      213: -8972161889354856652
+    second: bg_prison_foreground_alpha_0_8
+  - first:
+      213: -5249007659693484180
+    second: bg_prison_foreground_alpha_0_9
+  - first:
+      213: -3319388448429380572
+    second: bg_prison_foreground_alpha_0_10
+  - first:
+      213: 5293548982296180389
+    second: bg_prison_foreground_alpha_0_11
+  - first:
+      213: 4012792690809957137
+    second: bg_prison_foreground_alpha_0_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bg_prison_foreground_alpha_0_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 703
+        width: 546
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d13041f3fa2d1340800000000000000
+      internalID: 4836068802078716376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_prison_foreground_alpha_0_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 127
+        width: 546
+        height: 546
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 651e752e979a41b60800000000000000
+      internalID: 7715978402546049366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_prison_foreground_alpha_0_2
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 511
+        width: 289
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b5882e9bdfe0030800000000000000
+      internalID: 3462984138305854274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_prison_foreground_alpha_0_3
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 383
+        width: 66
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bfd555c55447c970800000000000000
+      internalID: 8775057534128349110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_prison_foreground_alpha_0_4
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 383
+        width: 66
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26a1b15c25aa4e090800000000000000
+      internalID: -8006086965086971294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_prison_foreground_alpha_0_5
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 287
+        width: 66
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5379d5eedeee6cd0800000000000000
+      internalID: -2562848496820849825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_prison_foreground_alpha_0_6
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 287
+        width: 130
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21bf77e714e7bbbe0800000000000000
+      internalID: -1460434834391827694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_prison_foreground_alpha_0_7
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 191
+        width: 66
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c27bdac4c66895bc0800000000000000
+      internalID: -3793853411381889236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_prison_foreground_alpha_0_8
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 191
+        width: 66
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 437c4b55c4a7c7380800000000000000
+      internalID: -8972161889354856652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_prison_foreground_alpha_0_9
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 98
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c675aac0857c727b0800000000000000
+      internalID: -5249007659693484180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_prison_foreground_alpha_0_10
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 98
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ce4d30bc92fe1d0800000000000000
+      internalID: -3319388448429380572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_prison_foreground_alpha_0_11
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 31
+        width: 98
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a6f4e2c0c6767940800000000000000
+      internalID: 5293548982296180389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_prison_foreground_alpha_0_12
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 31
+        width: 98
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11be20d01bd40b730800000000000000
+      internalID: 4012792690809957137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bg_prison_foreground_alpha_0_0: 4836068802078716376
+      bg_prison_foreground_alpha_0_1: 7715978402546049366
+      bg_prison_foreground_alpha_0_10: -3319388448429380572
+      bg_prison_foreground_alpha_0_11: 5293548982296180389
+      bg_prison_foreground_alpha_0_12: 4012792690809957137
+      bg_prison_foreground_alpha_0_2: 3462984138305854274
+      bg_prison_foreground_alpha_0_3: 8775057534128349110
+      bg_prison_foreground_alpha_0_4: -8006086965086971294
+      bg_prison_foreground_alpha_0_5: -2562848496820849825
+      bg_prison_foreground_alpha_0_6: -1460434834391827694
+      bg_prison_foreground_alpha_0_7: -3793853411381889236
+      bg_prison_foreground_alpha_0_8: -8972161889354856652
+      bg_prison_foreground_alpha_0_9: -5249007659693484180
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

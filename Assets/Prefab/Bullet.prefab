@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4130420609188960838}
   - component: {fileID: 3115902249253854507}
   - component: {fileID: 7636532405980243344}
+  - component: {fileID: 2803025670858006303}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -152,3 +153,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Study_ActionPlatformer.Bullet
   <Speed>k__BackingField: 10
+--- !u!114 &2803025670858006303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445931793684343767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2bd7f8b5f77d640890d9954ba122cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Study_System.TimelineTrackable
+  <TrackType>k__BackingField: 1

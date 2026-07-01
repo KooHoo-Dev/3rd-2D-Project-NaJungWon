@@ -34,6 +34,7 @@ namespace Study_ActionPlatformer
         [SerializeField] private float baseUpdateTerm = 0.1f;
 
         [Header("Physics Settings")]
+        public float yThreshold = 0.1f; // 허용 오차 범위
         public float gravity = -9.81f;
         public float skinWidth = 0.02f;
         public float groundCheckDistance = 0.5f;
@@ -104,8 +105,7 @@ namespace Study_ActionPlatformer
 
             ApplyGravaity();
 
-            // 죽으면 AI 이동은 막고, 넉백/중력만 남길지 선택 가능
-            float horizontalVelocity = IsDead ? 0.0f : desiredMoveX + externalVelocity.x;
+            float horizontalVelocity = desiredMoveX + externalVelocity.x;
             float verticalVelocity = baseVerticalVelocity + externalVelocity.y;
 
             Vector3 desireMove =
@@ -155,9 +155,13 @@ namespace Study_ActionPlatformer
 
             rb.MovePosition(rb.position + (Vector2)moveVector);
         }
-        public void AddExternalForce(Vector2 force)
+        public void ApplyImpact(Vector2 direction, float power)
         {
-            externalVelocity += force;
+            if (power <= 0.0f) return;
+
+            desiredMoveX = 0.0f;
+
+            externalVelocity += direction * power;
         }
 
         private void ApplyGravaity()
@@ -373,13 +377,19 @@ namespace Study_ActionPlatformer
             while (true)
             {
                 Vector3 adjustGoalPoint = transform.position;
-                adjustGoalPoint.x = goalPoint.x;
+                //같은 층일때 오차범위 체크 후 순회
+                if (Mathf.Abs(adjustGoalPoint.y - goalPoint.y) <= yThreshold)
+                {
+                    adjustGoalPoint.x = goalPoint.x;
+                    adjustGoalPoint.y = goalPoint.y;
+                }
 
                 if (Target != null && Target.IsInRange(transform.position, traceRange))
                 {
                     // 플레이어와 내가 같은 층에 있을때 (조건 검사)
                     if (CompareFloor(transform.position, Target.position) == 0)
                     {
+                        Animator.SetBool(IS_WALK, false);
                         nextStateCoroutine = AttackStateCoroutine();
                         yield break; // 코루틴 자체를 탈출하는 키워드 입니다
                     }
@@ -430,15 +440,15 @@ namespace Study_ActionPlatformer
                 //======== 반복문 탈출 검사가 끝나면 =======
                 // 공격하거나 (타겟이 사거리 안에 있으면)
                 Vector3 adjustTargetPosition = Target.position;
-                
-                adjustTargetPosition.y = transform.position.y;
 
-                
-                //if(adjustTargetPosition.y >= transform.position.y) adjustTargetPosition.y = transform.position.y;
-                /*
-                if (adjustTargetPosition.y < transform.position.y)
+                //안되던 이유((중력에 의해 y값이 미세하게 차이가 날 수밖에 없어서
+                //오차 허용 범위를 지정해야했다.)
+                if (Mathf.Abs(adjustTargetPosition.y - transform.position.y) <= yThreshold)
                 {
-                    // 2. 아래로 내려갈 수 있는 지면이면 관통 하강
+                    adjustTargetPosition.y = transform.position.y;
+                }
+                else if (adjustTargetPosition.y <= transform.position.y)
+                {
                     Bounds box = GetCastBox();
                     RaycastHit2D hit = Physics2D.BoxCast(
                         box.center,
@@ -452,13 +462,11 @@ namespace Study_ActionPlatformer
                     {
                         bool canDropDown = hit.collider.gameObject.GetComponent<PlatformEffector2D>();
                         if (canDropDown) StartCoroutine(DropDownPlatform(hit.collider));
-                        //else adjustTargetPosition.y = transform.position.y;
                     }
                 }
-                */
-                
 
-                if(transform.IsInRange(adjustTargetPosition, attackRange))
+
+                if (transform.IsInRange(adjustTargetPosition, attackRange))
                 {
                     Animator.SetBool(IS_RUN, false);
                     desiredMoveX = 0.0f;

@@ -1,0 +1,390 @@
+fileFormatVersion: 2
+guid: 081933d04b3b44e4595e7106e93ae2da
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1993116655442173224
+    second: bg_warehouse_foreground_alpha_0_0
+  - first:
+      213: -6055315876323499781
+    second: bg_warehouse_foreground_alpha_0_1
+  - first:
+      213: 5920092965319167928
+    second: bg_warehouse_foreground_alpha_0_2
+  - first:
+      213: -5146982385285414963
+    second: bg_warehouse_foreground_alpha_0_3
+  - first:
+      213: 9106954593280273148
+    second: bg_warehouse_foreground_alpha_0_4
+  - first:
+      213: -8234573936640890579
+    second: bg_warehouse_foreground_alpha_0_5
+  - first:
+      213: -3847279906178134472
+    second: bg_warehouse_foreground_alpha_0_6
+  - first:
+      213: -978101791368033265
+    second: bg_warehouse_foreground_alpha_0_7
+  - first:
+      213: -4294943428781765821
+    second: bg_warehouse_foreground_alpha_0_8
+  - first:
+      213: 1198794503342645621
+    second: bg_warehouse_foreground_alpha_0_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bg_warehouse_foreground_alpha_0_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 255
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82d9b83c909f8ab10800000000000000
+      internalID: 1993116655442173224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_foreground_alpha_0_1
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 191
+        width: 34
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf064fcfa4237fba0800000000000000
+      internalID: -6055315876323499781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_foreground_alpha_0_2
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 191
+        width: 34
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf432b9f25682250800000000000000
+      internalID: 5920092965319167928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_foreground_alpha_0_3
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 0
+        width: 290
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcfbedb5ace3298b0800000000000000
+      internalID: -5146982385285414963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_foreground_alpha_0_4
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 95
+        width: 65
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa251ea3f6626e70800000000000000
+      internalID: 9106954593280273148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_foreground_alpha_0_5
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 191
+        width: 162
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2964dd12aae8bd80800000000000000
+      internalID: -8234573936640890579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_foreground_alpha_0_6
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 226
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e01c02f47bb9ac0800000000000000
+      internalID: -3847279906178134472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_foreground_alpha_0_7
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 95
+        width: 226
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0cc55b5a951d62f0800000000000000
+      internalID: -978101791368033265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_foreground_alpha_0_8
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 0
+        width: 162
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34b801505bb4564c0800000000000000
+      internalID: -4294943428781765821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_foreground_alpha_0_9
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 0
+        width: 90
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 571ed62df39f2a010800000000000000
+      internalID: 1198794503342645621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bg_warehouse_foreground_alpha_0_0: 1993116655442173224
+      bg_warehouse_foreground_alpha_0_1: -6055315876323499781
+      bg_warehouse_foreground_alpha_0_2: 5920092965319167928
+      bg_warehouse_foreground_alpha_0_3: -5146982385285414963
+      bg_warehouse_foreground_alpha_0_4: 9106954593280273148
+      bg_warehouse_foreground_alpha_0_5: -8234573936640890579
+      bg_warehouse_foreground_alpha_0_6: -3847279906178134472
+      bg_warehouse_foreground_alpha_0_7: -978101791368033265
+      bg_warehouse_foreground_alpha_0_8: -4294943428781765821
+      bg_warehouse_foreground_alpha_0_9: 1198794503342645621
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

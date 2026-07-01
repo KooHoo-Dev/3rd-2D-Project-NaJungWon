@@ -20,26 +20,27 @@ namespace Study.Utilities
         [Header("Settings")]
         public float     speed               = 2.0f;
         public float     gravity             = -9.81f;
-        public float     jumpPower           = 8.0f;
-        public float     dashPower           = 6.0f; // 공격 대쉬 거리
-        public float dashDuration = 0.12f;  // 공격 대쉬 시간(초)
-        public float     rollPower           = 10.0f; // 구르기 거리
-        public float rollDuration = 0.10f;  // 구르기 시간(초)
-        public int       maxJumpCount        = 1;
         public float     groundCheckDistance = 0.5f;
         public float     skinWidth           = 0.02f;
         public LayerMask collisionLayer;
         public LayerMask originLayer;
         public LayerMask droppingLayer;
-        //public LayerMask layerB;
-
 
         private Rigidbody2D rBody;
         private Collider2D  col;
         public Animator attackAnim;
 
+        [Header("Attack Settings")]
+        public float dashPower = 6.0f; // 공격 대쉬 거리
+        public float dashDuration = 0.12f;  // 공격 대쉬 시간(초)
+        public float dashCooldown = 0.18f;
+        public float dashCooldownTimer = 0.0f;
+
         [Header("Jump Settings")]
-        private int    jumpCount        = 0;
+        public float jumpPower = 8.0f;
+        private int  jumpCount = 0;
+        public int maxJumpCount = 1;
+
         // 애니메이션 용 변수
         public bool isJumping = false;
         public bool isLanding = false;
@@ -63,8 +64,11 @@ namespace Study.Utilities
         public bool useGravity = true; //중력 적용
 
         [Header("Roll Settings")]
+        public float rollPower = 10.0f; // 구르기 거리
+        public float rollDuration = 0.10f;  // 구르기 시간(초)
+
         public float rollCooldown = 0.18f;
-        private float rollCooldownTimer = 0.0f;
+        public float rollCooldownTimer = 0.0f;
         public bool CanStartRoll =>
             IsGrounded &&
             !IsRolling &&
@@ -120,11 +124,12 @@ namespace Study.Utilities
         {
             IsGrounded = CheckGrounded();
             // 착지 감지: 이전 프레임 공중 → 현재 프레임 접지
-            isLanding = (prevGroundedInternal == false && IsGrounded);
+            isLanding = !prevGroundedInternal && IsGrounded;
             prevGroundedInternal = IsGrounded;
 
-            if (wallReattachLockTimer > 0.0f)
-                wallReattachLockTimer -= Time.fixedDeltaTime;
+            if (dashCooldownTimer > 0.0f) dashCooldownTimer -= Time.fixedDeltaTime;
+            if (rollCooldownTimer > 0.0f) rollCooldownTimer -= Time.fixedDeltaTime;
+            if (wallReattachLockTimer > 0.0f) wallReattachLockTimer -= Time.fixedDeltaTime;
 
             ApplyFlip();
             ApplyJump();
@@ -582,7 +587,7 @@ namespace Study.Utilities
         {
             if (attackRequested == false) return;
             attackRequested = false;
-
+            if (dashCooldownTimer > 0) return;
             if (dashDuration <= 0.0f) return;
 
             baseVerticalVelocity = 0; // 공격시 남은 점프값 삭제
@@ -593,6 +598,7 @@ namespace Study.Utilities
             float dashSpeed = dashPower / dashDuration;   // 거리 / 시간 = 속도
             boostVelocity = dir * dashSpeed;
             boostTimer = dashDuration;
+            dashCooldownTimer = dashCooldown;
         }
 
         public void ApplyCrouch()
@@ -646,8 +652,8 @@ namespace Study.Utilities
         {
             if (rollRequested == false) return;
             rollRequested = false;
-
             if (IsGrounded == false) return;
+            if (rollCooldownTimer > 0) return;
             if (rollDuration <= 0.0f) return;
 
             IsCrouching = false;
@@ -656,7 +662,7 @@ namespace Study.Utilities
             float rollSpeed = rollPower / rollDuration;   // 거리 / 시간 = 속도
             boostVelocity = new Vector2(pendingRollForward * rollSpeed, 0.0f);
             boostTimer = rollDuration;
-            //rollCooldownTimer = rollCooldown;
+            rollCooldownTimer = rollCooldown;
         }
 
         private void StickWall(Bounds box, float move, Vector3 axis)

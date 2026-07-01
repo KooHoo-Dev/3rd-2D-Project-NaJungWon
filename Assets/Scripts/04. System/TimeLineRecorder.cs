@@ -27,6 +27,7 @@ namespace Study_System
             public PlayerRecord player;
             public List<EnemyRecord> enemies = new(); // 해당 틱의 적 기록들
             public List<ObjectRecord> objects = new(); // 해당 틱의 총알/무기 등 기록들
+            public List<EffectRecord> effects = new(); // 해당 틱의 이펙트 기록들
         }
 
         #region 기록 구조체
@@ -63,6 +64,7 @@ namespace Study_System
         {
             public int id;              // 고유 ID
             public bool isActive;       // 현재 활성화 상태
+            public bool isDead;         // 적 사망 상태
             public Vector3 position;        // 적 위치
             public int facing;              // 정면 방향
 
@@ -84,6 +86,21 @@ namespace Study_System
             public int flipX; // -1, 1로 받음
 
             // 애니메이션이 있는 오브젝트만 사용
+            public int animStateHash;
+            public float animNormalizedTime;
+        }
+
+        // ------------------------------------------------------------
+        // [이펙트 기록]
+        // ------------------------------------------------------------
+        [System.Serializable]
+        public struct EffectRecord
+        {
+            public int id;
+            public bool isActive;
+            public Vector3 position;
+            public float rotationZ;
+            public Vector3 localScale;
             public int animStateHash;
             public float animNormalizedTime;
         }
@@ -518,10 +535,20 @@ namespace Study_System
                 TimelineTrackable trackable = pair.Value;
                 if (trackable == null) continue;
 
-                if (trackable.TrackType == TimelineTrackable.Type.Enemy)
-                    frame.enemies.Add(CaptureEnemyRecord(trackable));
-                else
-                    frame.objects.Add(CaptureObjectRecord(trackable));
+                switch (trackable.TrackType)
+                {
+                    case TimelineTrackable.Type.Enemy:
+                        frame.enemies.Add(CaptureEnemyRecord(trackable));
+                        break;
+
+                    case TimelineTrackable.Type.Effect:
+                        frame.effects.Add(CaptureEffectRecord(trackable));
+                        break;
+
+                    default:
+                        frame.objects.Add(CaptureObjectRecord(trackable));
+                        break;
+                }
             }
 
             frames.Add(frame);
@@ -606,6 +633,7 @@ namespace Study_System
             {
                 id = id,
                 isActive = isActive,
+                isDead = trackable.GetEnemyDead(),
                 position = currentPos,
                 facing = trackable.GetFacing(),
                 animStateHash = currentAnimHash,
@@ -637,6 +665,34 @@ namespace Study_System
                 position = currentPos,
                 rotationZ = trackable.transform.eulerAngles.z,
                 flipX = trackable.GetFacing(),
+                animStateHash = currentAnimHash,
+                animNormalizedTime = Mathf.Repeat(trackable.GetCurrentAnimNormalizedTime(), 1f),
+            };
+
+            prevTrackedPos[id] = currentPos;
+            prevTrackedActive[id] = isActive;
+            prevTrackedAnimHash[id] = currentAnimHash;
+
+            return record;
+        }
+
+        // ------------------------------------------------------------
+        // [이펙트 기록 캡처]
+        // ------------------------------------------------------------
+        private EffectRecord CaptureEffectRecord(TimelineTrackable trackable)
+        {
+            int id = trackable.TrackId;
+            bool isActive = trackable.gameObject.activeSelf;
+            Vector3 currentPos = trackable.transform.position;
+            int currentAnimHash = trackable.GetCurrentAnimHash();
+
+            EffectRecord record = new EffectRecord
+            {
+                id = id,
+                isActive = isActive,
+                position = currentPos,
+                rotationZ = trackable.transform.eulerAngles.z,
+                localScale = trackable.transform.localScale,
                 animStateHash = currentAnimHash,
                 animNormalizedTime = Mathf.Repeat(trackable.GetCurrentAnimNormalizedTime(), 1f),
             };
@@ -773,6 +829,7 @@ namespace Study_System
             SamplePlayer(fromFrame.player, toFrame.player, t, reverse);
             SampleEnemies(fromFrame.enemies, toFrame.enemies, t, reverse);
             SampleObjects(fromFrame.objects, toFrame.objects, t, reverse);
+            SampleEffects(fromFrame.effects, toFrame.effects, t, reverse);
         }
 
         // ------------------------------------------------------------
@@ -861,6 +918,28 @@ namespace Study_System
             return lookup;
         }
 
+        private void SampleEffects(List<EffectRecord> fromList, List<EffectRecord> toList, float t, bool reverse)
+        {
+            Dictionary<int, EffectRecord> toLookup = BuildEffectLookup(toList);
+
+            foreach (EffectRecord from in fromList)
+            {
+                if (!trackedById.TryGetValue(from.id, out TimelineTrackable trackable))
+                    continue;
+
+                EffectRecord to = toLookup.TryGetValue(from.id, out EffectRecord found) ? found : from;
+                SampleEffect(trackable, from, to, t, reverse);
+            }
+        }
+
+        private Dictionary<int, EffectRecord> BuildEffectLookup(List<EffectRecord> list)
+        {
+            Dictionary<int, EffectRecord> lookup = new();
+            foreach (EffectRecord record in list)
+                lookup[record.id] = record;
+            return lookup;
+        }
+
         // ------------------------------------------------------------
         // [적 샘플링]
         // ------------------------------------------------------------
@@ -879,6 +958,7 @@ namespace Study_System
                 : ((t < 0.5f) ? from.position : to.position);
 
             trackable.SetFacing((t < 0.5f) ? from.facing : to.facing);
+            trackable.ApplyEnemyDead((t < 0.5f) ? from.isDead : to.isDead);
 
             Animator animator = trackable.CachedAnimator;
             SampleAnimator(animator,
@@ -907,6 +987,31 @@ namespace Study_System
             float sampledRotation = Mathf.LerpAngle(from.rotationZ, to.rotationZ, t);
             trackable.transform.rotation = Quaternion.Euler(0f, 0f, sampledRotation);
             trackable.SetFacing((t < 0.5f) ? from.flipX : to.flipX);
+
+            Animator animator = trackable.CachedAnimator;
+            SampleAnimator(animator,
+                from.animStateHash, from.animNormalizedTime,
+                to.animStateHash, to.animNormalizedTime,
+                t, reverse);
+        }
+
+        private void SampleEffect(TimelineTrackable trackable, EffectRecord from, EffectRecord to, float t, bool reverse)
+        {
+            if (trackable == null) return;
+
+            bool active = (t < 0.5f) ? from.isActive : to.isActive;
+            if (trackable.gameObject.activeSelf != active)
+                trackable.gameObject.SetActive(active);
+
+            if (!active) return;
+
+            trackable.transform.position = interpolatePosition
+                ? Vector3.LerpUnclamped(from.position, to.position, t)
+                : ((t < 0.5f) ? from.position : to.position);
+
+            float sampledRotation = Mathf.LerpAngle(from.rotationZ, to.rotationZ, t);
+            trackable.transform.rotation = Quaternion.Euler(0f, 0f, sampledRotation);
+            trackable.transform.localScale = Vector3.LerpUnclamped(from.localScale, to.localScale, t);
 
             Animator animator = trackable.CachedAnimator;
             SampleAnimator(animator,
@@ -1020,6 +1125,14 @@ namespace Study_System
 
                 ApplyObject(trackable, obj);
             }
+
+            foreach (EffectRecord effect in frame.effects)
+            {
+                if (trackedById.TryGetValue(effect.id, out TimelineTrackable trackable) == false)
+                    continue;
+
+                ApplyEffect(trackable, effect);
+            }
         }
 
         // ------------------------------------------------------------
@@ -1066,6 +1179,7 @@ namespace Study_System
 
             trackable.transform.position = record.position;
             trackable.SetFacing(record.facing);
+            trackable.ApplyEnemyDead(record.isDead);
 
             Animator animator = trackable.CachedAnimator;
             if (animator != null && record.animStateHash != 0)
@@ -1090,6 +1204,27 @@ namespace Study_System
             trackable.transform.position = record.position;
             trackable.transform.rotation = Quaternion.Euler(0f, 0f, record.rotationZ);
             trackable.SetFacing(record.flipX);
+
+            Animator animator = trackable.CachedAnimator;
+            if (animator != null && record.animStateHash != 0)
+            {
+                animator.Play(record.animStateHash, 0, record.animNormalizedTime);
+                animator.Update(0f);
+            }
+        }
+
+        private void ApplyEffect(TimelineTrackable trackable, EffectRecord record)
+        {
+            if (trackable == null) return;
+
+            if (trackable.gameObject.activeSelf != record.isActive)
+                trackable.gameObject.SetActive(record.isActive);
+
+            if (!record.isActive) return;
+
+            trackable.transform.position = record.position;
+            trackable.transform.rotation = Quaternion.Euler(0f, 0f, record.rotationZ);
+            trackable.transform.localScale = record.localScale;
 
             Animator animator = trackable.CachedAnimator;
             if (animator != null && record.animStateHash != 0)

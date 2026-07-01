@@ -1,0 +1,884 @@
+fileFormatVersion: 2
+guid: d82a76870e9878b42bdd85a8d26e1422
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2794969589944300984
+    second: bg_club_background_alpha_0_0
+  - first:
+      213: -1134793205665436530
+    second: bg_club_background_alpha_0_1
+  - first:
+      213: -431192527544200493
+    second: bg_club_background_alpha_0_2
+  - first:
+      213: 213789036639658697
+    second: bg_club_background_alpha_0_3
+  - first:
+      213: -6098781083266659815
+    second: bg_club_background_alpha_0_4
+  - first:
+      213: 3724760150369636271
+    second: bg_club_background_alpha_0_5
+  - first:
+      213: 8660498751872580850
+    second: bg_club_background_alpha_0_6
+  - first:
+      213: 7495615799128165230
+    second: bg_club_background_alpha_0_7
+  - first:
+      213: -2284868603824022495
+    second: bg_club_background_alpha_0_8
+  - first:
+      213: 8683944884899967369
+    second: bg_club_background_alpha_0_9
+  - first:
+      213: 5305951429348572435
+    second: bg_club_background_alpha_0_10
+  - first:
+      213: -8710831830355507008
+    second: bg_club_background_alpha_0_11
+  - first:
+      213: 9055411937918654133
+    second: bg_club_background_alpha_0_12
+  - first:
+      213: -289766821980695724
+    second: bg_club_background_alpha_0_13
+  - first:
+      213: 6034768411186002072
+    second: bg_club_background_alpha_0_14
+  - first:
+      213: 2983097297684374655
+    second: bg_club_background_alpha_0_15
+  - first:
+      213: -27985636798641353
+    second: bg_club_background_alpha_0_16
+  - first:
+      213: 7630347235983425408
+    second: bg_club_background_alpha_0_17
+  - first:
+      213: 431301930856681964
+    second: bg_club_background_alpha_0_18
+  - first:
+      213: 2388330374046929954
+    second: bg_club_background_alpha_0_19
+  - first:
+      213: 4240000282480470044
+    second: bg_club_background_alpha_0_20
+  - first:
+      213: 4532577281000661477
+    second: bg_club_background_alpha_0_21
+  - first:
+      213: -630852385405599160
+    second: bg_club_background_alpha_0_22
+  - first:
+      213: 9154079063475582940
+    second: bg_club_background_alpha_0_23
+  - first:
+      213: 1178907031248546183
+    second: bg_club_background_alpha_0_24
+  - first:
+      213: 2927293431391271530
+    second: bg_club_background_alpha_0_25
+  - first:
+      213: 7376499092440976562
+    second: bg_club_background_alpha_0_26
+  - first:
+      213: -7081527316209305731
+    second: bg_club_background_alpha_0_27
+  - first:
+      213: 9131815705280333145
+    second: bg_club_background_alpha_0_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 767
+        width: 350
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84ac95167f54639d0800000000000000
+      internalID: -2794969589944300984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_1
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 547
+        width: 754
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8ce8c287976040f0800000000000000
+      internalID: -1134793205665436530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_2
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 735
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d2dce54ea8140af0800000000000000
+      internalID: -431192527544200493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_3
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 525
+        width: 130
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c2a7c10ff787f200800000000000000
+      internalID: 213789036639658697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_4
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 547
+        width: 254
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91ac401eae6cc5ba0800000000000000
+      internalID: -6098781083266659815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_5
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 543
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faf00544f9101b330800000000000000
+      internalID: 3724760150369636271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_6
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 543
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc3413cab5403870800000000000000
+      internalID: 8660498751872580850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_7
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 543
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6b07d71bd6c50860800000000000000
+      internalID: 7495615799128165230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_8
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 451
+        width: 306
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c50ae4c148a40e0800000000000000
+      internalID: -2284868603824022495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_9
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 431
+        width: 622
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98178810dd1938870800000000000000
+      internalID: 8683944884899967369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_10
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 451
+        width: 306
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d3ccd76b682a940800000000000000
+      internalID: 5305951429348572435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_11
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 531
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c88e7d2a98ec1780800000000000000
+      internalID: -8710831830355507008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_12
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 531
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b6197e0e294bad70800000000000000
+      internalID: 9055411937918654133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_13
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 495
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45395245c9a8afbf0800000000000000
+      internalID: -289766821980695724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_14
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 495
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8987d7a75edcfb350800000000000000
+      internalID: 6034768411186002072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_15
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 415
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f74a7e6ef27166920800000000000000
+      internalID: 2983097297684374655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_16
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 463
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73bcdcb26339c9ff0800000000000000
+      internalID: -27985636798641353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_17
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 463
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08ffca1426074e960800000000000000
+      internalID: 7630347235983425408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_18
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 259
+        width: 254
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce117ab22da4cf500800000000000000
+      internalID: 431301930856681964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_19
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 399
+        width: 40
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 224d75f32dd052120800000000000000
+      internalID: 2388330374046929954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_20
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 405
+        width: 114
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18edccdac187da30800000000000000
+      internalID: 4240000282480470044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_21
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 405
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e1ec0fb503f6ee30800000000000000
+      internalID: 4532577281000661477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_22
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 259
+        width: 254
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 842013e0913ce37f0800000000000000
+      internalID: -630852385405599160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_23
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 258
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd77d486862d90f70800000000000000
+      internalID: 9154079063475582940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_24
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 255
+        width: 126
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789a7c4e2b15c5010800000000000000
+      internalID: 1178907031248546183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_25
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 255
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a396bcdd5df9820800000000000000
+      internalID: 2927293431391271530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_26
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 19
+        width: 196
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc8fea97d69e5660800000000000000
+      internalID: 7376499092440976562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_27
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 0
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d777e1aec6c59bd90800000000000000
+      internalID: -7081527316209305731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_club_background_alpha_0_28
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 0
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9554193600ababe70800000000000000
+      internalID: 9131815705280333145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bg_club_background_alpha_0_0: -2794969589944300984
+      bg_club_background_alpha_0_1: -1134793205665436530
+      bg_club_background_alpha_0_10: 5305951429348572435
+      bg_club_background_alpha_0_11: -8710831830355507008
+      bg_club_background_alpha_0_12: 9055411937918654133
+      bg_club_background_alpha_0_13: -289766821980695724
+      bg_club_background_alpha_0_14: 6034768411186002072
+      bg_club_background_alpha_0_15: 2983097297684374655
+      bg_club_background_alpha_0_16: -27985636798641353
+      bg_club_background_alpha_0_17: 7630347235983425408
+      bg_club_background_alpha_0_18: 431301930856681964
+      bg_club_background_alpha_0_19: 2388330374046929954
+      bg_club_background_alpha_0_2: -431192527544200493
+      bg_club_background_alpha_0_20: 4240000282480470044
+      bg_club_background_alpha_0_21: 4532577281000661477
+      bg_club_background_alpha_0_22: -630852385405599160
+      bg_club_background_alpha_0_23: 9154079063475582940
+      bg_club_background_alpha_0_24: 1178907031248546183
+      bg_club_background_alpha_0_25: 2927293431391271530
+      bg_club_background_alpha_0_26: 7376499092440976562
+      bg_club_background_alpha_0_27: -7081527316209305731
+      bg_club_background_alpha_0_28: 9131815705280333145
+      bg_club_background_alpha_0_3: 213789036639658697
+      bg_club_background_alpha_0_4: -6098781083266659815
+      bg_club_background_alpha_0_5: 3724760150369636271
+      bg_club_background_alpha_0_6: 8660498751872580850
+      bg_club_background_alpha_0_7: 7495615799128165230
+      bg_club_background_alpha_0_8: -2284868603824022495
+      bg_club_background_alpha_0_9: 8683944884899967369
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

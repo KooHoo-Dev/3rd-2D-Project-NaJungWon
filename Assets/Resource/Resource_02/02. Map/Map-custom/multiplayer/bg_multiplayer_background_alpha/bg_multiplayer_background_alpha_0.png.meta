@@ -1,0 +1,2158 @@
+fileFormatVersion: 2
+guid: 0017782cedb177e41bfd7ccc29f88a05
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8262371386653723582
+    second: bg_multiplayer_background_alpha_0_0
+  - first:
+      213: -6191465339805426866
+    second: bg_multiplayer_background_alpha_0_1
+  - first:
+      213: -4978849224857387889
+    second: bg_multiplayer_background_alpha_0_2
+  - first:
+      213: -5042847807452493495
+    second: bg_multiplayer_background_alpha_0_3
+  - first:
+      213: 8006622176237215065
+    second: bg_multiplayer_background_alpha_0_4
+  - first:
+      213: 1404565697344385363
+    second: bg_multiplayer_background_alpha_0_5
+  - first:
+      213: -5788338744488495439
+    second: bg_multiplayer_background_alpha_0_6
+  - first:
+      213: -8516089823569589046
+    second: bg_multiplayer_background_alpha_0_7
+  - first:
+      213: 8630002327842976989
+    second: bg_multiplayer_background_alpha_0_8
+  - first:
+      213: -2778922173741553838
+    second: bg_multiplayer_background_alpha_0_9
+  - first:
+      213: 2334979779689382196
+    second: bg_multiplayer_background_alpha_0_10
+  - first:
+      213: 2907708150005402830
+    second: bg_multiplayer_background_alpha_0_11
+  - first:
+      213: -8539530872144491461
+    second: bg_multiplayer_background_alpha_0_12
+  - first:
+      213: 3278740228814869691
+    second: bg_multiplayer_background_alpha_0_13
+  - first:
+      213: 1101380745022531722
+    second: bg_multiplayer_background_alpha_0_14
+  - first:
+      213: -1369976778775989573
+    second: bg_multiplayer_background_alpha_0_15
+  - first:
+      213: -7480161443476869173
+    second: bg_multiplayer_background_alpha_0_16
+  - first:
+      213: -1944785187504604353
+    second: bg_multiplayer_background_alpha_0_17
+  - first:
+      213: 4857955930358043779
+    second: bg_multiplayer_background_alpha_0_18
+  - first:
+      213: -1629308524570799684
+    second: bg_multiplayer_background_alpha_0_19
+  - first:
+      213: -6580057039152508471
+    second: bg_multiplayer_background_alpha_0_20
+  - first:
+      213: -1860860148629796558
+    second: bg_multiplayer_background_alpha_0_21
+  - first:
+      213: -3496502343876940268
+    second: bg_multiplayer_background_alpha_0_22
+  - first:
+      213: 1044043206811708584
+    second: bg_multiplayer_background_alpha_0_23
+  - first:
+      213: 2287886726388972125
+    second: bg_multiplayer_background_alpha_0_24
+  - first:
+      213: 977895284571765717
+    second: bg_multiplayer_background_alpha_0_25
+  - first:
+      213: 1908261256778118535
+    second: bg_multiplayer_background_alpha_0_26
+  - first:
+      213: -2937730721850378620
+    second: bg_multiplayer_background_alpha_0_27
+  - first:
+      213: -7641705390677756709
+    second: bg_multiplayer_background_alpha_0_28
+  - first:
+      213: 3974737594643291569
+    second: bg_multiplayer_background_alpha_0_29
+  - first:
+      213: -950188189489560944
+    second: bg_multiplayer_background_alpha_0_30
+  - first:
+      213: 8252762528566045680
+    second: bg_multiplayer_background_alpha_0_31
+  - first:
+      213: 415880476442533593
+    second: bg_multiplayer_background_alpha_0_32
+  - first:
+      213: -3649986666051060422
+    second: bg_multiplayer_background_alpha_0_33
+  - first:
+      213: -5746279652256997965
+    second: bg_multiplayer_background_alpha_0_34
+  - first:
+      213: -2466865414779694570
+    second: bg_multiplayer_background_alpha_0_35
+  - first:
+      213: -6812603426233175099
+    second: bg_multiplayer_background_alpha_0_36
+  - first:
+      213: 5116145216248195075
+    second: bg_multiplayer_background_alpha_0_37
+  - first:
+      213: 2774211350314497722
+    second: bg_multiplayer_background_alpha_0_38
+  - first:
+      213: 6329519409354174759
+    second: bg_multiplayer_background_alpha_0_39
+  - first:
+      213: 7180458885427840176
+    second: bg_multiplayer_background_alpha_0_40
+  - first:
+      213: -3457376416712921088
+    second: bg_multiplayer_background_alpha_0_41
+  - first:
+      213: -1308177551379008312
+    second: bg_multiplayer_background_alpha_0_42
+  - first:
+      213: 1560674571496286710
+    second: bg_multiplayer_background_alpha_0_43
+  - first:
+      213: -548911803947980804
+    second: bg_multiplayer_background_alpha_0_44
+  - first:
+      213: 7134384296222510739
+    second: bg_multiplayer_background_alpha_0_45
+  - first:
+      213: 9002712840696126146
+    second: bg_multiplayer_background_alpha_0_46
+  - first:
+      213: -4995211642561309359
+    second: bg_multiplayer_background_alpha_0_47
+  - first:
+      213: 1569264460602032864
+    second: bg_multiplayer_background_alpha_0_48
+  - first:
+      213: 8456216034058356800
+    second: bg_multiplayer_background_alpha_0_49
+  - first:
+      213: -709137921721271489
+    second: bg_multiplayer_background_alpha_0_50
+  - first:
+      213: -4418647121231950575
+    second: bg_multiplayer_background_alpha_0_51
+  - first:
+      213: 7822865672593633218
+    second: bg_multiplayer_background_alpha_0_52
+  - first:
+      213: -4996872773090063454
+    second: bg_multiplayer_background_alpha_0_53
+  - first:
+      213: -2939798013496284887
+    second: bg_multiplayer_background_alpha_0_54
+  - first:
+      213: 3082904840890852016
+    second: bg_multiplayer_background_alpha_0_55
+  - first:
+      213: -70889597190107456
+    second: bg_multiplayer_background_alpha_0_56
+  - first:
+      213: -3038673551874644801
+    second: bg_multiplayer_background_alpha_0_57
+  - first:
+      213: -799187102563437023
+    second: bg_multiplayer_background_alpha_0_58
+  - first:
+      213: -2737877060525084157
+    second: bg_multiplayer_background_alpha_0_59
+  - first:
+      213: -1288162133512264016
+    second: bg_multiplayer_background_alpha_0_60
+  - first:
+      213: 2598924900591853368
+    second: bg_multiplayer_background_alpha_0_61
+  - first:
+      213: 6905860828684673060
+    second: bg_multiplayer_background_alpha_0_62
+  - first:
+      213: -2450473636792317894
+    second: bg_multiplayer_background_alpha_0_63
+  - first:
+      213: 907691534277955131
+    second: bg_multiplayer_background_alpha_0_64
+  - first:
+      213: -887167930139486183
+    second: bg_multiplayer_background_alpha_0_65
+  - first:
+      213: -3566859942449442961
+    second: bg_multiplayer_background_alpha_0_66
+  - first:
+      213: -6608174695661512214
+    second: bg_multiplayer_background_alpha_0_67
+  - first:
+      213: 8540532754575183117
+    second: bg_multiplayer_background_alpha_0_68
+  - first:
+      213: -5341467725863210566
+    second: bg_multiplayer_background_alpha_0_69
+  - first:
+      213: -426532791356789463
+    second: bg_multiplayer_background_alpha_0_70
+  - first:
+      213: 3716488967714629042
+    second: bg_multiplayer_background_alpha_0_71
+  - first:
+      213: -1583817668978936597
+    second: bg_multiplayer_background_alpha_0_72
+  - first:
+      213: -7754228407700302373
+    second: bg_multiplayer_background_alpha_0_73
+  - first:
+      213: -3595192510725600805
+    second: bg_multiplayer_background_alpha_0_74
+  - first:
+      213: -147384249941609171
+    second: bg_multiplayer_background_alpha_0_75
+  - first:
+      213: 671908231987635744
+    second: bg_multiplayer_background_alpha_0_76
+  - first:
+      213: -5791617640481185392
+    second: bg_multiplayer_background_alpha_0_77
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 35
+        width: 829
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2443720fff8265d80800000000000000
+      internalID: -8262371386653723582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_1
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 223
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4b11c5c31f731aa0800000000000000
+      internalID: -6191465339805426866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_2
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 223
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c7522520397eab0800000000000000
+      internalID: -4978849224857387889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_3
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 223
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949cf6423a4340ab0800000000000000
+      internalID: -5042847807452493495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_4
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 223
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d5269c27c3d1f60800000000000000
+      internalID: 8006622176237215065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_5
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 223
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35139ed5f050e7310800000000000000
+      internalID: 1404565697344385363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_6
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 223
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b6f12f6490bbafa0800000000000000
+      internalID: -5788338744488495439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_7
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 223
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: accc0d6fc65c0d980800000000000000
+      internalID: -8516089823569589046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_8
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 223
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4ffd9b46de3c770800000000000000
+      internalID: 8630002327842976989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_9
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 35
+        width: 766
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257adaf91094f69d0800000000000000
+      internalID: -2778922173741553838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_10
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 233
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4310b160db3876020800000000000000
+      internalID: 2334979779689382196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_11
+      rect:
+        serializedVersion: 2
+        x: 1853
+        y: 233
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecc849f18214a5820800000000000000
+      internalID: 2907708150005402830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_12
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 233
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3c88598aed7d7980800000000000000
+      internalID: -8539530872144491461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_13
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 215
+        width: 30
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb41b49dddc608d20800000000000000
+      internalID: 3278740228814869691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_14
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 215
+        width: 30
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88e585c3f3e84f00800000000000000
+      internalID: 1101380745022531722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_15
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 215
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb2f58ec06ddcfce0800000000000000
+      internalID: -1369976778775989573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_16
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 215
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcfecfa7cc0213890800000000000000
+      internalID: -7480161443476869173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_17
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 215
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3bb8560d2cb205e0800000000000000
+      internalID: -1944785187504604353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_18
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 215
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3845e7b1e2dea6340800000000000000
+      internalID: 4857955930358043779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_19
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 197
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb1117387888369e0800000000000000
+      internalID: -1629308524570799684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_20
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 197
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c1918b4cf0fea4a0800000000000000
+      internalID: -6580057039152508471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_21
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 187
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2398d38dd85ec26e0800000000000000
+      internalID: -1860860148629796558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_22
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 179
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ee4ecb4ade97fc0800000000000000
+      internalID: -3496502343876940268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_23
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 187
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aceb28d3cf2d7e00800000000000000
+      internalID: 1044043206811708584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_24
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 179
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5afebc1bd430cf10800000000000000
+      internalID: 2287886726388972125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_25
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 187
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dbfd68849e229d00800000000000000
+      internalID: 977895284571765717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_26
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 179
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78576eca0818b7a10800000000000000
+      internalID: 1908261256778118535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_27
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 187
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4863b5629751b37d0800000000000000
+      internalID: -2937730721850378620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_28
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 179
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd4f6764f6533f590800000000000000
+      internalID: -7641705390677756709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_29
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 187
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bd9a1488ca192730800000000000000
+      internalID: 3974737594643291569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_30
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 179
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09204bf30e040d2f0800000000000000
+      internalID: -950188189489560944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_31
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 187
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb65d27bc3b78270800000000000000
+      internalID: 8252762528566045680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_32
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 179
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de9063071185c500800000000000000
+      internalID: 415880476442533593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_33
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 187
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3d3d173774a85dc0800000000000000
+      internalID: -3649986666051060422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_34
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 179
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bd9a23f91d1140b0800000000000000
+      internalID: -5746279652256997965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_35
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 187
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6121c5ba9fee3cdd0800000000000000
+      internalID: -2466865414779694570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_36
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 179
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c333cf4745c471a0800000000000000
+      internalID: -6812603426233175099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_37
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 151
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 308a9c9b7f2300740800000000000000
+      internalID: 5116145216248195075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_38
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 151
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab63a53568aff7620800000000000000
+      internalID: 2774211350314497722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_39
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 151
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721fe791e58f6d750800000000000000
+      internalID: 6329519409354174759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_40
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 151
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b44936005d16a360800000000000000
+      internalID: 7180458885427840176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_41
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 151
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 000730b877ee400d0800000000000000
+      internalID: -3457376416712921088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_42
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 151
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c4f9e2b27b68dde0800000000000000
+      internalID: -1308177551379008312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_43
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 151
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f965040141a8a510800000000000000
+      internalID: 1560674571496286710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_44
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 151
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf769a06f9fd168f0800000000000000
+      internalID: -548911803947980804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_45
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 161
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39ec773c7bc620360800000000000000
+      internalID: 7134384296222510739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_46
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 143
+        width: 30
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca5a8451af00fc70800000000000000
+      internalID: 9002712840696126146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_47
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 143
+        width: 30
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 155dc331a717daab0800000000000000
+      internalID: -4995211642561309359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_48
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 143
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e244dc66b527c510800000000000000
+      internalID: 1569264460602032864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_49
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 143
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 048c2061ea38a5570800000000000000
+      internalID: 8456216034058356800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_50
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 143
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b7b0f31d2a826f0800000000000000
+      internalID: -709137921721271489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_51
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 143
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11dca2faadfcda2c0800000000000000
+      internalID: -4418647121231950575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_52
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 125
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf6a84c1e6609c60800000000000000
+      internalID: 7822865672593633218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_53
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 115
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ab452cffaa87aab0800000000000000
+      internalID: -4996872773090063454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_54
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 107
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 929a72e484db337d0800000000000000
+      internalID: -2939798013496284887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_55
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 115
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b2a1ad6e9da8ca20800000000000000
+      internalID: 3082904840890852016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_56
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 107
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce86357946240ff0800000000000000
+      internalID: -70889597190107456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_57
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 115
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb42320118674d5d0800000000000000
+      internalID: -3038673551874644801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_58
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 107
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126f1a28097b8e4f0800000000000000
+      internalID: -799187102563437023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_59
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 115
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30236b0c15b110ad0800000000000000
+      internalID: -2737877060525084157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_60
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 107
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b664e25d578f1ee0800000000000000
+      internalID: -1288162133512264016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_61
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 115
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83fd1b96d6c311420800000000000000
+      internalID: 2598924900591853368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_62
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 107
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420e80ab5db86df50800000000000000
+      internalID: 6905860828684673060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_63
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 115
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a38c883e53b2efdd0800000000000000
+      internalID: -2450473636792317894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_64
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 107
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e444a24a4c89c00800000000000000
+      internalID: 907691534277955131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_65
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 115
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 918daebc77520b3f0800000000000000
+      internalID: -887167930139486183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_66
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 107
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6f0bb6c7c7ff7ec0800000000000000
+      internalID: -3566859942449442961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_67
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 115
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae9de5b302c0b44a0800000000000000
+      internalID: -6608174695661512214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_68
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 107
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0dca056a41168670800000000000000
+      internalID: 8540532754575183117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_69
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 35
+        width: 362
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1b5b4576b4fd5b0800000000000000
+      internalID: -5341467725863210566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_70
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 89
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d6f16afa6a41af0800000000000000
+      internalID: -426532791356789463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_71
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 35
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5e94c760f939330800000000000000
+      internalID: 3716488967714629042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_72
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 61
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be4f583b836250ae0800000000000000
+      internalID: -1583817668978936597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_73
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 51
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd5d7cbc852736490800000000000000
+      internalID: -7754228407700302373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_74
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 39
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd94e0ba57f4b1ec0800000000000000
+      internalID: -3595192510725600805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_75
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 53
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d253eb83ec264fdf0800000000000000
+      internalID: -147384249941609171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_76
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 53
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 026a8412af8135900800000000000000
+      internalID: 671908231987635744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_multiplayer_background_alpha_0_77
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 35
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091ab38f07a00afa0800000000000000
+      internalID: -5791617640481185392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bg_multiplayer_background_alpha_0_0: -8262371386653723582
+      bg_multiplayer_background_alpha_0_1: -6191465339805426866
+      bg_multiplayer_background_alpha_0_10: 2334979779689382196
+      bg_multiplayer_background_alpha_0_11: 2907708150005402830
+      bg_multiplayer_background_alpha_0_12: -8539530872144491461
+      bg_multiplayer_background_alpha_0_13: 3278740228814869691
+      bg_multiplayer_background_alpha_0_14: 1101380745022531722
+      bg_multiplayer_background_alpha_0_15: -1369976778775989573
+      bg_multiplayer_background_alpha_0_16: -7480161443476869173
+      bg_multiplayer_background_alpha_0_17: -1944785187504604353
+      bg_multiplayer_background_alpha_0_18: 4857955930358043779
+      bg_multiplayer_background_alpha_0_19: -1629308524570799684
+      bg_multiplayer_background_alpha_0_2: -4978849224857387889
+      bg_multiplayer_background_alpha_0_20: -6580057039152508471
+      bg_multiplayer_background_alpha_0_21: -1860860148629796558
+      bg_multiplayer_background_alpha_0_22: -3496502343876940268
+      bg_multiplayer_background_alpha_0_23: 1044043206811708584
+      bg_multiplayer_background_alpha_0_24: 2287886726388972125
+      bg_multiplayer_background_alpha_0_25: 977895284571765717
+      bg_multiplayer_background_alpha_0_26: 1908261256778118535
+      bg_multiplayer_background_alpha_0_27: -2937730721850378620
+      bg_multiplayer_background_alpha_0_28: -7641705390677756709
+      bg_multiplayer_background_alpha_0_29: 3974737594643291569
+      bg_multiplayer_background_alpha_0_3: -5042847807452493495
+      bg_multiplayer_background_alpha_0_30: -950188189489560944
+      bg_multiplayer_background_alpha_0_31: 8252762528566045680
+      bg_multiplayer_background_alpha_0_32: 415880476442533593
+      bg_multiplayer_background_alpha_0_33: -3649986666051060422
+      bg_multiplayer_background_alpha_0_34: -5746279652256997965
+      bg_multiplayer_background_alpha_0_35: -2466865414779694570
+      bg_multiplayer_background_alpha_0_36: -6812603426233175099
+      bg_multiplayer_background_alpha_0_37: 5116145216248195075
+      bg_multiplayer_background_alpha_0_38: 2774211350314497722
+      bg_multiplayer_background_alpha_0_39: 6329519409354174759
+      bg_multiplayer_background_alpha_0_4: 8006622176237215065
+      bg_multiplayer_background_alpha_0_40: 7180458885427840176
+      bg_multiplayer_background_alpha_0_41: -3457376416712921088
+      bg_multiplayer_background_alpha_0_42: -1308177551379008312
+      bg_multiplayer_background_alpha_0_43: 1560674571496286710
+      bg_multiplayer_background_alpha_0_44: -548911803947980804
+      bg_multiplayer_background_alpha_0_45: 7134384296222510739
+      bg_multiplayer_background_alpha_0_46: 9002712840696126146
+      bg_multiplayer_background_alpha_0_47: -4995211642561309359
+      bg_multiplayer_background_alpha_0_48: 1569264460602032864
+      bg_multiplayer_background_alpha_0_49: 8456216034058356800
+      bg_multiplayer_background_alpha_0_5: 1404565697344385363
+      bg_multiplayer_background_alpha_0_50: -709137921721271489
+      bg_multiplayer_background_alpha_0_51: -4418647121231950575
+      bg_multiplayer_background_alpha_0_52: 7822865672593633218
+      bg_multiplayer_background_alpha_0_53: -4996872773090063454
+      bg_multiplayer_background_alpha_0_54: -2939798013496284887
+      bg_multiplayer_background_alpha_0_55: 3082904840890852016
+      bg_multiplayer_background_alpha_0_56: -70889597190107456
+      bg_multiplayer_background_alpha_0_57: -3038673551874644801
+      bg_multiplayer_background_alpha_0_58: -799187102563437023
+      bg_multiplayer_background_alpha_0_59: -2737877060525084157
+      bg_multiplayer_background_alpha_0_6: -5788338744488495439
+      bg_multiplayer_background_alpha_0_60: -1288162133512264016
+      bg_multiplayer_background_alpha_0_61: 2598924900591853368
+      bg_multiplayer_background_alpha_0_62: 6905860828684673060
+      bg_multiplayer_background_alpha_0_63: -2450473636792317894
+      bg_multiplayer_background_alpha_0_64: 907691534277955131
+      bg_multiplayer_background_alpha_0_65: -887167930139486183
+      bg_multiplayer_background_alpha_0_66: -3566859942449442961
+      bg_multiplayer_background_alpha_0_67: -6608174695661512214
+      bg_multiplayer_background_alpha_0_68: 8540532754575183117
+      bg_multiplayer_background_alpha_0_69: -5341467725863210566
+      bg_multiplayer_background_alpha_0_7: -8516089823569589046
+      bg_multiplayer_background_alpha_0_70: -426532791356789463
+      bg_multiplayer_background_alpha_0_71: 3716488967714629042
+      bg_multiplayer_background_alpha_0_72: -1583817668978936597
+      bg_multiplayer_background_alpha_0_73: -7754228407700302373
+      bg_multiplayer_background_alpha_0_74: -3595192510725600805
+      bg_multiplayer_background_alpha_0_75: -147384249941609171
+      bg_multiplayer_background_alpha_0_76: 671908231987635744
+      bg_multiplayer_background_alpha_0_77: -5791617640481185392
+      bg_multiplayer_background_alpha_0_8: 8630002327842976989
+      bg_multiplayer_background_alpha_0_9: -2778922173741553838
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

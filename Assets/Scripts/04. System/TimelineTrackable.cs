@@ -1,3 +1,5 @@
+using Study_ActionPlatformer;
+using System.Reflection;
 using UnityEngine;
 
 namespace Study_System
@@ -28,6 +30,7 @@ namespace Study_System
         {
             Enemy,
             Object,
+            Effect,
         }
 
         // 인스펙터에서 어떤 타입인지 지정
@@ -40,12 +43,14 @@ namespace Study_System
         // 자주 사용하는 컴포넌트는 Awake에서 캐싱해 두는 편이 좋음
         public Animator CachedAnimator { get; private set; }
         public SpriteRenderer CachedSpriteRenderer { get; private set; }
+        public EnemyController CachedEnemyController { get; private set; }
 
         private void Awake()
         {
             // 자식 포함 검색
-            CachedAnimator = GetComponentInChildren<Animator>();
-            CachedSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            CachedAnimator = GetComponentInChildren<Animator>(true);
+            CachedSpriteRenderer = GetComponentInChildren<SpriteRenderer>(true);
+            CachedEnemyController = GetComponent<EnemyController>();
         }
 
         private void OnEnable()
@@ -94,9 +99,17 @@ namespace Study_System
         ///
         /// localScale.x >= 0 이면 오른쪽(1), 아니면 왼쪽(-1)로 간주
         /// </summary>
+        private Transform GetFacingTarget()
+        {
+            if (TrackType == Type.Enemy)
+                return transform;
+
+            return CachedAnimator != null ? CachedAnimator.transform : transform;
+        }
+
         public int GetFacing()
         {
-            Transform target = CachedAnimator != null ? CachedAnimator.transform : transform;
+            Transform target = GetFacingTarget();
             return target.localScale.x >= 0f ? 1 : -1;
         }
 
@@ -108,11 +121,52 @@ namespace Study_System
         /// </summary>
         public void SetFacing(int facing)
         {
-            Transform target = CachedAnimator != null ? CachedAnimator.transform : transform;
+            Transform target = GetFacingTarget();
 
             Vector3 scale = target.localScale;
             scale.x = Mathf.Abs(scale.x) * (facing >= 0 ? 1 : -1);
             target.localScale = scale;
+        }
+
+        public bool GetEnemyDead()
+        {
+            if (CachedEnemyController != null)
+                return CachedEnemyController.IsDead;
+
+            if (CachedAnimator != null)
+                return CachedAnimator.GetBool("IsDead");
+
+            return false;
+        }
+
+        public void ApplyEnemyDead(bool isDead)
+        {
+            if (CachedAnimator != null)
+                CachedAnimator.SetBool("IsDead", isDead);
+
+            if (CachedEnemyController == null)
+                return;
+
+            PropertyInfo prop = typeof(EnemyController).GetProperty(
+                "IsDead",
+                BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+
+            if (prop != null)
+            {
+                MethodInfo setter = prop.GetSetMethod(true);
+                if (setter != null)
+                {
+                    setter.Invoke(CachedEnemyController, new object[] { isDead });
+                    return;
+                }
+            }
+
+            FieldInfo backingField = typeof(EnemyController).GetField(
+                "<IsDead>k__BackingField",
+                BindingFlags.Instance | BindingFlags.NonPublic);
+
+            if (backingField != null)
+                backingField.SetValue(CachedEnemyController, isDead);
         }
     }
 }

@@ -1,0 +1,2522 @@
+fileFormatVersion: 2
+guid: cc4957bb46e664d47a3ba392b8f5aca8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7914851365206496304
+    second: bg_warehouse_background_alpha_0_0
+  - first:
+      213: -4312059281118114492
+    second: bg_warehouse_background_alpha_0_1
+  - first:
+      213: 6132017840628829879
+    second: bg_warehouse_background_alpha_0_2
+  - first:
+      213: -7998734882296670187
+    second: bg_warehouse_background_alpha_0_3
+  - first:
+      213: -5500546879415273455
+    second: bg_warehouse_background_alpha_0_4
+  - first:
+      213: 4775019788785325036
+    second: bg_warehouse_background_alpha_0_5
+  - first:
+      213: -4112272014225594184
+    second: bg_warehouse_background_alpha_0_6
+  - first:
+      213: 9151656061170877476
+    second: bg_warehouse_background_alpha_0_7
+  - first:
+      213: 9107505236747202850
+    second: bg_warehouse_background_alpha_0_8
+  - first:
+      213: 5789871312681041379
+    second: bg_warehouse_background_alpha_0_9
+  - first:
+      213: -2200188200076940601
+    second: bg_warehouse_background_alpha_0_10
+  - first:
+      213: 3222259920450099926
+    second: bg_warehouse_background_alpha_0_11
+  - first:
+      213: -2358064740705539228
+    second: bg_warehouse_background_alpha_0_12
+  - first:
+      213: 5411486203129274998
+    second: bg_warehouse_background_alpha_0_13
+  - first:
+      213: 3180993165947422196
+    second: bg_warehouse_background_alpha_0_14
+  - first:
+      213: 2478765360644835942
+    second: bg_warehouse_background_alpha_0_15
+  - first:
+      213: 5729360617754436936
+    second: bg_warehouse_background_alpha_0_16
+  - first:
+      213: -1854113290619077498
+    second: bg_warehouse_background_alpha_0_17
+  - first:
+      213: -238590388284786643
+    second: bg_warehouse_background_alpha_0_18
+  - first:
+      213: -5004872047090907436
+    second: bg_warehouse_background_alpha_0_19
+  - first:
+      213: 2873526587576858897
+    second: bg_warehouse_background_alpha_0_20
+  - first:
+      213: -6498298153656603159
+    second: bg_warehouse_background_alpha_0_21
+  - first:
+      213: -8093602793634053699
+    second: bg_warehouse_background_alpha_0_22
+  - first:
+      213: 1322587721912329736
+    second: bg_warehouse_background_alpha_0_23
+  - first:
+      213: 7112096023009538856
+    second: bg_warehouse_background_alpha_0_24
+  - first:
+      213: -558179616625295552
+    second: bg_warehouse_background_alpha_0_25
+  - first:
+      213: 4034334158663442564
+    second: bg_warehouse_background_alpha_0_26
+  - first:
+      213: 8276180812742287365
+    second: bg_warehouse_background_alpha_0_27
+  - first:
+      213: -3529255775296705619
+    second: bg_warehouse_background_alpha_0_28
+  - first:
+      213: 6174790749226625394
+    second: bg_warehouse_background_alpha_0_29
+  - first:
+      213: 1379681184959923334
+    second: bg_warehouse_background_alpha_0_30
+  - first:
+      213: -195844761760872253
+    second: bg_warehouse_background_alpha_0_31
+  - first:
+      213: -7126780404030595200
+    second: bg_warehouse_background_alpha_0_32
+  - first:
+      213: 4802108147164019110
+    second: bg_warehouse_background_alpha_0_33
+  - first:
+      213: 2291297611501486742
+    second: bg_warehouse_background_alpha_0_34
+  - first:
+      213: -2465067597034566986
+    second: bg_warehouse_background_alpha_0_35
+  - first:
+      213: -1854205020305270091
+    second: bg_warehouse_background_alpha_0_36
+  - first:
+      213: 8564948429361231549
+    second: bg_warehouse_background_alpha_0_37
+  - first:
+      213: -2042775815529133009
+    second: bg_warehouse_background_alpha_0_38
+  - first:
+      213: 6449763575204015632
+    second: bg_warehouse_background_alpha_0_39
+  - first:
+      213: 2813944664578451909
+    second: bg_warehouse_background_alpha_0_40
+  - first:
+      213: 3925628850051913185
+    second: bg_warehouse_background_alpha_0_41
+  - first:
+      213: -6168654761254947263
+    second: bg_warehouse_background_alpha_0_42
+  - first:
+      213: 4149139952458962334
+    second: bg_warehouse_background_alpha_0_43
+  - first:
+      213: -9223250800315183548
+    second: bg_warehouse_background_alpha_0_44
+  - first:
+      213: -8709170264270531091
+    second: bg_warehouse_background_alpha_0_45
+  - first:
+      213: 8414544766352555795
+    second: bg_warehouse_background_alpha_0_46
+  - first:
+      213: -1429187346156249785
+    second: bg_warehouse_background_alpha_0_47
+  - first:
+      213: -533626390384387574
+    second: bg_warehouse_background_alpha_0_48
+  - first:
+      213: 2866472550625958167
+    second: bg_warehouse_background_alpha_0_49
+  - first:
+      213: -8192306036471988680
+    second: bg_warehouse_background_alpha_0_50
+  - first:
+      213: 591353416571200602
+    second: bg_warehouse_background_alpha_0_51
+  - first:
+      213: 8101891270173513132
+    second: bg_warehouse_background_alpha_0_52
+  - first:
+      213: 1239601042692570912
+    second: bg_warehouse_background_alpha_0_53
+  - first:
+      213: -6910873520597565004
+    second: bg_warehouse_background_alpha_0_54
+  - first:
+      213: 6040917894050119506
+    second: bg_warehouse_background_alpha_0_55
+  - first:
+      213: -2967358801548455690
+    second: bg_warehouse_background_alpha_0_56
+  - first:
+      213: 6207345352513924665
+    second: bg_warehouse_background_alpha_0_57
+  - first:
+      213: 5745680131966408576
+    second: bg_warehouse_background_alpha_0_58
+  - first:
+      213: 5467604366599604091
+    second: bg_warehouse_background_alpha_0_59
+  - first:
+      213: 3240182291532920867
+    second: bg_warehouse_background_alpha_0_60
+  - first:
+      213: 5797405205285003874
+    second: bg_warehouse_background_alpha_0_61
+  - first:
+      213: -5275371669644333986
+    second: bg_warehouse_background_alpha_0_62
+  - first:
+      213: 7441799416999967412
+    second: bg_warehouse_background_alpha_0_63
+  - first:
+      213: -6921000388379252343
+    second: bg_warehouse_background_alpha_0_64
+  - first:
+      213: -3298957846866361027
+    second: bg_warehouse_background_alpha_0_65
+  - first:
+      213: -4060822931288815846
+    second: bg_warehouse_background_alpha_0_66
+  - first:
+      213: -5861659612555836092
+    second: bg_warehouse_background_alpha_0_67
+  - first:
+      213: 208081935271350247
+    second: bg_warehouse_background_alpha_0_68
+  - first:
+      213: 5079304623238790651
+    second: bg_warehouse_background_alpha_0_69
+  - first:
+      213: 2493920048885761517
+    second: bg_warehouse_background_alpha_0_70
+  - first:
+      213: -3345724797534804617
+    second: bg_warehouse_background_alpha_0_71
+  - first:
+      213: -7027805403643911079
+    second: bg_warehouse_background_alpha_0_72
+  - first:
+      213: -7737927229869925108
+    second: bg_warehouse_background_alpha_0_73
+  - first:
+      213: -1759522328008928977
+    second: bg_warehouse_background_alpha_0_74
+  - first:
+      213: 1443122388770480968
+    second: bg_warehouse_background_alpha_0_75
+  - first:
+      213: -1601374674212104921
+    second: bg_warehouse_background_alpha_0_76
+  - first:
+      213: -6867816225719758939
+    second: bg_warehouse_background_alpha_0_77
+  - first:
+      213: 2693086641875384688
+    second: bg_warehouse_background_alpha_0_78
+  - first:
+      213: 4339784087499196466
+    second: bg_warehouse_background_alpha_0_79
+  - first:
+      213: 8188678899916419080
+    second: bg_warehouse_background_alpha_0_80
+  - first:
+      213: -7492263637886141036
+    second: bg_warehouse_background_alpha_0_81
+  - first:
+      213: -2665587074555151255
+    second: bg_warehouse_background_alpha_0_82
+  - first:
+      213: -1279114353256393550
+    second: bg_warehouse_background_alpha_0_83
+  - first:
+      213: -4059098906829105889
+    second: bg_warehouse_background_alpha_0_84
+  - first:
+      213: -2377633867452000054
+    second: bg_warehouse_background_alpha_0_85
+  - first:
+      213: -7669945603088591279
+    second: bg_warehouse_background_alpha_0_86
+  - first:
+      213: 9221605727331025535
+    second: bg_warehouse_background_alpha_0_87
+  - first:
+      213: 5753849252523170985
+    second: bg_warehouse_background_alpha_0_88
+  - first:
+      213: -4136170543183222855
+    second: bg_warehouse_background_alpha_0_89
+  - first:
+      213: 4387876152209415142
+    second: bg_warehouse_background_alpha_0_90
+  - first:
+      213: 8236248833948851400
+    second: bg_warehouse_background_alpha_0_91
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 737
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0341629c16337dd60800000000000000
+      internalID: 7914851365206496304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_1
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 325
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44d478a1eec7824c0800000000000000
+      internalID: -4312059281118114492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_2
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 325
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7be0a0bbcbd491550800000000000000
+      internalID: 6132017840628829879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_3
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 325
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5185e20f009cef090800000000000000
+      internalID: -7998734882296670187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_4
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 325
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 118b11e91c12aa3b0800000000000000
+      internalID: -5500546879415273455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_5
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 325
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce39202e237444240800000000000000
+      internalID: 4775019788785325036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_6
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 325
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8ad4c04664ee6c0800000000000000
+      internalID: -4112272014225594184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_7
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 325
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42404a833b6310f70800000000000000
+      internalID: 9151656061170877476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_8
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 325
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 221b35a52cb546e70800000000000000
+      internalID: 9107505236747202850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_9
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 127
+        width: 548
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3edf3976841c95050800000000000000
+      internalID: 5789871312681041379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_10
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 173
+        width: 168
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ca68673d7c5771e0800000000000000
+      internalID: -2200188200076940601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_11
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 335
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6da186c4354c7bc20800000000000000
+      internalID: 3222259920450099926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_12
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 335
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46b6fd4ac98764fd0800000000000000
+      internalID: -2358064740705539228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_13
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 335
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 672a27cc706791b40800000000000000
+      internalID: 5411486203129274998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_14
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 319
+        width: 30
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f5cd394e68252c20800000000000000
+      internalID: 3180993165947422196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_15
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 319
+        width: 30
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66a47c266f7566220800000000000000
+      internalID: 2478765360644835942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_16
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 319
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845ad5b5027c28f40800000000000000
+      internalID: 5729360617754436936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_17
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 319
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68cb15329cdd446e0800000000000000
+      internalID: -1854113290619077498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_18
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 319
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2876735e4b50bcf0800000000000000
+      internalID: -238590388284786643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_19
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 319
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d64dded36f1b8ab0800000000000000
+      internalID: -5004872047090907436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_20
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 303
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 119b821f431d0e720800000000000000
+      internalID: 2873526587576858897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_21
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 303
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eda8ba324861d5a0800000000000000
+      internalID: -6498298153656603159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_22
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 293
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db14554142fbdaf80800000000000000
+      internalID: -8093602793634053699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_23
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 287
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806a0e49686ca5210800000000000000
+      internalID: 1322587721912329736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_24
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 293
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 823b3f3c6ad33b260800000000000000
+      internalID: 7112096023009538856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_25
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 287
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f7f269892f048f0800000000000000
+      internalID: -558179616625295552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_26
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 293
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 480eb50ea85dcf730800000000000000
+      internalID: 4034334158663442564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_27
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 287
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5006860a996ead270800000000000000
+      internalID: 8276180812742287365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_28
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 293
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daba1f73290950fc0800000000000000
+      internalID: -3529255775296705619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_29
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 287
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2796502987341b550800000000000000
+      internalID: 6174790749226625394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_30
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 293
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68483d45abc952310800000000000000
+      internalID: 1379681184959923334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_31
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 287
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c84f101a38384df0800000000000000
+      internalID: -195844761760872253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_32
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 293
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f9a895bf6981d90800000000000000
+      internalID: -7126780404030595200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_33
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 287
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a978bccae384a240800000000000000
+      internalID: 4802108147164019110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_34
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 293
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6924f30b9035ccf10800000000000000
+      internalID: 2291297611501486742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_35
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 287
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bacd6bb4125acdd0800000000000000
+      internalID: -2465067597034566986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_36
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 293
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba55f7ab5a8446e0800000000000000
+      internalID: -1854205020305270091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_37
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 287
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db6bd9ba73fccd670800000000000000
+      internalID: 8564948429361231549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_38
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 261
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c80a7083a96a3e0800000000000000
+      internalID: -2042775815529133009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_39
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 261
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ee941acc9228950800000000000000
+      internalID: 6449763575204015632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_40
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 261
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9edc573c32d0720800000000000000
+      internalID: 2813944664578451909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_41
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 261
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e59e57e3a2aa7630800000000000000
+      internalID: 3925628850051913185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_42
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 261
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14670657d29846aa0800000000000000
+      internalID: -6168654761254947263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_43
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 261
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9592bdbdc4b49930800000000000000
+      internalID: 4149139952458962334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_44
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 261
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e40e4934e600080800000000000000
+      internalID: -9223250800315183548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_45
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 261
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de592cda9cfc22780800000000000000
+      internalID: -8709170264270531091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_46
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 263
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31ff01102e776c470800000000000000
+      internalID: 8414544766352555795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_47
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 271
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d9fda4ea18a2ce0800000000000000
+      internalID: -1429187346156249785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_48
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 255
+        width: 30
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a5d5e00ad2898f0800000000000000
+      internalID: -533626390384387574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_49
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 255
+        width: 30
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 719d77af891c7c720800000000000000
+      internalID: 2866472550625958167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_50
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 255
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e7cc480151f4e80800000000000000
+      internalID: -8192306036471988680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_51
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 255
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a54a07b9cc8e43800800000000000000
+      internalID: 591353416571200602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_52
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 255
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca5d78f3f23bf6070800000000000000
+      internalID: 8101891270173513132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_53
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 255
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ff4e4a492f33110800000000000000
+      internalID: 1239601042692570912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_54
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 245
+        width: 62
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b1012df525a710a0800000000000000
+      internalID: -6910873520597565004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_55
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 239
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25f782881d6a5d350800000000000000
+      internalID: 6040917894050119506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_56
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 229
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f0539844e2d1d6d0800000000000000
+      internalID: -2967358801548455690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_57
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 223
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ea3cec5bbe42650800000000000000
+      internalID: 6207345352513924665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_58
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 229
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08790ea53a1ccbf40800000000000000
+      internalID: 5745680131966408576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_59
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 223
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b774b8be335d0eb40800000000000000
+      internalID: 5467604366599604091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_60
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 229
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 328b45e70a077fc20800000000000000
+      internalID: 3240182291532920867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_61
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 223
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26263087155847050800000000000000
+      internalID: 5797405205285003874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_62
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 229
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5ca0b4aa6d1ac6b0800000000000000
+      internalID: -5275371669644333986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_63
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 223
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bafdf33425964760800000000000000
+      internalID: 7441799416999967412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_64
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 229
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9896058d0daa3ff90800000000000000
+      internalID: -6921000388379252343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_65
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 223
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d350b80215fb732d0800000000000000
+      internalID: -3298957846866361027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_66
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 229
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1705c42f0f05a7c0800000000000000
+      internalID: -4060822931288815846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_67
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 223
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4450b5783a337aea0800000000000000
+      internalID: -5861659612555836092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_68
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 229
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef460cea6143e200800000000000000
+      internalID: 208081935271350247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_69
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 223
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfdb52eb4a05d7640800000000000000
+      internalID: 5079304623238790651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_70
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 229
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de58f04321f2c9220800000000000000
+      internalID: 2493920048885761517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_71
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 223
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 775e8b6e5099191d0800000000000000
+      internalID: -3345724797534804617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_72
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 217
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 954eb356838387e90800000000000000
+      internalID: -7027805403643911079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_73
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 207
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0dd7c58e2c5d9490800000000000000
+      internalID: -7737927229869925108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_74
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 159
+        width: 322
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f21d8a8d3cbe497e0800000000000000
+      internalID: -1759522328008928977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_75
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 185
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843e316aa20070410800000000000000
+      internalID: 1443122388770480968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_76
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 159
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 725d74fd736c6c9e0800000000000000
+      internalID: -1601374674212104921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_77
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 183
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5af4f4ba78d90b0a0800000000000000
+      internalID: -6867816225719758939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_78
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 161
+        width: 24
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 079f45e3804cf5520800000000000000
+      internalID: 2693086641875384688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_79
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 175
+        width: 82
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 238484962a20a3c30800000000000000
+      internalID: 4339784087499196466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_80
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 171
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8003141f21804a170800000000000000
+      internalID: 8188678899916419080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_81
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 159
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49d7834cae1260890800000000000000
+      internalID: -7492263637886141036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_82
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 171
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96c7447bdaee10bd0800000000000000
+      internalID: -2665587074555151255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_83
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 169
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b49c03d54caf3ee0800000000000000
+      internalID: -1279114353256393550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_84
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 159
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f15564edc0f2ba7c0800000000000000
+      internalID: -4059098906829105889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_85
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 159
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac8d5944892f00fd0800000000000000
+      internalID: -2377633867452000054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_86
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 159
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156d5517c11ee8590800000000000000
+      internalID: -7669945603088591279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_87
+      rect:
+        serializedVersion: 2
+        x: 1547
+        y: 159
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7206440d89b9ff70800000000000000
+      internalID: 9221605727331025535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_88
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 143
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ac5ac3f867c9df40800000000000000
+      internalID: 5753849252523170985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_89
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 66
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b7212b2ece5996c0800000000000000
+      internalID: -4136170543183222855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_90
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 63
+        width: 322
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb99dacc1ed4ec30800000000000000
+      internalID: 4387876152209415142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_warehouse_background_alpha_0_91
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 63
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc1f3d4da80d4270800000000000000
+      internalID: 8236248833948851400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bg_warehouse_background_alpha_0_0: 7914851365206496304
+      bg_warehouse_background_alpha_0_1: -4312059281118114492
+      bg_warehouse_background_alpha_0_10: -2200188200076940601
+      bg_warehouse_background_alpha_0_11: 3222259920450099926
+      bg_warehouse_background_alpha_0_12: -2358064740705539228
+      bg_warehouse_background_alpha_0_13: 5411486203129274998
+      bg_warehouse_background_alpha_0_14: 3180993165947422196
+      bg_warehouse_background_alpha_0_15: 2478765360644835942
+      bg_warehouse_background_alpha_0_16: 5729360617754436936
+      bg_warehouse_background_alpha_0_17: -1854113290619077498
+      bg_warehouse_background_alpha_0_18: -238590388284786643
+      bg_warehouse_background_alpha_0_19: -5004872047090907436
+      bg_warehouse_background_alpha_0_2: 6132017840628829879
+      bg_warehouse_background_alpha_0_20: 2873526587576858897
+      bg_warehouse_background_alpha_0_21: -6498298153656603159
+      bg_warehouse_background_alpha_0_22: -8093602793634053699
+      bg_warehouse_background_alpha_0_23: 1322587721912329736
+      bg_warehouse_background_alpha_0_24: 7112096023009538856
+      bg_warehouse_background_alpha_0_25: -558179616625295552
+      bg_warehouse_background_alpha_0_26: 4034334158663442564
+      bg_warehouse_background_alpha_0_27: 8276180812742287365
+      bg_warehouse_background_alpha_0_28: -3529255775296705619
+      bg_warehouse_background_alpha_0_29: 6174790749226625394
+      bg_warehouse_background_alpha_0_3: -7998734882296670187
+      bg_warehouse_background_alpha_0_30: 1379681184959923334
+      bg_warehouse_background_alpha_0_31: -195844761760872253
+      bg_warehouse_background_alpha_0_32: -7126780404030595200
+      bg_warehouse_background_alpha_0_33: 4802108147164019110
+      bg_warehouse_background_alpha_0_34: 2291297611501486742
+      bg_warehouse_background_alpha_0_35: -2465067597034566986
+      bg_warehouse_background_alpha_0_36: -1854205020305270091
+      bg_warehouse_background_alpha_0_37: 8564948429361231549
+      bg_warehouse_background_alpha_0_38: -2042775815529133009
+      bg_warehouse_background_alpha_0_39: 6449763575204015632
+      bg_warehouse_background_alpha_0_4: -5500546879415273455
+      bg_warehouse_background_alpha_0_40: 2813944664578451909
+      bg_warehouse_background_alpha_0_41: 3925628850051913185
+      bg_warehouse_background_alpha_0_42: -6168654761254947263
+      bg_warehouse_background_alpha_0_43: 4149139952458962334
+      bg_warehouse_background_alpha_0_44: -9223250800315183548
+      bg_warehouse_background_alpha_0_45: -8709170264270531091
+      bg_warehouse_background_alpha_0_46: 8414544766352555795
+      bg_warehouse_background_alpha_0_47: -1429187346156249785
+      bg_warehouse_background_alpha_0_48: -533626390384387574
+      bg_warehouse_background_alpha_0_49: 2866472550625958167
+      bg_warehouse_background_alpha_0_5: 4775019788785325036
+      bg_warehouse_background_alpha_0_50: -8192306036471988680
+      bg_warehouse_background_alpha_0_51: 591353416571200602
+      bg_warehouse_background_alpha_0_52: 8101891270173513132
+      bg_warehouse_background_alpha_0_53: 1239601042692570912
+      bg_warehouse_background_alpha_0_54: -6910873520597565004
+      bg_warehouse_background_alpha_0_55: 6040917894050119506
+      bg_warehouse_background_alpha_0_56: -2967358801548455690
+      bg_warehouse_background_alpha_0_57: 6207345352513924665
+      bg_warehouse_background_alpha_0_58: 5745680131966408576
+      bg_warehouse_background_alpha_0_59: 5467604366599604091
+      bg_warehouse_background_alpha_0_6: -4112272014225594184
+      bg_warehouse_background_alpha_0_60: 3240182291532920867
+      bg_warehouse_background_alpha_0_61: 5797405205285003874
+      bg_warehouse_background_alpha_0_62: -5275371669644333986
+      bg_warehouse_background_alpha_0_63: 7441799416999967412
+      bg_warehouse_background_alpha_0_64: -6921000388379252343
+      bg_warehouse_background_alpha_0_65: -3298957846866361027
+      bg_warehouse_background_alpha_0_66: -4060822931288815846
+      bg_warehouse_background_alpha_0_67: -5861659612555836092
+      bg_warehouse_background_alpha_0_68: 208081935271350247
+      bg_warehouse_background_alpha_0_69: 5079304623238790651
+      bg_warehouse_background_alpha_0_7: 9151656061170877476
+      bg_warehouse_background_alpha_0_70: 2493920048885761517
+      bg_warehouse_background_alpha_0_71: -3345724797534804617
+      bg_warehouse_background_alpha_0_72: -7027805403643911079
+      bg_warehouse_background_alpha_0_73: -7737927229869925108
+      bg_warehouse_background_alpha_0_74: -1759522328008928977
+      bg_warehouse_background_alpha_0_75: 1443122388770480968
+      bg_warehouse_background_alpha_0_76: -1601374674212104921
+      bg_warehouse_background_alpha_0_77: -6867816225719758939
+      bg_warehouse_background_alpha_0_78: 2693086641875384688
+      bg_warehouse_background_alpha_0_79: 4339784087499196466
+      bg_warehouse_background_alpha_0_8: 9107505236747202850
+      bg_warehouse_background_alpha_0_80: 8188678899916419080
+      bg_warehouse_background_alpha_0_81: -7492263637886141036
+      bg_warehouse_background_alpha_0_82: -2665587074555151255
+      bg_warehouse_background_alpha_0_83: -1279114353256393550
+      bg_warehouse_background_alpha_0_84: -4059098906829105889
+      bg_warehouse_background_alpha_0_85: -2377633867452000054
+      bg_warehouse_background_alpha_0_86: -7669945603088591279
+      bg_warehouse_background_alpha_0_87: 9221605727331025535
+      bg_warehouse_background_alpha_0_88: 5753849252523170985
+      bg_warehouse_background_alpha_0_89: -4136170543183222855
+      bg_warehouse_background_alpha_0_9: 5789871312681041379
+      bg_warehouse_background_alpha_0_90: 4387876152209415142
+      bg_warehouse_background_alpha_0_91: 8236248833948851400
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
