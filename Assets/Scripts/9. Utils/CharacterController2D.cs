@@ -92,7 +92,10 @@ namespace Study.Utilities
         private float   pendingRollForward; // 구르기 방향값 -1/+1:좌/우
         private Vector2 boostVelocity    = Vector2.zero; //이동 메서드에 의한 이동값
         private float boostTimer = 0.0f; //대쉬/구르기 이동 시간
-        private Vector3 externalDelta    = Vector3.zero; //외부 플랫폼에 의한 이동값
+
+        [Header("Knockback Settings")]
+        [SerializeField] private float externalDrag = 12.0f;
+        private Vector2 externalVelocity = Vector3.zero; //외부에 의한 이동값
 
         private float   moveInput        = 0.0f; //기본 이동x값
         private float   baseVerticalVelocity = 0.0f; //기본 점프 + 중력값
@@ -140,16 +143,13 @@ namespace Study.Utilities
             UpdateBoostMovement();  // ← 매 프레임 감쇠
             
 
-            HorizontalVelocity = moveInput * speed + boostVelocity.x;
-            VerticalVelocity = baseVerticalVelocity + boostVelocity.y;
+            HorizontalVelocity = moveInput * speed + boostVelocity.x + externalVelocity.x;
+            VerticalVelocity = baseVerticalVelocity + boostVelocity.y + externalVelocity.y;
 
             MoveToPlatform();
 
             Vector3 desireMove =
-                new Vector3(HorizontalVelocity, VerticalVelocity) * Time.fixedDeltaTime
-                + externalDelta;
-
-            externalDelta = Vector3.zero;
+                new Vector3(HorizontalVelocity, VerticalVelocity) * Time.fixedDeltaTime;
 
             Bounds box = GetCastBox();
 
@@ -197,6 +197,13 @@ namespace Study.Utilities
                 }
             }
 
+            // 죽은 뒤에도 넉백은 잠깐 남게 두고 감쇠
+            externalVelocity = Vector2.Lerp(
+                externalVelocity,
+                Vector2.zero,
+                externalDrag * Time.fixedDeltaTime);
+            if (IsGrounded && externalVelocity.y < 0.0f)
+                externalVelocity.y = 0.0f;
 
             MoveVectorX = (Mathf.Abs(moveVector.x) > 0) ? 1 : 0;
 
@@ -217,9 +224,13 @@ namespace Study.Utilities
             FacingDirection = (direction < 0) ? -1 : 1;
         }
 
-        public void AddExternalMovement(Vector3 delta)
+        public void ApplyImpact(Vector2 direction, float power)
         {
-            externalDelta += delta;
+            if (power <= 0.0f) return;
+
+            moveInput = 0.0f;
+
+            externalVelocity += direction * power;
         }
 
         public void RequestAttack(Vector2 mouseVec)
@@ -253,6 +264,11 @@ namespace Study.Utilities
         {
             pendingRollForward = forward;
             rollRequested = true;
+        }
+
+        public void KnockbackReset()
+        {
+            externalVelocity = Vector3.zero;
         }
 
         #endregion

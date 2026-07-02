@@ -8,6 +8,8 @@ namespace Study_ActionPlatformer
 
         [SerializeField] private int totalEnemyCount;
         [SerializeField] private int deadEnemyCount;
+
+        [field:SerializeField] private PlayerController playerController;
         private Enemy[] enemies;
 
         public bool stageClear => totalEnemyCount > 0 && deadEnemyCount >= totalEnemyCount;
@@ -36,8 +38,10 @@ namespace Study_ActionPlatformer
             if (stageClear) GameManager.Instance?.OnAllEnemiesDead();
         }
 
-        public void ResetEnemy()
+        public void ResetUnit()
         {
+            playerController.ResetPlayer();
+
             deadEnemyCount = 0;
             foreach (var enemy in enemies)
             {

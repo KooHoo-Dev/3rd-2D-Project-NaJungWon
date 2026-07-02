@@ -45,6 +45,8 @@ namespace Study_ActionPlatformer
 
         public int FacingDirection { get; private set; } = 1;
 
+        public bool isDead { get; private set; } = false;
+
         // 각 상태를 제어하기 위한 멤버 변수들
         private Dictionary<int, PlayerAnimStateBase> StateDic { get; set; } = new();
         private PlayerAnimStateBase defaultState; // 예외처리를 위한 기본 상태
@@ -76,6 +78,7 @@ namespace Study_ActionPlatformer
 
         private void Update()
         {
+            if (isDead) return;
             UpdateAnimState();
             UpdateJumpInput();
             UpdateDownInput();
@@ -295,6 +298,19 @@ namespace Study_ActionPlatformer
         public void ApplyRoll(bool apply)
         {
             Controller2D.IsRolling = apply;
+        }
+
+        public void PlayerDead(Vector2 hitdirection, float power)
+        {
+            isDead = true;
+            Controller2D.ApplyImpact(hitdirection, power);
+        }
+
+        public void ResetPlayer()
+        {
+            if (isDead == false) return;
+            isDead = false;
+            Controller2D.KnockbackReset();
         }
 
         #endregion

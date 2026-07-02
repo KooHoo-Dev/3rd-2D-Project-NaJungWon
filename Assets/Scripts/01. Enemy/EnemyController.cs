@@ -153,7 +153,7 @@ namespace Study_ActionPlatformer
             if (IsGrounded && externalVelocity.y < 0.0f)
                 externalVelocity.y = 0.0f;
 
-            rb.MovePosition(rb.position + (Vector2)moveVector);
+            rb.MovePosition(transform.position + moveVector);
         }
         public void ApplyImpact(Vector2 direction, float power)
         {
@@ -573,6 +573,7 @@ namespace Study_ActionPlatformer
         public void Reset()
         {
             if (IsDead) IsDead = false;
+            StartCoroutine(FiniteStateMachineCoroutine());
         }
     }
 }

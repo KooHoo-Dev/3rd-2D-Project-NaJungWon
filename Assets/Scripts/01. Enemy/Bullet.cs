@@ -23,6 +23,7 @@ namespace Study_ActionPlatformer
 
         private void OnTriggerEnter2D(Collider2D other)
         {
+            //팀킬방지 코드
             if (Owner.gameObject == Player.LocalPlayer.gameObject &&
                 other.gameObject == Player.LocalPlayer.gameObject) return;
             else if (Owner.gameObject != Player.LocalPlayer.gameObject &&

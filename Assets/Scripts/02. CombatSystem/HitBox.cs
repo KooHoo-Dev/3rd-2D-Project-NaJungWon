@@ -49,8 +49,14 @@ namespace Study_ActionPlatformer
         {
             // 아래는 Legacy Code
             // HurtBox가 없을경우 종료한다. (Physics Layer 설정으로 아예 안들어오게 좋음)
-            //if (collision.TryGetComponent<HurtBox>(out HurtBox other) == false) return;
-            
+            if (collision.TryGetComponent<HurtBox>(out HurtBox other) == false) return;
+
+            //팀킬방지 코드
+            if (Owner.gameObject == Player.LocalPlayer.gameObject &&
+                collision.gameObject == Player.LocalPlayer.gameObject) return;
+            else if (Owner.gameObject != Player.LocalPlayer.gameObject &&
+                collision.gameObject != Player.LocalPlayer.gameObject) return;
+
             HurtBox hurtBox = CombatSystem.Instance.GetHurtBoxOrNull(collision);
             if (hurtBox == null) return;
             

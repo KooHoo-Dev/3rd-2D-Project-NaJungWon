@@ -62,6 +62,7 @@ namespace Study_ActionPlatformer
         {
             Stat.ResetToFull();
             EnemyController.Reset();
+            Debug.Log($"{gameObject.name}초기화 완료");
         }
 
         protected IEnumerator HitEffectCoroutine()

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9632ee56aee7b6e40bf787d8376b95dd
+guid: c4e4d2c77166c2544a2d0dc54b540e8c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1264147670748102889
-    second: Level_0__IntGrid-int_0
+      213: 637236004177935435
+    second: Level_0__Trigger_Grid-int_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Level_0__IntGrid-int_0
+      name: Level_0__Trigger_Grid-int_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 5
-        width: 7
-        height: 7
+        x: 0
+        y: 0
+        width: 53
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 71ffb652468d47ee0800000000000000
-      internalID: -1264147670748102889
+      spriteID: b4c7d1305cae7d800800000000000000
+      internalID: 637236004177935435
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Level_0__IntGrid-int_0: -1264147670748102889
+      Level_0__Trigger_Grid-int_0: 637236004177935435
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

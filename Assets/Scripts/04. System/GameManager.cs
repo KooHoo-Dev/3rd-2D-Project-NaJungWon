@@ -2,6 +2,7 @@ using Jay;
 using Study.Utilities;
 using Study_System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -10,22 +11,22 @@ namespace Study_ActionPlatformer
 {
     public class GameManager : SingletonBase<GameManager>
     {
-        // ============================================================
-        // [씬마다 갱신되는 참조들]
-        // ============================================================
+        [Header("씬 마다 갱신")]
         private TimeLineRecorder recorder;
         private UnitManagement unitManagement;
         private GameObject clearTrigger;
 
-        // ============================================================
-        // [게임 상태]
-        // ============================================================
+        [Header("게임 상태")]
         public GameState CurrentGameState { get; private set; } = GameState.Ready;
         public int currentStageNum = 1;
         public const int MAX_STAGE_NUM = 3;
 
         [Header("씬 이름 설정")]
         [SerializeField] private string[] stageSceneNames = { "Stage_1", "Stage_2", "Stage_3" };
+
+        [Header("재생 스킵 설정")]
+        public bool recordSkeep = false;
+
 
         public enum GameState
         {
@@ -37,9 +38,6 @@ namespace Study_ActionPlatformer
             Fin,
         }
 
-        // ============================================================
-        // [SingletonBase 오버라이드]
-        // ============================================================
         protected override void OnInitialize()
         {
             base.OnInitialize();
@@ -52,14 +50,12 @@ namespace Study_ActionPlatformer
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
 
-        // ============================================================
-        // [씬 로드 시 자동 실행]
-        // ============================================================
+        #region 씬 로드
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             Debug.Log($"[GameManager] 씬 로드: {scene.name}");
             RefreshSceneReferences();
-            ChangeGameState(GameState.Playing);
+            ChangeGameState(GameState.Playing); // 이걸 나중에 버튼 클릭으로 빼버리기
         }
 
         private void RefreshSceneReferences()
@@ -77,6 +73,7 @@ namespace Study_ActionPlatformer
                       $"UnitManagement: {unitManagement != null}, " +
                       $"ClearTrigger: {clearTrigger != null}");
         }
+        #endregion
 
         // ============================================================
         // [입력 처리]
@@ -90,11 +87,12 @@ namespace Study_ActionPlatformer
                 else if (CurrentGameState == GameState.Pause)
                     ChangeGameState(GameState.Playing);
             }
+            if(SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Left))
+            {
+                if (CurrentGameState == GameState.RePlay) recordSkeep = true;
+            }
         }
 
-        // ============================================================
-        // [상태 관리]
-        // ============================================================
         public void ChangeGameState(GameState newState)
         {
             if (CurrentGameState == newState) return;
@@ -116,7 +114,7 @@ namespace Study_ActionPlatformer
                     break;
 
                 case GameState.Rewind:
-                    unitManagement?.ResetEnemy();
+                    unitManagement?.ResetUnit();
                     recorder?.BeginRewind();
                     break;
 
@@ -130,11 +128,9 @@ namespace Study_ActionPlatformer
             }
         }
 
-        // ============================================================
-        // [외부에서 직접 호출하는 메서드들]
-        // ============================================================
+        #region 외부 호출
 
-        /// <summary>UnitManagement에서 모든 적이 죽었을 때 직접 호출</summary>
+        // 모든 적이 죽었을 때 직접 호출
         public void OnAllEnemiesDead()
         {
             Debug.Log("[GameManager] 모든 적 처치 완료!");
@@ -150,28 +146,31 @@ namespace Study_ActionPlatformer
             }
         }
 
-        /// <summary>StageClearTrigger에서 플레이어가 포탈에 닿았을 때 호출</summary>
+        /// StageClearTrigger에서 플레이어가 ClearTrigger에 닿았을 때 호출
         public void ClearStage()
         {
             StartCoroutine(ClearStageCoroutine());
         }
 
-        /// <summary>플레이어 사망 시 호출</summary>
+        /// 플레이어 사망 시 호출
         public void RestartStage()
         {
             StartCoroutine(RestartStageCoroutine());
         }
 
-        // ============================================================
-        // [코루틴들]
-        // ============================================================
+        #endregion
+
+        #region 코루틴
         private IEnumerator ClearStageCoroutine()
         {
             ChangeGameState(GameState.RePlay);
 
-            // TimeLineRecorder 재생 완료까지 대기
-            yield return new WaitUntil(() => TimeLineRecorder.recordMode == TimeLineRecorder.RecordMode.Fin);
+            // 녹화 재생 완료 또는 스킵 입력까지 대기
+            yield return new WaitUntil(() => 
+            TimeLineRecorder.recordMode == TimeLineRecorder.RecordMode.Fin ||
+            recordSkeep);
 
+            recordSkeep = false;
             // 다음 스테이지로
             ChangeGameState(GameState.Fin);
         }
@@ -183,7 +182,9 @@ namespace Study_ActionPlatformer
             // 역재생 완료까지 대기
             yield return new WaitUntil(() => TimeLineRecorder.recordMode == TimeLineRecorder.RecordMode.Fin);
 
-            // 다시 게임 시작
+            // 게임 재시작
+            unitManagement.ResetUnit();
+
             ChangeGameState(GameState.Ready);
         }
 
@@ -196,7 +197,7 @@ namespace Study_ActionPlatformer
             if (currentStageNum > MAX_STAGE_NUM)
             {
                 Debug.Log("[GameManager] 모든 스테이지 클리어!");
-                //SceneManager.LoadScene("MainMenu");
+                //여기 클리어 UI띄워야함
             }
             else
             {
@@ -208,5 +209,6 @@ namespace Study_ActionPlatformer
                 }
             }
         }
+        #endregion
     }
 }

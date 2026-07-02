@@ -1,3 +1,4 @@
+using Study.Utilities;
 using UnityEditor;
 using UnityEngine;
 
@@ -23,18 +24,26 @@ namespace Study_ActionPlatformer
         //private PlayerStat Stat { get; set; }
         [field: SerializeField] public BaseStat Stat { get; private set; }
 
+        protected PlayerController playerController { get; private set; }
 
         //public AttackInfo attackInfo;
 
         private void Awake()
         {
+            playerController = GetComponent<PlayerController>();
             LocalPlayer = this;
             Stat.ResetToFull();
         }
 
         public override void TakeDamage(int damage, Vector2 hitDirection, float power)
         {
-            
+            if (Stat.ApplyDamage(damage))
+            {
+                // 죽었다면
+                playerController.PlayerDead(hitDirection, power);
+                return;
+            }
+
         }
 
         public override void TakeHeal(int heal)
