@@ -247,6 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UnitManagement
   totalEnemyCount: 0
   deadEnemyCount: 0
+  playerController: {fileID: 0}
 --- !u!1 &211163049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,6 +1580,7 @@ MonoBehaviour:
   isWallFlipping: 0
   maxStepHeight: 0.05
   stepCheckCount: 4
+  externalDrag: 12
   IsDashing: 0
   IsRolling: 0
   showCastGizmos: 1
@@ -1670,7 +1672,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782025976}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 703abc631df80e94f9a4e8f06372a37b, type: 3}
   m_Name: 

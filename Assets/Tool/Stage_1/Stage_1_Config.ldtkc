@@ -14,17 +14,35 @@
         {
             "_key": "Trigger_Grid_1",
             "_asset": {
-                "instanceID": 0
+                "fileID": 11400000,
+                "guid": "9ca8eb792189ea74b8c68bb96fe956ad",
+                "type": 2
             }
         },
         {
             "_key": "Trigger_Grid_2",
             "_asset": {
-                "instanceID": 0
+                "fileID": 11400000,
+                "guid": "60c270ce95a98f74b92edd076704e9de",
+                "type": 2
             }
         },
         {
             "_key": "Trigger_Grid_3",
+            "_asset": {
+                "fileID": 11400000,
+                "guid": "8bf28f224db55c641ac35faf3effc424",
+                "type": 2
+            }
+        },
+        {
+            "_key": "Ground_alpha_1",
+            "_asset": {
+                "instanceID": 0
+            }
+        },
+        {
+            "_key": "Ground_alpha_2",
             "_asset": {
                 "instanceID": 0
             }
@@ -37,18 +55,6 @@
         },
         {
             "_key": "Ground_2",
-            "_asset": {
-                "instanceID": 0
-            }
-        },
-        {
-            "_key": "BG2_Grid_1",
-            "_asset": {
-                "instanceID": 0
-            }
-        },
-        {
-            "_key": "BG2_Grid_2",
             "_asset": {
                 "instanceID": 0
             }
@@ -67,12 +73,6 @@
         },
         {
             "_key": "BG_Grid_3",
-            "_asset": {
-                "instanceID": 0
-            }
-        },
-        {
-            "_key": "BG_Grid_4",
             "_asset": {
                 "instanceID": 0
             }

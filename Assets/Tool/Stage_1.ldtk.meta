@@ -21,18 +21,18 @@ ScriptedImporter:
   _scaleEntities: 1
   _intGridValues:
   - _key: Trigger_Grid_1
-    _asset: {instanceID: 0}
+    _asset: {fileID: 11400000, guid: 9ca8eb792189ea74b8c68bb96fe956ad, type: 2}
   - _key: Trigger_Grid_2
-    _asset: {instanceID: 0}
+    _asset: {fileID: 11400000, guid: 60c270ce95a98f74b92edd076704e9de, type: 2}
   - _key: Trigger_Grid_3
+    _asset: {fileID: 11400000, guid: 8bf28f224db55c641ac35faf3effc424, type: 2}
+  - _key: Ground_alpha_1
+    _asset: {instanceID: 0}
+  - _key: Ground_alpha_2
     _asset: {instanceID: 0}
   - _key: Ground_1
     _asset: {instanceID: 0}
   - _key: Ground_2
-    _asset: {instanceID: 0}
-  - _key: BG2_Grid_1
-    _asset: {instanceID: 0}
-  - _key: BG2_Grid_2
     _asset: {instanceID: 0}
   - _key: BG_Grid_1
     _asset: {instanceID: 0}
@@ -40,27 +40,33 @@ ScriptedImporter:
     _asset: {instanceID: 0}
   - _key: BG_Grid_3
     _asset: {instanceID: 0}
-  - _key: BG_Grid_4
-    _asset: {instanceID: 0}
   _entities: []
   _enumGenerate: 0
   _enumPath: 
   _enumNamespace: 
   _useLayerCustomSortingOrders: 0
   _layerCustomSortingOrders:
-  - _ldtkLayerName: GROUND_Tiles_1
-    _ldtkLayerOrder: 0
-  - _ldtkLayerName: BG_Tiles_2
-    _ldtkLayerOrder: -2
   - _ldtkLayerName: Trigger_Grid
     _ldtkLayerOrder: -4
+  - _ldtkLayerName: GROUND_Tiles_1_alpha
+    _ldtkLayerOrder: 0
+  - _ldtkLayerName: GROUND_Tiles_1
+    _ldtkLayerOrder: 0
+  - _ldtkLayerName: BG_Tiles_2_alpha
+    _ldtkLayerOrder: -2
+  - _ldtkLayerName: BG_Tiles_2
+    _ldtkLayerOrder: -2
+  - _ldtkLayerName: Ground_alpha
+    _ldtkLayerOrder: -5
   - _ldtkLayerName: Ground
     _ldtkLayerOrder: -3
+  - _ldtkLayerName: GROUND_Tiles_2_alpha
+    _ldtkLayerOrder: -7
   - _ldtkLayerName: GROUND_Tiles_2
     _ldtkLayerOrder: -1
+  - _ldtkLayerName: BG_Tiles_1_alpha
+    _ldtkLayerOrder: -9
   - _ldtkLayerName: BG_Tiles_1
     _ldtkLayerOrder: -3
-  - _ldtkLayerName: BG2_Grid
-    _ldtkLayerOrder: -5
   - _ldtkLayerName: BG_Grid
     _ldtkLayerOrder: -6
