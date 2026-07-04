@@ -1,8 +1,6 @@
 using Jay;
 using Study.Utilities;
-using Study_System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -18,6 +16,10 @@ namespace Study_ActionPlatformer
 
         [Header("게임 상태")]
         public GameState CurrentGameState { get; private set; } = GameState.Ready;
+
+        // [핵심 추가] 일시정지 직전 상태를 기억하여 정확한 복귀 보장
+        private GameState stateBeforePause = GameState.Playing;
+
         public int currentStageNum = 1;
         public const int MAX_STAGE_NUM = 3;
 
@@ -27,12 +29,20 @@ namespace Study_ActionPlatformer
         [Header("재생 스킵 설정")]
         public bool recordSkeep = false;
 
+        [Header("시작 / 재시작 연출 대기")]
+        [SerializeField] private float stageEntryDelay = 0.75f;
+        [SerializeField] private float restartPromptDelay = 0.15f;
+
+        private Coroutine flowCoroutine;
+
+        public bool CanAcceptGameplayInput => CurrentGameState == GameState.Playing;
 
         public enum GameState
         {
             Ready,
             Playing,
             Pause,
+            Dead,
             Rewind,
             RePlay,
             Fin,
@@ -54,19 +64,25 @@ namespace Study_ActionPlatformer
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             Debug.Log($"[GameManager] 씬 로드: {scene.name}");
+
+            if (flowCoroutine != null)
+            {
+                StopCoroutine(flowCoroutine);
+                flowCoroutine = null;
+            }
+
             RefreshSceneReferences();
-            ChangeGameState(GameState.Playing); // 이걸 나중에 버튼 클릭으로 빼버리기
+            StartManagedFlow(StageEntryCoroutine());
         }
 
         private void RefreshSceneReferences()
         {
-            // 씬마다 새로 배치된 컴포넌트들 찾기
             recorder = TimeLineRecorder.recorder;
             unitManagement = UnitManagement.Instance;
             clearTrigger = GameObject.FindWithTag("ClearTrigger");
 
             if (clearTrigger != null)
-                clearTrigger.SetActive(false); // 초기에는 비활성화
+                clearTrigger.SetActive(false);
 
             Debug.Log($"[GameManager] 참조 갱신 완료 - " +
                       $"Recorder: {recorder != null}, " +
@@ -80,16 +96,72 @@ namespace Study_ActionPlatformer
         // ============================================================
         private void Update()
         {
+            // ESC: Ready/Fin 제외한 모든 상태에서 일시정지 토글
             if (SimpleInput.GetKeyDown(Key.Escape))
             {
-                if (CurrentGameState == GameState.Playing)
+                if (CurrentGameState == GameState.Pause)
+                {
+                    // 일시정지 해제 → 이전 상태로 정확히 복귀
+                    ResumeFromPause();
+                }
+                else if (CurrentGameState != GameState.Ready &&
+                         CurrentGameState != GameState.Fin)
+                {
+                    // 일시정지 진입 → 현재 상태 기억
+                    stateBeforePause = CurrentGameState;
                     ChangeGameState(GameState.Pause);
-                else if (CurrentGameState == GameState.Pause)
-                    ChangeGameState(GameState.Playing);
+                }
             }
-            if(SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Left))
+
+            // R키: Playing 상태에서만 수동 재시작
+            if (SimpleInput.GetKeyDown(Key.R))
             {
-                if (CurrentGameState == GameState.RePlay) recordSkeep = true;
+                if (CurrentGameState == GameState.Playing)
+                    OnManualRestart();
+            }
+
+            // 좌클릭: RePlay 스킵
+            if (SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Left))
+            {
+                if (CurrentGameState == GameState.RePlay)
+                    recordSkeep = true;
+            }
+        }
+
+        // ============================================================
+        // [핵심] 일시정지 해제 전용 메서드
+        // ============================================================
+        // ChangeGameState를 우회하여 역재생/재생이 처음부터 다시 시작되는 것을 방지
+        private void ResumeFromPause()
+        {
+            if (CurrentGameState != GameState.Pause) return;
+
+            Debug.Log($"[GameManager] Pause 해제 → {stateBeforePause} 복귀");
+
+            // GameState 직접 설정 (ChangeGameState 우회)
+            CurrentGameState = stateBeforePause;
+
+            switch (stateBeforePause)
+            {
+                case GameState.Playing:
+                    Time.timeScale = 1f;
+                    recorder?.ResumeAll(); // Recording 모드 복귀
+                    break;
+
+                case GameState.Dead:
+                    Time.timeScale = 1f;
+                    // Dead 상태는 레코더 Pause 유지 (사망 연출 대기)
+                    break;
+
+                case GameState.Rewind:
+                    Time.timeScale = 0f;
+                    recorder?.ResumeAll(); // Rewinding 모드 복귀, 중단 지점부터 이어서 진행
+                    break;
+
+                case GameState.RePlay:
+                    Time.timeScale = 0f;
+                    recorder?.ResumeAll(); // Replaying 모드 복귀, 중단 지점부터 이어서 진행
+                    break;
             }
         }
 
@@ -97,28 +169,41 @@ namespace Study_ActionPlatformer
         {
             if (CurrentGameState == newState) return;
 
+            GameState prevState = CurrentGameState;
             Debug.Log($"[GameManager] 상태 변경: {CurrentGameState} → {newState}");
             CurrentGameState = newState;
 
             switch (newState)
             {
+                case GameState.Ready:
+                    Time.timeScale = 0f;
+                    break;
+
                 case GameState.Playing:
                     Time.timeScale = 1f;
-                    recorder?.BeginRecording();
+                    // Pause → Playing 복귀는 ResumeFromPause()에서만 처리
                     break;
 
                 case GameState.Pause:
                     Time.timeScale = 0f;
-                    recorder?.PauseRecording();
-                    // TODO: 설정창 UI 열기
+                    // [핵심] 모든 레코더 작업 일시정지 + 애니메이터 Normal 모드 전환
+                    recorder?.PauseAll();
+                    break;
+
+                case GameState.Dead:
+                    Time.timeScale = 1f;
+                    recorder?.PauseAll();
                     break;
 
                 case GameState.Rewind:
-                    unitManagement?.ResetUnit();
+                    Time.timeScale = 0f;
+                    // 항상 새로운 역재생 (Pause 복귀는 ResumeFromPause에서 처리)
                     recorder?.BeginRewind();
                     break;
 
                 case GameState.RePlay:
+                    Time.timeScale = 0f;
+                    // 항상 새로운 정방향 재생
                     recorder?.BeginReplay();
                     break;
 
@@ -130,62 +215,126 @@ namespace Study_ActionPlatformer
 
         #region 외부 호출
 
-        // 모든 적이 죽었을 때 직접 호출
         public void OnAllEnemiesDead()
         {
+            if (CurrentGameState != GameState.Playing) return;
+
             Debug.Log("[GameManager] 모든 적 처치 완료!");
 
             if (clearTrigger != null)
-            {
-                clearTrigger.SetActive(true); // 클리어 포탈 활성화
-            }
+                clearTrigger.SetActive(true);
             else
-            {
-                // 클리어 트리거가 없으면 바로 클리어
                 ClearStage();
-            }
         }
 
-        /// StageClearTrigger에서 플레이어가 ClearTrigger에 닿았을 때 호출
         public void ClearStage()
         {
-            StartCoroutine(ClearStageCoroutine());
+            if (flowCoroutine != null) return;
+            StartManagedFlow(ClearStageCoroutine());
         }
 
-        /// 플레이어 사망 시 호출
-        public void RestartStage()
+        public void OnPlayerDead()
         {
-            StartCoroutine(RestartStageCoroutine());
+            if (flowCoroutine != null) return;
+            if (CurrentGameState != GameState.Playing) return;
+            Player.LocalPlayer.GetComponent<PlayerController>().PlayerDead(Vector2.zero, 0f);
+            StartManagedFlow(DeadRestartCoroutine());
+        }
+
+        public void OnManualRestart()
+        {
+            if (flowCoroutine != null) return;
+            StartManagedFlow(ManualRestartCoroutine());
+        }
+
+        private void StartManagedFlow(IEnumerator routine)
+        {
+            if (flowCoroutine != null)
+                StopCoroutine(flowCoroutine);
+
+            flowCoroutine = StartCoroutine(ManagedFlowCoroutine(routine));
         }
 
         #endregion
 
         #region 코루틴
+
+        private IEnumerator ManagedFlowCoroutine(IEnumerator routine)
+        {
+            yield return StartCoroutine(routine);
+            flowCoroutine = null;
+        }
+
+        private IEnumerator StageEntryCoroutine()
+        {
+            ChangeGameState(GameState.Ready);
+            recordSkeep = false;
+
+            yield return new WaitForSecondsRealtime(stageEntryDelay);
+            yield return WaitForLeftClick();
+
+            StartFreshRound();
+        }
+
         private IEnumerator ClearStageCoroutine()
         {
             ChangeGameState(GameState.RePlay);
 
-            // 녹화 재생 완료 또는 스킵 입력까지 대기
-            yield return new WaitUntil(() => 
-            TimeLineRecorder.recordMode == TimeLineRecorder.RecordMode.Fin ||
-            recordSkeep);
+            yield return new WaitUntil(() =>
+                TimeLineRecorder.recordMode == TimeLineRecorder.RecordMode.Fin ||
+                recordSkeep);
 
             recordSkeep = false;
-            // 다음 스테이지로
             ChangeGameState(GameState.Fin);
         }
 
-        private IEnumerator RestartStageCoroutine()
+        private IEnumerator DeadRestartCoroutine()
         {
+            ChangeGameState(GameState.Dead);
+            yield return new WaitForSecondsRealtime(restartPromptDelay);
+            yield return WaitForLeftClick();
+
             ChangeGameState(GameState.Rewind);
+            yield return new WaitUntil(() =>
+                TimeLineRecorder.recordMode == TimeLineRecorder.RecordMode.Fin);
 
-            // 역재생 완료까지 대기
-            yield return new WaitUntil(() => TimeLineRecorder.recordMode == TimeLineRecorder.RecordMode.Fin);
+            StartFreshRound();
+        }
 
-            // 게임 재시작
-            unitManagement.ResetUnit();
-
+        private IEnumerator ManualRestartCoroutine()
+        {
             ChangeGameState(GameState.Ready);
+            yield return null;
+            ChangeGameState(GameState.Rewind);
+            yield return new WaitUntil(() =>
+                TimeLineRecorder.recordMode == TimeLineRecorder.RecordMode.Fin);
+
+            StartFreshRound();
+        }
+
+        // Pause 상태에서는 좌클릭 무시
+        private IEnumerator WaitForLeftClick()
+        {
+            yield return null; // debounce
+            while (true)
+            {
+                if (CurrentGameState != GameState.Pause &&
+                    SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Left))
+                    break;
+                yield return null;
+            }
+        }
+
+        private void StartFreshRound()
+        {
+            recordSkeep = false;
+            unitManagement?.ResetUnit();
+            recorder?.StartNewRecording();
+
+            if (clearTrigger != null)
+                clearTrigger.SetActive(false);
+
+            ChangeGameState(GameState.Playing);
         }
 
         private IEnumerator LoadNextStageCoroutine()
@@ -197,7 +346,6 @@ namespace Study_ActionPlatformer
             if (currentStageNum > MAX_STAGE_NUM)
             {
                 Debug.Log("[GameManager] 모든 스테이지 클리어!");
-                //여기 클리어 UI띄워야함
             }
             else
             {
@@ -209,6 +357,8 @@ namespace Study_ActionPlatformer
                 }
             }
         }
+
         #endregion
     }
 }
+

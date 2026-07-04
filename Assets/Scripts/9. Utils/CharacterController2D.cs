@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -88,7 +89,7 @@ namespace Study.Utilities
         public float maxStepHeight = 0.3f;   // 한 번에 올라갈 수 있는 최대 계단 높이
         public int stepCheckCount = 4;       // 위로 몇 번 나눠서 검사할지
 
-        private Vector2 pendingDashDirection; //마우스 방향 좌표
+        public Vector2 pendingDashDirection { get; private set; } //마우스 방향 좌표
         private float   pendingRollForward; // 구르기 방향값 -1/+1:좌/우
         private Vector2 boostVelocity    = Vector2.zero; //이동 메서드에 의한 이동값
         private float boostTimer = 0.0f; //대쉬/구르기 이동 시간
@@ -141,7 +142,8 @@ namespace Study.Utilities
             ApplyRoll();
             ApplyGravaity();
             UpdateBoostMovement();  // ← 매 프레임 감쇠
-            
+
+            if (IsDashing || IsRolling || isWallFlipping) moveInput = 0; 
 
             HorizontalVelocity = moveInput * speed + boostVelocity.x + externalVelocity.x;
             VerticalVelocity = baseVerticalVelocity + boostVelocity.y + externalVelocity.y;
@@ -216,12 +218,15 @@ namespace Study.Utilities
 
         public void SetMoveInput(float horizontal)
         {
+            if (IsDashing || IsRolling || isWallFlipping) return;
+
             moveInput = Mathf.Clamp(horizontal, -1.0f, 1.0f);
+            SetFacingDirection(moveInput);
         }
-        public void SetFacingDirection(int direction)
+        public void SetFacingDirection(float direction)
         {
-            if (direction == 0) return;
-            FacingDirection = (direction < 0) ? -1 : 1;
+            if (direction == 0f) return;
+            FacingDirection = (direction < 0f) ? -1 : 1;
         }
 
         public void ApplyImpact(Vector2 direction, float power)
@@ -269,6 +274,42 @@ namespace Study.Utilities
         public void KnockbackReset()
         {
             externalVelocity = Vector3.zero;
+        }
+
+        // [추가] 라운드 재시작 시 런타임 상태를 강하게 초기화합니다.
+        public void ResetRuntimeState()
+        {
+            jumpRequested = false;
+            attackRequested = false;
+            crouchRequested = false;
+            flipRequested = false;
+            rollRequested = false;
+
+            isJumping = false;
+            isLanding = false;
+            isDropping = false;
+            stickWall = false;
+            stickWallDirection = 0.0f;
+            isWallFlipping = false;
+
+            IsGrounded = false;
+            prevGroundedInternal = false;
+            IsCrouching = false;
+            IsDashing = false;
+            IsRolling = false;
+
+            moveInput = 0.0f;
+            baseVerticalVelocity = 0.0f;
+            boostVelocity = Vector2.zero;
+            boostTimer = 0.0f;
+            externalVelocity = Vector2.zero;
+
+            dashCooldownTimer = 0.0f;
+            rollCooldownTimer = 0.0f;
+            wallReattachLockTimer = 0.0f;
+
+            useGravity = true;
+            collisionLayer = originLayer;
         }
 
         #endregion
@@ -349,6 +390,8 @@ namespace Study.Utilities
 
         private void UpdateBoostMovement()
         {
+            bool wasDashing = IsDashing;
+
             // 타이머가 없으면 두 상태 모두 확실히 해제
             if (boostTimer <= 0.0f)
             {
@@ -606,10 +649,14 @@ namespace Study.Utilities
             if (dashCooldownTimer > 0) return;
             if (dashDuration <= 0.0f) return;
 
+            Vector2 dir = pendingDashDirection.normalized;
+            if (dir.sqrMagnitude <= 0.0001f) return;
+
+            // ✅ 이미 있던 벡터의 x부호만 보고 정면 전환. 새 변수 없음.
+            SetFacingDirection(dir.x);
+
             baseVerticalVelocity = 0; // 공격시 남은 점프값 삭제
             IsDashing = true; // 대쉬 시작
-
-            Vector2 dir = pendingDashDirection.normalized;
 
             float dashSpeed = dashPower / dashDuration;   // 거리 / 시간 = 속도
             boostVelocity = dir * dashSpeed;
@@ -653,13 +700,9 @@ namespace Study.Utilities
                 //else Debug.Log("내려갈 수 없는 지형입니다.");
 
                 // 3. 아니면 crouch loop 진입
+                // [수정] 구르기 시작 판정은 PlayerController.UpdateRollInput() 한 곳에서만 처리합니다.
+                // 여기서는 앉기 상태만 관리하고, 입력 순서(S→A/D, A/D→S)에 따른 판정 차이를 만들지 않게 합니다.
                 IsCrouching = true;
-
-                if (IsCrouching && MoveVectorX != 0)
-                {
-                    RequestRoll(moveInput);
-                    return;
-                }
                 //else IsCrouching = false;
             }
         }
@@ -774,7 +817,7 @@ namespace Study.Utilities
             wallReattachLockTimer = wallReattachLockTime;
 
             // 정면도 공중제비 방향으로 전환
-            FacingDirection = (awayDirection < 0.0f) ? -1 : 1;
+            SetFacingDirection(awayDirection);
 
             // 세로는 점프, 가로는 짧은 추진
             baseVerticalVelocity = wallFlipVerticalPower;

@@ -14,15 +14,40 @@ namespace Study_ActionPlatformer
         private Vector2 fireDirection = Vector2.zero;
         private HashSet<HurtBox> checkList = new HashSet<HurtBox>();
 
+        [SerializeField] private float lifeTime = 5f; // 아무것도 안 맞고 계속 날아갈 경우를 대비한 안전장치
+        private float aliveTimer;
 
         // Update is called once per frame
         private void Update()
         {
+            //  재생 / 역재생중 코드 정지
+            if (TimeLineRecorder.recordMode == TimeLineRecorder.RecordMode.Replaying ||
+                TimeLineRecorder.recordMode == TimeLineRecorder.RecordMode.Rewinding)
+                return;
+
+            aliveTimer += Time.deltaTime;
+            if (aliveTimer >= lifeTime)
+            {
+                gameObject.SetActive(false);
+                UnitManagement.Instance.EnemyBullets.Enqueue(this); // 아무것도 못 맞히고 시간 초과되면 회수
+                return;
+            }
+
             transform.Translate(fireDirection * Speed * Time.deltaTime, Space.World);
+        }
+
+        private void OnEnable()
+        {
+            checkList.Clear();
+            aliveTimer = 0f;
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
+            if (TimeLineRecorder.recordMode == TimeLineRecorder.RecordMode.Replaying ||
+                TimeLineRecorder.recordMode == TimeLineRecorder.RecordMode.Rewinding)
+                return;
+
             //팀킬방지 코드
             if (Owner.gameObject == Player.LocalPlayer.gameObject &&
                 other.gameObject == Player.LocalPlayer.gameObject) return;
@@ -59,6 +84,9 @@ namespace Study_ActionPlatformer
 
             // 보낸다
             CombatSystem.Instance.To(sender, receiver, @event);
+
+            gameObject.SetActive(false);
+            UnitManagement.Instance.EnemyBullets.Enqueue(this);
         }
 
         public void Set(Vector2 direction , CombatEntity sender)

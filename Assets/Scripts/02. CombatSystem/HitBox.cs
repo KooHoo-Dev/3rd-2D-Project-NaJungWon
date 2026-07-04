@@ -45,6 +45,11 @@ namespace Study_ActionPlatformer
             
         }
 
+        public void ResetHurtBox()
+        {
+            checkList.Clear();
+        }
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             // 아래는 Legacy Code
@@ -84,6 +89,11 @@ namespace Study_ActionPlatformer
 
             // 보낸다
             CombatSystem.Instance.To(sender, receiver, @event);
+
+            ScreenEffectManager.PlayAttackHitEffect(
+                    receiver.transform.position,    // 슬래시가 관통할 타겟 위치
+                    hitDir                          // 슬래시 진행 방향
+                );
         }
     }
 }

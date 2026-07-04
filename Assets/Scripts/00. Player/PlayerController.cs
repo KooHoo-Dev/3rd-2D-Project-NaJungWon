@@ -28,6 +28,7 @@ namespace Study_ActionPlatformer
         public static readonly int IS_FLIP     = Animator.StringToHash("IsFlip");
         public static readonly int DESCENDING  = Animator.StringToHash("Descending");
         public static readonly int STICK_WALL = Animator.StringToHash("StickWall");
+        public static readonly int IS_DEAD = Animator.StringToHash("IsDead");
 
         public static readonly int EFFECT_ATTACK = 0;
         public static readonly int EFFECT_JUMP = 1;
@@ -40,10 +41,10 @@ namespace Study_ActionPlatformer
         public Vector3 FlipCloudOffset;
 
         private Player player;
-        private SpriteRenderer SpriteRenderer { get; set; }
+        [field: SerializeField] public SpriteRenderer SpriteRenderer;
         private CharacterController2D Controller2D { get; set; }
 
-        public int FacingDirection { get; private set; } = 1;
+        private HitBox hitBox { get; set; }
 
         public bool isDead { get; private set; } = false;
 
@@ -52,6 +53,7 @@ namespace Study_ActionPlatformer
         private PlayerAnimStateBase defaultState; // 예외처리를 위한 기본 상태
         private PlayerAnimStateBase currentState; // 상태객체를 담아서 제어하기 위한 빈 객체 변수
 
+        private bool prevIsDashing = false;
         private bool prevIsGrounded = false;
         private bool prevIsJumping = false;
         private bool prevIsWallFlipping = false;
@@ -68,7 +70,7 @@ namespace Study_ActionPlatformer
             Animator = GetComponentInChildren<Animator>();
             SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
             Controller2D = GetComponent<CharacterController2D>();
-
+            hitBox = GetComponentInChildren<HitBox>();
             defaultState = new MovementState(this);
 
             StateDic.Add(Animator.StringToHash(ANIM_TAG_MOVEMENT), defaultState);
@@ -79,13 +81,26 @@ namespace Study_ActionPlatformer
         private void Update()
         {
             if (isDead) return;
-            UpdateAnimState();
-            UpdateJumpInput();
-            UpdateDownInput();
-            UpdateRollInput();
+
+            // 게임 진행 상태가 아닐 때는 플레이 입력만 막기
+            bool canAcceptGameplayInput = GameManager.Instance.CanAcceptGameplayInput;
+
+            if (canAcceptGameplayInput)
+            {
+                UpdateAnimState();
+                UpdateJumpInput();
+                UpdateDownInput();
+                UpdateRollInput();
+                UpdateAttackInput();
+            }
+            else
+            {
+                Controller2D.SetMoveInput(0.0f);
+                Animator.SetFloat(MOVEMENT, 0.0f);
+            }
+
             UpdateGroundedAnimation();
             UpdateEffectAnimation();
-            UpdateAttackInput();
             SyncFacingVisual();
         }
 
@@ -115,8 +130,30 @@ namespace Study_ActionPlatformer
 
         private void SyncFacingVisual()
         {
-            FacingDirection = Controller2D.FacingDirection;
-            Animator.transform.localScale = new Vector3(FacingDirection, 1, 1);
+            Animator.transform.localScale = new Vector3(Controller2D.FacingDirection, 1, 1);
+        }
+
+
+        // [추가] 공격 이펙트 방향은 FacingDirection 지연값이 아니라 실제 공격 벡터로 직접 맞춥니다.
+        private void ApplyAttackEffect(Vector2 dir)
+        {
+            if (effectAnim == null || effectAnim.Length <= EFFECT_ATTACK || effectAnim[EFFECT_ATTACK] == null)
+                return;
+
+            if (dir.sqrMagnitude <= 0.0001f)
+                return;
+
+            Transform effectTransform = effectAnim[EFFECT_ATTACK].transform;
+            effectTransform.position = transform.position;
+            effectTransform.right = dir.normalized;
+
+            // 회전으로 방향을 표현하므로, 스케일은 절댓값 기준으로 정리해 꼬임을 줄입니다.
+            Vector3 scale = effectTransform.localScale;
+            scale.x = Mathf.Abs(scale.x);
+            scale.y = Mathf.Abs(scale.y);
+            effectTransform.localScale = scale;
+            // ✅ 수정: 처음부터 재생하도록 강제
+            effectAnim[0].Play("Zero_Slash", 0, 0f);
         }
 
         // 아래부터는 상태 클래스들이 사용하는 공용함수들입니다
@@ -124,13 +161,6 @@ namespace Study_ActionPlatformer
         {
             Vector2 inputVector = SimpleInput.GetMoveAxisRaw();
             float absMovement = Mathf.Abs(inputVector.x);
-
-            if (absMovement > 0.0f)
-            {
-                int inputFacing = (inputVector.x < 0.0f) ? -1 : 1;
-                Controller2D.SetFacingDirection(inputFacing);
-            }
-
             Controller2D.SetMoveInput(inputVector.x);
 
             Animator.SetFloat(MOVEMENT, Controller2D.MoveVectorX);
@@ -145,24 +175,29 @@ namespace Study_ActionPlatformer
                 Vector2 myPosition = transform.position;
                 Vector2 dir = (goalPosition - myPosition);
 
-                if (Mathf.Abs(dir.x) > 0.001f)
-                {
-                    int attackFacing = (dir.x < 0.0f) ? -1 : 1;
-                    Controller2D.SetFacingDirection(attackFacing);
-                }
-
-                // 구르기 중이라도 공격 요청 전달
                 Controller2D.RequestAttack(dir);
-                Animator.SetBool(IS_ATTACK, true);
-
-                effectAnim[0].gameObject.transform.right = dir.normalized;
-                effectAnim[0].transform.localScale = new Vector3(1, FacingDirection, 1);
             }
 
             if (SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Right))
             {
-                Animator.SetBool(IS_ATTACK, true);
+                // 필요하면 이후 별도 파라미터/상태 연결
             }
+
+            // ✅ 말씀하신 그대로: IsDashing bool의 시작/끝 엣지를 여기서 감시
+            bool isDashingNow = Controller2D.IsDashing;
+
+            if (!prevIsDashing && isDashingNow)
+            {
+                Animator.SetBool(IS_ATTACK, true);
+                // 방향은 이미 ApplyAttack()에서 확정됨. 여기선 이펙트 회전용으로만 재사용.
+                ApplyAttackEffect(Controller2D.pendingDashDirection);
+            }
+            else if (prevIsDashing && !isDashingNow)
+            {
+                Animator.SetBool(IS_ATTACK, false);
+            }
+
+            prevIsDashing = isDashingNow;
         }
 
         private void UpdateDownInput()
@@ -188,16 +223,12 @@ namespace Study_ActionPlatformer
 
             // S 재입력
             bool crouchDown = crouchHeld && !prevCrouchHeld;
-            // 이동 재입력
-            bool moveReInput = false;
-
-            // 0 -> 좌/우 입력 시작
-            if (!prevMoveHeld && moveHeld)
-            {
-                moveReInput = true;
-            }
+            // 좌/우 입력이 0 -> 비0 으로 바뀌는 순간만 재입력으로 취급
+            bool moveReInput = Mathf.Approximately(prevHorizontalRaw, 0.0f) &&
+                               !Mathf.Approximately(horizontalRaw, 0.0f);
 
             // 카타나 제로식 구르기 판정
+            // [수정] S→A/D, A/D→S 모두 같은 기준으로 처리되도록 입력 에지만 여기서만 판정합니다.
             if (crouchHeld && moveHeld && (crouchDown || moveReInput) && Controller2D.CanStartRoll)
             {
                 Controller2D.RequestRoll(Mathf.Sign(horizontalRaw));
@@ -252,8 +283,8 @@ namespace Study_ActionPlatformer
             bool isWallFlipping = Controller2D.isWallFlipping;
 
             // 1. 기본 점프 이펙트 (점프 시작 순간)
-            bool justStartedJump = isJumping && !prevIsJumping;
-            if (justStartedJump)
+            bool StartedJump = isJumping && !prevIsJumping;
+            if (StartedJump)
             {
                 effectAnim[EFFECT_JUMP].transform.position = transform.position + JumpCloudOffset;
                 effectAnim[EFFECT_JUMP].transform.up = Vector3.up;
@@ -261,8 +292,8 @@ namespace Study_ActionPlatformer
             }
 
             // 2. 벽 공중제비(Flip) 이펙트
-            bool justStartedWallFlip = isWallFlipping && !prevIsWallFlipping;
-            if (justStartedWallFlip)
+            bool StartedWallFlip = isWallFlipping && !prevIsWallFlipping;
+            if (StartedWallFlip)
             {
                 effectAnim[EFFECT_JUMP].transform.position = transform.position;
 
@@ -302,15 +333,34 @@ namespace Study_ActionPlatformer
 
         public void PlayerDead(Vector2 hitdirection, float power)
         {
+            if (isDead) return;
+
             isDead = true;
             Controller2D.ApplyImpact(hitdirection, power);
+            Animator.SetBool(IS_DEAD, true);
+            // 사망 시 GameManager에 알림
+            GameManager.Instance?.OnPlayerDead();
         }
 
         public void ResetPlayer()
         {
-            if (isDead == false) return;
+            // 라운드 재시작용 상태 초기화
             isDead = false;
             Controller2D.KnockbackReset();
+            Controller2D.ResetRuntimeState();
+            hitBox.ResetHurtBox();
+
+            Animator.SetBool(IS_DEAD, false);
+            Animator.SetBool(IS_ATTACK, false);
+            Animator.SetBool(IS_ROLL, false);
+            Animator.SetBool(IS_Crouch, false);
+            Animator.SetBool(STICK_WALL, false);
+            Animator.SetBool(IS_GROUNDED, false);
+            Animator.ResetTrigger(JUMP);
+            Animator.ResetTrigger(DESCENDING);
+            Animator.ResetTrigger(IS_FLIP);
+            Animator.Rebind();
+            Animator.Update(0.0f);
         }
 
         #endregion

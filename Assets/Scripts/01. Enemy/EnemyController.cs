@@ -3,6 +3,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEngine.Rendering.DebugUI;
 
 namespace Study_ActionPlatformer
 {
@@ -56,6 +57,7 @@ namespace Study_ActionPlatformer
         //private Coroutine fsmRoutine;
         public Rigidbody2D rb;
         public Collider2D col;
+        public HitBox hitbox;
 
         public bool useGravity = true;
         public bool isDropping = false;
@@ -83,6 +85,7 @@ namespace Study_ActionPlatformer
 
             rb = GetComponent<Rigidbody2D>();
             col = GetComponentInChildren<Collider2D>();
+            hitbox = GetComponentInChildren<HitBox>();
 
             rb.bodyType = RigidbodyType2D.Kinematic;
 
@@ -572,8 +575,32 @@ namespace Study_ActionPlatformer
 
         public void Reset()
         {
-            if (IsDead) IsDead = false;
-            StartCoroutine(FiniteStateMachineCoroutine());
+            //역재생 종료 후 실제 라운드 재시작에 필요한 상태를 강하게 초기화합니다.
+            StopAllCoroutines();
+
+            IsDead = false;
+            IsGrounded = false;
+            useGravity = true;
+            isDropping = false;
+            if (hitbox != null) hitbox.ResetHurtBox();
+
+            desiredMoveX = 0.0f;
+            baseVerticalVelocity = 0.0f;
+            externalVelocity = Vector2.zero;
+            nextStateCoroutine = null;
+            collisionLayer = originLayer;
+
+            transform.localScale = originalScale;
+            goalPoint = pointB;
+
+            Animator.SetBool(IS_RUN, false);
+            Animator.SetBool(IS_WALK, false);
+            Animator.SetBool(IS_DEAD, false);
+            Animator.ResetTrigger(ATTACK);
+            Animator.Update(0.0f);
+
+            if (gameObject.activeInHierarchy)
+                StartCoroutine(FiniteStateMachineCoroutine());
         }
     }
 }

@@ -1,8 +1,5 @@
 using Study.Utilities;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
-
 namespace Study_ActionPlatformer
 {
     public class AttackState : PlayerAnimStateBase
@@ -14,7 +11,7 @@ namespace Study_ActionPlatformer
             // 공격중엔 이동 금지
             Owner.StopMovement();
             Owner.ApplyGravity(false);
-            Owner.effectAnim[0].Play("Zero_Slash");
+            ScreenEffectManager.StartAfterimage();
         }
 
         public override void UpdateState(AnimatorStateInfo stateInfo)
@@ -29,6 +26,7 @@ namespace Study_ActionPlatformer
         public override void Exit()
         {
             Owner.ApplyGravity(true);
+            ScreenEffectManager.StopAfterimage();
         }
     }
 }

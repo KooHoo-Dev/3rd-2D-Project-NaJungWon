@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Study_ActionPlatformer
@@ -9,15 +10,19 @@ namespace Study_ActionPlatformer
         [SerializeField] private int totalEnemyCount;
         [SerializeField] private int deadEnemyCount;
 
+        [field: SerializeField] private Player player;
         [field:SerializeField] private PlayerController playerController;
+
         private Enemy[] enemies;
 
+        public Queue<Bullet> EnemyBullets = new Queue<Bullet>();
         public bool stageClear => totalEnemyCount > 0 && deadEnemyCount >= totalEnemyCount;
 
         private void Awake()
         {
             Instance = this;
             enemies = GetComponentsInChildren<Enemy>(true);
+            playerController = player.GetComponent<PlayerController>();
             totalEnemyCount = enemies.Length;
             deadEnemyCount = 0;
 
@@ -40,7 +45,15 @@ namespace Study_ActionPlatformer
 
         public void ResetUnit()
         {
+            // [수정] 플레이어 HP와 컨트롤 상태를 함께 초기화합니다.
+            Player.LocalPlayer.ResetState();
             playerController.ResetPlayer();
+
+            foreach(Bullet bullet in EnemyBullets)
+            {
+                Destroy(bullet.gameObject);
+            }
+            EnemyBullets.Clear();
 
             deadEnemyCount = 0;
             foreach (var enemy in enemies)

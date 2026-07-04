@@ -1,31 +1,13 @@
-using Study_ActionPlatformer;
 using System.Reflection;
 using UnityEngine;
 
-namespace Study_System
+namespace Study_ActionPlatformer
 {
     /// <summary>
     /// TimeLineRecorder가 추적해야 하는 오브젝트에 붙이는 보조 컴포넌트.
     ///
-    /// 이 스크립트의 역할:
-    /// 1. 자신이 "적"인지 "일반 동적 오브젝트"인지 구분
-    /// 2. OnEnable 시점에 TimeLineRecorder에 자동 등록
-    /// 3. Animator / SpriteRenderer 같은 자주 쓰는 참조 캐싱
-    /// 4. 현재 애니메이션 상태, 방향 같은 공통 정보를 쉽게 꺼내도록 도와줌
-    ///
-    /// 보통 붙이는 대상:
-    /// - 적 프리팹
-    /// - 총알 프리팹
-    /// - 던지는 무기 프리팹
-    /// - 재생/역재생 대상 동적 오브젝트
-    /// </summary>
     public class TimelineTrackable : MonoBehaviour
     {
-        /// <summary>
-        /// 레코더가 이 오브젝트를 어떤 그룹으로 다룰지 구분하는 타입
-        /// Enemy  : 적
-        /// Object : 총알, 던지는 무기, 움직이는 일반 오브젝트
-        /// </summary>
         public enum Type
         {
             Enemy,

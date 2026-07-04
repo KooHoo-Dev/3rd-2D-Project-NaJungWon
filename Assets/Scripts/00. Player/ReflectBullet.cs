@@ -5,7 +5,6 @@ public class ReflectBullet : MonoBehaviour
 {
     private CombatEntity Owner { get; set; }
     public Animator reflectEffect;
-    private bool canReflect = false;
     
     private void Awake()
     {
@@ -20,23 +19,12 @@ public class ReflectBullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.GetComponent<Bullet>() && canReflect)
+        if(other.GetComponent<Bullet>())
         {
-            canReflect = false;
             Bullet bullet = other.GetComponent<Bullet>();
             reflectEffect.transform.position = other.transform.position;
             reflectEffect.Play("Effect");
             bullet.ReflectBullet(Owner);
         }
-    }
-
-    private void OnEnable()
-    {
-        canReflect = true;
-    }
-
-    private void OnDisable()
-    {
-        canReflect = false;
     }
 }

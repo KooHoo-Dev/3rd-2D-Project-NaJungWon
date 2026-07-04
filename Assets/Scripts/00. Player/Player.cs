@@ -50,6 +50,13 @@ namespace Study_ActionPlatformer
         {
             
         }
+
+        // [추가] 라운드 재시작 시 플레이어 HP와 제어 상태를 함께 초기화합니다.
+        public void ResetState()
+        {
+            Stat.ResetToFull();
+            playerController.ResetPlayer();
+        }
     }
 
 }
