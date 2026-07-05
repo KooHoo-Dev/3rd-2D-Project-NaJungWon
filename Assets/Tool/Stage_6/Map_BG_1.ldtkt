@@ -1,0 +1,33 @@
+{
+  "Rects": null,
+  "Def": {
+    "__cHei": 7,
+    "__cWid": 13,
+    "cachedPixelData": {
+      "opaqueTiles": "0111111110111011111101111101111110011110111111000111011111100011100000110001110000000000111",
+      "averageColors": "0000f111f111f111f111f111f111f343f2220000f111f111f1110000f111f111f111f111f111f1110000f333f222f111f111f1210000f111f111f111f121f111f11100000000f343f111f111f1210000f121f111f121f121f111f111000000000000f111f221f2210000f121f111f121f111f111f121000000000000f111f221f22100000000000000000000f121f122411141110000f111f111f1210000000000000000000000000000000000000000f111f111f111"
+    },
+    "customData": [
+
+    ],
+    "embedAtlas": null,
+    "enumTags": [
+
+    ],
+    "identifier": "Map_BG_1",
+    "padding": 0,
+    "pxHei": 224,
+    "pxWid": 416,
+    "relPath": "../Resource/Resource_02/02. Map/Map-custom/00. factory_Df1/bg_factory_wall/bg_factory_wall_0.png",
+    "savedSelections": [
+
+    ],
+    "spacing": 0,
+    "tags": [
+
+    ],
+    "tagsSourceEnumUid": null,
+    "tileGridSize": 32,
+    "uid": 5
+  }
+}

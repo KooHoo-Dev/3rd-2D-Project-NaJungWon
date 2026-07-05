@@ -105,7 +105,9 @@ namespace Study_ActionPlatformer
         [SerializeField] private bool enableDebugHotkeys = false;
 
         [Header("기록 설정")]
-        [SerializeField] private int maxRecordedTicks = 15000;
+        [field: SerializeField] public int maxRecordedTicks { get; private set; } = 15000;
+        public static bool WasTimeoutStop { get; private set; } = false;
+
 
         [Header("재생 설정")]
         [SerializeField] private float playbackTicksPerSecond = 50f;
@@ -311,6 +313,7 @@ namespace Study_ActionPlatformer
 
         public void StartNewRecording()
         {
+            WasTimeoutStop = false;
             frames.Clear();
             currentTick = 0;
             playbackTick = 0;
@@ -427,6 +430,7 @@ namespace Study_ActionPlatformer
         {
             if (currentTick >= maxRecordedTicks)
             {
+                WasTimeoutStop = true;
                 recordMode = RecordMode.Fin;
                 GameManager.Instance?.OnPlayerDead();
                 return;
@@ -700,42 +704,88 @@ namespace Study_ActionPlatformer
 
         private void SampleEnemies(List<EnemyRecord> fromList, List<EnemyRecord> toList, float t, bool reverse)
         {
+            Dictionary<int, EnemyRecord> fromLookup = BuildEnemyLookup(fromList);
             Dictionary<int, EnemyRecord> toLookup = BuildEnemyLookup(toList);
 
-            foreach (EnemyRecord from in fromList)
+            foreach (var pair in trackedById)
             {
-                if (!trackedById.TryGetValue(from.id, out TimelineTrackable trackable))
-                    continue;
+                if (pair.Value.TrackType != TimelineTrackable.Type.Enemy) continue;
 
-                EnemyRecord to = toLookup.TryGetValue(from.id, out EnemyRecord found) ? found : from;
+                int id = pair.Key;
+                TimelineTrackable trackable = pair.Value;
+
+                bool hasFrom = fromLookup.TryGetValue(id, out EnemyRecord from);
+                bool hasTo = toLookup.TryGetValue(id, out EnemyRecord to);
+
+                // 이 구간 어디에도 기록이 없다면 = 아직 생성되기 전 → 강제 비활성화
+                if (!hasFrom && !hasTo)
+                {
+                    if (trackable.gameObject.activeSelf)
+                        trackable.gameObject.SetActive(false);
+                    continue;
+                }
+
+                if (!hasFrom) from = to;
+                if (!hasTo) to = from;
+
                 SampleEnemy(trackable, from, to, t, reverse);
             }
         }
 
         private void SampleObjects(List<ObjectRecord> fromList, List<ObjectRecord> toList, float t, bool reverse)
         {
+            Dictionary<int, ObjectRecord> fromLookup = BuildObjectLookup(fromList);
             Dictionary<int, ObjectRecord> toLookup = BuildObjectLookup(toList);
 
-            foreach (ObjectRecord from in fromList)
+            foreach (var pair in trackedById)
             {
-                if (!trackedById.TryGetValue(from.id, out TimelineTrackable trackable))
-                    continue;
+                if (pair.Value.TrackType != TimelineTrackable.Type.Object) continue;
 
-                ObjectRecord to = toLookup.TryGetValue(from.id, out ObjectRecord found) ? found : from;
+                int id = pair.Key;
+                TimelineTrackable trackable = pair.Value;
+
+                bool hasFrom = fromLookup.TryGetValue(id, out ObjectRecord from);
+                bool hasTo = toLookup.TryGetValue(id, out ObjectRecord to);
+
+                if (!hasFrom && !hasTo)
+                {
+                    if (trackable.gameObject.activeSelf)
+                        trackable.gameObject.SetActive(false);
+                    continue;
+                }
+
+                if (!hasFrom) from = to;
+                if (!hasTo) to = from;
+
                 SampleObject(trackable, from, to, t, reverse);
             }
         }
 
         private void SampleEffects(List<EffectRecord> fromList, List<EffectRecord> toList, float t, bool reverse)
         {
+            Dictionary<int, EffectRecord> fromLookup = BuildEffectLookup(fromList);
             Dictionary<int, EffectRecord> toLookup = BuildEffectLookup(toList);
 
-            foreach (EffectRecord from in fromList)
+            foreach (var pair in trackedById)
             {
-                if (!trackedById.TryGetValue(from.id, out TimelineTrackable trackable))
-                    continue;
+                if (pair.Value.TrackType != TimelineTrackable.Type.Effect) continue;
 
-                EffectRecord to = toLookup.TryGetValue(from.id, out EffectRecord found) ? found : from;
+                int id = pair.Key;
+                TimelineTrackable trackable = pair.Value;
+
+                bool hasFrom = fromLookup.TryGetValue(id, out EffectRecord from);
+                bool hasTo = toLookup.TryGetValue(id, out EffectRecord to);
+
+                if (!hasFrom && !hasTo)
+                {
+                    if (trackable.gameObject.activeSelf)
+                        trackable.gameObject.SetActive(false);
+                    continue;
+                }
+
+                if (!hasFrom) from = to;
+                if (!hasTo) to = from;
+
                 SampleEffect(trackable, from, to, t, reverse);
             }
         }

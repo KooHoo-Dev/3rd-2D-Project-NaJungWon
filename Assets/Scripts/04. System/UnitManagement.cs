@@ -49,11 +49,13 @@ namespace Study_ActionPlatformer
             Player.LocalPlayer.ResetState();
             playerController.ResetPlayer();
 
+            /*
             foreach(Bullet bullet in EnemyBullets)
             {
                 Destroy(bullet.gameObject);
             }
             EnemyBullets.Clear();
+            */
 
             deadEnemyCount = 0;
             foreach (var enemy in enemies)

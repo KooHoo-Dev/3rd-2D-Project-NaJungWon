@@ -109,6 +109,7 @@ namespace Study_ActionPlatformer
                 {
                     // 일시정지 진입 → 현재 상태 기억
                     stateBeforePause = CurrentGameState;
+                    InGameUI.Instance.ShowPause();
                     ChangeGameState(GameState.Pause);
                 }
             }
@@ -139,6 +140,7 @@ namespace Study_ActionPlatformer
             Debug.Log($"[GameManager] Pause 해제 → {stateBeforePause} 복귀");
 
             // GameState 직접 설정 (ChangeGameState 우회)
+            InGameUI.Instance.HidePause();
             CurrentGameState = stateBeforePause;
 
             switch (stateBeforePause)
@@ -270,8 +272,12 @@ namespace Study_ActionPlatformer
             ChangeGameState(GameState.Ready);
             recordSkeep = false;
 
+            InGameUI.Instance.ShowReady();
+
             yield return new WaitForSecondsRealtime(stageEntryDelay);
             yield return WaitForLeftClick();
+
+            InGameUI.Instance.HideReady();
 
             StartFreshRound();
         }
@@ -280,9 +286,13 @@ namespace Study_ActionPlatformer
         {
             ChangeGameState(GameState.RePlay);
 
+            InGameUI.Instance.ShowReplay();
+
             yield return new WaitUntil(() =>
                 TimeLineRecorder.recordMode == TimeLineRecorder.RecordMode.Fin ||
                 recordSkeep);
+
+            InGameUI.Instance.HideReplay();
 
             recordSkeep = false;
             ChangeGameState(GameState.Fin);
@@ -291,12 +301,20 @@ namespace Study_ActionPlatformer
         private IEnumerator DeadRestartCoroutine()
         {
             ChangeGameState(GameState.Dead);
+
+            bool isTimeout = TimeLineRecorder.WasTimeoutStop; 
+            InGameUI.Instance.ShowDead(isTimeout);            
+
             yield return new WaitForSecondsRealtime(restartPromptDelay);
             yield return WaitForLeftClick();
 
             ChangeGameState(GameState.Rewind);
+            InGameUI.Instance.ShowRewind();
+
             yield return new WaitUntil(() =>
                 TimeLineRecorder.recordMode == TimeLineRecorder.RecordMode.Fin);
+
+            InGameUI.Instance.HideRewind();
 
             StartFreshRound();
         }
@@ -306,8 +324,13 @@ namespace Study_ActionPlatformer
             ChangeGameState(GameState.Ready);
             yield return null;
             ChangeGameState(GameState.Rewind);
+
+            InGameUI.Instance.ShowRewind();
+
             yield return new WaitUntil(() =>
                 TimeLineRecorder.recordMode == TimeLineRecorder.RecordMode.Fin);
+
+            InGameUI.Instance.HideRewind();
 
             StartFreshRound();
         }
@@ -330,11 +353,13 @@ namespace Study_ActionPlatformer
             recordSkeep = false;
             unitManagement?.ResetUnit();
             recorder?.StartNewRecording();
+            ChronosSystem.Instance.ResetEnergy();
 
             if (clearTrigger != null)
                 clearTrigger.SetActive(false);
 
             ChangeGameState(GameState.Playing);
+            InGameUI.Instance.ShowPlaying();     // 인터페이스 켜기 + 이전 결과 문구 정리
         }
 
         private IEnumerator LoadNextStageCoroutine()

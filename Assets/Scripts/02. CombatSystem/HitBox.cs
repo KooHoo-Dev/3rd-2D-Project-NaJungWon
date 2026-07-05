@@ -1,6 +1,8 @@
 using NUnit.Framework;
+using Study.Utilities;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 namespace Study_ActionPlatformer
@@ -62,6 +64,15 @@ namespace Study_ActionPlatformer
             else if (Owner.gameObject != Player.LocalPlayer.gameObject &&
                 collision.gameObject != Player.LocalPlayer.gameObject) return;
 
+            // 플레이어가 구르는동안 안맞도록 처리
+            if (Owner != Player.LocalPlayer && other.gameObject == Player.LocalPlayer.gameObject)
+            {
+                CharacterController2D char2D = Player.LocalPlayer.GetComponent<CharacterController2D>();
+                PlayerController playerController = Player.LocalPlayer.GetComponent<PlayerController>();
+                bool isInvincible = playerController.isDead || char2D.IsRolling;
+                if (isInvincible) return;
+            }
+
             HurtBox hurtBox = CombatSystem.Instance.GetHurtBoxOrNull(collision);
             if (hurtBox == null) return;
             
@@ -75,8 +86,10 @@ namespace Study_ActionPlatformer
             // 미리 준비해놓고
             CombatEntity sender = Owner;
             CombatEntity receiver = hurtBox.Owner;
+
             int damage = AttackInfo.Damage;
 
+            //if(receiver.)
             Vector2 hitDir = (receiver.transform.position - sender.transform.position).normalized;
 
             // 담아주고

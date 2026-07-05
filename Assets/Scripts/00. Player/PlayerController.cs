@@ -80,6 +80,9 @@ namespace Study_ActionPlatformer
 
         private void Update()
         {
+            bool isGrounded = Controller2D.IsGrounded;
+            Animator.SetBool(IS_GROUNDED, isGrounded);
+
             if (isDead) return;
 
             // 게임 진행 상태가 아닐 때는 플레이 입력만 막기
@@ -99,7 +102,7 @@ namespace Study_ActionPlatformer
                 Animator.SetFloat(MOVEMENT, 0.0f);
             }
 
-            UpdateGroundedAnimation();
+            UpdateGroundedAnimation(isGrounded);
             UpdateEffectAnimation();
             SyncFacingVisual();
         }
@@ -255,11 +258,10 @@ namespace Study_ActionPlatformer
             }
         }
 
-        private void UpdateGroundedAnimation()
+        private void UpdateGroundedAnimation(bool isGrounded)
         {
-            bool isGrounded = Controller2D.IsGrounded;
-
-            Animator.SetBool(IS_GROUNDED, isGrounded);
+            //bool isGrounded = Controller2D.IsGrounded;
+            //Animator.SetBool(IS_GROUNDED, isGrounded);
 
             if (prevIsGrounded && !isGrounded)
             {

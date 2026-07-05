@@ -1,0 +1,58 @@
+fileFormatVersion: 2
+guid: f4d55e3a43532cc4db7bf1ff3d781ebd
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: aaa16bfc62c086f4fb45da87b6acf9b1, type: 3}
+  _reimportOnDependencyChange: 1
+  _jsonFile: {fileID: -164016180542632921, guid: f4d55e3a43532cc4db7bf1ff3d781ebd, type: 3}
+  _pixelsPerUnit: 16
+  _customLevelPrefab: {instanceID: 0}
+  _intGridValueColorsVisible: 0
+  _useCompositeCollider: 1
+  _geometryType: 0
+  _createBackgroundColor: 1
+  _createLevelBoundsTrigger: 0
+  _useParallax: 1
+  _scaleEntities: 1
+  _intGridValues:
+  - _key: Trigger_Grid_1
+    _asset: {fileID: 11400000, guid: a253839e7bbaf9440be2d5017806a2a7, type: 2}
+  - _key: Trigger_Grid_2
+    _asset: {fileID: 11400000, guid: fdbe0a752b3a2ba44b7e047e3104bc6e, type: 2}
+  - _key: Trigger_Grid_3
+    _asset: {instanceID: 0}
+  - _key: Ground_1
+    _asset: {instanceID: 0}
+  - _key: Ground_2
+    _asset: {instanceID: 0}
+  - _key: BG_Grid_1
+    _asset: {instanceID: 0}
+  - _key: BG_Grid_2
+    _asset: {instanceID: 0}
+  - _key: BG_Grid_3
+    _asset: {instanceID: 0}
+  _entities: []
+  _enumGenerate: 0
+  _enumPath: 
+  _enumNamespace: 
+  _useLayerCustomSortingOrders: 0
+  _layerCustomSortingOrders:
+  - _ldtkLayerName: Trigger_Grid
+    _ldtkLayerOrder: 0
+  - _ldtkLayerName: GROUND_Tiles_1
+    _ldtkLayerOrder: -1
+  - _ldtkLayerName: BG_Tiles_2
+    _ldtkLayerOrder: -2
+  - _ldtkLayerName: Ground
+    _ldtkLayerOrder: -3
+  - _ldtkLayerName: GROUND_Tiles_2
+    _ldtkLayerOrder: -4
+  - _ldtkLayerName: BG_Tiles_1
+    _ldtkLayerOrder: -5
+  - _ldtkLayerName: BG_Grid
+    _ldtkLayerOrder: -6

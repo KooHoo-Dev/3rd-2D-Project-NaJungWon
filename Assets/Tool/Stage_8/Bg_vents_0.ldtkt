@@ -1,0 +1,33 @@
+{
+  "Rects": null,
+  "Def": {
+    "__cHei": 6,
+    "__cWid": 6,
+    "cachedPixelData": {
+      "opaqueTiles": "011110011111011111101111101000101000",
+      "averageColors": "0000f445f555f545f55500000000f555f666f555f556f5560000f445f556f545f556f556f5550000f555f555f556f555f5560000f656000000000000f5550000f556000000000000"
+    },
+    "customData": [
+
+    ],
+    "embedAtlas": null,
+    "enumTags": [
+
+    ],
+    "identifier": "Bg_vents_0",
+    "padding": 0,
+    "pxHei": 192,
+    "pxWid": 192,
+    "relPath": "../Resource/Resource_02/02. Map/Map-custom/04. vents_DF4/bg_vents/bg_vents_0.png",
+    "savedSelections": [
+
+    ],
+    "spacing": 0,
+    "tags": [
+
+    ],
+    "tagsSourceEnumUid": null,
+    "tileGridSize": 32,
+    "uid": 264
+  }
+}

@@ -26,9 +26,9 @@ namespace Study_ActionPlatformer
         [SerializeField] private KeyCode chronosKey = KeyCode.LeftShift;
 
         [Header("에너지 시스템")]
-        [SerializeField] private float maxEnergy = 100f;
-        [SerializeField] private float energyDrainRate = 25f;    // 초당 소모 (unscaled)
-        [SerializeField] private float energyRegenRate = 20f;    // 초당 회복 (unscaled)
+        [SerializeField] private float maxEnergy = 11f;
+        [SerializeField] private float energyDrainRate = 1f;    // 초당 소모 (unscaled)
+        [SerializeField] private float energyRegenRate = 0.5f;    // 초당 회복 (unscaled)
 
         [Header("부드러운 전환")]
         [SerializeField] private float transitionInDuration = 0.15f;   // 진입 시간

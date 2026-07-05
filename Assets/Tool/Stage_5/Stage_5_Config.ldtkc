@@ -1,0 +1,56 @@
+{
+    "PixelsPerUnit": 16,
+    "CustomLevelPrefab": {
+        "instanceID": 0
+    },
+    "IntGridValueColorsVisible": false,
+    "UseCompositeCollider": true,
+    "GeometryType": 0,
+    "CreateBackgroundColor": true,
+    "CreateLevelBoundsTrigger": false,
+    "UseParallax": true,
+    "ScaleEntities": true,
+    "IntGridValues": [
+        {
+            "_key": "Trigger_Grid_1",
+            "_asset": {
+                "fileID": 11400000,
+                "guid": "ab6e07c99a0f3b643b0d44a9e4337b5a",
+                "type": 2
+            }
+        },
+        {
+            "_key": "Trigger_Grid_2",
+            "_asset": {
+                "fileID": 11400000,
+                "guid": "137ac3640c95daa47b14b8720a9925ed",
+                "type": 2
+            }
+        },
+        {
+            "_key": "Trigger_Grid_3",
+            "_asset": {
+                "instanceID": 0
+            }
+        },
+        {
+            "_key": "Ground_1",
+            "_asset": {
+                "instanceID": 0
+            }
+        },
+        {
+            "_key": "Ground_2",
+            "_asset": {
+                "instanceID": 0
+            }
+        },
+        {
+            "_key": "BG_Grid_1",
+            "_asset": {
+                "instanceID": 0
+            }
+        }
+    ],
+    "Entities": []
+}

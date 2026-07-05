@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6054266223411231176}
   - component: {fileID: 1815578999751007505}
-  - component: {fileID: 5587442401241102058}
   m_Layer: 0
   m_Name: SlashHitEffect
   m_TagString: Untagged
@@ -92,16 +91,3 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &5587442401241102058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816991256754643550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d2bd7f8b5f77d640890d9954ba122cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Study_ActionPlatformer.TimelineTrackable
-  <TrackType>k__BackingField: 2

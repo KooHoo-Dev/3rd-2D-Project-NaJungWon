@@ -1,3 +1,4 @@
+using Study.Utilities;
 using System.Collections.Generic;
 using Unity.Android.Types;
 using UnityEngine;
@@ -54,8 +55,16 @@ namespace Study_ActionPlatformer
             else if (Owner.gameObject != Player.LocalPlayer.gameObject &&
                 other.gameObject != Player.LocalPlayer.gameObject) return;
 
+            // 플레이어가 구르는동안 안맞도록 처리
+            if (Owner != Player.LocalPlayer && other.gameObject == Player.LocalPlayer.gameObject)
+            {
+                CharacterController2D char2D = Player.LocalPlayer.GetComponent<CharacterController2D>();
+                PlayerController playerController = Player.LocalPlayer.GetComponent<PlayerController>();
+                bool isInvincible = playerController.isDead || char2D.IsRolling;
+                if (isInvincible) return;
+            }
             //gameObject.SetActive(false);
-            
+
 
             HurtBox hurtBox = CombatSystem.Instance.GetHurtBoxOrNull(other);
             if (hurtBox == null) return;
@@ -84,6 +93,11 @@ namespace Study_ActionPlatformer
 
             // 보낸다
             CombatSystem.Instance.To(sender, receiver, @event);
+
+            ScreenEffectManager.PlayAttackHitEffect(
+                    receiver.transform.position,    // 슬래시가 관통할 타겟 위치
+                    hitDir                          // 슬래시 진행 방향
+                );
 
             gameObject.SetActive(false);
             UnitManagement.Instance.EnemyBullets.Enqueue(this);

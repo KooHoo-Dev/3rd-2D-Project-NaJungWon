@@ -13,9 +13,10 @@ namespace Study_ActionPlatformer
         // 코루틴의 yield return StartCoroutine(코루틴); 함수를 이용해서
         // 코루틴들끼리 연결되어 끊임없이 순환하는 구조의
         // 소규모 인공지능 캐릭터를 만들어 봅시다.
-        
+
         // : Simple FSM 이라고 부름(나만)
 
+        private static readonly int IS_LEAN = Animator.StringToHash("IsLean");
         private static readonly int IS_WALK = Animator.StringToHash("IsWalk");
         private static readonly int IS_RUN = Animator.StringToHash("IsRun");
         private static readonly int ATTACK = Animator.StringToHash("Attack");
@@ -61,6 +62,7 @@ namespace Study_ActionPlatformer
 
         public bool useGravity = true;
         public bool isDropping = false;
+        public bool isLean = false;
 
         public float desiredMoveX = 0.0f;
         private float baseVerticalVelocity = 0.0f; //기본 점프 + 중력값
@@ -346,6 +348,13 @@ namespace Study_ActionPlatformer
             while(true)
             {
                 // Idle상태의 탈출조건
+                if(isLean && Target == null)
+                {
+                    Animator.SetBool(IS_LEAN, true);
+                    yield return new WaitUntil(() => Target != null);
+                    Animator.SetBool(IS_LEAN, false);
+                    isLean = false;
+                }
 
                 // 1. 3초가 지났을때 PatrolState로 전환(Transition)
                 if (IDLE_WAIT_TIME < waitTime)

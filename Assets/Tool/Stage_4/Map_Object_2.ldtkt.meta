@@ -1,0 +1,3166 @@
+fileFormatVersion: 2
+guid: 48e6c0836cf592e45994442a0083806d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 16
+  _overrideTexture: {instanceID: 0}
+  _sprites:
+  - name: Map_Object_2_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 0b6568ed89510ce4894b8efc49d99e0d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 0285fb94e1ec9df4390506f1f8056037
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 416
+      width: 32
+      height: 32
+    spriteID: c364aec8e2f18da4c8541bae9509437f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 49da08a267913e24890665af92cd3966
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 6394b2f04a7fafb478f064a3edb19dc9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 726f87128ca16d447b7f2743fc5321de
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 39fe78ea360dc184797b6a829be748e7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 442c27e34e484b146a629c53fd902abd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 24f1282adb3f0bf4ab8b9b0a761b7241
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 31b73e3265b27fc4fb4f86ca480f7dba
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 0e51d11002448bd4aacddebd12733017
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 416
+      width: 32
+      height: 32
+    spriteID: da19642546dd58345aefe31cacdc2d57
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 4a5273c3bd936b246b5f2b6556e9e4da
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 661e661b360b04749b3bcd3c6a354b9b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 416
+      width: 32
+      height: 32
+    spriteID: fe49b35947dbb564eba4bbafdbdf09db
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 384
+      width: 32
+      height: 32
+    spriteID: c8f9759060d83b3419bd0b56397fc6d9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 415a2c7c853b4254eb066108fd51d4df
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 5d3db8b57f8a20444b65099b34527fc5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 7fdfe2a264b380a4bba7871a162a5824
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 384
+      width: 32
+      height: 32
+    spriteID: aa4714fbd44208e4e90c24c28a9a985a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 384
+      width: 32
+      height: 32
+    spriteID: a2a6d0e7308a0e3499e344a0cf066e59
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 1161540626fac76469afb55722332013
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 384
+      width: 32
+      height: 32
+    spriteID: f640eb6abe97e5a4e931eda4a3b30dbe
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 4dd3028c1ec9c9542881bb484295a775
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 384
+      width: 32
+      height: 32
+    spriteID: b00362dcae9dbe047934abe814500b73
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 03ac713cec026584aa1e95235b0aa385
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 65657c6145c079b438a5b108f754a66d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 37234ad0265cb1a45bf92231fc4e8452
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 6ba97248cfd8b5740b791023a7d54aee
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 572d05931640cd24d992f2db1f40e743
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 5c80f0fe6f158eb4d93a50df5cb9c4bf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_31
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 363b9dfcfb2c5774e82b09f6c575b433
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_32
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 9155d36b61a325d4282f6f755fff7a92
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_33
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 11ffcb76f634de24fa3c1fc99a603868
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_34
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 352
+      width: 32
+      height: 32
+    spriteID: e82589d03e1c9dc47a135bce096231f4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_35
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 352
+      width: 32
+      height: 32
+    spriteID: fd688f0989bd5a843a45663ba1d2c878
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_36
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 70abc34d36a01ab42879f386eccd02fd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_37
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 0e89bcfd701ee0b419365a7103ac2284
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_38
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 352
+      width: 32
+      height: 32
+    spriteID: d00559ab6124dfc4bb5273322142ed72
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_39
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 6e58663196db7494bbc223c3aba0dc52
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_40
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 3c2196d4187b4574da50670c5cd593bd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_41
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 352
+      width: 32
+      height: 32
+    spriteID: ff35cbc97679d4e45ac4fd8712d41658
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_42
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 8ded9f4d0ccd98a47bc5e871fb82c0fc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_43
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 352
+      width: 32
+      height: 32
+    spriteID: da542b4942b28004cb2a287a726ce770
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_44
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 352
+      width: 32
+      height: 32
+    spriteID: e68d454af98cafa40b5ae1a6d8013560
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_45
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 530f04ce8f2200046afabc25e77f8aff
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_46
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 320
+      width: 32
+      height: 32
+    spriteID: ff78fdf061c67da499333b25546b3020
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_47
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 58e90f7d1a17f7349b262c3869643ed1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_48
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 75c2b317a315d644ab966d90cb2fd3a9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 320
+      width: 32
+      height: 32
+    spriteID: c804a75e93635364ab708b280486f8b5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_50
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 320
+      width: 32
+      height: 32
+    spriteID: db60a5e31b5c8b846825a65878fa85b3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_51
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 320
+      width: 32
+      height: 32
+    spriteID: afa505017e63a284b947603c3436bdf8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_52
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 320
+      width: 32
+      height: 32
+    spriteID: db01a5b50a9f4214ba4afe85f192b879
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_53
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 320
+      width: 32
+      height: 32
+    spriteID: b4c308d6fb2e5d243bd89c09e45ff80e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_54
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 032acc00342135549a2f76595014a94b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_55
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 320
+      width: 32
+      height: 32
+    spriteID: a4f65fb3d4a27ba4bbcd557794d32910
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_56
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 102210a00550c334caac6c296e4ec77a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_57
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 2492dcc8b8185464db1387eb818d0eea
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_58
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 9afe457872c6d934ba8a6b9d506cde85
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_59
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 3c8b19a946b77544cb2623330e5dc135
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_60
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 288
+      width: 32
+      height: 32
+    spriteID: e136c0f7665449c449c685bd173bcbf1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_61
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 02c8b97fba063124db9b7794af0eb6aa
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_62
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 0e3d65c2e8067994b8f18c8da9fdcb88
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_63
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 496a93a189f1e644a8dc4404007d065c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_64
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 288
+      width: 32
+      height: 32
+    spriteID: d974972db3463024f9e80968c8491089
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_65
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 7c85f222efc6e554191690ea77716201
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_66
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 288
+      width: 32
+      height: 32
+    spriteID: db8b7b4e326e777408a3ce1d193cb360
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_67
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 288
+      width: 32
+      height: 32
+    spriteID: a8580fd9dc04c534489e8b1ca8a308e1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_68
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 9025a60a22366dc4095099408071591d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_69
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 9346687e470ad7842a1a11a424a683bd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_70
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 19a4bad3dfe375d4f87d0bdfb5d0b809
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_71
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 50bf801abcaaff741ae3a301e422768d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_72
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 288
+      width: 32
+      height: 32
+    spriteID: fede264fdc09d7e43a1977125c4eb58c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_73
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 288
+      width: 32
+      height: 32
+    spriteID: b86154ac69882c144864ceee282c3811
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_74
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 34f3023e290393e46a5bfa8e245b37da
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_75
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 72f63d79f7276fd4891eacf4313bb093
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_76
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 26f2ed1894d466d4fb5a7b4728190e5e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_77
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 256
+      width: 32
+      height: 32
+    spriteID: aecffd4c9ae03634fb9613c2cd6f61b4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_78
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 73d8da6701c04734791746c165718f45
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_79
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 256
+      width: 32
+      height: 32
+    spriteID: e745730e86ae44f4b8d538bf96cd4735
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_80
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 1789ac0e1486ca84da5b77ee0e7caed3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_81
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 256
+      width: 32
+      height: 32
+    spriteID: d4ba593f155056f4c86a9d6950e66be6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_82
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 26f44fd0915b457458c205d07f51d5ae
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_83
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 2b7e7c55e15fabd46a87699a34770f41
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_84
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 9bd42d06c4b6a5b449c2814bd0d90909
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_85
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 256
+      width: 32
+      height: 32
+    spriteID: e53ebc1e7bab87d4395ebcfd2bfcd22f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_86
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 6780f37a1b955294a974ba20f5434a73
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_87
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 27480af192c662140ad70627b7aac1c8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_88
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 700ed274a5852204cad9a5a6289ff986
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_89
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 256
+      width: 32
+      height: 32
+    spriteID: fdce54572d79ac647bd7ff547bf83ad0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_90
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 3a5e3aad206514247a8e295b4cd46a7b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_91
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 781a8348eb776814681bed38c431c928
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_92
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 224
+      width: 32
+      height: 32
+    spriteID: af048af828f02f144a0638492640fde7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_93
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 224
+      width: 32
+      height: 32
+    spriteID: eddf7f640f1386642bd616ec574422f1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_94
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 5119d7e200f88094fb4911fc98704a4b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_95
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 616cd49509ee1074c8f274e14276808d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_96
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 224
+      width: 32
+      height: 32
+    spriteID: baed62bbcb1e55b449cc398d20958a98
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_97
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 224
+      width: 32
+      height: 32
+    spriteID: f2483bdd782ca1049b5c219ec5d8a75e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_98
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 224
+      width: 32
+      height: 32
+    spriteID: bbe7d1b5bfe3a77438bad0c74ed3602d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_99
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 224
+      width: 32
+      height: 32
+    spriteID: be6b4259dd5d74a419bec25357a72e71
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_100
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 9db82133928243a489ea4ef113c8cd41
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_101
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 7f02a6e827748684abe3fc41e32e3027
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_102
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 99e9dea5e1cee8e44b221a3e2354c500
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_103
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 224
+      width: 32
+      height: 32
+    spriteID: c5801ca0b064e3e46ae48ae494ac1156
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_104
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 1dea050f66f341742b48198d3f7cf71a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_105
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 0410e536758b64047bc356d0fc7a57d6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_106
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 52571455bda83324abde82af1f95d509
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_107
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 1f2b37be78737ef4489d42e79a3ce6bb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_108
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 3a38833d2cbcb914098418e6f1aa0723
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_109
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 192
+      width: 32
+      height: 32
+    spriteID: abd2536035e8554499926d21658fa5a6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_110
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 7ade9c38fd023b74183695bbc06d1654
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_111
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 192
+      width: 32
+      height: 32
+    spriteID: b199e9fae50a7a74989fccd718296795
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_112
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 192
+      width: 32
+      height: 32
+    spriteID: d3472512238a32b4ba6fae5a6c1ced39
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_113
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 366a3852c4c663643901bb6c7bbe0c55
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_114
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 11bbbfcfdc021204e83282233679dec9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_115
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 957220ae8cc4f6142a7ff0b3bc8858cb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_116
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 51279929eca750c4bb11473a33ca7703
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_117
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 5c407f7ae75e25949b80aa16c5a963ea
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_118
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 643131bf494ad2d47b8e8cf308dcd966
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_119
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 4069cb3767ef76940b5ccb7b9743f707
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_120
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 160
+      width: 32
+      height: 32
+    spriteID: b35637851eef0294cbb9481066671d8d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_121
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 1ec7b15333e977c4a81b2157db8dfb62
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_122
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 160
+      width: 32
+      height: 32
+    spriteID: e1506c72ae9a04e419c9185e976ca3ac
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_123
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 5c1c9153eabd4154fa0e57969a5818f4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_124
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 160
+      width: 32
+      height: 32
+    spriteID: fd9cc060e9250c14da809d6dce600148
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_125
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 46aa42caa1e39574eae69e45b3fe768b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_126
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 160
+      width: 32
+      height: 32
+    spriteID: d069dcb71426add4a9d4c960fd98545d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_127
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 50d572399be705e4eaebbe94c9e6b383
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_128
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 160
+      width: 32
+      height: 32
+    spriteID: aa0337c23695730479deb9db303492ba
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_129
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 196e829ec4fe91144a02bb1585cf72f2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_130
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 87b077f98a2933d42a1128e1da3246af
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_131
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 160
+      width: 32
+      height: 32
+    spriteID: aa221b6f7414d564e943e54d8256a205
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_132
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 160
+      width: 32
+      height: 32
+    spriteID: a867e20b431383645ac1cdf68a4e27a7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_133
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 406537af13c47504b8599312c9c2f2cf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_134
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 1136647e7e137e449986adf59299ec75
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_135
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 875f3a71787939d499dae0f88d211f6a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_136
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 128
+      width: 32
+      height: 32
+    spriteID: cf73cf4531ea6e549af0d22b6db23237
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_137
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 78dc82f95e805c54e977e75391321d44
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_138
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 7c3e845c7215658409d8315e0e166780
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_139
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 06800c62fa8eed24b9423fe7c0b5e6d6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_140
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 128
+      width: 32
+      height: 32
+    spriteID: da66353ad3109d748bd34ec0e01ecc80
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_141
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 5d4a956bea121b344b00ac9337e8ce44
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_142
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 31798544bb7bb1847a65d470bc759f7d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_143
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 7905844d60833e34282fd7d68718e82a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_144
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 918472722bf5fd543b35ff598c433598
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_145
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 128
+      width: 32
+      height: 32
+    spriteID: abf60a2bad9c2fc4a8f3c17d76d2bfaa
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_146
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 8bb93731cb986d046be48bca0fb5b432
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_147
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 3b78e882de940ae45b46d524e7f8d2dd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_148
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 128
+      width: 32
+      height: 32
+    spriteID: ce1caef398c08674c828a99a03d8c7f1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_149
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 79693fdf0ddc8d645bf79052539eba66
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_150
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 96
+      width: 32
+      height: 32
+    spriteID: c98b1cd1bcccfdc48be0c13bc199a2e1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_151
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 3fffd426c32c0ef4ea0b56ab118064d9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_152
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 96
+      width: 32
+      height: 32
+    spriteID: cf4df9f06932b254897257d2ed2fe578
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_153
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 96
+      width: 32
+      height: 32
+    spriteID: d376348a7bf10d74dada509ab6deddfe
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_154
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 81c85c49e58293c419709db7b97fc340
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_155
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 00b93859958e71d49bc7f2fb7791c8ad
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_156
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 1d8b45ccf0008b640acf2edd2911538a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_157
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 367454868f91b0d4bb69e3a973b8cdd0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_158
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 95687aa495f61784f9d4b0bd022a700f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_159
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 96
+      width: 32
+      height: 32
+    spriteID: a5faa2aab27aa1b469ad2326b1e78198
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_160
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 96
+      width: 32
+      height: 32
+    spriteID: f7ce05dc531cfdf4ca706cc64fee8542
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_161
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 96
+      width: 32
+      height: 32
+    spriteID: c48fa52dd642956438af73306740a1a3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_162
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 30f3d91e0a2076a428ed1f7092381aa9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_163
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 96
+      width: 32
+      height: 32
+    spriteID: e157b845aa9e09d46b629316307addcf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_164
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 397c26c0a9a8abf4c982190ba9255825
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_165
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 1bc5c5c0bfe13e04dbf69757c3e3151a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_166
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 2cc2cef3137d6c549b3d972ffab40846
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_167
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 64
+      width: 32
+      height: 32
+    spriteID: b36256e162dfee941939f666936ec385
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_168
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 64
+      width: 32
+      height: 32
+    spriteID: c59c2659c777ad54a9d345ecdd48ce89
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_169
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 575792adb8bb40a43a33fdebf7895e4d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_170
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 16a45ea2e5105b14381633916295340a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_171
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 64
+      width: 32
+      height: 32
+    spriteID: dd907e33107e61549abba680265dc1bd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_172
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 64
+      width: 32
+      height: 32
+    spriteID: d4c5c12a9806a1d4fad9fb6e144b1610
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_173
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 0fd4b4865b42aee49b13bc7e44645883
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_174
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 36bb077191270ea49a6bfdcd95127945
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_175
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 7d4f060500c2dc148a272cc43e17f5a4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_176
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 64
+      width: 32
+      height: 32
+    spriteID: ff9837257af75ea459cc973e9b1d33d4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_177
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 8a3cbbe322486a7429daaa0d6d323bc0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_178
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 5a438df74ff4b0e4db07e9dd78f9d33e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_179
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 5befa52b64edf0f4eabb5386d6cdb82a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_180
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 2a6d3a6ced9a3aa46bbca282acfebad7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_181
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 1e5d5ac7e49231948b8dcdad73f6eabd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_182
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 8af38ba701f700e48ba8de6a9aa56e16
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_183
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 689403b3d5489234190f5f913ddeff23
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_184
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 32
+      width: 32
+      height: 32
+    spriteID: d5b91203766913a49ab480d514fea9a0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_185
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 22bbc764ac33a9147a3bbe36327775ed
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_186
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 1b66c7814eefbc342a890275a0201591
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_187
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 26a5c705e68012048835c22179d483a9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_188
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 32
+      width: 32
+      height: 32
+    spriteID: a91bf0e703670504a944eb1af3cf01af
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_189
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 1e4fc4d73a84fbb4ca73f5871eeaddbc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_190
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 7398a50e92071c045b068f4bcaf638cc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_191
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 961933f65d985a84eabf0bdebcbb415a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_192
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 321d9febed36682428c92627e1b2af2a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_193
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 7aa06775a30742b4583284a096c921b7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_194
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 82139c8204ba4e3409d75ed9783449b0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_195
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 3b4dd8321302c7c40b43f1eb3f6d58fe
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_196
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 821a6685e4af40b44951c39bbbc6e7c2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_197
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 4535ccbdba6c4044baf28a9c4d2b0c42
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_198
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 2483cd2a00fd9b740a2fd0f8c13e7747
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_199
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 96fb7a00cd7dc6643aa0d0ac5ecc903c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_200
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 0
+      width: 32
+      height: 32
+    spriteID: c6655a4e087b494468ac4fb87e479ab6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_201
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 1b24778df77ae804cbc751db7a91ab8a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_202
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 0eec1b55585b27b419eb5abc89bb237c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_203
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 46c6b6fe7c9aff1418dca2ceb26157df
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_204
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 4922cec9c0d67504bbd2c22785214fc9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_205
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 3c571e4b3db5adb4489d633257a8913a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_206
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 836518a35aec1fd438b51c6fd512c6d9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_207
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 6227befe9693ecd4bad2fd51118b4afa
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_208
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 60bf65291b52a974b91280dbf38aaffe
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_Object_2_209
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 576ba8fba4f88394ca97bdcc6f9cdce8
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []
+  _artifacts: {instanceID: 0}
