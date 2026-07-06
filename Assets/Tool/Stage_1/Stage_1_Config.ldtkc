@@ -12,6 +12,14 @@
     "ScaleEntities": true,
     "IntGridValues": [
         {
+            "_key": "MAPAREA_Grid_1",
+            "_asset": {
+                "fileID": 11400000,
+                "guid": "1e0725c28cdbae74b9ea95cfc5239237",
+                "type": 2
+            }
+        },
+        {
             "_key": "Trigger_Grid_1",
             "_asset": {
                 "fileID": 11400000,
@@ -31,7 +39,7 @@
             "_key": "Trigger_Grid_3",
             "_asset": {
                 "fileID": 11400000,
-                "guid": "8bf28f224db55c641ac35faf3effc424",
+                "guid": "bd66897a81b80964f89adefb34d98ccb",
                 "type": 2
             }
         },

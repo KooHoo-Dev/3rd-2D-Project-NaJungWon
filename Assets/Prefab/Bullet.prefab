@@ -82,7 +82,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2346302928887187388, guid: 5b3aa440af251f94ba7bfe93d0afce92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -158,6 +158,7 @@ MonoBehaviour:
     Damage: 1
     KnockbackPower: 40
   <Speed>k__BackingField: 20
+  lifeTime: 5
 --- !u!114 &2803025670858006303
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -29,7 +29,6 @@ namespace Study.Utilities
 
         private Rigidbody2D rBody;
         private Collider2D  col;
-        public Animator attackAnim;
 
         [Header("Attack Settings")]
         public float dashPower = 6.0f; // 공격 대쉬 거리
@@ -79,7 +78,7 @@ namespace Study.Utilities
         public float wallFlipHorizontalPower = 6.0f; // 공중제비 좌우힘
         public float wallFlipVerticalPower = 8.0f; // 공중제비 위쪽힘
         public float wallFlipHorizontalDuration = 0.18f; //공중제비 지속시간
-        public float wallStickProbeDistance = 0.08f; // 벽감지 거리
+        public float wallStickProbeDistance = 0.03f; // 벽감지 거리
         public float wallReattachLockTime = 0.08f; //벽감지 쿨타임
 
         public bool isWallFlipping = false;
@@ -141,6 +140,10 @@ namespace Study.Utilities
             ApplyCrouch();
             ApplyRoll();
             ApplyGravaity();
+
+            if (isWallFlipping && baseVerticalVelocity <= 0f)
+                isWallFlipping = false;
+
             UpdateBoostMovement();  // ← 매 프레임 감쇠
 
             if (IsDashing || IsRolling || isWallFlipping) moveInput = 0; 
@@ -864,7 +867,7 @@ namespace Study.Utilities
 
             if (hit.collider == null)
                 return false;
-
+            if (hit.collider.gameObject.layer != 9) return false;
             float newWallDirection = -Mathf.Sign(hit.normal.x);
             if (Mathf.Approximately(newWallDirection, 0.0f))
                 return false;

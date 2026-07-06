@@ -47,6 +47,8 @@ namespace Study_ActionPlatformer
 
         public override void TakeDamage(int damage, Vector2 Hitdirection, float power)
         {
+            if (EnemyController.IsDead) return;
+
             EnemyController.ApplyImpact(Hitdirection, power);
             if (Stat.ApplyDamage(damage))
             {
@@ -62,7 +64,7 @@ namespace Study_ActionPlatformer
         {
             Stat.ResetToFull();
             EnemyController.Reset();
-            Debug.Log($"{gameObject.name}초기화 완료");
+            //Debug.Log($"{gameObject.name}초기화 완료");
         }
 
         protected IEnumerator HitEffectCoroutine()

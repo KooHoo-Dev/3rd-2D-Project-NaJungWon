@@ -20,6 +20,7 @@ namespace Study_ActionPlatformer
 
         [Header("카메라 설정")]
         [SerializeField] private Camera targetCamera;
+        [SerializeField] private CameraController cameraController;
         [SerializeField] private float defaultShakeDuration = 0.15f;
         [SerializeField] private float defaultShakeMagnitude = 0.18f;
 
@@ -42,7 +43,7 @@ namespace Study_ActionPlatformer
         private Coroutine hitStopCoroutine;
         private Coroutine afterimageCoroutine;
 
-        // 🔥 크로노스 시스템 호환성을 위한 TimeScale 스택
+        // 크로노스 시스템 호환성을 위한 TimeScale 스택
         private readonly Stack<float> timeScaleStack = new Stack<float>();
 
         // 오브젝트 풀
@@ -62,11 +63,8 @@ namespace Study_ActionPlatformer
             }
             Instance = this;
 
-            if (targetCamera == null)
-                targetCamera = Camera.main;
-
-            if (targetCamera != null)
-                cameraOriginPos = targetCamera.transform.localPosition;
+            targetCamera = Camera.main;
+            cameraController = targetCamera.GetComponent<CameraController>();
 
             InitializePools();
         }
@@ -230,7 +228,7 @@ namespace Study_ActionPlatformer
 
             while (elapsed < duration)
             {
-                // 🔥 핵심: 히트스탑 중에도 슬래시는 계속 이동
+                // 히트스탑 중에도 슬래시는 계속 이동
                 elapsed += Time.unscaledDeltaTime;
                 float t = Mathf.Clamp01(elapsed / duration);
 
@@ -262,15 +260,19 @@ namespace Study_ActionPlatformer
 
         private IEnumerator HitStopCoroutine(float duration)
         {
-            // 현재 timeScale 저장 (크로노스 슬로우모션 값 보존)
             timeScaleStack.Push(Time.timeScale);
             Time.timeScale = 0f;
 
             yield return new WaitForSecondsRealtime(duration);
 
-            // 이전 timeScale 복구 (크로노스 상태 정확히 복원)
-            if (timeScaleStack.Count > 0)
-                Time.timeScale = timeScaleStack.Pop();
+            if (timeScaleStack.Count > 0) timeScaleStack.Pop(); // 예전 값은 버립니다.
+
+            float restoreScale = (ChronosSystem.Instance != null)
+                ? ChronosSystem.Instance.GetTargetTimeScale()
+                : 1f;
+
+            Time.timeScale = restoreScale;
+            // fixedDeltaTime은 더 이상 어디서도 건드리지 않으므로 별도 복구가 필요 없습니다.
 
             hitStopCoroutine = null;
         }
@@ -299,15 +301,18 @@ namespace Study_ActionPlatformer
                 float currentMagnitude = Mathf.Lerp(magnitude, 0f, progress);
 
                 Vector2 randomOffset = Random.insideUnitCircle * currentMagnitude;
-                targetCamera.transform.localPosition = cameraOriginPos +
-                    new Vector3(randomOffset.x, randomOffset.y, 0f);
+
+                // ✅ 절대 위치(origin + offset)로 덮어쓰지 않고,
+                // "현재 위치에 더해질 오프셋 값"만 전달합니다.
+                cameraController.SetShakeOffset(new Vector3(randomOffset.x, randomOffset.y, 0f));
+
 
                 // 히트스탑 중에도 쉐이크 진행
                 elapsed += Time.unscaledDeltaTime;
                 yield return null;
             }
 
-            targetCamera.transform.localPosition = cameraOriginPos;
+            cameraController.SetShakeOffset(Vector3.zero);
             shakeCoroutine = null;
         }
 
@@ -371,7 +376,7 @@ namespace Study_ActionPlatformer
             SpriteRenderer ghost = afterimagePool.Dequeue();
             ghost.gameObject.SetActive(true);
 
-            // ✅ 핵심: 이 순간의 애니메이션 프레임을 잔상에 적용
+            //  이 순간의 애니메이션 프레임을 잔상에 적용
             ghost.sprite = currentAnimationFrame;
 
             // 플레이어의 현재 상태를 완전히 복사
@@ -379,15 +384,15 @@ namespace Study_ActionPlatformer
             ghost.transform.rotation = targetRenderer.transform.rotation;
             ghost.transform.localScale = targetRenderer.transform.lossyScale;
 
-            // ✅ 좌우 반전 상태 동기화
+            //  좌우 반전 상태 동기화
             ghost.flipX = targetRenderer.flipX;
             ghost.flipY = targetRenderer.flipY;
 
-            // ✅ 런타임에 플레이어와 동일한 Sorting Layer 자동 적용
+            // 런타임에 플레이어와 동일한 Sorting Layer 자동 적용
             ghost.sortingLayerID = targetRenderer.sortingLayerID;
             ghost.sortingOrder = targetRenderer.sortingOrder - 1; // 플레이어 바로 뒤
 
-            // ✅ 잔상 색상 적용
+            // 잔상 색상 적용
             ghost.color = afterimageColor;
 
             StartCoroutine(FadeOutAfterimage(ghost));

@@ -898,28 +898,19 @@ namespace Study_ActionPlatformer
             int sampledHash;
             float sampledTime;
 
-            if (hashA != 0 && hashA == hashB && interpolateLoopAnimation)
+            if (hashA != 0 && hashA == hashB)
             {
                 sampledHash = hashA;
 
-                // ✅ 핵심 개선: normalizedTime이 1.0을 초과하면 단발성 애니메이션으로 판단
-                // 루프 애니메이션은 항상 0~1 사이를 유지하지만
-                // 단발성 애니메이션은 재생 완료 후 1.0을 넘어 계속 증가함
-                bool isOneShot = (timeA > 1.0f || timeB > 1.0f);
-
-                if (isOneShot)
-                {
-                    // 단발성: 선형 보간 후 1.0에서 클램프하여 재시작 방지
-                    sampledTime = Mathf.LerpUnclamped(timeA, timeB, t);
-                    sampledTime = Mathf.Min(sampledTime, 1.0f);
-                }
-                else
-                {
-                    // 루프: 기존 방식으로 루프 경계(0.95→0.05 등)를 처리
-                    sampledTime = reverse
-                        ? LerpLoop01Reverse(timeA, timeB, t)
-                        : LerpLoop01(timeA, timeB, t);
-                }
+                //    normalizedTime이 1.0을 넘었는지로 "단발성 여부"를 추측하지 않습니다.
+                //    루프 애니메이션도 한 사이클만 지나면 똑같이 1.0을 넘어 계속 증가하므로
+                //    그 값만으로는 둘을 구분할 방법이 없습니다.
+                //    대신 각 State의 "Loop Time" 설정에 판단을 맡기면,
+                //    루프 상태는 큰 값이 들어와도 내부적으로 올바르게 순환 재생되고,
+                //    단발성 상태는 클립 길이를 넘는 순간 자동으로 마지막 프레임에 고정됩니다.
+                sampledTime = interpolateLoopAnimation
+                    ? Mathf.LerpUnclamped(timeA, timeB, t)
+                    : ((t < 0.5f) ? timeA : timeB);
             }
             else
             {
@@ -932,9 +923,8 @@ namespace Study_ActionPlatformer
                     sampledHash = (hashA != 0) ? hashA : hashB;
                     sampledTime = (hashA != 0) ? timeA : timeB;
                 }
-
-                // ✅ 상태 전환 경계에서도 단발성 애니메이션 보호
-                sampledTime = Mathf.Min(sampledTime, 1.0f);
+                // ⚠️ 여기 있던 Mathf.Min(sampledTime, 1.0f) 클램프도 함께 제거합니다.
+                // 이유는 위와 동일합니다.
             }
 
             animator.Play(sampledHash, 0, sampledTime);

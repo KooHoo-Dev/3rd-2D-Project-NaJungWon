@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -21,11 +22,22 @@ namespace Study_ActionPlatformer
         public Image[] cronosTicks;
         [SerializeField] private Color tickChargedColor = Color.white;
         [SerializeField] private Color tickDepletedColor = Color.red;
+        public Image lshiftImage;
+        public Sprite[] lShifsprites;
+
+        [Header("크로노스 UI 페이드")]
+        [SerializeField] private float cronosFadeInDuration = 0.15f;
+        [SerializeField] private float cronosFadeOutDuration = 0.2f;
+        [SerializeField, Range(0f, 1f)] private float cronosMaxAlpha = 200f / 255f;
+        private SpriteRenderer cronosSpriteRenderer;
+        private Coroutine cronosFadeCoroutine;
 
         [Header("상태별 패널")]
+        public GameObject cronosUI;
         public GameObject pauseUI;
         public GameObject replayUI;
         public GameObject rewindUI;
+        public GameObject gameClearUI;
 
         private readonly string[] resultMessage =
         {
@@ -47,6 +59,20 @@ namespace Study_ActionPlatformer
             pauseUI.SetActive(false);
             replayUI.SetActive(false);
             rewindUI.SetActive(false);
+
+            if (cronosUI != null)
+            {
+                cronosSpriteRenderer = cronosUI.GetComponent<SpriteRenderer>();
+                Color c = cronosSpriteRenderer.color;
+                c.a = 0f;
+                cronosSpriteRenderer.color = c;
+            }
+        }
+
+        private void Start()
+        {
+            cronosFadeInDuration = ChronosSystem.Instance.transitionInDuration;
+            cronosFadeOutDuration = ChronosSystem.Instance.transitionOutDuration;
         }
 
         private void Update()
@@ -60,12 +86,7 @@ namespace Study_ActionPlatformer
             }
         }
 
-        // ============================================================
-        // GameManager가 WaitUntil 전/후로 직접 호출하는 On/Off 메서드
-        // (참고: 각 메서드는 GameManager 안에서 정확히 한 곳에서만 호출되어야 합니다.
-        //  ChangeGameState()의 switch문 내부에는 이 메서드들을 다시 넣지 마세요.
-        //  같은 토글을 두 곳에서 호출하면 중복 실행되어 코드 흐름을 추적하기 어려워집니다.)
-        // ============================================================
+        # region 입력/호출
 
         public void ShowReady()
         {
@@ -133,6 +154,26 @@ namespace Study_ActionPlatformer
             //ScreenEffectManager.SetRewindGlitch(false);
         }
 
+        public void UpdateLShiftIcon(int num)
+        {
+            lshiftImage.sprite = lShifsprites[num];
+        }
+
+        public void applyCronosUI(bool active)
+        {
+            if (cronosSpriteRenderer == null) return;
+
+            if (cronosFadeCoroutine != null)
+                StopCoroutine(cronosFadeCoroutine);
+
+            float targetAlpha = active ? cronosMaxAlpha : 0f;
+            float duration = active ? cronosFadeInDuration : cronosFadeOutDuration;
+
+            cronosFadeCoroutine = StartCoroutine(CronosFadeCoroutine(targetAlpha, duration));
+        }
+
+        #endregion
+
         // ============================================================
         // 실시간 게이지 (Playing 중에만 매 프레임 갱신)
         // ============================================================
@@ -160,6 +201,39 @@ namespace Study_ActionPlatformer
                 // 앞쪽(i < chargedCount)은 충전색, 뒤쪽(마지막 인덱스부터)은 소모색
                 cronosTicks[i].color = (i < chargedCount) ? tickChargedColor : tickDepletedColor;
             }
+        }
+
+        private void SetSpriteAlpha(float alpha)
+        {
+            Color c = cronosSpriteRenderer.color;
+            c.a = alpha;
+            cronosSpriteRenderer.color = c;
+        }
+
+        private IEnumerator CronosFadeCoroutine(float targetAlpha, float duration)
+        {
+            float startAlpha = cronosSpriteRenderer.color.a;
+
+            if (duration <= 0f)
+            {
+                SetSpriteAlpha(targetAlpha);
+                cronosFadeCoroutine = null;
+                yield break;
+            }
+
+            float elapsed = 0f;
+            while (elapsed < duration)
+            {
+                // ✅ 크로노스 중에는 timeScale이 낮아지고, 히트스탑 중에는 0이 되므로
+                // 반드시 unscaledDeltaTime을 써야 페이드 애니메이션 자체가 멈추지 않습니다.
+                elapsed += Time.unscaledDeltaTime;
+                float t = Mathf.Clamp01(elapsed / duration);
+                SetSpriteAlpha(Mathf.Lerp(startAlpha, targetAlpha, t));
+                yield return null;
+            }
+
+            SetSpriteAlpha(targetAlpha); // 최종값 확정
+            cronosFadeCoroutine = null;
         }
     }
 }

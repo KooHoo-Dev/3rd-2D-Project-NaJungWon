@@ -32,6 +32,17 @@ namespace Study_ActionPlatformer
         {
             CombatSystem.Instance.RemoveHurtBox(col2D);
         }
+
+        // 콜라이더/게임오브젝트는 그대로 두고, "전투 판정 대상으로 등록되어 있는가"만 제어.
+        public void SetCombatActive(bool active)
+        {
+            if (CombatSystem.Instance == null) return;
+
+            if (active)
+                CombatSystem.Instance.AddHurtBox(col2D, this);
+            else
+                CombatSystem.Instance.RemoveHurtBox(col2D);
+        }
     }
 }
 

@@ -1,6 +1,5 @@
 using Study.Utilities;
 using System.Collections.Generic;
-using Unity.Android.Types;
 using UnityEngine;
 
 namespace Study_ActionPlatformer
@@ -63,8 +62,6 @@ namespace Study_ActionPlatformer
                 bool isInvincible = playerController.isDead || char2D.IsRolling;
                 if (isInvincible) return;
             }
-            //gameObject.SetActive(false);
-
 
             HurtBox hurtBox = CombatSystem.Instance.GetHurtBoxOrNull(other);
             if (hurtBox == null) return;
@@ -112,6 +109,8 @@ namespace Study_ActionPlatformer
 
         public void ReflectBullet(CombatEntity sender)
         {
+            ScreenEffectManager.HitStop();
+            ScreenEffectManager.CameraShake();
             Owner = sender;
             fireDirection = fireDirection * new Vector2(-1, -1);
         }

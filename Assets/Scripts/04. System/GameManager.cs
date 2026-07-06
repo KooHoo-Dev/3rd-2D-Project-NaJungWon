@@ -82,7 +82,7 @@ namespace Study_ActionPlatformer
             clearTrigger = GameObject.FindWithTag("ClearTrigger");
 
             if (clearTrigger != null)
-                clearTrigger.SetActive(false);
+                clearTrigger.gameObject.layer = 6;
 
             Debug.Log($"[GameManager] 참조 갱신 완료 - " +
                       $"Recorder: {recorder != null}, " +
@@ -224,7 +224,7 @@ namespace Study_ActionPlatformer
             Debug.Log("[GameManager] 모든 적 처치 완료!");
 
             if (clearTrigger != null)
-                clearTrigger.SetActive(true);
+                clearTrigger.gameObject.layer = 0;
             else
                 ClearStage();
         }
@@ -356,7 +356,7 @@ namespace Study_ActionPlatformer
             ChronosSystem.Instance.ResetEnergy();
 
             if (clearTrigger != null)
-                clearTrigger.SetActive(false);
+                clearTrigger.gameObject.layer = 6;
 
             ChangeGameState(GameState.Playing);
             InGameUI.Instance.ShowPlaying();     // 인터페이스 켜기 + 이전 결과 문구 정리
@@ -371,6 +371,7 @@ namespace Study_ActionPlatformer
             if (currentStageNum > MAX_STAGE_NUM)
             {
                 Debug.Log("[GameManager] 모든 스테이지 클리어!");
+                InGameUI.Instance.gameClearUI.SetActive(true);
             }
             else
             {

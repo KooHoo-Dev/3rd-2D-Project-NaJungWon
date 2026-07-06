@@ -59,7 +59,7 @@ namespace Study_ActionPlatformer
         public Rigidbody2D rb;
         public Collider2D col;
         public HitBox hitbox;
-
+        public HurtBox hurtbox;
         public bool useGravity = true;
         public bool isDropping = false;
         public bool isLean = false;
@@ -72,6 +72,7 @@ namespace Study_ActionPlatformer
         [field: SerializeField] public Transform Target;
 
         private Animator Animator { get; set; }
+        public Animator hitAnim;
         private Enemy Enemy { get; set; }
 
         
@@ -88,7 +89,7 @@ namespace Study_ActionPlatformer
             rb = GetComponent<Rigidbody2D>();
             col = GetComponentInChildren<Collider2D>();
             hitbox = GetComponentInChildren<HitBox>();
-
+            hurtbox = GetComponentInChildren<HurtBox>();
             rb.bodyType = RigidbodyType2D.Kinematic;
 
             originalScale = transform.localScale;
@@ -102,6 +103,11 @@ namespace Study_ActionPlatformer
             pointB.y = transform.position.y;
 
             goalPoint = pointB;
+        }
+
+        private void Start()
+        {
+            Target = Player.LocalPlayer.transform;
         }
 
         private void FixedUpdate()
@@ -163,7 +169,18 @@ namespace Study_ActionPlatformer
         public void ApplyImpact(Vector2 direction, float power)
         {
             if (power <= 0.0f) return;
-
+            if (direction != Vector2.zero)
+            {
+                Vector2 facing = direction * -1;
+                
+                if(transform.localScale.x < 0)
+                {
+                    facing.x = facing.x * -1;
+                    facing.y = facing.y * -1;
+                }
+                
+                PlayHitEffect(facing);
+            }
             desiredMoveX = 0.0f;
 
             externalVelocity += direction * power;
@@ -527,7 +544,7 @@ namespace Study_ActionPlatformer
 
         protected virtual void ProcessAttack()
         {
-            
+
         }
 
         // 내 Transform과 Target의 Transform의 y값을 비교하여
@@ -555,6 +572,13 @@ namespace Study_ActionPlatformer
         [SerializeField] private Vector3 deadEffectOffset;
         [SerializeField] private float deadEffectLifeTime = 0.5f;
 
+        public void PlayHitEffect(Vector2 FacingDirection)
+        {
+            hitAnim.transform.right = FacingDirection;
+            hitAnim.Play("Effect",0,0f);
+            Debug.Log("이펙트 재생");
+        }
+
         public void Dead()
         {
             if (IsDead) return;
@@ -568,6 +592,7 @@ namespace Study_ActionPlatformer
             nextStateCoroutine = null;
 
             StopAllCoroutines();
+            hurtbox.SetCombatActive(false);
 
             UnitManagement.Instance.ReportEnemyDeath();
             // Enemy가 죽게 되면 죽음 이펙트를 생성하고, 스스로를 삭제합니다.
@@ -592,6 +617,7 @@ namespace Study_ActionPlatformer
             useGravity = true;
             isDropping = false;
             if (hitbox != null) hitbox.ResetHurtBox();
+            hurtbox.SetCombatActive(true);
 
             desiredMoveX = 0.0f;
             baseVerticalVelocity = 0.0f;

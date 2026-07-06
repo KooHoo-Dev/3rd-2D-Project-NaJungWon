@@ -16,9 +16,6 @@ namespace Study_ActionPlatformer
     {
         public static ChronosSystem Instance { get; private set; }
 
-        // ============================================================
-        // [크로노스 설정]
-        // ============================================================
         [Header("크로노스 기본 설정")]
         [SerializeField, Range(0.1f, 0.8f)]
         private float chronosTimeScale = 0.25f;
@@ -31,33 +28,20 @@ namespace Study_ActionPlatformer
         [SerializeField] private float energyRegenRate = 0.5f;    // 초당 회복 (unscaled)
 
         [Header("부드러운 전환")]
-        [SerializeField] private float transitionInDuration = 0.15f;   // 진입 시간
-        [SerializeField] private float transitionOutDuration = 0.2f;   // 해제 시간
+        public float transitionInDuration { get; private set; } = 0.15f;   // 진입 시간
+        public float transitionOutDuration { get; private set; } = 0.2f;   // 해제 시간
 
-        [Header("오디오 연출")]
-        [SerializeField] private AudioSource bgmSource;
-        [SerializeField] private float normalPitch = 1.0f;
-        [SerializeField] private float chronosPitch = 0.65f;
-        [SerializeField] private float pitchTransitionSpeed = 8f;
-
-        // ============================================================
-        // [상태 프로퍼티]
-        // ============================================================
+        [Header("상태 프로퍼티")]
         public bool IsChronosActive { get; private set; } = false;
         public float CurrentEnergy { get; private set; }
         public float EnergyRatio => CurrentEnergy / maxEnergy;
         public bool CanUseChronos => CurrentEnergy > 0f && !IsTransitioning;
 
-        // ============================================================
-        // [내부 상태]
-        // ============================================================
+        [Header("내부 상태")]
         private bool IsTransitioning { get; set; } = false;
         private Coroutine transitionCoroutine;
         private float originalFixedDeltaTime;
 
-        // ============================================================
-        // [초기화]
-        // ============================================================
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -83,12 +67,9 @@ namespace Study_ActionPlatformer
 
             HandleChronosInput();
             UpdateEnergySystem();
-            UpdateAudioEffects();
         }
 
-        // ============================================================
-        // [입력 및 상태 관리]
-        // ============================================================
+        #region 입력 상태 관리
         private bool CanAcceptChronosInput()
         {
             // GameManager 상태 체크
@@ -106,14 +87,19 @@ namespace Study_ActionPlatformer
 
         private void HandleChronosInput()
         {
-            bool chronosKeyHeld = SimpleInput.GetKey(Key.LeftShift);
+            bool chronosKeyDown = SimpleInput.GetKeyDown(Key.LeftShift);
+            bool chronosKeyHeld = SimpleInput.GetKey(Key.LeftShift); // 해제 판정에는 계속 "누르고 있는지"가 필요하므로 그대로 유지
 
-            if (chronosKeyHeld && CanUseChronos && !IsChronosActive)
+            if (chronosKeyDown && CanUseChronos && !IsChronosActive)
             {
+                InGameUI.Instance.UpdateLShiftIcon(1);
+                InGameUI.Instance.applyCronosUI(true);
                 ActivateChronos();
             }
             else if ((!chronosKeyHeld || CurrentEnergy <= 0f) && IsChronosActive)
             {
+                InGameUI.Instance.UpdateLShiftIcon(0);
+                InGameUI.Instance.applyCronosUI(false);
                 DeactivateChronos();
             }
         }
@@ -133,15 +119,7 @@ namespace Study_ActionPlatformer
                 CurrentEnergy = Mathf.Min(CurrentEnergy, maxEnergy);
             }
         }
-
-        private void UpdateAudioEffects()
-        {
-            if (bgmSource == null) return;
-
-            float targetPitch = IsChronosActive ? chronosPitch : normalPitch;
-            bgmSource.pitch = Mathf.Lerp(bgmSource.pitch, targetPitch,
-                Time.unscaledDeltaTime * pitchTransitionSpeed);
-        }
+        #endregion
 
         // ============================================================
         // [크로노스 활성화/비활성화]
@@ -222,7 +200,7 @@ namespace Study_ActionPlatformer
         }
 
         // ============================================================
-        // [🔥 핵심: 물리 엔진 호환 TimeScale 적용]
+        // 물리 엔진 호환 TimeScale 적용]
         // ============================================================
         private void ApplyTimeScale(float scale)
         {
@@ -230,10 +208,9 @@ namespace Study_ActionPlatformer
             if (Time.timeScale <= 0f) return;
 
             Time.timeScale = scale;
-
-            // 🔥 중요: fixedDeltaTime도 같은 비율로 조정해야 물리 엔진 jittering 방지
-            Time.fixedDeltaTime = originalFixedDeltaTime * scale;
         }
+
+        public float GetTargetTimeScale() => IsChronosActive ? chronosTimeScale : 1f;
 
         // ============================================================
         // [외부 API - 강제 제어]
@@ -253,8 +230,10 @@ namespace Study_ActionPlatformer
             if (Time.timeScale > 0f)
             {
                 Time.timeScale = 1f;
-                Time.fixedDeltaTime = originalFixedDeltaTime;
             }
+
+            InGameUI.Instance.UpdateLShiftIcon(0);
+            InGameUI.Instance.applyCronosUI(false);
         }
 
         public void ResetEnergy()

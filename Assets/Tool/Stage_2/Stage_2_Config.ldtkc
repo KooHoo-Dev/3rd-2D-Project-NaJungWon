@@ -12,6 +12,14 @@
     "ScaleEntities": true,
     "IntGridValues": [
         {
+            "_key": "MapArea_Grid_1",
+            "_asset": {
+                "fileID": 11400000,
+                "guid": "1e0725c28cdbae74b9ea95cfc5239237",
+                "type": 2
+            }
+        },
+        {
             "_key": "Trigger_Grid_1",
             "_asset": {
                 "fileID": 11400000,
@@ -30,7 +38,33 @@
         {
             "_key": "Trigger_Grid_3",
             "_asset": {
-                "instanceID": 0
+                "fileID": 11400000,
+                "guid": "4d11ec0c9b3b9dd43ad97c7b9a332f6e",
+                "type": 2
+            }
+        },
+        {
+            "_key": "Trigger_Grid_4",
+            "_asset": {
+                "fileID": 11400000,
+                "guid": "4d11ec0c9b3b9dd43ad97c7b9a332f6e",
+                "type": 2
+            }
+        },
+        {
+            "_key": "Trigger_Grid_5",
+            "_asset": {
+                "fileID": 11400000,
+                "guid": "4d11ec0c9b3b9dd43ad97c7b9a332f6e",
+                "type": 2
+            }
+        },
+        {
+            "_key": "Trigger_Grid_6",
+            "_asset": {
+                "fileID": 11400000,
+                "guid": "4d11ec0c9b3b9dd43ad97c7b9a332f6e",
+                "type": 2
             }
         },
         {

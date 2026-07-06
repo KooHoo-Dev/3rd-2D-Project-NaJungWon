@@ -89,21 +89,23 @@ namespace Jay
         /// <summary>
         /// 현재 인스턴스를 강제로 제거하고 다시 초기화 가능 상태로 되돌림. 다시 싱글톤 호출해야함 (어떤 문제있는지 잘 모름)
         /// </summary>
+        /*
         public static void ResetInstance()
         {
             if (instance != null)
             {
                 (instance as SingletonBase<T>)?.OnDispose();
 
-#if UNITY_EDITOR
+                #if UNITY_EDITOR
                 DestroyImmediate((instance as MonoBehaviour)?.gameObject);
-#else
+                #else
                 Destroy((_instance as MonoBehaviour)?.gameObject);
-#endif
+                #endif
                 instance = null;
                 isInitialized = false;
                 applicationIsQuitting = false;
             }
         }
+        */
     }
 }

@@ -20,6 +20,8 @@ ScriptedImporter:
   _useParallax: 1
   _scaleEntities: 1
   _intGridValues:
+  - _key: MapArea_Grid_1
+    _asset: {fileID: 11400000, guid: 1e0725c28cdbae74b9ea95cfc5239237, type: 2}
   - _key: Trigger_Grid_1
     _asset: {fileID: 11400000, guid: a253839e7bbaf9440be2d5017806a2a7, type: 2}
   - _key: Trigger_Grid_2
@@ -42,6 +44,8 @@ ScriptedImporter:
   _enumNamespace: 
   _useLayerCustomSortingOrders: 0
   _layerCustomSortingOrders:
+  - _ldtkLayerName: MapArea_Grid
+    _ldtkLayerOrder: 0
   - _ldtkLayerName: Trigger_Grid
     _ldtkLayerOrder: 0
   - _ldtkLayerName: GROUND_Tiles_1

@@ -22,11 +22,17 @@ namespace Study_ActionPlatformer
         {
             Instance = this;
             enemies = GetComponentsInChildren<Enemy>(true);
-            playerController = player.GetComponent<PlayerController>();
+            //playerController = player.GetComponent<PlayerController>();
             totalEnemyCount = enemies.Length;
             deadEnemyCount = 0;
 
             Debug.Log($"[UnitManagement] 초기화 - 총 적 수: {totalEnemyCount}");
+        }
+
+        private void Start()
+        {
+            player = Player.LocalPlayer;
+            playerController = player.GetComponent<PlayerController>();
         }
 
         private void OnDestroy()

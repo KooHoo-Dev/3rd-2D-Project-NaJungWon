@@ -1,7 +1,6 @@
 using Study.Utilities;
 using Study_ActionPlatformer;
 using System.Collections;
-using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 
 

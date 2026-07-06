@@ -338,6 +338,7 @@ namespace Study_ActionPlatformer
 
             isDead = true;
             Controller2D.ApplyImpact(hitdirection, power);
+            Controller2D.SetMoveInput(0.0f);
             Animator.SetBool(IS_DEAD, true);
             // 사망 시 GameManager에 알림
             GameManager.Instance?.OnPlayerDead();
