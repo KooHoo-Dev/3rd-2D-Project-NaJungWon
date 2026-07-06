@@ -38,7 +38,7 @@
 	"backupRelPath": null,
 	"levelNamePattern": "Level_%idx",
 	"tutorialDesc": null,
-	"customCommands": [{ "command": "../../Library/LDtkTilesetExporter/ExportTilesetDefinition.exe \"Stage_1\"", "when": "AfterSave" }],
+	"customCommands": [{ "command": "../../Library/LDtkTilesetExporter/ExportTilesetDefinition.exe \"Stage_6\"", "when": "AfterSave" }],
 	"flags": [],
 	"defs": { "layers": [
 		{
@@ -757,10 +757,10 @@
 			"iid": "8c5a0970-6fc0-11f1-907e-19b6663520a3",
 			"uid": 0,
 			"worldX": -64,
-			"worldY": 352,
+			"worldY": 256,
 			"worldDepth": 0,
 			"pxWid": 1984,
-			"pxHei": 728,
+			"pxHei": 888,
 			"__bgColor": "#696A79",
 			"bgColor": null,
 			"useAutoIdentifier": true,

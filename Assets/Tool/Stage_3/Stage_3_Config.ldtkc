@@ -22,9 +22,7 @@
         {
             "_key": "Trigger_Grid_2",
             "_asset": {
-                "fileID": 11400000,
-                "guid": "fdbe0a752b3a2ba44b7e047e3104bc6e",
-                "type": 2
+                "instanceID": 0
             }
         },
         {

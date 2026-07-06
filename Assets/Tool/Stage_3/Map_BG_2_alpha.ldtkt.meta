@@ -1,0 +1,3166 @@
+fileFormatVersion: 2
+guid: d1765727f4495e84aa17d73838a0a765
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 16
+  _overrideTexture: {instanceID: 0}
+  _sprites:
+  - name: Map_BG_2_alpha_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 42d5e5c74d8c7954f8e7298a294879fa
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 416
+      width: 32
+      height: 32
+    spriteID: c7eccde9fe6dc4e4197eb83b9e3c2b0f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 0c0e7204ba704584bbfe756c581a05a2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 40e105924add99b459f209eae7bf033f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 048b93fcd37f56347a27d5fc19df6941
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 416
+      width: 32
+      height: 32
+    spriteID: f657bf360e979be4fa1781300e5d996b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 0e173b94433add147b2f4b842a73fad7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 416
+      width: 32
+      height: 32
+    spriteID: d682fca3de8527645bd3d55bac65647d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 188ce40c3da0b2a4ca9591d0c02afb31
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 6beb1a173e048c64ebdb53cbbea86815
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 9341be568aef0d148b944b9c37b4686b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 416
+      width: 32
+      height: 32
+    spriteID: eb79648dbcef0a548b63a4f0bdee89e6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 52f5548b1ade4074fbd094388eb19485
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 25a930a60f857ba41adb9a9d4e7970c8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 416
+      width: 32
+      height: 32
+    spriteID: 516f05807a9e8c04792114b6f3d17163
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 1027bb402620517438303cb0a7791d60
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 384
+      width: 32
+      height: 32
+    spriteID: f6471d102802ebf4ea63a8920f6b17ff
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 9460bcd8df0934748b66058355a1a085
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 384
+      width: 32
+      height: 32
+    spriteID: d75504c601f175647804ed9080a8b905
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 0be8777a6c1d6984fbf70c0807fdeb88
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 7f3242936f6962447a89dde501767a22
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 2a16f9b5eabd9714fa13811f707bdee0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 849814b90652ec64b8298b423a9a8c77
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 384
+      width: 32
+      height: 32
+    spriteID: f26463f064c8455498ac6a0c720ab508
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 384
+      width: 32
+      height: 32
+    spriteID: ac62d6a462dd78744a9b2e69c02440f8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 2dbd3178896264142b1ae2bf7eec2525
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 0b258d5123ed68a4e97df35ac4e7e91d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 138217f1618409446bca4eaec481d276
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 384
+      width: 32
+      height: 32
+    spriteID: 28f05d8d8c680934cbc8780824ced1d6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 384
+      width: 32
+      height: 32
+    spriteID: f782b2403174e7b4fa5ecbc237456e83
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 75233622b04d05f488c5167bf0f83293
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_31
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 41840cf9abff8a849a81df28fed01d5c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_32
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 41f947d65b1622644bc824e8cca2a829
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_33
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 75585a9bc258eca4fa8213e231c78141
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_34
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 28b1f23437db11a4c8d64c5945938123
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_35
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 80cd26590fe807349beeaf74b7d32ab4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_36
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 352
+      width: 32
+      height: 32
+    spriteID: b8b4a48f85d01794e9aa1e8eb85f9b78
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_37
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 184b22c31912f0c48a6451b1eedde3ad
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_38
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 352
+      width: 32
+      height: 32
+    spriteID: a11f0067e14361b4eb7d6538d5adb673
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_39
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 7001b6031b8d5b5408a0d8d29ffe0a0c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_40
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 90536cc54cfd65549b37ea31804fce0a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_41
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 33fc34166186a184381f34c51d6cb7c3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_42
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 1471cb524e361c347a39645483acbdce
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_43
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 97d97b399d052e2449fac486d3509f52
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_44
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 352
+      width: 32
+      height: 32
+    spriteID: 2d03ae0c0bc050d418a72f31d2f00f8e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_45
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 79e4fb864b048414d80628a501adbc92
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_46
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 1e203bd915c0f6d4698e86d1add45a85
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_47
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 6774d252a8204d94a814c7c98f6392ee
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_48
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 320
+      width: 32
+      height: 32
+    spriteID: cf462d013cef5904ebadeb193f9d8b5e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 320
+      width: 32
+      height: 32
+    spriteID: d94649f9b18deb941a0792ebf7d24aae
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_50
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 320
+      width: 32
+      height: 32
+    spriteID: c80d2c03c5f65ce4aa42869e4af907ef
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_51
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 1b4a5b51d1528fc49a85c38e1d986521
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_52
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 9a5707dc735020f409d259d562b743c8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_53
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 3b8d30e57c2109f498eb18634e2067db
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_54
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 320
+      width: 32
+      height: 32
+    spriteID: f3a20074b29834a42b36f1e76d0f86e8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_55
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 06098429a6ee2ec4ba52d8de36f072d8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_56
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 8805290bdcb66ab43b83d694495cf021
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_57
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 320
+      width: 32
+      height: 32
+    spriteID: aa01a4812d7844e4bbc7e054b3e582ea
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_58
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 320
+      width: 32
+      height: 32
+    spriteID: b7584929f1aa2784bb973ab99015626f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_59
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 320
+      width: 32
+      height: 32
+    spriteID: 5b12701993405f0458ccfe5ae415ceb3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_60
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 63adca96aa8099a4abdb314aa1df07a8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_61
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 288
+      width: 32
+      height: 32
+    spriteID: a6f0c323e73ac004c91d06431fe253d4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_62
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 6119ef3902b6cbf4299cbbf62691b444
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_63
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 288
+      width: 32
+      height: 32
+    spriteID: e62a32186389ac4418f68d92acb8dec2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_64
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 288
+      width: 32
+      height: 32
+    spriteID: baf5d8636a7bb6943aca2e7e6bd3fd37
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_65
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 931b179076a05604e9984639abbb486a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_66
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 097c04f7c79149e48a9b2d17476c652e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_67
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 288
+      width: 32
+      height: 32
+    spriteID: db4978ccfae8cfa4b84ff7105f46657b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_68
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 288
+      width: 32
+      height: 32
+    spriteID: be4e7f01797cf4241a725f982d8d8884
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_69
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 288
+      width: 32
+      height: 32
+    spriteID: c6d35ebd285f815479d3efd5ce1f45bc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_70
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 288
+      width: 32
+      height: 32
+    spriteID: c2e81788bbb28fa4dacce4a8fbf869ea
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_71
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 7ea4b4937564e74499eca00376fe9bc9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_72
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 288
+      width: 32
+      height: 32
+    spriteID: 1aa54195ac12e7c47b6227e4cbdaa7cf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_73
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 288
+      width: 32
+      height: 32
+    spriteID: d4e752b0882296a42a9355f5c14ff72a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_74
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 288
+      width: 32
+      height: 32
+    spriteID: ec3261dc04c5d8f49bba13cc4abce219
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_75
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 256
+      width: 32
+      height: 32
+    spriteID: da03dc0d765ad834c97eb246549f05ef
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_76
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 16e9f06c95527354c91b731505dce92d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_77
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 10315882095796f4dbf5f971a477efa6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_78
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 86b241f8bf6c216498dbafe9fba431d4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_79
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 256
+      width: 32
+      height: 32
+    spriteID: d7a86c6ba8442434faedf48c16c60812
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_80
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 5fe6baaa17b5c15458dbe31426cb098a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_81
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 3ee75e5a18f98e14f84e158e6efb1785
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_82
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 4339d315c95bcbb45b30ef6ca5e2ec2e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_83
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 08b35688044c31343a246fe28611377a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_84
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 256
+      width: 32
+      height: 32
+    spriteID: c52411c7e2551bb49b62a9942330e829
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_85
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 15e3c7b13005caa42a8fbebf11065c8f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_86
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 6c0e8da2ec97ed042a8199335d4eab17
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_87
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 647f8172b0d046f4aa5de21837f2cfea
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_88
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 256
+      width: 32
+      height: 32
+    spriteID: 858c65978c321bd43a1cf20e2123225b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_89
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 256
+      width: 32
+      height: 32
+    spriteID: aa8fd752451445b4980081a4562275c7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_90
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 73735616c969c15469626f2fbb57c29c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_91
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 5ef31619711cebb4eacbcf445a967d37
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_92
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 224
+      width: 32
+      height: 32
+    spriteID: feb25159df15fbe47aea0238123625f1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_93
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 025c07b12af21d2478ad6731c76a4432
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_94
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 3993b7a547bdde74a964ecb3d5b8b1a1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_95
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 2662ea991eefee249ab004238dd4da67
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_96
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 224
+      width: 32
+      height: 32
+    spriteID: a6dc3e703a08bc049b8277cd12439e1c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_97
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 224
+      width: 32
+      height: 32
+    spriteID: efb82dddfa9673040bfe9dd34784ff25
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_98
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 73436e01f02f9fe4baf6aa14ff6c54ff
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_99
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 224
+      width: 32
+      height: 32
+    spriteID: e6bfefec33821e9408151b5a68cfd620
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_100
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 224
+      width: 32
+      height: 32
+    spriteID: f2199994fb12d494cb3f51d498e5d8b3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_101
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 2ce0badea87b1c24e96e51d8f8c10718
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_102
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 224
+      width: 32
+      height: 32
+    spriteID: ec62bd60f53a9384f9287cf6be7dcf3b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_103
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 6684fb09ed1d36a46a7d64da52741d77
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_104
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 224
+      width: 32
+      height: 32
+    spriteID: 99838bc6b35da8c48b0f1332754bad31
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_105
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 8dc3136d313adab4cb6415c269e11611
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_106
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 192
+      width: 32
+      height: 32
+    spriteID: ba3352e19b8b6214ba2c864aebf5ed00
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_107
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 192
+      width: 32
+      height: 32
+    spriteID: aa4b688b9063077479ae2b443917a19e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_108
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 36469fafce815e148b2346bb91d964dd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_109
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 192
+      width: 32
+      height: 32
+    spriteID: eb305b7ea305c75438cff7c6a396b9a6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_110
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 8de49ebcbdfbc4547a6274ac9da8212f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_111
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 011de9669d9eac2449db8f82628efddd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_112
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 3f63919c40bbb464ba76ac0f897272c4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_113
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 24b1f9c9ac1cdbf45aca5e48a531a02f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_114
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 7c5742f038b1c1244995188fdf39b873
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_115
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 39f62a1d2fd730a4fbb7333ef5a5c776
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_116
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 04b0b0fe78fb76748bc1d5087f10eb5f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_117
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 3e6f13b3d073505468326c7e04212de5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_118
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 2ea19ae7b58484e4db9a3a266a15b66d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_119
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 192
+      width: 32
+      height: 32
+    spriteID: 758f3d37def00774a89f6ec1e2030e1f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_120
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 651abd9aeba233b459647422cd75bced
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_121
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 160
+      width: 32
+      height: 32
+    spriteID: f31bcbab82b217345a84fb8f14555229
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_122
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 396d98cb311823a439aafde0e37cbbb5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_123
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 8e33976c69b42a947bcf7cc6ff5ca0a1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_124
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 160
+      width: 32
+      height: 32
+    spriteID: cdd576f028f9259458c78ead09b0030c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_125
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 6e12807aa78cbe348b5174d83b20a7d4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_126
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 160
+      width: 32
+      height: 32
+    spriteID: ea9f9673a3c1ce545b65f53ea25f128e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_127
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 1d43dc46c2e8fb74d99c602b09ee97f8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_128
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 160
+      width: 32
+      height: 32
+    spriteID: d59ed375ebcb3de4dbb6c8a8ec4ee72e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_129
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 160
+      width: 32
+      height: 32
+    spriteID: a7bef409a0f80044e8db76ae63e0eb08
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_130
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 3da9f6fa93d049844a0f03473318ba9d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_131
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 1a416e53b4103d142961158b60a9117d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_132
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 3b5078dab6ad4bb43ad61e73e03beb62
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_133
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 55bc06ebeb844f44e8ff8285499f2d7c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_134
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 160
+      width: 32
+      height: 32
+    spriteID: 1ea6ef1ee92d13048859e834b7df3d7f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_135
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 128
+      width: 32
+      height: 32
+    spriteID: aeb6c25448a04054cb7a3f063d8b1619
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_136
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 3bbc50ad31367d64ca0b5e576c91fc3e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_137
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 7ec89ad150131a24b9807383385ff386
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_138
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 128
+      width: 32
+      height: 32
+    spriteID: ba46af5cbc9ff6949b43553e8c8543cd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_139
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 370e2827321acb54a982c6ff4e90596c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_140
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 214b0ca935b73b34c8b89ddfef68e114
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_141
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 6dbfbd64b319b1c43aacd28259b5739f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_142
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 128
+      width: 32
+      height: 32
+    spriteID: f0180361d51a2a84e8f5cc73dc33cbba
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_143
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 4070eb236d67e0645b4047471abe5cc4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_144
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 128
+      width: 32
+      height: 32
+    spriteID: a87b1dad0968c3e48990c4355e76da46
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_145
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 96782dad2df5fbc4887925c7acfe9c3e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_146
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 25fdd5a5e99dc464298ade30b7efe5d9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_147
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 128
+      width: 32
+      height: 32
+    spriteID: c7c19e300eece6b4684453019ec415ed
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_148
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 128
+      width: 32
+      height: 32
+    spriteID: 50b1ed159f23a554aa18f99f1edf4fa9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_149
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 128
+      width: 32
+      height: 32
+    spriteID: e798017fd3a531e4b8f5e1e317ce7c75
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_150
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 95beea980d6044f438984cbfce55dcea
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_151
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 6f2b1f6da8818c141aca9cf7c838be25
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_152
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 2312f2b086cc45e418c14b106ec82bdd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_153
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 96
+      width: 32
+      height: 32
+    spriteID: bac4f6b084ab211409e4fb445951684d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_154
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 3c885ba0d4b46c14b98a1f2b833fd4d0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_155
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 6c00d74271a103f4abcdc5fd70408435
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_156
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 51fbcc6dd3a6059488e14808d0f19a02
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_157
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 5eca25f3865dbe548a400a47b27831c3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_158
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 78d7dc2b74f554e44b717f09e7373c93
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_159
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 9ee564734336a7f4bbbbd59e4b085ea8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_160
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 96
+      width: 32
+      height: 32
+    spriteID: f8767332727ab994b8063830d4872384
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_161
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 5d01dc2ba1da86f4c9db6a1937cc04d1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_162
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 87f805b2a24734f42ac4882e31df45cb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_163
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 70bdc9324b2ba72458568ae6832f1a61
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_164
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 96
+      width: 32
+      height: 32
+    spriteID: 22b5338b9a2299146ba2f2e29918b742
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_165
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 64
+      width: 32
+      height: 32
+    spriteID: fc12095bdd80a2640b808e9d3e677cf9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_166
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 5b3dd3a06f9141f42ae2efc0978f7b09
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_167
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 64
+      width: 32
+      height: 32
+    spriteID: b90c1c9e0114f144c9c2f9f3feebc22b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_168
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 6f9c3394d95703a45b561c618c969673
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_169
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 2ef68633706bf1c47852ebc263dfd917
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_170
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 6910ed8823c16194e96d43d3874ebe46
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_171
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 04fc72bb2b09aa34a8a61830836241d5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_172
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 27c144c7082725e4d93b75580b02324a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_173
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 723a93ec493a5c147b215b65ad45fef5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_174
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 64
+      width: 32
+      height: 32
+    spriteID: a261518db5eb75742bf7e9a171176252
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_175
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 64
+      width: 32
+      height: 32
+    spriteID: f3efcc48e88b86e429c3fb6d62906dcc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_176
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 64
+      width: 32
+      height: 32
+    spriteID: a49e073d404729148a81ef60a8593536
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_177
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 64
+      width: 32
+      height: 32
+    spriteID: f1bdc32fa66787341920fca8e3ab98ee
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_178
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 0562de70e08af9941a90f97a5b7bade3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_179
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 64
+      width: 32
+      height: 32
+    spriteID: 73bbc726566305a49b14c96c56579682
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_180
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 32
+      width: 32
+      height: 32
+    spriteID: c452e5f3c5dfdbb4c908531b6f0de996
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_181
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 32
+      width: 32
+      height: 32
+    spriteID: eda80cf11f7f3e54591a9823483c41c5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_182
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 32
+      width: 32
+      height: 32
+    spriteID: d7adc0dc3edc0f5409575ae58e5c5f58
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_183
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 1cd1748b4c7bbdb448f3509442012a87
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_184
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 32
+      width: 32
+      height: 32
+    spriteID: b3428ef66ef1fbb4f9cd53ec5ace150a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_185
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 32
+      width: 32
+      height: 32
+    spriteID: db3fac98b72990541a6eae1f498f19e2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_186
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 6f0054a06774ecc4e9530898fc36ea13
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_187
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 32
+      width: 32
+      height: 32
+    spriteID: c7a700d944a21aa408ec3c95e38998b5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_188
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 32
+      width: 32
+      height: 32
+    spriteID: aec717f9fa554c543a8d91478be57cce
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_189
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 7e022a730a3f1da468903f6250fa73e3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_190
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 8952132d44158274787e7f59c2260b67
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_191
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 79dff80e27f38144692a2ee1aff0a080
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_192
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 32
+      width: 32
+      height: 32
+    spriteID: 8d58fbb16a80bc946b55e829d2768909
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_193
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 32
+      width: 32
+      height: 32
+    spriteID: c4e00e8bfc575c84883757f7f2f1f441
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_194
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 32
+      width: 32
+      height: 32
+    spriteID: bdaa55fd7dfeb0046b36755a48318b86
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_195
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 6a291d0b68e5b0a48b4a2c17d8b9f578
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_196
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 0
+      width: 32
+      height: 32
+    spriteID: cd31e68b70fc0dc45b4797495b6439dc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_197
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 22ed2e2b1f9463b41892460106225989
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_198
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 0
+      width: 32
+      height: 32
+    spriteID: f0b0d91755907914d99c06238e7a6579
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_199
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 0
+      width: 32
+      height: 32
+    spriteID: dbe4ceafb71966444be5f944d90ed1dd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_200
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 0
+      width: 32
+      height: 32
+    spriteID: bc1b9c661e9e96948b23dfaadd9caa63
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_201
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 7e120e30a52d4704fa3247ff7f105550
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_202
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 0
+      width: 32
+      height: 32
+    spriteID: eec5bb40a193a3741be4a2d255a34b7b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_203
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 0
+      width: 32
+      height: 32
+    spriteID: ea13697899fb12648969536240971566
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_204
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 0
+      width: 32
+      height: 32
+    spriteID: b31434fb67ac81047b062007353907f0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_205
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 320
+      y: 0
+      width: 32
+      height: 32
+    spriteID: b944eed0c40adaf44a9923ea208af26f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_206
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 352
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 6cc682ca49469174bbe2ab94ff9a7b8c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_207
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 0
+      width: 32
+      height: 32
+    spriteID: d9a13d93ff1509b45831616ea80c89a9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_208
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 0
+      width: 32
+      height: 32
+    spriteID: c2ade3f7c507c404aaf11206b8340a91
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Map_BG_2_alpha_209
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 0
+      width: 32
+      height: 32
+    spriteID: 568e1a0d5acdac3419d7e19e890d9e1d
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []
+  _artifacts: {instanceID: 0}

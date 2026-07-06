@@ -14,10 +14,10 @@ namespace Study_ActionPlatformer
     {
         // 애니메이터 상태 Tag
 
-        private const string ANIM_TAG_ATTACK = "Attack";
-        private const string ANIM_TAG_ROLL = "Roll";
+        private const string ANIM_TAG_ATTACK   = "Attack";
+        private const string ANIM_TAG_ROLL     = "Roll";
         private const string ANIM_TAG_MOVEMENT = "Movement";
-        private const string ANIM_TAG_JUMP = "Jump";
+        private const string ANIM_TAG_JUMP     = "Jump";
 
         public static readonly int MOVEMENT    = Animator.StringToHash("Movement");
         public static readonly int IS_ATTACK   = Animator.StringToHash("IsAttack");
@@ -27,8 +27,8 @@ namespace Study_ActionPlatformer
         public static readonly int JUMP        = Animator.StringToHash("IsJump");
         public static readonly int IS_FLIP     = Animator.StringToHash("IsFlip");
         public static readonly int DESCENDING  = Animator.StringToHash("Descending");
-        public static readonly int STICK_WALL = Animator.StringToHash("StickWall");
-        public static readonly int IS_DEAD = Animator.StringToHash("IsDead");
+        public static readonly int STICK_WALL  = Animator.StringToHash("StickWall");
+        public static readonly int IS_DEAD     = Animator.StringToHash("IsDead");
 
         public static readonly int EFFECT_ATTACK = 0;
         public static readonly int EFFECT_JUMP = 1;
@@ -36,12 +36,12 @@ namespace Study_ActionPlatformer
 
         public Animator Animator { get; private set; }
         public Animator[] effectAnim; //캐릭터 연출 애니메이터
+
         public Vector3 LandCloudOffset;
         public Vector3 JumpCloudOffset;
         public Vector3 FlipCloudOffset;
 
         private Player player;
-        [field: SerializeField] public SpriteRenderer SpriteRenderer;
         private CharacterController2D Controller2D { get; set; }
 
         private HitBox hitBox { get; set; }
@@ -68,7 +68,6 @@ namespace Study_ActionPlatformer
         private void Awake()
         {
             Animator = GetComponentInChildren<Animator>();
-            SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
             Controller2D = GetComponent<CharacterController2D>();
             hitBox = GetComponentInChildren<HitBox>();
             defaultState = new MovementState(this);

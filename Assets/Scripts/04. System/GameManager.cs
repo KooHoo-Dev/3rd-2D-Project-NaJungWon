@@ -21,10 +21,10 @@ namespace Study_ActionPlatformer
         private GameState stateBeforePause = GameState.Playing;
 
         public int currentStageNum = 1;
-        public const int MAX_STAGE_NUM = 3;
+        public const int MAX_STAGE_NUM = 8;
 
         [Header("씬 이름 설정")]
-        [SerializeField] private string[] stageSceneNames = { "Stage_1", "Stage_2", "Stage_3" };
+        [SerializeField] private string[] stageSceneNames = { "Stage_1", "Stage_2", "Stage_3", "Stage_4", "Stage_5", "Stage_6", "Stage_7", "Stage_8" };
 
         [Header("재생 스킵 설정")]
         public bool recordSkeep = false;

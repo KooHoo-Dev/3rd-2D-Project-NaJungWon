@@ -14,13 +14,17 @@
         {
             "_key": "Trigger_Grid_1",
             "_asset": {
-                "instanceID": 0
+                "fileID": 11400000,
+                "guid": "282bf2d3465c7c949b36e03e64371b8f",
+                "type": 2
             }
         },
         {
             "_key": "Trigger_Grid_2",
             "_asset": {
-                "instanceID": 0
+                "fileID": 11400000,
+                "guid": "adfe6f9d91a492a46bd7c89704934bf3",
+                "type": 2
             }
         },
         {

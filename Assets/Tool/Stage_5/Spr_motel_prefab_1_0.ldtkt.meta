@@ -1,0 +1,2296 @@
+fileFormatVersion: 2
+guid: a4069645a27e5cd45a10fc1ae96c4fa4
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 16
+  _overrideTexture: {instanceID: 0}
+  _sprites:
+  - name: Spr_motel_prefab_1_0_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 112
+      width: 16
+      height: 16
+    spriteID: dc67d93b143a78d4e92cb1b55155ed0f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 16
+      y: 112
+      width: 16
+      height: 16
+    spriteID: d11d15b2e3bbf1d44afea93c107c860c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 112
+      width: 16
+      height: 16
+    spriteID: 33e12373fb8d2834ba83b0e4c2300584
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 112
+      width: 16
+      height: 16
+    spriteID: 489f9d1714c64ef47ab241349c3be9fb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 112
+      width: 16
+      height: 16
+    spriteID: 5a090d8666651bf46a4989ffaeedfbe9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 80
+      y: 112
+      width: 16
+      height: 16
+    spriteID: 26b9bc945ce286b4ba818c8ae84a3ad2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 112
+      width: 16
+      height: 16
+    spriteID: d8304a896c395b249887a084d794d3e7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 112
+      width: 16
+      height: 16
+    spriteID: 7487212815754f54b9bbd923b9bf0345
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 112
+      width: 16
+      height: 16
+    spriteID: b1964cc93a59618489b558df875c8663
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 144
+      y: 112
+      width: 16
+      height: 16
+    spriteID: d56a93bd170173c4392e5d6a1e6b40db
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 112
+      width: 16
+      height: 16
+    spriteID: 71f7f2d6db50f3644aca3503f7e4ccaa
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 112
+      width: 16
+      height: 16
+    spriteID: 4fbe09907c7a7e147b572a2272535f9c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 112
+      width: 16
+      height: 16
+    spriteID: 9b9fe70bdbb7a5c4f87ce60909408fb5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 112
+      width: 16
+      height: 16
+    spriteID: e33c1659f9107e046b2370a2e952cc17
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 112
+      width: 16
+      height: 16
+    spriteID: b50beddc84ad4384fbf7995201259fba
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 112
+      width: 16
+      height: 16
+    spriteID: 1512450df4996b643b5ade3d4f14b523
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 112
+      width: 16
+      height: 16
+    spriteID: 4b0c963363fa4794ca683b0b0bc3aae8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 272
+      y: 112
+      width: 16
+      height: 16
+    spriteID: 3753e763b56a340489e805d8a800cda6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 112
+      width: 16
+      height: 16
+    spriteID: 30824270a1afb7c43a01ac87fe2d3136
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 96
+      width: 16
+      height: 16
+    spriteID: b8e0065a06bfbf24d9d6a35cf429fef6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 16
+      y: 96
+      width: 16
+      height: 16
+    spriteID: 41849c21317639b42ad384cf3b8d512b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 96
+      width: 16
+      height: 16
+    spriteID: 34b5323347a600b49a58caac51d2e6f4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 96
+      width: 16
+      height: 16
+    spriteID: 0066c840822816146a414f7582c4af56
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 96
+      width: 16
+      height: 16
+    spriteID: e02b33561da4b2848b2c423fc675934f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 80
+      y: 96
+      width: 16
+      height: 16
+    spriteID: e105bab09b7c3c345881a12a31c77f82
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 96
+      width: 16
+      height: 16
+    spriteID: 24ed55667897a7045a49c286e707814a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 96
+      width: 16
+      height: 16
+    spriteID: 732537a8ae7a2fb4ea46b38fd05fd465
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 96
+      width: 16
+      height: 16
+    spriteID: 242905db072a36c41bc648c6ccb15af8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 144
+      y: 96
+      width: 16
+      height: 16
+    spriteID: bee0914bdf00f6947803ef69d036e8ff
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 96
+      width: 16
+      height: 16
+    spriteID: 39be4f5d34940e142bfcb45377ced721
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 96
+      width: 16
+      height: 16
+    spriteID: 7d39881b53f5fa144b1f1183316b1098
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_31
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 96
+      width: 16
+      height: 16
+    spriteID: d29afd7a5605d4e47841d8ad7c8766df
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_32
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 96
+      width: 16
+      height: 16
+    spriteID: b49c6b3124e758e42b31b878ec6c9f9f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_33
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 96
+      width: 16
+      height: 16
+    spriteID: e65bca6e283c87049b8149aab5b43b73
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_34
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 96
+      width: 16
+      height: 16
+    spriteID: 3a87e29ccd9baed4bbe2ed55c62d504d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_35
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 96
+      width: 16
+      height: 16
+    spriteID: ba1dfa486b33fbf4e9d7b00b1578c452
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_36
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 272
+      y: 96
+      width: 16
+      height: 16
+    spriteID: a8a2d03fab7873d4d841fd63b13aa6da
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_37
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 96
+      width: 16
+      height: 16
+    spriteID: 50f4f0388e45e564f93539673dc89eda
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_38
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 80
+      width: 16
+      height: 16
+    spriteID: c8c6b180e11fbce4bb0c3c9ce07c489d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_39
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 16
+      y: 80
+      width: 16
+      height: 16
+    spriteID: ea2ad776c8832d044a75e1268c225f92
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_40
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 80
+      width: 16
+      height: 16
+    spriteID: 196d133dfd94e544c999c2d92791f3c5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_41
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 80
+      width: 16
+      height: 16
+    spriteID: 9ffa59766045738429fffd742c4e5c93
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_42
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 80
+      width: 16
+      height: 16
+    spriteID: b691aa5f01f6bc84db0eec9e2ceb7b2c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_43
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 80
+      y: 80
+      width: 16
+      height: 16
+    spriteID: 01e6203473cda7740b3b5701e73b7382
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_44
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 80
+      width: 16
+      height: 16
+    spriteID: 97120ce38a831d7468c1ef5a6a402d1e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_45
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 80
+      width: 16
+      height: 16
+    spriteID: f1f65d96561897e46b24570613b810c8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_46
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 80
+      width: 16
+      height: 16
+    spriteID: 28ca8ca4e13a851419e49e551267e0bf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_47
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 144
+      y: 80
+      width: 16
+      height: 16
+    spriteID: a0c63e4119fa7e3459795d5e94031ae1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_48
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 80
+      width: 16
+      height: 16
+    spriteID: bcc77747067eba74b81b9e832ccba8fd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 80
+      width: 16
+      height: 16
+    spriteID: aa52251f71fc4894d8ec25aa3ba8f3ab
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_50
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 80
+      width: 16
+      height: 16
+    spriteID: 5c9d5426000afd64b8d207d0a798c6cd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_51
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 80
+      width: 16
+      height: 16
+    spriteID: fc7a1b142f616ab40b9f8987a0cd034a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_52
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 80
+      width: 16
+      height: 16
+    spriteID: a968a6347d5d6744b8cf90cf1135a34d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_53
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 80
+      width: 16
+      height: 16
+    spriteID: 1a744da190660db4089f1fe70af0d4f0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_54
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 80
+      width: 16
+      height: 16
+    spriteID: 3240bcf689730534cb325a68e596e78b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_55
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 272
+      y: 80
+      width: 16
+      height: 16
+    spriteID: d099bc338e7610f4a9c1a6c403aa1490
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_56
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 80
+      width: 16
+      height: 16
+    spriteID: 7e3919c14cea70b46932cabd4143b55e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_57
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 90c9d2f1b771f22479c5ac6c155a801e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_58
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 16
+      y: 64
+      width: 16
+      height: 16
+    spriteID: acf3b0eb3d160bc49930d43c2708797d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_59
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 5bc5c0aa96fd69244918286d3555df32
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_60
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 839d419ae0401e14f8f7f2af92653c49
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_61
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 64
+      width: 16
+      height: 16
+    spriteID: a3bfbf826f01c8a4eb58560148062264
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_62
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 80
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 8a2281ff687149d4ba8c37a5b91eb7dd
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_63
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 72c1e7e65671a0045bec2950ddafd807
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_64
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 9b35acd0ec389274faeab622004278c6
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_65
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 773ccbe62f5bbe14cb7d2a37725fb37e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_66
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 144
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 77c614219260cba40961318b75f6c354
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_67
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 91a3b6f0a3fcabd4da2f7b029a4baa8b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_68
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 231ff01b4aa0e0345ac47467bb1f8546
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_69
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 3c40ae216f6fb0646a162ff8eb58ac20
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_70
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 64
+      width: 16
+      height: 16
+    spriteID: f069e818e5668e940ad272a29259752e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_71
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 64
+      width: 16
+      height: 16
+    spriteID: aa37e67ce4a680c49b2a5d1c76d1e45c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_72
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 17446e0a4bac39d4492fc93885188192
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_73
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 49c2c9fda5a90d04fae75422fa3eb567
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_74
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 272
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 4e30fd9a188eb7a4aa6234138593aefe
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_75
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 3cd8759f78a0af64a870164a0a0707e7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_76
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 1105bf24cdcbafe4eb4428a1f4da1f34
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_77
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 16
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 2431b28c65ce1644ab2df240a62638f1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_78
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 77b4978b73c8b1a47b9e60df9b883d3d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_79
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 7093bca7011d26843b6f78d0912a92cb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_80
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 48
+      width: 16
+      height: 16
+    spriteID: b459f472946efb34d85dc31e8593520f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_81
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 80
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 659a24e2079d56d4ba6e133423116029
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_82
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 1daa412059ac5654e9ec25f548715864
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_83
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 350d1522c477bdd43a549212baf91d82
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_84
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 220cae42ed64c4c4689930548faae656
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_85
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 144
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 98434884d23a238439b349180b2f613a
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_86
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 1075d9f52e172034fb526174747bee26
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_87
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 17ed453033783b64690a78cebe945120
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_88
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 6a6729462b53b104bb0a3042064033e7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_89
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 48
+      width: 16
+      height: 16
+    spriteID: eb07fe50733c0e348b9e212fc2c9c7c0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_90
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 48
+      width: 16
+      height: 16
+    spriteID: eca750a726129fc4ea1aefbc62b793c4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_91
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 48
+      width: 16
+      height: 16
+    spriteID: a6f8cfcce767ebe4a9553f0eaa8dd4f2
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_92
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 2a22d9e567987f34b964192b33c8ef8b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_93
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 272
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 022b46ae8ca6aa1428e12aea6f3ca707
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_94
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 48
+      width: 16
+      height: 16
+    spriteID: c27108002b1bcd844a840b5584fba595
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_95
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 32
+      width: 16
+      height: 16
+    spriteID: 0d8008f04bd17964884a80c1bdc335b5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_96
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 16
+      y: 32
+      width: 16
+      height: 16
+    spriteID: 2bb55c9b6987fab44bee859623f05763
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_97
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 32
+      width: 16
+      height: 16
+    spriteID: 1bc055caaf2e73a4ca65793893db5158
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_98
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 32
+      width: 16
+      height: 16
+    spriteID: c089cf4e51329b9478c47f7e5c8804ed
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_99
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 32
+      width: 16
+      height: 16
+    spriteID: 9f30ed63e262dc84bb738c19fcad5b14
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_100
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 80
+      y: 32
+      width: 16
+      height: 16
+    spriteID: 97f4426709a8bcb4abefffd467cc1c7e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_101
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 32
+      width: 16
+      height: 16
+    spriteID: 7d1a5a54fcdce3048a48a1d1be0f9bf4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_102
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 32
+      width: 16
+      height: 16
+    spriteID: f00b713d5039584468c3cc7be42f6187
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_103
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 32
+      width: 16
+      height: 16
+    spriteID: 31b7c99c09f037d4d83afe26087ab393
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_104
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 144
+      y: 32
+      width: 16
+      height: 16
+    spriteID: 00beeaaaa82565048be732ac7e2750b8
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_105
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 32
+      width: 16
+      height: 16
+    spriteID: f7b8dd6bdd8423d4faf738d82801bb31
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_106
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 32
+      width: 16
+      height: 16
+    spriteID: 5d337f51a255311479a673fb2be9ab58
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_107
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 32
+      width: 16
+      height: 16
+    spriteID: 5a57745c602fb524da495e9a7965b597
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_108
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 32
+      width: 16
+      height: 16
+    spriteID: de8cfe9064f75114f87c31a93bce1072
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_109
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 32
+      width: 16
+      height: 16
+    spriteID: 4535f6ed5a02a8143962bb9d6b5dcb7e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_110
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 32
+      width: 16
+      height: 16
+    spriteID: c06cb65b3fe9a6840967bb8ce74536e4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_111
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 32
+      width: 16
+      height: 16
+    spriteID: c3bd0551759282a4489d9d6904d45e5d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_112
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 272
+      y: 32
+      width: 16
+      height: 16
+    spriteID: 948629b0353446e46a8b099f732ddc77
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_113
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 32
+      width: 16
+      height: 16
+    spriteID: 44d92e7f41acb1b44af088d7a8914e3b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_114
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 16
+      width: 16
+      height: 16
+    spriteID: beb08782190e8494cb2b5fbad2847eb5
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_115
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 16
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 1459f9d198de1564a97f502ef64aaf64
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_116
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 1b41a72ca0abd8647964c2ed55c74779
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_117
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 163e18a94b07bd34dbd5bcc49917744b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_118
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 16
+      width: 16
+      height: 16
+    spriteID: eb85548f52aa03d40b4eb106d00ce396
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_119
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 80
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 7994c4e4f67d7c14b9fe19046f3b4337
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_120
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 9ecf5d5f469a0a042807f0b13586021b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_121
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 3fdd83bcad85b7b4ba13d9be554293f1
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_122
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 16
+      width: 16
+      height: 16
+    spriteID: ed0e7ca7e3a87f54691d256af3e0c40c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_123
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 144
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 5da2e2f5c1a3ddc4d8866121230a8cb7
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_124
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 16
+      width: 16
+      height: 16
+    spriteID: da6156c3472d827419f7722d08aaf115
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_125
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 16
+      width: 16
+      height: 16
+    spriteID: a9d0cf1aae055c14892afcee8d97833e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_126
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 16
+      width: 16
+      height: 16
+    spriteID: bc157c59fbf65b14eb59a567960ff3f9
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_127
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 8803caf3a1fb5904fb11277dab11f7cf
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_128
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 3579ee00e8a167449ac1025ecf4e1165
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_129
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 16
+      width: 16
+      height: 16
+    spriteID: e040be180c35882418daffc24be79578
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_130
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 8234f8f23bbacb044a65e177c91b7bcb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_131
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 272
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 317a253a778945c4caa23154dbd1dcfb
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_132
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 16
+      width: 16
+      height: 16
+    spriteID: f338681f99d5e914490adb119bfd4ad3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_133
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 1a248dbff4a6eb94ea2b62aec0f86d2d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_134
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 16
+      y: 0
+      width: 16
+      height: 16
+    spriteID: cda2f968d69040143a25918d74eb552e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_135
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 0
+      width: 16
+      height: 16
+    spriteID: f97806182febd874497a737b674b7d71
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_136
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 0
+      width: 16
+      height: 16
+    spriteID: c5517ac56ef8ff94e8c9b1e8a2189a2f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_137
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 979aa48c48f9a6949bf963279dd01359
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_138
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 80
+      y: 0
+      width: 16
+      height: 16
+    spriteID: eb611668747b4c04c92faba433818d05
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_139
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 96
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 625081c8d6516344da5999c0cbf313dc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_140
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 0
+      width: 16
+      height: 16
+    spriteID: fc43981af8836634a954263b72970f50
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_141
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 3c3df406a801fab4e8e82d1dc8f9c21f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_142
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 144
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 88730a82d0f117741af9c683b9fea756
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_143
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 0
+      width: 16
+      height: 16
+    spriteID: fa360970e3948bb4da098214c35e2181
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_144
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 0
+      width: 16
+      height: 16
+    spriteID: c7ddd9a663c3d6d44b423099f2316e83
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_145
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 861ca90e70597724fab4c39ec70cd5ac
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_146
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 71c901674a9733a45b71752d2f8da616
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_147
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 0
+      width: 16
+      height: 16
+    spriteID: e9eccaa9c05f10a4e8caae9481fbaffc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_148
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 7222edc8821db004e947f9aaeb3dfca3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_149
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 21fce4f7d60b6974d8233e882908a39d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_150
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 272
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 46ec04fd5d135454da2b166eb0d287e3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Spr_motel_prefab_1_0_151
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 7a3b12cc45de5d847858443f22cb6163
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []
+  _artifacts: {instanceID: 0}

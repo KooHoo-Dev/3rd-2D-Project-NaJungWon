@@ -38,7 +38,7 @@
 	"backupRelPath": null,
 	"levelNamePattern": "Level_%idx",
 	"tutorialDesc": null,
-	"customCommands": [{ "command": "../../Library/LDtkTilesetExporter/ExportTilesetDefinition.exe \"Stage_1\"", "when": "AfterSave" }],
+	"customCommands": [{ "command": "../../Library/LDtkTilesetExporter/ExportTilesetDefinition.exe \"Stage_7\"", "when": "AfterSave" }],
 	"flags": [],
 	"defs": { "layers": [
 		{
