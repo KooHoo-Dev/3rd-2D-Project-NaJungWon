@@ -1705,6 +1705,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 867348757153994483, guid: b1fed0765d52df2489d887e02f597e6c, type: 3}
   m_PrefabInstance: {fileID: 470434178}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &476974750 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2585885720996491341, guid: a80d45ff0c3392f4b950b08b98119d76, type: 3}
+  m_PrefabInstance: {fileID: 622309432}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &482861985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,81 +1820,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 483462921}
   m_CullTransparentMesh: 1
---- !u!1 &501557894
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 501557897}
-  - component: {fileID: 501557896}
-  - component: {fileID: 501557895}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &501557895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501557894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74a125e5f080ccd419961facad849d56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Study_ActionPlatformer.ChronosSystem
-  chronosTimeScale: 0.25
-  chronosKey: 304
-  maxEnergy: 11
-  energyDrainRate: 1
-  energyRegenRate: 0.5
---- !u!114 &501557896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501557894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a542c8a0c52e403429f1dc062528fed1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  currentStageNum: 1
-  stageSceneNames:
-  - Stage_1
-  - Stage_2
-  - Stage_3
-  - Stage_4
-  - Stage_5
-  - Stage_6
-  - Stage_7
-  - Stage_8
-  recordSkeep: 0
-  stageEntryDelay: 0.75
-  restartPromptDelay: 0.15
---- !u!4 &501557897
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501557894}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &512852661 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8261360784306483895, guid: b1fed0765d52df2489d887e02f597e6c, type: 3}
@@ -10001,7 +9931,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2585885720996491341, guid: a80d45ff0c3392f4b950b08b98119d76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1191129833}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -139852541810139114, guid: a80d45ff0c3392f4b950b08b98119d76, type: 3}
       insertIndex: -1
@@ -11163,11 +11096,11 @@ Transform:
   m_GameObject: {fileID: 1191129831}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.2, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 10, z: 1}
+  m_LocalPosition: {x: -2.5, y: 29.7, z: 0}
+  m_LocalScale: {x: 5, y: 50, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 476974750}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1257573913
 GameObject:
@@ -11339,50 +11272,6 @@ Transform:
   m_Children:
   - {fileID: 69552985}
   - {fileID: 384563451}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1263656360
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1263656362}
-  - component: {fileID: 1263656361}
-  m_Layer: 0
-  m_Name: CombatSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1263656361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263656360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 476d36d36da2c9042ab93f512f2b6690, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Study_ActionPlatformer.CombatSystem
---- !u!4 &1263656362
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263656360}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1361094829 stripped
@@ -13055,6 +12944,3 @@ SceneRoots:
   - {fileID: 460084476}
   - {fileID: 1495399021}
   - {fileID: 1436171833}
-  - {fileID: 1191129833}
-  - {fileID: 501557897}
-  - {fileID: 1263656362}

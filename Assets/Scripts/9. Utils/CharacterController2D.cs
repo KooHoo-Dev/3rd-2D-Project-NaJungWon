@@ -507,29 +507,25 @@ namespace Study.Utilities
                     stairMove = new Vector2(moveX, stepY);
                     return true;
                 }
-
-                // 여기서 바로 포기하지 않고 다음 높이를 계속 시도
             }
 
-            // Debug.Log("계단 이동 실패");
+            //Debug.LogError("계단 이동 실패");
 
             return false;
         }
 
-        private bool ResolveRollMovementBySteps(Bounds startBox, float totalMoveX, out Vector2 moveResult) //구르기 계단 이동값 보정
+        private bool ResolveRollMovementBySteps(Bounds startBox, float moveX, out Vector2 moveResult) //구르기 계단 이동값 보정
         {
             moveResult = Vector2.zero;
 
-            if (Mathf.Approximately(totalMoveX, 0.0f))
+            if (Mathf.Approximately(moveX, 0.0f))
                 return false;
 
             // 구르기 이동을 잘게 나눠서 step 방식으로 처리
-            float sliceDistance = 0.05f;
-
-            int sliceCount = Mathf.CeilToInt(Mathf.Abs(totalMoveX) / sliceDistance);
+            int sliceCount = Mathf.CeilToInt(Mathf.Abs(moveX) / maxStepHeight);
             sliceCount = Mathf.Max(1, sliceCount);
 
-            float unitMoveX = totalMoveX / sliceCount;
+            float unitMoveX = moveX / sliceCount;
 
             Bounds box = startBox;
 

@@ -28569,50 +28569,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3331820287159768869, guid: 6481875b4ae93aa4cba45133771dac01, type: 3}
   m_PrefabInstance: {fileID: 1683858270}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1701935172
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1701935174}
-  - component: {fileID: 1701935173}
-  m_Layer: 0
-  m_Name: CombatSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1701935173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701935172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 476d36d36da2c9042ab93f512f2b6690, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Study_ActionPlatformer.CombatSystem
---- !u!4 &1701935174
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701935172}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1705468147
 GameObject:
   m_ObjectHideFlags: 0
@@ -28689,81 +28645,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1798198016
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1798198019}
-  - component: {fileID: 1798198018}
-  - component: {fileID: 1798198017}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1798198017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798198016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74a125e5f080ccd419961facad849d56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Study_ActionPlatformer.ChronosSystem
-  chronosTimeScale: 0.25
-  chronosKey: 304
-  maxEnergy: 11
-  energyDrainRate: 1
-  energyRegenRate: 0.5
---- !u!114 &1798198018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798198016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a542c8a0c52e403429f1dc062528fed1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  currentStageNum: 1
-  stageSceneNames:
-  - Stage_1
-  - Stage_2
-  - Stage_3
-  - Stage_4
-  - Stage_5
-  - Stage_6
-  - Stage_7
-  - Stage_8
-  recordSkeep: 0
-  stageEntryDelay: 0.75
-  restartPromptDelay: 0.15
---- !u!4 &1798198019
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798198016}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1819419130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29327,7 +29208,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TobeContinued. . .
+  m_text: To be Continued. . .
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 659ceb8947c683b4a9e1216df0a67515, type: 2}
   m_sharedMaterial: {fileID: 6898141960898469622, guid: 659ceb8947c683b4a9e1216df0a67515, type: 2}
@@ -30059,5 +29940,3 @@ SceneRoots:
   - {fileID: 1495399021}
   - {fileID: 460084476}
   - {fileID: 1436171833}
-  - {fileID: 1798198019}
-  - {fileID: 1701935174}
