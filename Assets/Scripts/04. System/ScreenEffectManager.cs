@@ -8,14 +8,10 @@ namespace Study_ActionPlatformer
     {
         public static ScreenEffectManager Instance { get; private set; }
 
-        // ============================================================
-        // [인스펙터 설정]
-        // ============================================================
-
         [Header("슬래시 이펙트 (오브젝트 풀링)")]
-        [SerializeField] private GameObject slashPrefab;          // 슬래시 이미지 오브젝트
-        [SerializeField] private int slashPoolSize = 8;          // 풀 크기
-        [SerializeField] private float slashSpeed = 100f;         // 화면 가로지르는 속도
+        [SerializeField] private GameObject slashPrefab;         // 슬래시 이미지 오브젝트
+        [SerializeField] private int   slashPoolSize = 8;        // 풀 크기
+        [SerializeField] private float slashSpeed = 100f;        // 화면 가로지르는 속도
         [SerializeField] private float screenMargin = 2f;        // 화면 밖 여유 거리
 
         [Header("카메라 설정")]
@@ -29,16 +25,13 @@ namespace Study_ActionPlatformer
 
         [Header("잔상 이펙트")]
         [SerializeField] private SpriteRenderer afterimagePrefab;
-        [SerializeField] private int afterimagePoolSize = 20;
-        [SerializeField] private float afterimageInterval = 0.03f;
+        [SerializeField] private int   afterimagePoolSize     = 20;
+        [SerializeField] private float afterimageInterval     = 0.03f;
         [SerializeField] private float afterimageFadeDuration = 0.2f;
-        [SerializeField] private Color afterimageColor = new Color(0.5f, 0.8f, 1f, 0.7f);
+        [SerializeField] private Color afterimageColor        = new Color(0.5f, 0.8f, 1f, 0.7f);
 
-        // ============================================================
-        // [내부 상태 관리]
-        // ============================================================
-
-        private Vector3 cameraOriginPos;
+        [Header("내부 설정")]
+        private Vector3   cameraOriginPos;
         private Coroutine shakeCoroutine;
         private Coroutine hitStopCoroutine;
         private Coroutine afterimageCoroutine;
@@ -49,10 +42,6 @@ namespace Study_ActionPlatformer
         // 오브젝트 풀
         private readonly Queue<GameObject> slashPool = new Queue<GameObject>();
         private readonly Queue<SpriteRenderer> afterimagePool = new Queue<SpriteRenderer>();
-
-        // ============================================================
-        // [초기화]
-        // ============================================================
 
         private void Awake()
         {
@@ -302,7 +291,6 @@ namespace Study_ActionPlatformer
 
                 Vector2 randomOffset = Random.insideUnitCircle * currentMagnitude;
 
-                // ✅ 절대 위치(origin + offset)로 덮어쓰지 않고,
                 // "현재 위치에 더해질 오프셋 값"만 전달합니다.
                 cameraController.SetShakeOffset(new Vector3(randomOffset.x, randomOffset.y, 0f));
 

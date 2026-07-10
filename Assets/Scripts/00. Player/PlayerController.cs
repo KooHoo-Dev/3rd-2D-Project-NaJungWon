@@ -53,14 +53,14 @@ namespace Study_ActionPlatformer
         private PlayerAnimStateBase defaultState; // 예외처리를 위한 기본 상태
         private PlayerAnimStateBase currentState; // 상태객체를 담아서 제어하기 위한 빈 객체 변수
 
-        private bool prevIsDashing = false;
-        private bool prevIsGrounded = false;
-        private bool prevIsJumping = false;
-        private bool prevIsWallFlipping = false;
-
-        private bool prevCrouchHeld = false;
-        private bool prevMoveHeld = false;
         private float prevHorizontalRaw = 0.0f;
+
+        private bool prevIsGrounded     = false;
+        private bool prevMoveHeld       = false;
+        private bool prevIsDashing      = false;
+        private bool prevIsJumping      = false;
+        private bool prevCrouchHeld     = false;
+        private bool prevIsWallFlipping = false;
 
         [field: SerializeField] private Transform Cursor { get; set; }
 
@@ -136,15 +136,8 @@ namespace Study_ActionPlatformer
         }
 
 
-        // [추가] 공격 이펙트 방향은 FacingDirection 지연값이 아니라 실제 공격 벡터로 직접 맞춥니다.
         private void ApplyAttackEffect(Vector2 dir)
         {
-            if (effectAnim == null || effectAnim.Length <= EFFECT_ATTACK || effectAnim[EFFECT_ATTACK] == null)
-                return;
-
-            if (dir.sqrMagnitude <= 0.0001f)
-                return;
-
             Transform effectTransform = effectAnim[EFFECT_ATTACK].transform;
             effectTransform.position = transform.position;
             effectTransform.right = dir.normalized;
@@ -154,7 +147,6 @@ namespace Study_ActionPlatformer
             scale.x = Mathf.Abs(scale.x);
             scale.y = Mathf.Abs(scale.y);
             effectTransform.localScale = scale;
-            // ✅ 수정: 처음부터 재생하도록 강제
             effectAnim[0].Play("Zero_Slash", 0, 0f);
         }
 
@@ -180,18 +172,18 @@ namespace Study_ActionPlatformer
                 Controller2D.RequestAttack(dir);
             }
 
+            /* 원래 물건 던지기 만들어야하는데 못만듬
             if (SimpleInput.GetMouseButtonDown(SimpleInput.MouseButton.Right))
             {
-                // 필요하면 이후 별도 파라미터/상태 연결
-            }
 
-            // ✅ 말씀하신 그대로: IsDashing bool의 시작/끝 엣지를 여기서 감시
+            }
+            */
+
             bool isDashingNow = Controller2D.IsDashing;
 
             if (!prevIsDashing && isDashingNow)
             {
                 Animator.SetBool(IS_ATTACK, true);
-                // 방향은 이미 ApplyAttack()에서 확정됨. 여기선 이펙트 회전용으로만 재사용.
                 ApplyAttackEffect(Controller2D.pendingDashDirection);
             }
             else if (prevIsDashing && !isDashingNow)
@@ -211,7 +203,7 @@ namespace Study_ActionPlatformer
 
             Controller2D.RequestCrouch(crouchHeld);
 
-            // 이동 중이면 crouch 애니메이션은 무시
+            // 구르기중이면 crouch 애니메이션은 무시
             Animator.SetBool(IS_Crouch, crouchHeld && !moveHeld && !Controller2D.IsRolling);
             Animator.SetBool(IS_ROLL, Controller2D.IsRolling);
         }
@@ -229,8 +221,7 @@ namespace Study_ActionPlatformer
             bool moveReInput = Mathf.Approximately(prevHorizontalRaw, 0.0f) &&
                                !Mathf.Approximately(horizontalRaw, 0.0f);
 
-            // 카타나 제로식 구르기 판정
-            // [수정] S→A/D, A/D→S 모두 같은 기준으로 처리되도록 입력 에지만 여기서만 판정합니다.
+            // 구르기 판정
             if (crouchHeld && moveHeld && (crouchDown || moveReInput) && Controller2D.CanStartRoll)
             {
                 Controller2D.RequestRoll(Mathf.Sign(horizontalRaw));
@@ -259,9 +250,6 @@ namespace Study_ActionPlatformer
 
         private void UpdateGroundedAnimation(bool isGrounded)
         {
-            //bool isGrounded = Controller2D.IsGrounded;
-            //Animator.SetBool(IS_GROUNDED, isGrounded);
-
             if (prevIsGrounded && !isGrounded)
             {
                 if (Controller2D.VerticalVelocity > 0.0f)
@@ -325,11 +313,6 @@ namespace Study_ActionPlatformer
         public void StopMovement()
         {
             Controller2D.SetMoveInput(0.0f);
-        }
-
-        public void ApplyRoll(bool apply)
-        {
-            Controller2D.IsRolling = apply;
         }
 
         public void PlayerDead(Vector2 hitdirection, float power)

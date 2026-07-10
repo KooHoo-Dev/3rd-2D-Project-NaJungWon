@@ -21,19 +21,12 @@ namespace Study_ActionPlatformer
         [SerializeField] private Transform target;
         [SerializeField] private Vector3 offset = new Vector3(0f, 0f, -10f);
 
-        [Header("실제 렌더링 카메라")]
-        [SerializeField] private Camera cam;
+        [Header("기본 설정")]
+        [SerializeField] private float   followLerpSpeed = 8f; //추적 러프
+        [SerializeField] private Vector2 deadZoneSize    = new Vector2(3f, 2f); //데드존 (카메라 중심 기준 박스)
 
-        [Header("데드존 (카메라 중심 기준 박스)")]
-        [Tooltip("플레이어가 이 박스 안에서 움직이는 동안은 카메라가 정지합니다.")]
-        [SerializeField] private Vector2 deadZoneSize = new Vector2(3f, 2f);
-
-        [Header("추적 부드러움")]
-        [SerializeField] private float followLerpSpeed = 8f;
-
-        [Header("맵 경계")]
-        [Tooltip("맵 전체를 감싸는 Collider2D (형태 무관, .bounds로 AABB만 사용)")]
-        [SerializeField] private Collider2D mapBounds;
+        [SerializeField] private Camera cam; //실제 렌더링 카메라
+        [SerializeField] private Collider2D mapBounds; // 맵 경계
 
         // 데드존 로직이 추적하는 "논리적 카메라 목표점" (흔들림 미포함)
         private Vector3 anchor;
@@ -67,7 +60,7 @@ namespace Study_ActionPlatformer
 
             if (isPlayback)
             {
-                // ✅ 재생/역재생 중에는 TimeLineRecorder.SampleObject()가
+                //    재생/역재생 중에는 TimeLineRecorder.SampleObject()가
                 //    이번 프레임의 Update() 단계에서 이 오브젝트의 transform.position을
                 //    기록된 값으로 이미 지정해 두었습니다(LateUpdate는 Update보다 항상 나중에 실행).
                 //    여기서는 그 값을 그대로 렌더링 카메라에 반영만 하고, 데드존/클램프는 완전히 건너뜁니다.
@@ -87,8 +80,8 @@ namespace Study_ActionPlatformer
             Vector3 desired = anchor;
             desired.z = transform.position.z;
 
-            // ✅ Time.unscaledDeltaTime 사용: 크로노스(timeScale<1)나
-            //    히트스탑/일시정지(timeScale=0) 중에도 카메라 추적이 절대 멈추지 않습니다.
+            // Time.unscaledDeltaTime 사용: 크로노스(timeScale<1)나
+            // 히트스탑/일시정지(timeScale=0) 중에도 카메라 추적이 절대 멈추지 않습니다.
             transform.position = Vector3.Lerp(transform.position, desired, followLerpSpeed * Time.unscaledDeltaTime);
 
             Vector3 camPos = transform.position + shakeOffset;
@@ -143,16 +136,5 @@ namespace Study_ActionPlatformer
         // ScreenEffectManager가 호출하는 흔들림 API
         // ============================================================
         public void SetShakeOffset(Vector3 offsetValue) => shakeOffset = offsetValue;
-
-#if UNITY_EDITOR
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.color = new Color(0f, 1f, 0.6f, 0.25f);
-            Vector3 c = Application.isPlaying ? anchor : transform.position;
-            Gizmos.DrawCube(c, new Vector3(deadZoneSize.x, deadZoneSize.y, 0.1f));
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireCube(c, new Vector3(deadZoneSize.x, deadZoneSize.y, 0.1f));
-        }
-#endif
     }
 }

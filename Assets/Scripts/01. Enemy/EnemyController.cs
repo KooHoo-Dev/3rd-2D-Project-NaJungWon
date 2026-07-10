@@ -18,16 +18,14 @@ namespace Study_ActionPlatformer
 
         private static readonly int IS_LEAN = Animator.StringToHash("IsLean");
         private static readonly int IS_WALK = Animator.StringToHash("IsWalk");
-        private static readonly int IS_RUN = Animator.StringToHash("IsRun");
-        private static readonly int ATTACK = Animator.StringToHash("Attack");
+        private static readonly int IS_RUN  = Animator.StringToHash("IsRun");
+        private static readonly int ATTACK  = Animator.StringToHash("Attack");
         private static readonly int IS_DEAD = Animator.StringToHash("IsDead");
 
         private const float IDLE_WAIT_TIME = 3.0f;
         private const float ATTACK_HIT_DELAY = 0.5f;
         private const float ATTACK_COOLDOWN = 2.0f;
-
         private const float GROUND_STICK_SPEED = -2.0f;
-
 
         [SerializeField] private float walkSpeed = 1f;
         [SerializeField] private float runSpeed = 3f;
@@ -35,48 +33,44 @@ namespace Study_ActionPlatformer
         [SerializeField] private float attackRange = 3f;
         [SerializeField] private float baseUpdateTerm = 0.1f;
 
-        [Header("Physics Settings")]
+        [Header("내부 설정")]
         public float yThreshold = 0.1f; // 허용 오차 범위
-        public float gravity = -9.81f;
-        public float skinWidth = 0.02f;
+        public float gravity    = -9.81f;
+        public float skinWidth  = 0.02f;
         public float groundCheckDistance = 0.5f;
-
-        [Header("Step Settings")]
-        public float maxStepHeight = 0.3f;   // 한 번에 올라갈 수 있는 최대 계단 높이
-        public int stepCheckCount = 4;       // 위로 몇 번 나눠서 검사할지
-
-        [Header("Knockback Settings")]
-        [SerializeField] private float externalDrag = 12.0f;
-
         public LayerMask collisionLayer;
         public LayerMask originLayer;
         public LayerMask droppingLayer;
+
+        [Header("계단 설정")]
+        public int   stepCheckCount = 4;       // 위로 몇 번 나눠서 검사할지
+        public float maxStepHeight  = 0.3f;   // 한 번에 올라갈 수 있는 최대 계단 높이
+
+        [Header("외부 충격 설정")]
+        [SerializeField] private float externalDrag = 12.0f;
 
         public bool IsGrounded { get; private set; } = false;
         public bool IsDead { get; private set; } = false;
 
         //private Coroutine fsmRoutine;
-        public Rigidbody2D rb;
-        public Collider2D col;
-        public HitBox hitbox;
-        public HurtBox hurtbox;
-        public bool useGravity = true;
-        public bool isDropping = false;
-        public bool isLean = false;
-
-        public float desiredMoveX = 0.0f;
-        private float baseVerticalVelocity = 0.0f; //기본 점프 + 중력값
-        private Vector2 externalVelocity = Vector2.zero;
-
-
-        [field: SerializeField] public Transform Target;
-
+        private Rigidbody2D rb;
+        private Collider2D col;
+        private HitBox hitbox;
+        private HurtBox hurtbox;
         private Animator Animator { get; set; }
         public Animator hitAnim;
         private Enemy Enemy { get; set; }
 
-        
+        private bool useGravity = true;
+        private bool isFalling = false;
+        private bool isLean = false;
+
+        private float desiredMoveX = 0.0f;
+        private float baseVerticalVelocity = 0.0f; //기본 점프 + 중력값
+        private Vector2 externalVelocity = Vector2.zero;
         private Vector3 originalScale;
+
+        [field: SerializeField] public Transform Target;
 
         // 빈 코루틴 필드 (빈 객체랑 동일하다)
         protected IEnumerator nextStateCoroutine;
@@ -301,14 +295,14 @@ namespace Study_ActionPlatformer
             float platformBottom = collider.bounds.min.y;
 
             collisionLayer = droppingLayer;
-            isDropping = true;
+            isFalling = true;
 
             //플랫폼 위에서 벗어나거나 아래로 완전히 내려가면 해당 레이어 키기
             yield return new WaitUntil(() =>
             GetCastBox().max.y + skinWidth < platformBottom || //완전히 내려갈 때까지 기다리기
             GetCastBox().min.y + skinWidth > platformTop);//또는 아예 다시 올라가버리기 
 
-            isDropping = false;
+            isFalling = false;
             collisionLayer = originLayer;
         }
 
@@ -365,6 +359,7 @@ namespace Study_ActionPlatformer
             while(true)
             {
                 // Idle상태의 탈출조건
+                /*
                 if(isLean && Target == null)
                 {
                     Animator.SetBool(IS_LEAN, true);
@@ -372,6 +367,7 @@ namespace Study_ActionPlatformer
                     Animator.SetBool(IS_LEAN, false);
                     isLean = false;
                 }
+                */
 
                 // 1. 3초가 지났을때 PatrolState로 전환(Transition)
                 if (IDLE_WAIT_TIME < waitTime)
@@ -615,7 +611,7 @@ namespace Study_ActionPlatformer
             IsDead = false;
             IsGrounded = false;
             useGravity = true;
-            isDropping = false;
+            isFalling = false;
             if (hitbox != null) hitbox.ResetHurtBox();
             hurtbox.SetCombatActive(true);
 

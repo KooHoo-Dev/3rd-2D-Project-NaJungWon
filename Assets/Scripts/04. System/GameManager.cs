@@ -11,8 +11,8 @@ namespace Study_ActionPlatformer
     {
         [Header("씬 마다 갱신")]
         private TimeLineRecorder recorder;
-        private UnitManagement unitManagement;
-        private GameObject clearTrigger;
+        private UnitManagement   unitManagement;
+        private GameObject       clearTrigger;
 
         [Header("게임 상태")]
         public GameState CurrentGameState { get; private set; } = GameState.Ready;

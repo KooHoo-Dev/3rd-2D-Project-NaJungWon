@@ -27,7 +27,6 @@ namespace Study_ActionPlatformer
         [SerializeField] private float energyDrainRate = 1f;    // 초당 소모 (unscaled)
         [SerializeField] private float energyRegenRate = 0.5f;    // 초당 회복 (unscaled)
 
-        [Header("부드러운 전환")]
         public float transitionInDuration { get; private set; } = 0.15f;   // 진입 시간
         public float transitionOutDuration { get; private set; } = 0.2f;   // 해제 시간
 
@@ -121,9 +120,7 @@ namespace Study_ActionPlatformer
         }
         #endregion
 
-        // ============================================================
         // [크로노스 활성화/비활성화]
-        // ============================================================
         public void ActivateChronos()
         {
             if (IsChronosActive || IsTransitioning || !CanUseChronos) return;
@@ -144,9 +141,7 @@ namespace Study_ActionPlatformer
             transitionCoroutine = StartCoroutine(DeactivateCoroutine());
         }
 
-        // ============================================================
         // [부드러운 전환 코루틴]
-        // ============================================================
         private IEnumerator ActivateCoroutine()
         {
             IsTransitioning = true;
@@ -199,9 +194,7 @@ namespace Study_ActionPlatformer
             transitionCoroutine = null;
         }
 
-        // ============================================================
-        // 물리 엔진 호환 TimeScale 적용]
-        // ============================================================
+        // TimeScale 적용
         private void ApplyTimeScale(float scale)
         {
             // ScreenEffectManager 히트스탑(timeScale=0) 중에는 건드리지 않음

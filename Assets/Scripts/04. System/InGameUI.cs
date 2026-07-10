@@ -11,19 +11,19 @@ namespace Study_ActionPlatformer
 
         [Header("기본 UI")]
         public GameObject inGameInterface;
-        public TMP_Text planStartText;
-        public TMP_Text resultText;
+        public TMP_Text   planStartText;
+        public TMP_Text   resultText;
 
         [Header("타이머 게이지")]
         public Image gameTimerGauge; // Image Type = Filled, Fill Method = Horizontal
 
         [Header("크로노스 틱")]
         public GameObject cronosBattery;
-        public Image[] cronosTicks;
+        public Image[]    cronosTicks;
+        public Image      lshiftImage;
+        public Sprite[]   lShifsprites;
         [SerializeField] private Color tickChargedColor = Color.white;
         [SerializeField] private Color tickDepletedColor = Color.red;
-        public Image lshiftImage;
-        public Sprite[] lShifsprites;
 
         [Header("크로노스 UI 페이드")]
         [SerializeField] private float cronosFadeInDuration = 0.15f;

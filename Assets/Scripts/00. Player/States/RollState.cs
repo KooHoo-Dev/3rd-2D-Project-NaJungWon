@@ -19,21 +19,7 @@ namespace Study_ActionPlatformer
 
         public override void UpdateState(AnimatorStateInfo stateInfo)
         {
-            /*
-            // 상태 초반부에는 직전 공격 입력을 제거해준다
-            if (stateInfo.normalizedTime < INPUT_ROLL_TIME)
-            {
-                //Animator.SetBool(PlayerController.IS_ROLL, false);
-                Owner.ApplyRoll(false);
-            }
-            */
-
-            /*
-            if (stateInfo.normalizedTime > COMBO_INPUT_END_TIME)
-            {
-                Owner.ApplyGravity();
-            }
-            */
+            
         }
 
         public override void Exit()

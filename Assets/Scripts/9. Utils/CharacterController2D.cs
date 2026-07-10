@@ -8,21 +8,17 @@ using UnityEngineInternal;
 
 namespace Study.Utilities
 {
-    // RequireComponent?
-    // : 아래의 선언된 클래스가 동작하려면 typeof(컴포넌트)의
-    // 컴포넌트가 필요하다고 강제하는 키워드 입니다.
-    // GameObject에 Attach하게 되면 필요한 컴포넌트를
-    // 자동으로 생성합니다.
     [RequireComponent(typeof(Rigidbody2D))]
     public class CharacterController2D : MonoBehaviour
     {
         private const float GROUND_STICK_SPEED = -2.0f;
 
-        [Header("Settings")]
+        [Header("기본 설정")]
         public float     speed               = 2.0f;
         public float     gravity             = -9.81f;
         public float     groundCheckDistance = 0.5f;
         public float     skinWidth           = 0.02f;
+        public bool      useGravity          = true; //중력 적용
         public LayerMask collisionLayer;
         public LayerMask originLayer;
         public LayerMask droppingLayer;
@@ -30,89 +26,88 @@ namespace Study.Utilities
         private Rigidbody2D rBody;
         private Collider2D  col;
 
-        [Header("Attack Settings")]
-        public float dashPower = 6.0f; // 공격 대쉬 거리
-        public float dashDuration = 0.12f;  // 공격 대쉬 시간(초)
-        public float dashCooldown = 0.18f;
-        public float dashCooldownTimer = 0.0f;
+        [Header("공격(대쉬) 설정")]
+        public  float dashPower         = 6.0f; // 공격 대쉬 거리
+        public  float dashDuration      = 0.12f;  // 공격 대쉬 시간(초)
+        public  float dashCooldown      = 0.18f;
+        public  bool  IsDashing { get; private set; } = false;
 
-        [Header("Jump Settings")]
-        public float jumpPower = 8.0f;
-        private int  jumpCount = 0;
-        public int maxJumpCount = 1;
+        private float dashCooldownTimer = 0.0f;
 
-        // 애니메이션 용 변수
-        public bool isJumping = false;
-        public bool isLanding = false;
+        [Header("점프 설정")]
+        public float jumpPower    = 8.0f;
+        public int   maxJumpCount = 1;
+        public bool isJumping { get; private set; } = false;
+        public bool isLanding { get; private set; } = false;
 
-        [Header("Request Settings")]
-        public bool jumpRequested = false;
-        public bool attackRequested = false;
-        public bool crouchRequested = false;
-        public bool flipRequested = false;
-        public bool rollRequested = false;
+        private int  jumpCount    = 0;
 
-        [Header("Crouch Settings")]
+        [Header("포복 설정")]
         public float fastFallSpeed = 1.0f; //빠른 하강 속도
-        public bool isDropping = false; // 플랫폼에서 떨어짐 변수
+        public bool IsCrouching { get; private set; } = false;
 
+        private bool isFalling = false; // 플랫폼에서 떨어짐 변수
 
-        [Header("stick Settings")]
-        public bool    stickWall = false;
-        // [문제 3 해결] 벽 타기 방향 기억 및 상태 유지
-        public float stickWallDirection = 0.0f;
-        public bool useGravity = true; //중력 적용
+        [Header("벽 타기 설정")]
+        public float stickWallDirection = 0.0f; //벽 타기 방향
+        public bool stickWall { get; private set; } = false;
 
-        [Header("Roll Settings")]
-        public float rollPower = 10.0f; // 구르기 거리
+        [Header("구르기 설정")]
+        public float rollPower    = 10.0f; // 구르기 거리
         public float rollDuration = 0.10f;  // 구르기 시간(초)
-
         public float rollCooldown = 0.18f;
-        public float rollCooldownTimer = 0.0f;
+
         public bool CanStartRoll =>
             IsGrounded &&
             !IsRolling &&
             rollCooldownTimer <= 0.0f;
+        public bool IsRolling { get; private set; } = false;
 
-        [Header("Wall Flip Settings")]
-        public float wallFlipHorizontalPower = 6.0f; // 공중제비 좌우힘
-        public float wallFlipVerticalPower = 8.0f; // 공중제비 위쪽힘
-        public float wallFlipHorizontalDuration = 0.18f; //공중제비 지속시간
-        public float wallStickProbeDistance = 0.03f; // 벽감지 거리
-        public float wallReattachLockTime = 0.08f; //벽감지 쿨타임
+        private float pendingRollForward; // 구르기 방향값 -1/+1:좌/우
+        private float rollCooldownTimer = 0.0f;
 
-        public bool isWallFlipping = false;
+        [Header("공중제비 설정")]
+        public float wallFlipHorizontalPower    = 6.0f; // 공중제비 좌우힘
+        public float wallFlipVerticalPower      = 8.0f; // 공중제비 위쪽힘
+        public float wallFlipDuration           = 0.18f; //공중제비 지속시간
+        public float wallStickProbeDistance     = 0.03f; // 벽감지 거리
+        public float wallReattachLockTime       = 0.08f; //벽감지 쿨타임
+        public bool isWallFlipping { get; private set; } = false;
+
         private float wallReattachLockTimer = 0.0f;
 
-        [Header("Step Settings")]
-        public float maxStepHeight = 0.3f;   // 한 번에 올라갈 수 있는 최대 계단 높이
-        public int stepCheckCount = 4;       // 위로 몇 번 나눠서 검사할지
+        [Header("계단 설정")]
+        public int   stepCheckCount = 4;       // 위로 몇 번 나눠서 검사할지 카운트
+        public float maxStepHeight  = 0.3f;   // 한 번에 올라갈 수 있는 최대 계단 높이
 
+        [Header("내부 이동값 설정")]
         public Vector2 pendingDashDirection { get; private set; } //마우스 방향 좌표
-        private float   pendingRollForward; // 구르기 방향값 -1/+1:좌/우
-        private Vector2 boostVelocity    = Vector2.zero; //이동 메서드에 의한 이동값
-        private float boostTimer = 0.0f; //대쉬/구르기 이동 시간
 
-        [Header("Knockback Settings")]
-        [SerializeField] private float externalDrag = 12.0f;
+        private float boostTimer = 0.0f; //대쉬/구르기 이동 시간 타이머
+        private Vector2 boostVelocity    = Vector2.zero; //이동 메서드에 의한 이동값
+
+        [Header("외부 이동값 설정")]
+        public float externalDrag = 12.0f;
+
         private Vector2 externalVelocity = Vector3.zero; //외부에 의한 이동값
 
-        private float   moveInput        = 0.0f; //기본 이동x값
-        private float   baseVerticalVelocity = 0.0f; //기본 점프 + 중력값
+        [Header("입력 요청 설정")]
+        private bool attackRequested = false;
+        private bool jumpRequested   = false;
+        private bool crouchRequested = false;
+        private bool flipRequested   = false;
+        private bool rollRequested   = false;
 
+        [Header("내부 설정")]
+        private float   moveInput            = 0.0f; //기본 이동x값
+        private float   baseVerticalVelocity = 0.0f; //기본 점프 + 중력값
         // 읽기 전용으로 바꿔줍니다
         public float HorizontalVelocity { get; private set; } = 0.0f; // 최종 x값
         public float VerticalVelocity { get; private set; } = 0.0f; // 최종 y값
-
-        public float MoveVectorX { get; private set; } = 0.0f;
-        public int FacingDirection { get; private set; } = 1;
+        public float MoveVectorX { get; private set; } = 0.0f; // 벽 앞에서 멈추게 하기 용
+        public int FacingDirection { get; private set; } = 1; // 정면 방향
         public bool IsGrounded { get; private set; } = false;
         public bool prevGroundedInternal { get; private set; } = false;
-
-        public bool IsCrouching { get; private set; } = false;
-
-        public bool IsDashing = false;
-        public bool IsRolling = false;
 
         #region Unity Methods
         private void Awake()
@@ -279,7 +274,7 @@ namespace Study.Utilities
             externalVelocity = Vector3.zero;
         }
 
-        // [추가] 라운드 재시작 시 런타임 상태를 강하게 초기화합니다.
+        // 라운드 재시작 시 초기화
         public void ResetRuntimeState()
         {
             jumpRequested = false;
@@ -290,7 +285,7 @@ namespace Study.Utilities
 
             isJumping = false;
             isLanding = false;
-            isDropping = false;
+            isFalling = false;
             stickWall = false;
             stickWallDirection = 0.0f;
             isWallFlipping = false;
@@ -320,7 +315,7 @@ namespace Study.Utilities
         #region 플랫폼 이동
         public void MoveToPlatform() //기본 플랫폼 이동 
         {
-            if (isDropping == true || VerticalVelocity > 0)
+            if (isFalling == true || VerticalVelocity > 0)
             {
                 collisionLayer = droppingLayer;
                 return;
@@ -344,7 +339,7 @@ namespace Study.Utilities
             //하강중 벽에 낌처리
             bool isStuck =
                 VerticalVelocity <= 0 &&
-                hit.collider.gameObject.GetComponent<PlatformEffector2D>() &&
+                hit.collider.gameObject.layer == 7 &&
                 (box.min.y + skinWidth) < hit.collider.bounds.max.y;
 
             if (isStuck)
@@ -360,14 +355,14 @@ namespace Study.Utilities
             float platformBottom = collider.bounds.min.y;
 
             collisionLayer = droppingLayer;
-            isDropping = true;
+            isFalling = true;
 
             // 플레이어가 플랫폼 위에서 벗어나거나 아래로 완전히 내려가면 해당 레이어 키기
             yield return new WaitUntil(() =>
             GetCastBox().max.y + skinWidth < platformBottom || //완전히 내려갈 때까지 기다리기
             GetCastBox().min.y + skinWidth > platformTop);//또는 아예 다시 올라가버리기 
 
-            isDropping = false;
+            isFalling = false;
             collisionLayer = originLayer;
         }
 
@@ -377,7 +372,6 @@ namespace Study.Utilities
 
         private void ApplyGravaity()
         {
-            // 여기 공격중 중력끄는 코드 필요
             if (useGravity == false) return;
 
             if (IsGrounded && baseVerticalVelocity <= 0)
@@ -405,7 +399,7 @@ namespace Study.Utilities
                 return;
             }
 
-            // 상호 배타적 상태 보장 (동시에 true 방지)
+            // 동시에 true 방지
             if (IsDashing && IsRolling)
                 IsRolling = false; // 대쉬 우선
 
@@ -821,7 +815,7 @@ namespace Study.Utilities
             // 세로는 점프, 가로는 짧은 추진
             baseVerticalVelocity = wallFlipVerticalPower;
             boostVelocity = new Vector2(awayDirection * wallFlipHorizontalPower, 0.0f);
-            boostTimer = wallFlipHorizontalDuration;
+            boostTimer = wallFlipDuration;
 
             // 벽점프를 점프 1회 사용으로 볼지 여부는 취향
             jumpCount = maxJumpCount;
