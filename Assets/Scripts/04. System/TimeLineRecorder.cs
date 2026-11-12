@@ -141,7 +141,8 @@ namespace Study_ActionPlatformer
         private bool prevAttackHeld;
 
         private Animator playerAnimator;
-        private CharacterController2D playerController;
+        private CharacterController2D characterController;
+        private PlayerController playerController;
 
         private void Awake()
         {
@@ -153,8 +154,10 @@ namespace Study_ActionPlatformer
             recorder = this;
 
             if (playerObject == null) return;
-            playerController = playerObject.GetComponent<CharacterController2D>();
+            characterController = playerObject.GetComponent<CharacterController2D>();
+            playerController = playerObject.GetComponent<PlayerController>();
             disableWhilePlayback.Add(playerController);
+            disableWhilePlayback.Add(characterController);
             playerAnimator = playerObject.GetComponentInChildren<Animator>();
         }
 
@@ -369,6 +372,12 @@ namespace Study_ActionPlatformer
             recordMode = RecordMode.Rewinding;
 
             SetPlaybackMode(true);
+
+            // 사망 시 켜진 IsDead가 남아 있으면, 녹화된 상태를 Play해도
+            // 모든 상태의 IsDead → HurtFly 전이가 바로 발동해 사망 애니메이션으로 덮인다.
+            // (적은 기록의 isDead를 프레임마다 적용하지만 플레이어 기록에는 없음)
+            playerAnimator.SetBool(PlayerController.IS_DEAD, false);
+
             CacheAndSetAnimatorsToUnscaledTime();
             SampleFrame(playbackTickFloat, true);
         }
@@ -477,7 +486,7 @@ namespace Study_ActionPlatformer
             Vector2 aimDirection = GetAimDirection(currentPos);
 
             int facing = 1;
-            if (playerController != null) facing = playerController.FacingDirection;
+            if (characterController != null) facing = characterController.FacingDirection;
             else if (playerObject.transform.localScale.x < 0f) facing = -1;
 
             int animStateHash = 0;
